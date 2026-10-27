@@ -1,0 +1,79 @@
+﻿<Property name="Load Curve ID for Longitudinal Tensile Strength (LCXT)"
+          neutralName="LoadCurveIDLongitudinalTensileLCXT"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Load Curve ID for Longitudinal Compressive Strength (LCXC)"
+          neutralName="LoadCurveIDLongitudinalCompressiveLCXC"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Load Curve ID for Transverse Tensile Strength (LCYT)"
+          neutralName="LoadCurveIDTransverseTensileLCYT"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Load Curve ID for Transverse Compressive Strength (LCYC)"
+          neutralName="LoadCurveIDTransverseCompressiveLCYC"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Load Curve ID for Shear Strength, ab Plane (LCSC)"
+          neutralName="LoadCurveIDShearStrengthABPlaneLCSC"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>

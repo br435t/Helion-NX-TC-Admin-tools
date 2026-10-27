@@ -1,0 +1,110 @@
+        <Property name="Non-Linear Behavior of the in Plane Shear Components (SES NF)"
+                    neutralName="InPlaneShearComponents"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureForcePerArea;"
+                    scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainAngle;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Mode I Crack Release Energy for the Matrix (GIc)"
+                    neutralName="ModeICrackReleaseEnergy"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureForcePerLength;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Mode II Crack Release Energy for the Matrix (GIIc)"
+                    neutralName="ModeIICrackReleaseEnergy"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureForcePerLength;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Mode III Crack Release Energy for the Matrix (GIIIc)"
+                    neutralName="ModeIIICrackReleaseEnergy"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureForcePerLength;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="The Thickness Transition Between Thick and Thin Embedded Plied (HBAR)"
+                    neutralName="ThicknessTransition"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="float"
+                    Dimensions="&MeasureLength;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Unidirectional Laminate Behavior (LOPT)"
+                    neutralName="LaminateBehavior"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="enum"
+                    valueChoices="&Choice;Computed In-situ Strength (LOPT 1)=0&Choice;Measured Strength (LOPT 2)=1">
+            <DefaultValue value="0"/>
+            <LowerBound value="0"
+                        inclusive="true"/>
+            <UpperBound value="1"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Fracture Angle Due to Pure Compressive Loading (ALFT)"
+                    neutralName="FractureAngle"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="float"
+                    Dimensions="&MeasureAngle;">
+            <DefaultValue value="&Angle53deg;"/>
+            <LowerBound value="&AngleMin;"
+                        inclusive="true"/>
+            <UpperBound value="&Angle360deg;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Friction Coefficient (ETAS)"
+                    neutralName="FrictionCoefficient"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;LaRC04FailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="float"
+                    Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>

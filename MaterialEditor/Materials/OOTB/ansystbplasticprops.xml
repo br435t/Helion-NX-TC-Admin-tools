@@ -1,0 +1,130 @@
+﻿<Property name="Static Recovery Coefficient"
+          neutralName="AnsysStaticRecoveryCoeff"
+          valueType="scalarField"
+          Dimensions="&MeasureCoefficientPerTime;"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="0,3"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature Dependent Static Recovery Coefficient"
+          neutralName="AnsysStaticRecoveryCoeffTemperature"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureCoefficientPerTime;"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="0,4,6"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Temperature Coefficient"
+          neutralName="AnsysTemperatureCoeff"
+          valueType="scalarField"
+          Dimensions="&MeasureTemperature;"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="0,3"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature Dependent Temperature Coefficient"
+          neutralName="AnsysTemperatureCoeffTemperature"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureTemperature;"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="0,4,6"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Static Recovery Threshold"
+          neutralName="AnsysRecoveryThreshold"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="0,3"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature Dependent Static Recovery Threshold"
+          neutralName="AnsysRecoveryThresholdTemperature"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="0,4,6"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="BKIN Stress-Strain Option"
+          neutralName="BKINStressStrainOption"
+          valueType="enum"
+          valueChoices="&Choice;No Stress Relaxation with Temperature Increase=0&Choice;Rice's Hardening Rule=1"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="1"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+
+<Property name="KINH Stress-Strain Option"
+          neutralName="KINHStressStrainOption"
+          valueType="enum"
+          valueChoices="&Choice;Stress-Strain Curve=0&Choice;Stress-Strain Plastic Curve=1"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>

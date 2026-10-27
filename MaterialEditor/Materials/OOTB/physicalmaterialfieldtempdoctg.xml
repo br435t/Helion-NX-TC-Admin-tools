@@ -1,0 +1,58 @@
+<FieldDefn nDomains="8">
+    <Domain type="&DomainConstant;"/>
+    <Domain type="&DomainTemperature;"/>
+    <Domain Name="Degree of Cure"
+            nVariables="1"
+            autocreate="true">
+        <Variable Name="Degree of Cure"/>
+    </Domain>
+
+    <Domain Name="Glass Transition Temperature"
+            nVariables="1"
+            autocreate="true">
+        <Variable Name="Glass Transition Temperature"
+                  Measure="&MeasureTemperature;"/>
+    </Domain>
+
+    <Domain Name="Glass Transition Temperature"
+            nVariables="1"
+            hasSecondary="true"
+            autocreate="true">
+        <Variable Name="Glass Transition Temperature"
+                  Measure="&MeasureTemperature;"/>
+        <SecondaryDomain type="&DomainTemperature;"/>
+    </Domain>
+
+    <Domain Name="Degree of Cure"
+            nVariables="1"
+            hasSecondary="true"
+            autocreate="true">
+        <Variable Name="Degree of Cure"/>
+        <SecondaryDomain type="&DomainTemperature;"/>
+    </Domain>
+
+    <Domain Name="Degree of Cure"
+            nVariables="1"
+            hasSecondary="true"
+            autocreate="true">
+        <Variable Name="Degree of Cure"/>
+        <SecondaryDomain Name ="Glass Transition Temperature"
+                         nVariables="1"
+                         autocreate="true">
+            <Variable Name="Glass Transition Temperature"
+                      Measure="&MeasureTemperature;"/>
+        </SecondaryDomain>
+    </Domain>
+
+    <Domain Name="Temperature, Degree of Cure, Glass Transition Temperature"
+            type="&DomainUser;"
+            nVariables="3"
+            autocreate="true">
+        <Variable Name="temperature" 
+                  Measure="&MeasureTemperature;"/>
+        <Variable Name="Degree of Cure"/>
+        <Variable Name="Glass Transition Temperature"
+                  Measure="&MeasureTemperature;"/>
+    </Domain>
+
+</FieldDefn>

@@ -1,0 +1,34 @@
+<Property name="X0 (X0)"
+          neutralName="AnagonyeWangCoefficientX0"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="false"/>
+</Property>
+
+<Property name="X1 (X1)"
+          neutralName="AnagonyeWangCoefficientX1"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+</Property>
+
+<Property name="X2 (X2)"
+          neutralName="AnagonyeWangCoefficientX2"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="2">
+</Property>
+
+<Property name="X3 (X3)"
+          neutralName="AnagonyeWangCoefficientX3"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="2">
+</Property>

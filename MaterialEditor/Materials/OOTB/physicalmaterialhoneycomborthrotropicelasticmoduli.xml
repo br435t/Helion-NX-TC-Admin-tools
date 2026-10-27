@@ -1,0 +1,120 @@
+               <Property name="Elastic Modulus a-Direction (EAAU)"
+                         neutralName="ElasticModulusEAAU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Elastic Modulus b-Direction (EBBU)"
+                         neutralName="ElasticModulusEBBU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Elastic Modulus c-Direction (ECCU)"
+                         neutralName="ElasticModulusECCU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>              
+               <Property name="Shear Modulus ab-Direction (GABU)"
+                         neutralName="ShearModulusGABU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Shear Modulus bc-Direction (GBCU)"
+                         neutralName="ShearModulusGBCU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Shear Modulus ca-Direction (GCAU)"
+                         neutralName="ShearModulusGCAU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Strong Axis Elastic Modulus (EAAU)"
+                         neutralName="StrongAxisElasticModulus"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Weak Axis Elastic Modulus (EBBU)"
+                         neutralName="WeakAxisElasticModulus"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Initial Stress Limit in Simple Shear (ECCU)"
+                         neutralName="InitialStressLimitECCU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Strong-Weak Shear Modulus (GABU)"
+                         neutralName="StrongWeakShearModulus"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Weak-Weak Shear Modulus (GBCU)"
+                         neutralName="WeakWeakShearModulus"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>
+               <Property name="Initial Stress Limit in Hydrostatic Compression (GCAU)"
+                         neutralName="InitialStressLimitGCAU"
+                         valueType="float"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <LowerBound value="&valueZero;"
+                               inclusive="true"/>
+               </Property>

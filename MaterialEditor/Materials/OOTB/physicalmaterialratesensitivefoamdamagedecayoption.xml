@@ -1,0 +1,5 @@
+<Property name="Damage Decay Option"
+          neutralName="DamageDecayOption"
+          valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>

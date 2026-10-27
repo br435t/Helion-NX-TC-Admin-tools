@@ -1,0 +1,8 @@
+<Property name="Optional Young's Modulus (KCON)"
+          neutralName="YoungsModulusKCON"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>

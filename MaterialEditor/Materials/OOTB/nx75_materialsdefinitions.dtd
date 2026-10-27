@@ -1,0 +1,1177 @@
+<!ENTITY CurrentVersion "1">
+<!-- This correlates to NX6; materials was viewed to not change often, so the complex -->
+<!-- mainVersion.QRMNumber.DevelopVersion was not implemented here.  At some point we -->
+<!-- may want to handle this or get the version in sync with the NX version numbers   -->
+
+
+<!--                  ====================================
+                         Key constant values
+                      ====================================
+     correlates to defines in sfom.h (valueEmpty)
+     system values:FLT_MAX and FLT_MIN
+ -->
+<!-- DoNotShow : Used in boxLabel to indicate no group on the UI, but colect the children together. -->
+<!ENTITY DoNotShow "#">
+<!-- Collapse : Used in boxLabel to indicate the group on the UI is to be initially displayed as collasped -->
+<!ENTITY Collapse "-">
+<!-- ColumnLayout : Used in boxLabel to indicate the group on the UI is to have n columns where n is a number -->
+<!--                between 1 and 9 inclusive the immediately follows the ColumnLayout symbol                 -->
+<!--                (e.g. &ColumnLayout;6 indicates this group will have 6 columns).                          -->
+<!ENTITY ColumnLayout "^">
+<!-- Choice : Our universal delimiter. A separator between option choices. -->
+<!ENTITY Choice "#">
+<!-- LoadSumChoice : Placed before a magnitude in the magnitude string to indicate that the next magnitude    -->
+<!--                 should be used in Load Summation.                                                        -->
+<!ENTITY LoadSumChoice "+">
+<!-- DispMagnChoice : Placed before a magnitude in the magnitude string to indicate that the next magnitude   -->
+<!--                  is one of the several that can be selected in the disp attr dialog to control the       -->
+<!--                  magnitude strings and the size of the display symbols.                                  -->
+<!ENTITY DispMagnChoice "!">
+<!-- Note: LoadSumChoice and DispMagnChoice must be 1 character long; their relative order is not important.  -->
+
+<!-- Above|Below : (Applies only to TargetSets and valueLabel attribute of properties.)                                                             -->
+<!--          Used in boxLabel to indicate the TargetSet is placed in the UI group above specified property.-->
+<!--          E.g., boxLabel="Model Objects&Choice;&Above;description"                                      -->
+<!--          where  "description" is the neutralName of a property having boxLabel="Model Objects"         -->
+<!--          E.g., boxLabel="Model Objects&Choice;&Above;"                                                 -->
+<!--          E.g., boxLabel="Model Objects&Choice;&Below;"                                                 -->
+<!--          No property name means place at top/bottom of group.                                          -->
+<!--          Default is boxLabel="Model Objects" which means top of group.                                 -->
+<!--                                                                                                        -->
+<!--          Append to the start of the valueLabel string to indicate the ValueLabel widget will be        -->
+<!--          above or below the PropertyComponent UI block.                                                -->
+<!--          To indent the valueLabel, insert extra blank charaters in the string.                         -->
+<!ENTITY Above "+">
+<!ENTITY Below "-">
+
+<!ENTITY valueAutoAssign "-666666.">
+<!ENTITY valueEmpty "-777777.">
+<!ENTITY valueBlank "">
+<!ENTITY maxFloat "-888888.">
+<!ENTITY minFloat "-999999.">
+
+<!ENTITY valueInherit "inherited">
+
+<!-- Default MPC Node Match Tolerance Value -->
+<!ENTITY defaultMPCNodeTol "0.01">
+
+<!-- Enum choices for the MPC -->
+<!ENTITY MPCEnumChoiceDOF1   "1" >
+<!ENTITY MPCEnumChoiceDOF2   "2" >
+<!ENTITY MPCEnumChoiceDOF3   "3" >
+<!ENTITY MPCEnumChoiceDOF4   "4" >
+<!ENTITY MPCEnumChoiceDOF5   "5" >
+<!ENTITY MPCEnumChoiceDOF6   "6" >
+
+<!-- Enum choices for the Conflict Check Mechanism -->
+<!ENTITY AutomaticConflictCheckMechanism   "0" >
+<!ENTITY AssistedConflictCheckMechanism    "1" >
+
+<!-- BC Fixed/Free/Displacement values -->
+<!ENTITY DispConstraintFree "-777777.">
+<!ENTITY DispConstraintFixed "0.">
+<!ENTITY DispConstraintDisplacement "1.">
+
+<!-- Coupled dof coefficients -->
+<!ENTITY DispFreeCoefficient "-777777.">
+<!ENTITY DispUnitCoefficient "1.">
+<!ENTITY DispVariableCoefficient "2.">
+
+<!-- Enforced Motion values -->
+<!ENTITY EnforcedMotionFree "-777777.">
+<!ENTITY EnforcedMotionEnforced "0.">
+
+<!-- Unit Force values -->
+<!ENTITY UnitForceNone "-777777.">
+<!ENTITY UnitForceUnit "1.">
+
+<!-- Angle values -->
+<!ENTITY AngleMin     "0">
+<!ENTITY AngleMax     "360">
+<!ENTITY BearingAngleDefault "180">
+
+<!-- Other Values -->
+<!ENTITY valueZero "0.">
+<!ENTITY valueZeroPointOne "0.1">
+<!ENTITY valueOne "1.">
+<!ENTITY valueMinusOne "-1.">
+<!ENTITY valueThousand "1000.">
+
+<!ENTITY valueDistTol "0.0254">
+
+<!ENTITY valueAcceleration "9810">
+
+<!ENTITY valueWaterDensity ".000001">
+
+<!ENTITY XVector "1, 0, 0">
+<!ENTITY YVector "0, 1, 0">
+<!ENTITY ZVector "0, 0, 1">
+<!ENTITY NegativeXVector "-1, 0, 0">
+<!ENTITY NegativeYVector "0, -1, 0">
+<!ENTITY NegativeZVector "0, 0, -1">
+
+<!-- Default Search Distance for surf to surf gluing -->
+<!ENTITY valueSearchDist "1">
+
+
+<!-- Select Modes -->
+<!ENTITY selModeSingle "true">
+<!ENTITY selModeMulti  "false">
+
+<!-- Retain Values (Dialog Memory) on UI. -->
+<!ENTITY retainValueDefault "-777777.">
+<!ENTITY retainValueTrue    "true">
+<!ENTITY retainValueFalse   "false">
+
+
+<!--                  ====================================
+                         Distribute to values for BCs
+                      ====================================
+     correlates to SFOM_LANG_bc_applied_to_t in sfom_lang_bc_descriptors.h
+ -->
+<!ENTITY distributeToNodes                  "Nodes">
+<!ENTITY distributeToElms                   "Elements">
+<!ENTITY distributeToElmEdges               "ElementEdges">
+<!ENTITY distributeToElmFaces               "ElementFaces">
+<!ENTITY distributeToModel                  "Model">
+<!ENTITY distributeToFEM                    "FEM">
+<!ENTITY distributeToOrderedNodes           "OrderedNodes">
+<!ENTITY distributeToSequentialEdgeNodes    "SequentialEdgeNodes">
+<!-- Only valid for constant distributions -->
+
+
+<!ENTITY distFormulaComponent          "CalcComponentResolution">
+<!ENTITY distFormulaComponentFirst3    "CalcComponentResolutionFirst3">
+<!ENTITY distFormulaComponentLast3     "CalcComponentResolutionLast3">
+<!ENTITY distFormulaDistribution       "CalcDistributionStrategy">
+<!ENTITY distFormulaBlankComponent     "CalcDistributionBlankComp">
+
+<!--                  ====================================
+                               Neutral element type
+                      ====================================
+    Correspond to sfom_elem_enum.h and uf_sf_types.h
+ -->
+<!ENTITY ElementTypeUNDEFINED "0">
+<!-- Generic undefined type. -->
+<!ENTITY ElementTypeCMASS "1">
+<!-- Concentrated mass element. -->
+<!ENTITY ElementTypeBAR "2">
+<!-- Bar element. -->
+<!ENTITY ElementTypeBEAM "3">
+<!-- Beam element. -->
+<!ENTITY ElementTypeROD "4">
+<!--  Rod element. -->
+<!ENTITY ElementTypeRBE2 "5">
+<!-- Rigid link element. -->
+<!ENTITY ElementTypeSPRING "6">
+<!--  Spring element. -->
+<!ENTITY ElementTypeMASS "7">
+<!--  Distributed mass element. -->
+<!ENTITY ElementTypeHBDY "8">
+<!-- Heat body element. -->
+<!ENTITY ElementTypeQUAD4 "9">
+<!-- Quadrilateral element with 4 nodes.-->
+<!ENTITY ElementTypeTRIA3 "10">
+<!-- Triangular element with 3 nodes. -->
+<!ENTITY ElementTypeQUAD8 "11">
+<!-- Quadrilateral element with 8 nodes. -->
+<!ENTITY ElementTypeTRIA6 "12">
+<!-- Triangular element with 6 nodes. -->
+<!ENTITY ElementTypeTET4 "13">
+<!-- Tetrahedral element with 4 nodes. -->
+<!ENTITY ElementTypeTET10 "14">
+<!-- Tetrahedral element with 10 nodes. -->
+<!ENTITY ElementType1DCONTACT "15">
+<!-- 1D contact elements between 2 bodies. -->
+<!ENTITY ElementTypeHEX8 "16">
+<!-- Hexahedral element with 8 nodes. -->
+<!ENTITY ElementTypeHEX20 "17">
+<!-- Hexahedral element with 20 nodes. -->
+<!ENTITY ElementTypeWDG6  "18">
+<!-- Wedge element with 6 nodes. -->
+<!ENTITY ElementTypeWDG15 "19">
+<!-- Wedge element with 15 nodes. -->
+<!ENTITY ElementType2DCONTACT "20">
+<!-- 2D Contact elements between 2 faces -->
+<!ENTITY ElementTypeWELD "21">
+<!-- weld elements -->
+<!ENTITY ElementTypeEFCONN "22">
+<!-- Edge-Face connection element -->
+<!ENTITY ElementTypeRBE3 "25">
+<!-- RBE3 element. -->
+<!ENTITY ElementTypePYR5  "26">
+<!-- Pyramid element with 5 nodes. -->
+<!ENTITY ElementTypePYR13 "28">
+<!-- Pyramid element with 13 nodes. -->
+<!ENTITY ElementTypeNG    "29">
+<!-- Node to ground 1d element. -->
+<!ENTITY ElementTypePLOTEL "30">
+<!-- PLOTEL element. -->
+<!ENTITY ElementType1DMASS  "31">
+<!-- 1D Mass element. -->
+<!ENTITY ElementTypePYR_MIXED_ORDER "32">
+<!-- Pyramid element with drop mid-nodes. -->
+<!ENTITY ElementTypeTET_MIXED_ORDER "33">
+<!-- Tetrahedral element with drop mid-nodes. -->
+
+
+<!--                  ====================================
+                 And the icon to use for each neutral element type
+                      ====================================
+    Correspond to sfom_elem_enum.h and uf_sf_types.h
+ -->
+<!ENTITY ElementIconUNDEFINED "blank">
+<!-- Generic undefined type. -->
+<!ENTITY ElementIconCMASS     "element_neutral_cmass">
+<!-- Concentrated mass element. -->
+<!ENTITY ElementIconMASS      "element_neutral_mass">
+<!-- 1d mass element. -->
+<!ENTITY ElementIconMASSNG    "element_neutral_mass_ng">
+<!-- 1d mass element node to ground. -->
+<!ENTITY ElementIconTUBE      "element_neutral_tube">
+<!-- 1d tube element. -->
+<!ENTITY ElementIconPLOTEL    "element_neutral_mass">
+<!-- 1d plotel element. -->
+<!ENTITY ElementIconBUSH      "element_neutral_bush">
+<!-- bush element. -->
+<!ENTITY ElementIconBUSHNG    "element_neutral_bush_ng">
+<!-- bush element. -->
+<!ENTITY ElementIconDAMPER    "element_neutral_damper">
+<!-- damper element. -->
+<!ENTITY ElementIconDAMPERNG  "element_neutral_damper_ng">
+<!-- damper element node to ground. -->
+<!ENTITY ElementIconBAR       "element_neutral_bar">
+<!-- Bar element. -->
+<!ENTITY ElementIconBEAM      "element_neutral_beam">
+<!-- Beam element. -->
+<!ENTITY ElementIconROD       "element_neutral_rod">
+<!-- Rod element. -->
+<!ENTITY ElementIconRBE2      "element_neutral_mass">
+<!-- Rigid link element. -->
+<!ENTITY ElementIconRBE3      "element_neutral_mass">
+<!-- RBE3 element. -->
+<!ENTITY ElementIconSPRING    "element_neutral_spring">
+<!-- Spring element. -->
+<!ENTITY ElementIconSPRINGNG  "element_neutral_spring_ng">
+<!-- Spring element. -->
+<!ENTITY ElementIconHBDY      "blank">
+<!-- Heat body element. -->
+<!ENTITY ElementIconQUAD4     "element_neutral_quad4">
+<!-- Quadrilateral element with 4 nodes.-->
+<!ENTITY ElementIconTRIA3     "element_neutral_tria3">
+<!-- Triangular element with 3 nodes. -->
+<!ENTITY ElementIconQUAD8     "element_neutral_quad8">
+<!-- Quadrilateral element with 8 nodes. -->
+<!ENTITY ElementIconTRIA6     "element_neutral_tria6">
+<!-- Triangular element with 6 nodes. -->
+<!ENTITY ElementIconTET4      "element_neutral_tet4">
+<!-- Tetrahedral element with 4 nodes. -->
+<!ENTITY ElementIconTET10     "element_neutral_tet10">
+<!-- Tetrahedral element with 10 nodes. -->
+<!ENTITY ElementIcon1DCONTACT "element_neutral_gap">
+<!-- 1D contact elements between 2 bodies. -->
+<!ENTITY ElementIconHEX8      "element_neutral_hex8">
+<!-- Hexahedral element with 8 nodes. -->
+<!ENTITY ElementIconHEX20     "element_neutral_hex20">
+<!-- Hexahedral element with 20 nodes. -->
+<!ENTITY ElementIconWDG6      "element_neutral_wdg6">
+<!-- Wedge element with 6 nodes. -->
+<!ENTITY ElementIconWDG15     "element_neutral_wdg15">
+<!-- Wedge element with 15 nodes. -->
+<!ENTITY ElementIconPYR5      "element_neutral_pyr5">
+<!-- Pyramid element with 5 nodes. -->
+<!ENTITY ElementIconPYR13     "element_neutral_pyr13">
+<!-- Pyramid element with 13 nodes. -->
+<!ENTITY ElementIcon2DCONTACT "select_contact_faces">
+<!-- 2D Contact elements between 2 faces -->
+<!ENTITY ElementIconWELD      "element_neutral_mass">
+<!-- weld elements -->
+<!ENTITY ElementIconEFCONN    "edge_face_connection">
+<!-- Edge-Face connection element -->
+<!ENTITY ElementIconPYR_MIXED_ORDER  "element_neutral_pyr_mixed_order">
+<!-- Pyramid element with drop mid nodes. -->
+<!ENTITY ElementIconTET_MIXED_ORDER  "element_neutral_tet_mixed_order">
+<!-- Tetrahedral element with drop mid nodes. -->
+
+
+<!--                  =====================================
+                      Element Associated Data package type
+                      =====================================
+-->
+<!ENTITY ElementEADPackageTypeUNDEFINED   "blank">
+<!ENTITY ElementEADPackageTypeBUSHING     "BushingEAD">
+<!ENTITY ElementEADPackageTypeSPRING      "SpringEAD">
+<!ENTITY ElementEADPackageTypeSHELL       "ShellEAD">
+<!ENTITY ElementEADPackageTypeBEAM        "BeamEAD">
+<!ENTITY ElementEADPackageTypeCMASS       "CMassEAD">
+<!ENTITY ElementEADPackageTypeCGAP        "GapEAD">
+
+<!--                  ====================================
+                           Element Associated Data type
+                      ====================================
+
+    Correspond to ead bit mask enum in sfom_ead_enum.h
+
+-->
+<!ENTITY ElementEADTypeUNDEFINED      "blank">
+<!ENTITY ElementEADTypeMCID_THETA     "material orientation">
+<!ENTITY ElementEADTypeORIENTATION    "orientation">
+<!ENTITY ElementEADTypeMASS           "mass">
+<!ENTITY ElementEADTypeSTIFFNESS      "stiffness">
+<!ENTITY ElementEADTypeTHICKNESS      "thickness">
+<!ENTITY ElementEADTypeEND_RELEASES   "end releases">
+<!ENTITY ElementEADTypeEND_OFFSETS    "end offsets">
+<!ENTITY ElementEADTypeZOFFSET        "zoffset">
+
+
+<!--                  ====================================
+                               Section topology filter
+                      ====================================
+
+    Corresponds to sfom_beam_enum.h
+    
+    Any cross section
+    A solid cross section, the geometry has one loop
+    A thin wall cross section, the geometry has more than one loop
+
+ -->
+
+<!ENTITY SectionAny "SectionTopologyAny">
+<!ENTITY SectionSolid "SectionTopologySolid">
+<!ENTITY SectionThinWall "SectionTopologyThinWall">
+
+<!--                  ====================================
+                               Neutral section type
+                      ====================================
+
+    Corresponds to sfom_beam_enum.h
+
+ -->
+
+<!ENTITY SectionTypeROD "0">
+<!--  -->
+<!ENTITY SectionTypeTUBE "1">
+<!--  -->
+<!ENTITY SectionTypeTUBE1 "2">
+<!--  -->
+<!ENTITY SectionTypeTUBE2 "3">
+<!--  -->
+<!ENTITY SectionTypePIPE "4">
+<!--  -->
+<!ENTITY SectionTypePIPE1 "5">
+<!--  -->
+<!ENTITY SectionTypeBAR "6">
+<!--  -->
+<!ENTITY SectionTypeBOX "7">
+<!-- . -->
+<!ENTITY SectionTypeBOX1 "8">
+<!--  -->
+<!ENTITY SectionTypeBOX2 "9">
+<!--  -->
+<!ENTITY SectionTypeBOX3 "10">
+<!--  -->
+<!ENTITY SectionTypeI "11">
+<!--  -->
+<!ENTITY SectionTypeI1 "12">
+<!--  -->
+<!ENTITY SectionTypeI2 "13">
+<!--  -->
+<!ENTITY SectionTypeI3 "14">
+<!--  -->
+<!ENTITY SectionTypeT "15">
+<!--  -->
+<!ENTITY SectionTypeT1 "16">
+<!--  -->
+<!ENTITY SectionTypeT2 "17">
+<!--  -->
+<!ENTITY SectionTypeT3 "18">
+<!--  -->
+<!ENTITY SectionTypeCHAN "19">
+<!--  -->
+<!ENTITY SectionTypeCHAN1 "20">
+<!--  -->
+<!ENTITY SectionTypeCHAN2 "21">
+<!--  -->
+<!ENTITY SectionTypeCHAN3 "22">
+<!--  -->
+<!ENTITY SectionTypeCHAN4 "23">
+<!--  -->
+<!ENTITY SectionTypeHAT "24">
+<!--  -->
+<!ENTITY SectionTypeHAT1 "25">
+<!--  -->
+<!ENTITY SectionTypeHAT2 "26">
+<!--  -->
+<!ENTITY SectionTypeHAT3 "27">
+<!--  -->
+<!ENTITY SectionTypeHAT4 "28">
+<!--  -->
+<!ENTITY SectionTypeH "29">
+<!--  -->
+<!ENTITY SectionTypeL "30">
+<!--  -->
+<!ENTITY SectionTypeL1 "31">
+<!--  -->
+<!ENTITY SectionTypeZ "32">
+<!--  -->
+<!ENTITY SectionTypeZ1 "33">
+<!--  -->
+<!ENTITY SectionTypeZ2 "34">
+<!--  -->
+<!ENTITY SectionTypeZ3 "35">
+<!--  -->
+<!ENTITY SectionTypeHEXA "36">
+<!--  -->
+<!ENTITY SectionTypeHEXAGONAL "37">
+<!--  -->
+<!ENTITY SectionTypePOLYGON "38">
+<!--  -->
+<!ENTITY SectionTypeCROSS "39">
+<!--  -->
+<!ENTITY SectionTypeTRAPE "40">
+<!--  -->
+<!ENTITY SectionTypeQUARD "41">
+<!--  -->
+<!ENTITY SectionTypeKEYIN "42">
+<!--  -->
+<!ENTITY SectionTypeUSERSOLID "43">
+<!--  -->
+<!ENTITY SectionTypeGENERAL "44">
+<!--  -->
+
+<!--                  ====================================
+                               Neutral material type
+                      ====================================
+
+    Correspond to uf_sf_types.h
+
+ -->
+
+<!ENTITY MaterialTypeISOTROPIC "0">
+<!ENTITY MaterialTypeORTHOTROPIC "1">
+<!ENTITY MaterialTypeANISOTROPIC "2">
+<!ENTITY MaterialTypeFORMABILITY "3">
+<!ENTITY MaterialTypeFLUID "4">
+<!ENTITY MaterialTypeHYPERELASTIC "5">
+<!ENTITY MaterialTypeMOONEYRIVLIN "6">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATA "7">
+<!ENTITY MaterialTypePOLYNOMIAL "8">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIAL "9">
+<!ENTITY MaterialTypeOGDEN "10">
+<!ENTITY MaterialTypeOGDENTESTDATA "11">
+<!ENTITY MaterialTypeFOAM "12">
+<!ENTITY MaterialTypeFOAMTESTDATA "13">
+<!ENTITY MaterialTypeBLATZ "14">
+<!ENTITY MaterialTypeARRUDABOYCE "15">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATA "16">
+<!ENTITY MaterialTypeNEOHOOKE "17">
+<!ENTITY MaterialTypeNEOHOOKETESTDATA "18">
+<!ENTITY MaterialTypeMARLOW "19">
+<!ENTITY MaterialTypeVANDERWAALS "20">
+<!ENTITY MaterialTypeYEOH "21">
+<!ENTITY MaterialTypeYEOHTESTDATA "22">
+<!ENTITY MaterialTypeGENT "23">
+<!ENTITY MaterialTypeGASKET "24">
+<!ENTITY MaterialTypeGASKETBEHAVIOR "25">
+
+<!ENTITY MaterialTypeISOTROPICString "Isotropic">
+<!ENTITY MaterialTypeORTHOTROPICString "Orthotropic">
+<!ENTITY MaterialTypeANISOTROPICString "Anisotropic">
+<!ENTITY MaterialTypeFORMABILITYString "Formability">
+<!ENTITY MaterialTypeFLUIDString "Fluid">
+<!ENTITY MaterialTypeHYPERELASTICString "Hyperelastic - general">
+<!ENTITY MaterialTypeMOONEYRIVLINString "Mooney-Rivlin">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATAString "Mooney-Rivlin Test Data">
+<!ENTITY MaterialTypePOLYNOMIALString "Polynomial">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIALString "Reduced Polynomial">
+<!ENTITY MaterialTypeOGDENString "Ogden">
+<!ENTITY MaterialTypeOGDENTESTDATAString "Ogden Test Data">
+<!ENTITY MaterialTypeFOAMString "Foam">
+<!ENTITY MaterialTypeFOAMTESTDATAString "Foam Test Data">
+<!ENTITY MaterialTypeBLATZString "Blatz">
+<!ENTITY MaterialTypeARRUDABOYCEString "Arruda-Boyce">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATAString "Arruda-Boyce Test Data">
+<!ENTITY MaterialTypeNEOHOOKEString "Neo Hooke">
+<!ENTITY MaterialTypeNEOHOOKETESTDATAString "Marlow">
+<!ENTITY MaterialTypeMARLOWString "Van Der Waals">
+<!ENTITY MaterialTypeVANDERWAALSString "Yeoh">
+<!ENTITY MaterialTypeYEOHString "Yeoh Test Data">
+<!ENTITY MaterialTypeYEOHTESTDATAString "Gent">
+<!ENTITY MaterialTypeGENTString "Gent">
+<!ENTITY MaterialTypeGASKETString "Gasket">
+<!ENTITY MaterialTypeGASKETBEHAVIORString "Gasket Behavior">
+
+<!--                  ====================================
+                               Units of Measure
+                      ====================================
+     correlates to units_general.h (or sfunit_def.h)
+ -->
+<!ENTITY MeasureDomain "-2">
+<!-- (Field Domain) -->
+<!ENTITY MeasureUnitLess "-1">
+<!ENTITY MeasureLength "0">
+<!-- (mm) -->
+<!ENTITY MeasureArea "1">
+<!-- (mm^2) -->
+<!ENTITY MeasureVolume "2">
+<!-- (mm^3) -->
+<!ENTITY MeasureMass "3">
+<!-- (kg) -->
+<!ENTITY MeasureMassDensity "4">
+<!-- (kg/mm^3) -->
+<!ENTITY MeasureFatigueStrCoeff "5">
+<!-- (mN/mm^2) -->
+<!ENTITY MeasureTime "6">
+<!-- (sec) -->
+<!ENTITY MeasureAngle "7">
+<!-- (degrees)-->
+<!ENTITY MeasureVelocity "8">
+<!-- (mm/s)-->
+<!ENTITY MeasureAcceleration "9">
+<!-- (mm/s^2) -->
+<!ENTITY MeasureForce "10">
+<!-- (mN = kg*mm/s^2) -->
+<!ENTITY MeasureForcePerLength  "11">
+<!-- (mN/mm) -->
+<!ENTITY MeasureForcePerArea  "12">
+<!-- (mN/mm^2) -->
+<!ENTITY MeasureMoment "13">
+<!-- (mN-mm) -->
+<!ENTITY MeasureStress "14">
+<!-- (kPa = mN/mm^2)-->
+<!ENTITY MeasureStrain "15">
+<!-- (mm/mm) -->
+<!ENTITY MeasureStrainEnergy "16">
+<!-- (mN-mm)-->
+<!ENTITY MeasureStrainEnergyDensity "17">
+<!-- (mN-mm/mm^3) -->
+<!ENTITY MeasureTemperature "18">
+<!ENTITY MeasureHeatFlux "19">
+<!-- (microW/mm^2-C) -->
+<!ENTITY MeasureConvection "20">
+<!-- (mN-mm) -->
+<!ENTITY MeasureThermConductivity "21">
+<!-- (micro W/(mm*C)) -->
+<!ENTITY MeasureThermExpansion "22">
+<!-- (1/C) -->
+<!ENTITY MeasureHeatCapacity "23">
+<!-- (micro J/K = kg*mm^2/(K*s^2)) -->
+<!ENTITY MeasureAngularVelocity     "24">
+<!-- (rad/sec)   -->
+<!ENTITY MeasureAngularAcceleration "25">
+<!-- (rad/sec^2) -->
+<!ENTITY MeasureFatigueLife "26">
+<!-- (dutycycles) -->
+<!ENTITY MeasureHeatFlow "27">
+<!-- (microW) -->
+<!ENTITY MeasureThermEnergy "28">
+<!-- (microJ) -->
+<!ENTITY MeasureMassInertia "29" >
+<!-- (kg-mm^2) Need to Add?? -->
+<!ENTITY MeasureDynamicViscosity "30">
+<!-- (kg/(mm*s))-->
+<!ENTITY MeasureHeatGeneration "31">
+<!-- (microW/mm^3) -->
+<!ENTITY MeasureThermalConductance "32">
+<!-- (microW/C) -->
+<!ENTITY MeasureConductancePerLength "33">
+<!-- (microW/(mm*C)) -->
+<!ENTITY MeasureThermalResistance "34">
+<!-- (C/microW) -->
+<!ENTITY MeasureMassFlowRate "35">
+<!-- (kg/s) -->
+<!ENTITY MeasureVolumeFlowRate "36">
+<!-- (mm^3/s) -->
+<!ENTITY MeasureTemperatureDifference "37">
+<!-- (C) -->
+<!ENTITY MeasureFrequency "38">
+<!-- (cycles/s)  -->
+<!ENTITY MeasureCoefficientPerLength "39">
+<!-- (1/mm) -->
+<!ENTITY MeasureAreaMomentInertia "40">
+<!-- (mm^4) -->
+<!ENTITY MeasureViscousDamping "41">
+<!ENTITY MeasureEnergy "42">
+<!ENTITY MeasurePower "43">
+<!ENTITY MeasureMomentum "44">
+<!ENTITY MeasureTemperatureGradient "45">
+<!ENTITY MeasureEnergyPerMass "46">
+<!ENTITY MeasureEnergyDispRateMass "47">
+<!ENTITY MeasureMassFlux "48">
+<!ENTITY MeasureMassPerLength "49">
+<!ENTITY MeasureMassPerArea "50">
+<!ENTITY MeasureElectricCurrent "51">
+<!ENTITY MeasureElectricalResistance "52">
+<!ENTITY MeasureElectricalResistivity "53">
+<!ENTITY MeasureElectricalConductance "54">
+<!ENTITY MeasureVoltage  "55">
+<!ENTITY MeasureVoltagePerTemperature  "56">
+<!ENTITY MeasureDiffusivity "57">
+<!ENTITY MeasureLatentHeatPerMass "58">
+<!ENTITY MeasureThermalEnergyPerArea  "59">
+<!ENTITY MeasureThermalPIDGain  "60">
+<!ENTITY MeasureThermalPIDIntegral "61">
+<!ENTITY MeasureThermalPIDDerivative "62">
+<!ENTITY MeasureHeadLossCoeff  "63">
+<!ENTITY MeasureTsaiWuCoeff "64">
+<!ENTITY MeasureMassLength "65">
+<!ENTITY MeasurePerVolume "66">
+<!ENTITY MeasureWarpingConstant  "67">
+<!-- (mm^6) -->
+<!ENTITY MeasureStressCompliance  "68">
+<!ENTITY MeasureLengthPerPressure  "69">
+<!ENTITY MeasurePressurePerLength  "70">
+<!ENTITY MeasurePressurePerVelocity  "71">
+<!ENTITY MeasureMomentPerAngle  "72">
+<!ENTITY MeasureTerminal "73">
+
+
+
+<!-- Domains are from field_domain_internal.h.
+     The domain numbers are maintained as their enums
+ -->
+
+<!ENTITY DomainUser "-1">
+<!ENTITY DomainGeneral "0">
+<!ENTITY DomainAngle "3">
+<!ENTITY DomainTime "5">
+<!ENTITY DomainTemperature "6">
+<!ENTITY DomainConstant "16">
+<!ENTITY DomainFrequency "4">
+<!ENTITY DomainAngleAngle "17">
+<!ENTITY DomainGeneral3d "11">
+<!ENTITY DomainParameter "1">
+<!ENTITY DomainParameterPlane "8">
+<!ENTITY DomainSpatial "13">
+<!ENTITY DomainLength "2">
+<!ENTITY DomainGeneral2d "7">
+<!ENTITY DomainPlane "9">
+<!ENTITY DomainNodeID "18">
+<!ENTITY DomainGeneral2d "7">
+
+<!--
+The following domains are no longer system domains, but rather they are "user" domains
+
+<!ENTITY DomainVector3Vector3   "19">
+<!ENTITY DomainVector3Vector3Length "20">
+<!ENTITY DomainAngleAngleAngleAngle "21">
+<!ENTITY DomainAngleAngleAngleAngleLength "22">
+
+This was not in use, but it has been removed as a system domain also
+<!ENTITY DomainAngleAngleLength "18">
+-->
+
+<!--
+The following domains are no longer in use but are still system domains...
+
+<!ENTITY DomainPole "10">
+<!ENTITY DomainParameterSpace "12">
+<!ENTITY DomainCylindrical "14">
+<!ENTITY DomainSpherical "15">
+-->
+
+
+
+<!--                  ====================================
+                               Selection Classes
+                      ====================================
+     correlates to the enum (SFOM_nx_bc_class2_t) and the #defines in sfom.h
+ -->
+<!ENTITY BcNoneClass "None">
+<!ENTITY BcInferFromIDTableClass "InferFromIDTable">
+<!ENTITY BcNodeClass "Node">
+<!ENTITY BcOrderedNodeClass "OrderedNode">
+<!ENTITY BcElmClass  "Elm">
+<!ENTITY Bc0DELMClass "0DElm">
+<!ENTITY Bc1DELMClass "1DElm">
+<!ENTITY Bc2DELMClass "2DElm">
+<!ENTITY Bc3DELMClass "3DElm">
+<!ENTITY BcElmEdgeClass "ElmEdge">
+<!ENTITY BcElmFaceClass "ElmFace">
+<!ENTITY BcPointClass "Point">
+<!ENTITY BcVertexClass "Vertex">
+<!ENTITY BcCurveClass "Curve">
+<!ENTITY BcCircularCurveClass "CircularCurve">
+<!ENTITY BcEdgeClass "Edge">
+<!ENTITY BcCircularEdgeClass "CircularEdge">
+<!ENTITY BcFaceClass "Face">
+<!ENTITY BcPlanarFaceClass "PlanarFace">
+<!ENTITY BcCylindricalFaceClass "CylindricalFace">
+<!ENTITY BcBodyClass "Body">
+<!ENTITY BcPartClass "Part">
+<!ENTITY BcEdgesOnFaceClass "EdgesOnFace">
+
+
+<!--                  ====================================
+                               Group Reference Filter Classes
+                      ====================================
+     correlates to the enum (SFEM_Group_ReferenceFilterClass_t) and the #defines in sfem_group_enum.h
+ -->
+<!ENTITY GRFilterNodeClass "Node">
+<!ENTITY GRFilterElmClass  "Elm">
+<!ENTITY GRFilterPointClass "Point">
+<!ENTITY GRFilterCurveClass "Curve">
+<!ENTITY GRFilterCircularCurveClass "CircularCurve">
+<!ENTITY GRFilterFaceClass "Face">
+<!ENTITY GRFilterPlanarFaceClass "PlanarFace">
+<!ENTITY GRFilterCylindricalFaceClass "CylindricalFace">
+<!ENTITY GRFilterBodyClass "Body">
+<!ENTITY GRFilterPartClass "Part">
+<!ENTITY GRFilterMeshClass "Mesh">
+<!ENTITY GRFilterCsysClass "CSYS">
+<!ENTITY GRFilterNoneClass "None">
+
+
+<!--                  ====================================
+                        Orientation Specifications
+                      ====================================
+ -->
+<!ENTITY GlobalCsys "0">
+<!ENTITY BcCsysLocalOrGlobal "-1">
+<!-- This is for targetsets which could have items 0 thru 3 -->
+<!ENTITY MinBcCsysItems "0">
+<!ENTITY BcCsysGlobal "0">
+<!ENTITY BcCsysCartesian "1">
+<!ENTITY BcCsysCylindrical "2">
+<!ENTITY BcCsysSpherical "3">
+<!ENTITY BcCsysInferredNormal "4">
+<!ENTITY BcCsysInferredFromZaxis "5">
+<!ENTITY BcCsysInferredFromGeomAxis "6">
+<!ENTITY BcCsysInferredEdgeFace "7">
+<!ENTITY BcCsysInferredFaceNormal "8">
+<!ENTITY BcCsysInferredXVectorFaceNormalZ "9">
+<!ENTITY BcCsysInferredIntoElement "10">
+<!ENTITY BcCsysInferredEdgeNormalXYPlaneIntoElement "11">
+<!ENTITY BcCsysInferredEdgeNormalYZPlaneIntoElement "12">
+<!ENTITY BcCsysInferredEdgeNormalZXPlaneIntoElement "13">
+<!ENTITY BcCsysInferredTangent                      "14">
+<!ENTITY MaxBcCsysItems "15">
+
+<!-- Added these for the NX5 Automatic Contact Pairs - Kostas Hardaloupas -->
+<!ENTITY FacePairAll "0">
+<!ENTITY FacePairBodies "1">
+<!ENTITY FacePair11  "2">
+
+<!--                  ====================================
+                        Constraint Types
+                      ====================================
+ -->
+<!ENTITY userDefinedConstraint "0">
+<!ENTITY enforcedDisplacementConstraint "1">
+<!ENTITY fixedConstraint "2">
+<!ENTITY fixedTranslationConstraint "3">
+<!ENTITY fixedRotationConstraint "4">
+<!ENTITY simplySupportedConstraint "5">
+<!ENTITY sliderConstraint "6">
+<!ENTITY hingeConstraint "7">
+<!ENTITY cylindricalConstraint "8">
+<!ENTITY planarConstraint "9">
+<!ENTITY rollerConstraint "10">
+<!ENTITY universalConstraint "11">
+<!ENTITY symmetricConstraint "12">
+<!ENTITY antiSymmetricConstraint "13">
+<!ENTITY maxConstraintTypes "13">
+<!ENTITY minConstraintTypes "0">
+
+
+<!--                  ====================================
+                        Display Symbols
+                      ====================================
+     correlates to defines and enum (SFOM_LANG_bc_display_symbol_t) in sfom_lang_bc_descriptors.h
+ -->
+<!ENTITY BcDisp_CONE                                                       "Cone">
+<!ENTITY BcDisp_CONNECTEDCONES                                             "ConnectedCones">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT                                      "SingleHeadedResultant">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_HOLLOWCYLINDERBASE                   "SingleHeadedResultant_HollowCylinderBase">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_CIRCLEMIDPOINT                       "SingleHeadedResultant_CircleMidpoint">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_DOUBLEARROWMIDPOINT_DOUBLECIRCLEBASE "SingleHeadedResultant_DoubleArrowMidpoint_DoubleCircleBase">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_CIRCLETIP                            "SingleHeadedResultant_CircleTip">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_CIRCLETIP_CYLINDERBASE               "SingleHeadedResultant_CircleTip_CylinderBase">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_HOLLOWCYLINDERTIP                    "SingleHeadedResultant_HollowCylinderTip">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_CUBEHOLEBASE                         "SingleHeadedResultant_CubeHoleBase">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT                                      "DoubleHeadedResultant">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_CIRCLEMIDPOINT                       "DoubleHeadedResultant_CircleMidpoint">
+<!ENTITY BcDisp_COMPONENT                                                  "Component">
+<!ENTITY BcDisp_COMPONENTDIRECTIONS                                        "ComponentDirections">
+<!ENTITY BcDisp_COMPONENTCONES                                             "ComponentCones">
+<!ENTITY BcDisp_COMPONENTCONES_RESULTANTCONE                               "ComponentCones_ResultantCone">
+<!ENTITY BcDisp_COMPONENTDOFS_DISPLACEMENTTIP_ROTATIONMIDPOINT             "ComponentDOFs_DisplacementTip_RotationMidpoint">
+<!ENTITY BcDisp_MULTIPLECOMPONENTVALUES_PER_AXIS_CONES_AND_DISKS           "MultipleComponentValues_per_Axis_Cones_and_Disks">
+<!ENTITY BcDisp_HOLLOWCYLINDER                                             "HollowCylinder">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_REVERSE                              "SingleHeadedResultant_Reverse">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_CYLINDERMIDPOINT                     "SingleHeadedResultant_CylinderMidpoint">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT                               "Broken_SingleHeadedResultant">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_ENDCONE                       "Broken_SingleHeadedResultant_EndCone">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_CIRCLESMIDPOINT               "Broken_SingleHeadedResultant_CirclesMidpoint">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_CIRCLESMIDPOINT_ENDCONE       "Broken_SingleHeadedResultant_CirclesMidpoint_EndCone">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_MIDARROWS                     "Broken_SingleHeadedResultant_MidArrows">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_MIDARROWS_ENDCONE             "Broken_SingleHeadedResultant_MidArrows_EndCone">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_MIDLINES                      "Broken_SingleHeadedResultant_MidLines">
+<!ENTITY BcDisp_BROKEN_SINGLEHEADEDRESULTANT_MIDLINES_ENDCONE              "Broken_SingleHeadedResultant_MidLines_EndCone">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_FANMIDPOINT                          "DoubleHeadedResultant_FanMidpoint">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_FANMIDPOINT_REVERSE                  "DoubleHeadedResultant_FanMidpoint_Reverse">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_BOTHENDS_FANMIDPOINT                 "DoubleHeadedResultant_BothEnds_FanMidpoint">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_HOLLOWCYLINDERMIDPOINT               "DoubleHeadedResultant_HollowCylinderMidpoint">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_BLOCKMIDPOINT_ARROWTOP               "DoubleHeadedResultant_BlockMidpoint_ArrowTop">
+<!ENTITY BcDisp_DOUBLEHEADEDRESULTANT_POROUSBLOCKMIDPOINT_ARROWTOP         "DoubleHeadedResultant_PorousBlockMidpoint_ArrowTop">
+<!ENTITY BcDisp_SQUARE                                                     "Square">
+<!ENTITY BcDisp_CONNECTEDSQUARES                                           "ConnectedSquares">
+<!ENTITY BcDisp_SQUAREOPENING                                              "SquareOpening">
+<!ENTITY BcDisp_SQUARESCREEN                                               "SquareScreen">
+<!ENTITY BcDisp_SQUARE_BLOCKMIDPOINT                                       "Square_BlockMidpoint">
+<!ENTITY BcDisp_SQUAREWINDOW                                               "SquareWindow">
+<!ENTITY BcDisp_REVERSE_SINGLEHEADEDRESULTANT_HOLLOWCYLINDERBASE           "Reverse_SingleHeadedResultant_HollowCylinderBase">
+<!ENTITY BcDisp_HORIZONTAL_SINGLEHEADEDRESULTANT_HOLLOWCYLINDERBASE        "Horizontal_SingleHeadedResultant_HollowCylinderBase">
+<!ENTITY BcDisp_TRICOMPONENTCONES                                          "TriComponentCones">
+<!ENTITY BcDisp_TRICOMPONENTCONES_REVERSE                                  "TriComponentCones_Reverse">
+<!ENTITY BcDisp_SINGLEHEADEDRESULTANT_SENSOR "SingleHeadedResultant_Sensor">
+<!ENTITY BcDisp_X_BLOCK                                                    "X_Block">
+<!ENTITY BCDisp_SINGLEHEADEDRESULTANT_CIRCLEARROWS                         "SingleHeadedResultant_CircleArrows">
+<!ENTITY BcDisp_CONE_DOF                                                   "ConeDOF">
+<!ENTITY BcDisp_SQUARE_DOF                                                 "SquareDOF">
+<!--                  ====================================
+                        Distribution Algorithms
+                      ====================================
+     correlates to defines and enum (SFOM_LANG_bc_distribution_t) in sfom_lang_bc_descriptors.h
+ -->
+<!ENTITY BcDistribution_TotalPerObj "0" >
+<!ENTITY BcDistribution_Geometric   "1" >
+<!ENTITY BcDistribution_Spatial     "2" >
+<!ENTITY BcDistribution_Parabolic   "3" >
+<!ENTITY BcDistribution_Sinusoidal  "4" >
+<!ENTITY BcDistribution_Constant    "5" >
+<!ENTITY BcDistribution_Hydrostatic "6" >
+<!ENTITY BcDistribution_Torque      "7" >
+<!ENTITY BcDistribution_DerivedSet_Mapped   "8" >
+<!ENTITY BcDistribution_DerivedSet_Cyl   "9" >
+<!ENTITY BcDistribution_DerivedSet_Rec   "10" >
+<!ENTITY BcDistribution_DerivedSet_Sph  "11" >
+<!ENTITY BcDistribution_Mapped_Manual   "12" >
+<!ENTITY BcDistribution_Coupled_DOF   "13" >
+<!ENTITY BcDistribution_Centrifugal "14" >
+<!ENTITY BcDistribution_Single_Elem_Bolt   "15" >
+<!ENTITY BcDistribution_Multi_Elem_Bolt   "16" >
+<!ENTITY BcDistribution_Node_ID_Table  "17" >
+<!ENTITY BcDistribution_ConstOverallSpatialField  "18" >
+<!ENTITY BcDistribution_ConstPropSpatialField  "19" >
+<!ENTITY BcDistribution_GeomOverallSpatialField  "20" >
+<!ENTITY BcDistribution_Multi_Point_Constraint   "21" >
+<!ENTITY BcDistribution_Constant_Auto   "22" >
+<!ENTITY maxBcDistributionTypes "22">
+<!ENTITY minBcDistributionTypes "0">
+
+<!ENTITY autopair_parentTypeSSSO "SSSO">
+<!ENTITY autopair_parentTypeLoad "Load">
+<!ENTITY autopair_parentTypeConstraint "Constraint">
+
+
+
+<!--  =================================================================
+                               Environments
+      ================================================================ -->
+
+<!ENTITY minAnlType "0">
+<!ENTITY unknownAnlType "0">
+<!ENTITY structuralAnlType "1">
+<!ENTITY thermalAnlType "2">
+<!ENTITY flowAnlType "3">
+<!ENTITY coupledAnlType "4">
+<!ENTITY mappingAnlType "5">
+<!ENTITY maxAnlTypes "5">
+
+<!ELEMENT Materials (Material)*>
+<!ATTLIST Materials
+    versionNumber CDATA #REQUIRED 
+    additionalUserProperties CDATA  #FIXED "false"
+>
+
+<!ELEMENT Material  (Property|PropertyField)*>
+<!ATTLIST Material
+    name          CDATA #REQUIRED
+    neutralName   CDATA #REQUIRED
+    type ( 0 | 1 | 2 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25  ) #REQUIRED
+    viewProperty  CDATA ""
+    contextHelp   CDATA ""
+    versionNumber CDATA #REQUIRED 
+>
+
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kiran Gorur (UGS PLM Solutions) -->
+<!ELEMENT Property ((DefaultValue)?, (LowerBound)?, (UpperBound)?, (ExcludeValue)?, (FieldDefn | MatrixDefn | TableDefn)?, (ReferenceFilterClass)*)>
+<!ATTLIST Property
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    neutralName CDATA #REQUIRED
+    valueType (nil          |
+               int          |
+               float        |
+               char         |
+               enum         |
+               externalMenu |
+               bool         |
+               vector       |
+               multistring  |
+               filename     |
+               catalog      |
+               dirpath      |
+               material     |
+               matrix       |
+               section      |
+               groupRef     |
+               regionRef    |
+               field        |
+               scalarField  |
+               time         |
+               axis         |
+               modelingObject        |
+               modelingObjectArray   |
+               physicalPropertyTable |
+               plyMaterial           |
+               float_array           |
+               float_table           |
+               int_array             |
+               point                 |
+               action                |
+               targetSet             |
+               selectionRef          |
+               section_orientation   |
+               section_offset |
+               section_ref |
+               dofsetRef ) "nil"
+    valueSubtype CDATA ""
+    selectionLabel CDATA ""
+    selectionBoxLabel CDATA ""
+    valueChoices CDATA #IMPLIED
+    valueLabel CDATA #IMPLIED
+    valueToolTip CDATA #IMPLIED
+    Dimensions ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72) "-1"
+    Type (default) "default"
+    parentProperty CDATA "0"
+    parentPropertyValToBeSensitive CDATA "0"
+    propertyVisibleOrSensitive ( visible | sensitive ) "visible"
+    tabLabel CDATA ""
+    boxLabel CDATA "#PROP"
+    retainValue ( true | false ) "false"
+    displayName CDATA ""
+    action CDATA ""
+    plot (true | false) "true"
+    scaleFactor (true | false) "true"
+    scalarOnly (true | false) "false"
+    noObjectSelectedLabel CDATA "None"
+    allowUnspecifiedValue ( true | false ) "true"
+    relatedRegionTargetSets CDATA ""
+>
+<!ELEMENT DefaultValue EMPTY>
+<!ATTLIST DefaultValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT UpperBound EMPTY>
+<!ATTLIST UpperBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT LowerBound EMPTY>
+<!ATTLIST LowerBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT ExcludeValue EMPTY>
+<!ATTLIST ExcludeValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT ReferenceFilterClass EMPTY>
+<!ATTLIST ReferenceFilterClass
+    name CDATA #IMPLIED
+    groupFilterClassName CDATA #IMPLIED
+    selectionFilterClassName CDATA #IMPLIED
+>
+<!--
+      .=============.
+      |Property...  |
+      |             |
+      ·==v==========·
+         |
+         |
+      .=(1)=======.
+      |FieldDefn |
+      |          |
+      ·==v=======·
+         |
+         |
+      .=(*)=======.
+      |Domain     |
+      |           |  The "Domain"s are to define the independent variable domains of a Field
+      ·==v========·
+         |           There can be 'n' number of independent domains for each field
+         |           and each domain can have 'm' number of variables; note that specified
+      .=(*)=======.  independent variables need to map to the specified independent domain
+      |Variable   |
+      |           |
+      ·===========·
+  -->
+<!ELEMENT FieldDefn ((Domain)*)>
+<!ATTLIST FieldDefn
+    nDomains CDATA "1"
+>
+<!ELEMENT Domain ((Variable)*)>
+<!ATTLIST Domain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 ) "-1"
+    nVariables CDATA "0"
+>
+<!ELEMENT Variable EMPTY>
+<!ATTLIST Variable
+    Name CDATA ""
+    Measure ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 ) "-1"
+    evaluationValue CDATA "-777777."
+    evaluationProperty CDATA ""
+    propertyType (Solution | Step | None ) "None"
+>
+<!ELEMENT MatrixDefn ((ColumnHeading)*, (RowHeading)*, (DisableCell)*, (HideCell)*, (DefaultCellValue)*)>
+<!ATTLIST MatrixDefn
+    nCols (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64) #REQUIRED
+    nRows (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64) #REQUIRED
+    matrixType (symmetric | general) "general"
+>
+<!ELEMENT ColumnHeading EMPTY>
+<!ATTLIST ColumnHeading
+    column CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!ELEMENT RowHeading EMPTY>
+<!ATTLIST RowHeading
+    row CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!ELEMENT HideCell EMPTY>
+<!ATTLIST HideCell
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+>
+<!ELEMENT DisableCell EMPTY>
+<!ATTLIST DisableCell
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+>
+<!ELEMENT DefaultCellValue EMPTY>
+<!ATTLIST DefaultCellValue
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+
+
+<!--
+   Defintion for a Table of Properties
+   A table can have any number of Column, each defined by an
+   included TableProperty.
+   The number of rows in the table is defined by nRows.
+   If nRows is set to "dynamic" then the number of rows in this table is
+   dynamically defined by the user of this descriptor.
+   -->
+<!ELEMENT TableDefn (TableProperty+)>
+<!ATTLIST TableDefn
+    nRows CDATA '"1"'
+>
+<!ELEMENT TableProperty (DefaultValue, (LowerBound)?, (UpperBound)?)>
+<!ATTLIST TableProperty
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    neutralName CDATA #REQUIRED
+    valueType (int | float) "float"
+    Dimensions (-1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72) "-1"
+>
+<!--
+          .===============.
+          |PropertyField  |
+          |               |
+          .v============v=.
+           |            |
+           |            |
+     .=====v======.     |
+     |DepDomain   |     |  The "DepDomain" is used to define the field's dependent domain
+     |            |     |
+     .==v=========.     |  If the specified domain has measures, then variable validation will
+        |               |  simply check that it is a valid domain.  No order is specified or
+        |               |  names for validation, so it is NOT recommended unless all variables
+        |               |  in the domain have unique measures; otherwise it will be impossible
+        |               |  for formatters to differentiate the variables to map to output=
+     .==v=========.     |
+     |DepVariable |     |  If the specified domain has variables, then the specified variables
+     |            |     |  must constitute the valid measures for the domain and variables on
+     .==v=========.     |  the selected field should be mapped in order.
+        |               |
+        |               |  If the specified variables have names, the order is irrelevant, and
+     .=(*)=========.    |  the mapping will be done based on name AND measure.
+     |ExcludeValue |    |
+     |             |    |
+     .=============.    |
+                     .==v=========.
+                     |FieldDefn   |
+                     |            |
+                     .==v=========.
+                        |
+                       .=. See FieldDefn for info on independent domain spec=
+-->
+<!ELEMENT PropertyField (DepDomain, FieldDefn, FormulaField?)>
+<!ATTLIST PropertyField
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    neutralName CDATA #REQUIRED
+    valueType (generalField | vectorField) "generalField"
+    inferredSelection (true | false) "false"
+    plot (true | false) "true"
+    scaleFactor (true | false) "true"
+    valueSubtype CDATA ""
+    icon CDATA #IMPLIED
+    valueChoices CDATA #IMPLIED
+    valueLabel CDATA #IMPLIED
+    valueToolTip CDATA #IMPLIED
+    Dimensions ( -2 ) "-2"
+    Type (default) "default"
+    parentProperty CDATA "0"
+    parentPropertyValToBeSensitive CDATA "0"
+    propertyVisibleOrSensitive ( visible | sensitive ) "visible"
+    menuAttachProp CDATA ""
+    attachType ( attachRight ) "attachRight"
+    tabLabel CDATA ""
+    boxLabel CDATA "Field"
+    retainValue ( true | false ) "false"
+    displayName CDATA ""
+    action CDATA ""
+    scalarOnly ( true | false ) "false"
+    noObjectSelectedLabel CDATA "None"
+    allowUnspecifiedValue ( true | false ) "true"
+    relatedRegionTargetSets CDATA ""
+
+>
+<!ELEMENT DepDomain ((DepVariable)*, (ExcludeValue)*)>
+<!ATTLIST DepDomain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 ) "-1"
+    nVariables CDATA "0"
+    LowerBound CDATA "-777777."
+    LowerBound_inclusive (true | false) "false"
+    UpperBound CDATA "-777777."
+    UpperBound_inclusive (true | false) "false"
+>
+<!ELEMENT DepVariable ((ExcludeValue)*)>
+<!ATTLIST DepVariable
+    Name CDATA ""
+    DisplayName CDATA ""
+    NeutralName CDATA ""
+    Measure ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 61 | 62 | 63 | 64 | 65 | 66 | 67 ) "-1"
+    DefaultValue CDATA "-777777."
+    LowerBound CDATA "-777777."
+    LowerBound_inclusive (true | false) "false"
+    UpperBound CDATA "-777777."
+    UpperBound_inclusive (true | false) "false"
+>
+<!ELEMENT FormulaField EMPTY>
+<!ATTLIST FormulaField
+    value CDATA #REQUIRED
+>

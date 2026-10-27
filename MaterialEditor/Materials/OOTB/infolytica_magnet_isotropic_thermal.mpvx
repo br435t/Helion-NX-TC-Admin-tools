@@ -1,0 +1,45 @@
+
+
+<!-- Thermal Conductivity -->
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="TempConductivityBehaviorType"
+                   valueChoices="&Choice;Isotropic=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ThermalConductivity"/>
+
+
+
+<!-- Specific Heat Capacity -->
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="SpecificHeat"/>
+
+
+<!-- Volumetric Expansion Coefficient / Ideal Gas -->
+<ReferenceProperty neutralName="ThermalExpansionConstant"
+                   displayName="Thermal Expansion Coefficient (B)"/>
+<ReferenceProperty neutralName="ThermalExpansionTemperature"
+                   displayName="Temperature Dependent Thermal Expansion Coefficient (B)"/>
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+
+<!-- Dynamic Viscosity -->
+<ReferenceProperty neutralName="DynamicViscosityControl"
+                   defaultValue="0"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Constant or Temperature=0"/>
+<ReferenceProperty neutralName="DynamicVisc"/>
+<ReferenceProperty neutralName="DynamicViscTempPress"/>
+
+
+
+

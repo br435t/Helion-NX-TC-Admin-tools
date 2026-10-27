@@ -1,0 +1,53 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="DistortionalStrainEnergyOrder"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;1=1&Choice;2=2&Choice;3=3&Choice;4=4&Choice;5=5"/>
+
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="StructuralDamping"/>
+
+<ReferenceProperty neutralName="DefinitionMethod"/>
+
+<ReferenceProperty neutralName="DistortionalDeformationConstants"/>
+
+<ReferenceProperty neutralName="enableTab1"/>
+
+<ReferenceProperty neutralName="SimpleTensionCompressionTable"/>
+
+<ReferenceProperty neutralName="enableTab2"/>
+
+<ReferenceProperty neutralName="EquibiaxialTensionTable"/>
+
+<ReferenceProperty neutralName="enableTab3"/>
+
+<ReferenceProperty neutralName="SimpleShearTable"/>
+
+<ReferenceProperty neutralName="enableTab4"/>
+
+<ReferenceProperty neutralName="PureShearTable"/>
+
+<ReferenceProperty neutralName="VDDefinitionMethod"/>
+
+<ReferenceProperty neutralName="VolumetricDeformationConstants"/>
+
+<ReferenceProperty neutralName="PureVolumetricCompressionTable"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"
+                   displayName="Coefficient of Volumetric Thermal Expansion (AV)"/>

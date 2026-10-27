@@ -1,0 +1,169 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="StrainEnergyInputData"
+                   valueChoices="&Choice;Strain Energy Potential in terms of Compressibility=1"
+                   defaultValue="1"
+                   showProp="true"
+                   lockProp="true"/>
+
+
+<ReferenceProperty neutralName="DistortionalStrainEnergyOrder"
+                   lockProp="false"
+                   showProp="true"
+                   valueChoices="&Choice;1=1&Choice;2=2&Choice;3=3&Choice;4=4&Choice;5=5&Choice;6=6"/>
+
+
+<ReferenceProperty neutralName="StrainEnergyCoeff"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticDomain"
+                   valueChoices="&Choice;##397None=0;&Choice;Time Domain Data=1;&Choice;Frequency Domain Data=2"
+                   defaultValue="0"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticType"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticTimeDefn"/>
+
+<ReferenceProperty neutralName="TimeErrorTolerance"/>
+
+
+<ReferenceProperty neutralName="TimeNMax"/>
+
+<ReferenceProperty neutralName="ViscoelasticTimeDefnCreepTestDataFormat"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticTimeDefnRelaxTestDataFormat"/>
+
+<ReferenceProperty neutralName="TimeDomainLongTermShearCompliance"/>
+
+
+<ReferenceProperty neutralName="TimeDomainLongTermBulkCompliance"/>
+
+
+<ReferenceProperty neutralName="TimeDomainLongTermShearRelaxation"/>
+
+
+<ReferenceProperty neutralName="TimeDomainLongTermBulkRelaxation"/>
+
+
+<ReferenceProperty neutralName="TimeNormalizedShearCompliance"/>
+
+
+<ReferenceProperty neutralName="TimeNormalizedBulkCompliance"/>
+
+
+<ReferenceProperty neutralName="TimeShearBulkComplianceData"/>
+
+
+<ReferenceProperty neutralName="TimeNormalizedShearRelaxation"/>
+
+
+<ReferenceProperty neutralName="TimeNormalizedBulkRelaxation"/>
+
+
+<ReferenceProperty neutralName="TimeShearBulkRelaxationData"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticTimeFreqTabularData"/>
+
+<ReferenceProperty neutralName="PronyParameterType"
+                   valueChoices="&Choice;Series=0;"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="ViscoelasticPronyTimeParms"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticType2"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefn"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefn2"/>
+
+
+<ReferenceProperty neutralName="FreqErrorTolerance"/>
+
+
+<ReferenceProperty neutralName="FreqNMax"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefnCreepTestDataFormat"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefnRelaxTestDataFormat"/>
+
+
+<ReferenceProperty neutralName="FreqDomainLongTermShearCompliance"/>
+
+
+<ReferenceProperty neutralName="FreqDomainLongTermBulkCompliance"/>
+
+
+<ReferenceProperty neutralName="FreqDomainLongTermShearRelaxation"/>
+
+
+<ReferenceProperty neutralName="FreqDomainLongTermBulkRelaxation"/>
+
+
+<ReferenceProperty neutralName="FreqNormalizedShearCompliance"/>
+
+<ReferenceProperty neutralName="FreqNormalizedBulkCompliance"/>
+
+
+<ReferenceProperty neutralName="FreqShearBulkComplianceData"/>
+
+
+<ReferenceProperty neutralName="FreqNormalizedShearRelaxation"/>
+
+
+<ReferenceProperty neutralName="FreqNormalizedBulkRelaxation"/>
+
+<ReferenceProperty neutralName="FreqShearBulkRelaxationData"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticPronyFreqParms"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticPreload"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticPreload2"/>
+
+
+<ReferenceProperty neutralName="FreqFormulaG1"/>
+
+
+<ReferenceProperty neutralName="FreqFormulaAlpha"/>
+
+<ReferenceProperty neutralName="FreqFormulaK1"/>
+
+
+<ReferenceProperty neutralName="FreqFormulaBeta"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticFreqTabularData"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticUniaxialData"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticBulkData"/>
+
+
+<ReferenceProperty neutralName="FrequencyNormalizedLossShearModuliiField"/>
+
+
+<ReferenceProperty neutralName="FrequencyUniaxialLossStorageModuliiClosureField"/>
+

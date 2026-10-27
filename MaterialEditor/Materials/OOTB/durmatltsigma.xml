@@ -1,0 +1,14 @@
+<Property name="Tsigma (90/10)"
+          neutralName="TSigma90-10"
+          valueType="scalarField"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueOnePointFive;"/>
+    <LowerBound value="&valueOne;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

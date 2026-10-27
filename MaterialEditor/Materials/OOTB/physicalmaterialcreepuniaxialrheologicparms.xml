@@ -1,0 +1,48 @@
+        <Property name="Primary Spring (Kp)"
+                  neutralName="PrimarySpringCreepTable_Kp"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  Dimensions="&MeasureForcePerArea;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="3"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStress;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureStress;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Primary Damping (Cp)"
+                  neutralName="PrimaryDampingCreepTable_Cp"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  Dimensions="&MeasureViscousDamping;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="3"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStress;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureStress;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Secondary Damping (Cs)"
+                  neutralName="SecondaryDampingCreepTable_Cs"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  Dimensions="&MeasureViscousDamping;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="3"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStress;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureStress;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>

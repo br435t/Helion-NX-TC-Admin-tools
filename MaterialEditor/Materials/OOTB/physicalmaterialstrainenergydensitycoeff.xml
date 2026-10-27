@@ -1,0 +1,26 @@
+<Property name="Strain Energy Density Constant (A)"
+          neutralName="StrainEnergyDensityConstantA"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Strain Energy Density Constant (B)"
+          neutralName="StrainEnergyDensityConstantB"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+
+
+

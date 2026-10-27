@@ -1,0 +1,12 @@
+        <Property name="Percent Reduction in Area"
+                  neutralName="PercentAreaReduction"
+                  editable="true"
+                  valueType="float"
+                  valueSubtype="scale_keyin_limits"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&valuePercentMin;"/>
+            <LowerBound value="&valuePercentMin;"
+                        inclusive="true"/>
+            <UpperBound value="&valuePercentMax;"
+                        inclusive="true"/>
+        </Property>

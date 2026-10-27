@@ -1,0 +1,7 @@
+<Property name=""
+          neutralName="ElectromagneticFrequency"
+          valueType="enum"
+          valueChoices="&Choice;Low Frequency=0&Choice;High Frequency=1&Choice;Common Electrical=2">
+    <DefaultValue value="2"/>
+</Property>
+

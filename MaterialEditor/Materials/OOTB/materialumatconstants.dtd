@@ -1,0 +1,13 @@
+<!-- Model Types (<UserMaterialModel modelType="&rateIndependent;") -->
+<!ENTITY umatModel1 "umatModel1">
+<!ENTITY umatModel2 "umatModel2">
+<!ENTITY umatCreepModel1 "umatCreepModel1">
+<!ENTITY umatCreepModel2 "umatCreepModel2">
+
+<!-- Card Mapping Types (e.g. <CardPropertyMapping type="&real;") -->
+<!ENTITY real "REAL">
+<!ENTITY integer "INTEGER">
+<!ENTITY stressStrainTable "TABLES1">
+<!ENTITY tableOfTables "TABLEST">
+<!ENTITY temperatureTable "TABLEM1">
+<!ENTITY xyPairTable "TABLE">

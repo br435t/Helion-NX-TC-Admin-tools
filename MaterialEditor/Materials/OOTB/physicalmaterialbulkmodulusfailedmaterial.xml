@@ -1,0 +1,6 @@
+        <Property name="Failed Material (KFAIL)"
+                  neutralName="BulkModulusFailedMaterial"
+                  valueType="float"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+        </Property>

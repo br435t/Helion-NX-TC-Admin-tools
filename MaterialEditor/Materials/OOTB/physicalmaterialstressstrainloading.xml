@@ -1,0 +1,12 @@
+        <Property name="Nominal Tensile Stress Cut-Off (TC)"
+                  neutralName="NominalTensileStressCutOff"
+                  valueType="float"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+        </Property>
+        <Property name="Failure Option (FAIL)"
+                  neutralName="FailureOption"
+                  valueType="enum"
+                  valueChoices="&Choice;Remain at Cut-Off=0&Choice;Reset to Zero=1&Choice;Element Eroded=2">
+            <DefaultValue value= "0"/>
+        </Property>

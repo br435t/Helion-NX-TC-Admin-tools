@@ -1,0 +1,42 @@
+<Property name="Uncured Resin (tg0)"
+          neutralName="TgUncuredResin"
+          valueType="scalarField"
+          scalarOnly="true"
+          Dimensions="&MeasureTemperature;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MinTemperature;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Fully Cured Resin (tg1)"
+          neutralName="TgFullyCuredResin"
+          valueType="scalarField"
+          scalarOnly="true"
+          Dimensions="&MeasureTemperature;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MinTemperature;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Lambda"
+          neutralName="TgLambda"
+          valueType="scalarField"
+          scalarOnly="true">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+

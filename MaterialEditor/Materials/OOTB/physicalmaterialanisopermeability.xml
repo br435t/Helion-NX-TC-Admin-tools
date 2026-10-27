@@ -1,0 +1,227 @@
+<!-- Permeability Electromagnet -->
+<Property name="Permeability Method"
+          neutralName="AnisoElectroMagnetPermeabilityMethod"
+          valueType="enum"
+          valueChoices="&Choice;Linear=0&Choice;Complex=1&Choice;Nonlinear=2"
+          valueSubtype="radio">
+    <DefaultValue value="0"/>
+</Property>
+
+
+
+<!-- linear Anisotropic -->
+<PropertyField name="Relative Permeability"
+               neutralName="AnisotropicLinearPermeability"
+               valueSubtype="compact"
+               parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+               parentPropertyValToBeSensitive="&Choice;0">
+    <DepDomain nVariables="6"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Linear Anisotropic Permeability">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability XX"
+                     DisplayName="XX"
+                     NeutralName="RelativePermeabilityXX"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability XY"
+                     DisplayName="XY"
+                     NeutralName="RelativePermeabilityXY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability XZ"
+                     DisplayName="XZ"
+                     NeutralName="RelativePermeabilityXZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability YY"
+                     DisplayName="YY"
+                     NeutralName="RelativePermeabilityYY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability YZ"
+                     DisplayName="YZ"
+                     NeutralName="RelativePermeabilityYZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability ZZ"
+                     DisplayName="ZZ"
+                     NeutralName="RelativePermeabilityZZ"
+                     LowerBound="&valueZero;"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+<!-- Nonlinear Anisotropic -->
+<Property name="Nonlinear Isotropic (B)"
+          neutralName="AnisotropicNonLinearPermeability"
+          valueType="scalarField_table"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+               nCols="4"
+               minNumRows="1"
+               maxNumRows="5000">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Temperature"
+                       neutralName="anisobhtemp"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTemperature;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+                       parentPropertyValToBeSensitive="&Choice;2">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="BH Curve XX"
+                       neutralName="BHCurveXX"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureMagneticFluxDensity;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+                       parentPropertyValToBeSensitive="&Choice;2">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="H"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFieldStrength;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="BH Curve YY"
+                       neutralName="BHCurveYY"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureMagneticFluxDensity;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+                       parentPropertyValToBeSensitive="&Choice;2">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="H"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFieldStrength;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="BH Curve ZZ"
+                       neutralName="BHCurveZZ"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureMagneticFluxDensity;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+                       parentPropertyValToBeSensitive="&Choice;2">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="H"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFieldStrength;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+
+
+<!-- Complex linear anisotropic -->
+<PropertyField name="Complex Permeability"
+               neutralName="ComplexAnisotropicLinearPermeability"
+               valueSubtype="compact"
+               parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+               parentPropertyValToBeSensitive="&Choice;1">
+    <DepDomain nVariables="12"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Complex Anisotropic Permeability">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability XX (real)"
+                     DisplayName="XX (real)"
+                     NeutralName="RelativePermeabilityXXReal"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability XX (imaginary)"
+                     DisplayName="XX (imaginary)"
+                     NeutralName="RelativePermeabilityXXImaginary"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability XY (real)"
+                     DisplayName="XY (real)"
+                     NeutralName="RelativePermeabilityXYReal"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability XY (imaginary)"
+                     DisplayName="XY (imaginary)"
+                     NeutralName="RelativePermeabilityXYImaginary"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability XZ (real)"
+                     DisplayName="XZ (real)"
+                     NeutralName="RelativePermeabilityXZReal"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability XZ (imaginary)"
+                     DisplayName="XZ (imaginary)"
+                     NeutralName="RelativePermeabilityXZImaginary"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability YY (real)"
+                     DisplayName="YY (real)"
+                     NeutralName="RelativePermeabilityYYReal"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability YY (imaginary)"
+                     DisplayName="YY (imaginary)"
+                     NeutralName="RelativePermeabilityYYImaginary"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability YZ (real)"
+                     DisplayName="YZ (real)"
+                     NeutralName="RelativePermeabilityYZReal"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability YZ (imaginary)"
+                     DisplayName="YZ (imaginary)"
+                     NeutralName="RelativePermeabilityYZImaginary"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability ZZ (real)"
+                     DisplayName="ZZ (real)"
+                     NeutralName="RelativePermeabilityZZReal"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Permeability ZZ (imaginary)"
+                     DisplayName="ZZ (imaginary)"
+                     NeutralName="RelativePermeabilityZZImaginary"
+                     LowerBound="&valueZero;"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+

@@ -1,0 +1,46 @@
+<Property name="Chaboche Kinematic Hardening Part (True Stress and Plastic Strain)"
+          neutralName="ChabocheKinematicHardening"
+          valueType="scalarField_table"
+          plot="true"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1,7&Choice;5,6">
+    <DefaultValue value="&valueZero;"/>    
+    <TableDefn nRows="dynamic"
+               nCols="2"
+               minNumRows="1"
+               maxNumRows="20">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="C Stress (Linear Back-Stress)"
+                       neutralName="CStress"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureStress;"
+                       allowUnspecifiedValue="false">
+            <LowerBound value="&valueZero;"
+                       inclusive="false"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="G Factor (NL Back-Stress)"
+                       neutralName="GFactor"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureUnitLess;"
+                       allowUnspecifiedValue="false">
+            <LowerBound value="&valueZero;"
+                       inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>

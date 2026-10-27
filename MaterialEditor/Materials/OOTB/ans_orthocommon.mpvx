@@ -1,0 +1,126 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulus"/>
+<ReferenceProperty neutralName="YoungsModulus2"/>
+<ReferenceProperty neutralName="YoungsModulus3"/>
+
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+
+
+<ReferenceProperty neutralName="ShearModulus"/>
+<ReferenceProperty neutralName="ShearModulus2"/>
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="TempConductivityBehaviorType"
+                   valueChoices="&Choice;Orthotropic=1"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ThermalConductivity"/>
+<ReferenceProperty neutralName="ThermalConductivity2"/>
+<ReferenceProperty neutralName="ThermalConductivity3"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"
+                   valueLabel="Thermal Expansion (X)"/>
+<ReferenceProperty neutralName="ThermalExpansion2"
+                   valueLabel="Thermal Expansion (Y)"/>
+<ReferenceProperty neutralName="ThermalExpansion3"
+                   valueLabel="Thermal Expansion (Z)"/>
+
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="SpecificHeat"/>
+
+
+
+<ReferenceProperty neutralName="StructuralDamping"/>
+
+
+<ReferenceProperty neutralName="CreepFormulation"
+                   valueChoices="&Choice;##397None=0&Choice;Time Hardening (Norton-Bailey) Power Law (CREEP/TYPE 300)=1&Choice;Strain Hardening Power Law=4&Choice;Generalized Blackburn Creep=11"/>
+
+<ReferenceProperty neutralName="CreepReferenceTemperature"/>
+
+<ReferenceProperty neutralName="TempDependTermType"
+                   valueChoices="&Choice;exp( -DeltaH / ( R * T0 ))=0;"/>
+
+<ReferenceProperty neutralName="CreepTemperatureDependence"/>
+
+<ReferenceProperty neutralName="CreepTemperatureDependenceDeltaH"/>
+
+<ReferenceProperty neutralName="CreepHardening"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+
+<ReferenceProperty neutralName="ForceLengthMassUnits"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_n"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_m"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A1"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_b"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_d"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC1Function"
+                   valueChoices="&Choice;a * exp( b * SIGMA )=2"
+                   showProp="true"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC2Function"
+                   valueChoices="&Choice;c * ( SIGMA / d ) ^ x=3"
+                   showProp="true"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC3Function"
+                   valueChoices="&Choice;e * exp( f * SIGMA )=2"
+                   showProp="true"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_a"
+                   minValue="0"
+                   minValueInclude="false"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_b"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_c"
+                   minValue="0"
+                   minValueInclude="false"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_d"/>
+
+<ReferenceProperty neutralName="GeneralizedBlackburnCreepParameter_x"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_e"
+                   minValue="0"
+                   minValueInclude="false"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_f"/>

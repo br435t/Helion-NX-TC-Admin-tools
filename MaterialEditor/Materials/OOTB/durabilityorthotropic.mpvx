@@ -1,0 +1,56 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="YoungsModulus"/>
+<ReferenceProperty neutralName="YoungsModulus2"/>
+<ReferenceProperty neutralName="YoungsModulus3"/>
+<ReferenceProperty neutralName="CompressionYoungsModulus"/>
+<ReferenceProperty neutralName="CompressionYoungsModulus2"/>
+<ReferenceProperty neutralName="CompressionYoungsModulus3"/>
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+<ReferenceProperty neutralName="ShearModulus"/>
+<ReferenceProperty neutralName="ShearModulus2"/>
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+<ReferenceProperty neutralName="Yield"/>
+<ReferenceProperty neutralName="Yield2"/>
+<ReferenceProperty neutralName="Yield12"/>
+
+<ReferenceProperty neutralName="UltTensile"/>
+<ReferenceProperty neutralName="UltTensile2"/>
+<ReferenceProperty neutralName="UltTensile12"/>
+
+<ReferenceProperty neutralName="AllFailureCriterion"
+                   defaultValue="&BoolTrue;"
+                   showProp="false"/>
+
+<ReferenceProperty neutralName="MaxStressTension"/>
+<ReferenceProperty neutralName="MaxStressTension2"/>
+<ReferenceProperty neutralName="MaxStressTension3"/>
+
+<ReferenceProperty neutralName="MaxStressCompression"/>
+<ReferenceProperty neutralName="MaxStressCompress2"/>
+<ReferenceProperty neutralName="MaxStressCompress3"/>
+
+<ReferenceProperty neutralName="MaxInPlaneShearStress"/>
+<ReferenceProperty neutralName="ShearStress13"/>
+<ReferenceProperty neutralName="ShearStress23"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"/>
+<ReferenceProperty neutralName="TsaiWu13"/>
+<ReferenceProperty neutralName="TsaiWu23"/>

@@ -1,0 +1,117 @@
+<Property name="Plastic Yielding Pressure - Volumetric Strain Rate (LCPY)"
+          neutralName="PlasticYieldingVolumetricStrainLCPY"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureForcePerArea;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Volumetric Strain"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="Volumetric Strain"
+                      Measure="&MeasureUnitLess;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Uniaxial Yield Stress - Volumetric Strain Rate (LCUYS)"
+          neutralName="Uniaxial Yield StressVolumetricStrainLCPY"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Volumetric Strain"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="Volumetric Strain"
+                      Measure="&MeasureUnitLess;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Scale Factor for Yield (LCRATE)"
+          neutralName="YieldCurveScaleFactorLCRATE"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Volumetric Strain Rate"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="Volumetric Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Viscous Damping Coefficient (VC)"
+          neutralName="ViscousDampingCoefficientVC"
+          valueType="float">
+    <DefaultValue value="0.05"/>
+</Property>
+
+<Property name="Yield Surface Specification Method"
+          neutralName="YieldSurfaceSpecificationMethod"
+          valueType="enum"
+          valueChoices="&Choice;Negative Abscissa of LCUYS Curve=0
+                        &Choice;Pressure Cutoff=1
+                        &Choice;Variable Pressure Cutoff=2
+                        &Choice;Tension Cutoff=3
+                        &Choice;Variable Tension Cutoff=4">
+    <DefaultValue value="1"/>
+</Property>
+
+<Property name="Tensile Response Option (ISFLG)"
+          neutralName="TensileResponseOptionISFLG"
+          valueType="enum"
+          valueChoices="&Choice;Volumetric Strain=0
+                        &Choice;Effective Strain=1"
+          parentProperty="YieldSurfaceSpecificationMethod"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="1"/>
+</Property>
+
+
+
+
+
+<Property name="Pressure Cutoff (PC)"
+          neutralName="PressureCutoff"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldSurfaceSpecificationMethod"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Variable Pressure Cutoff (VPC)"
+          neutralName="VariablePressureCutoff"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldSurfaceSpecificationMethod"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Tension Cutoff (TC)"
+          neutralName="TensionCutoff"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldSurfaceSpecificationMethod"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Variable Tension Cutoff (VTC)"
+          neutralName="VariableTensionCutoff"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldSurfaceSpecificationMethod"
+          parentPropertyValToBeSensitive="4">
+    <DefaultValue value="&valueZero;"/>
+</Property>

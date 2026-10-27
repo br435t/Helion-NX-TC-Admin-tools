@@ -1,0 +1,29 @@
+<Property name="Material Axes Option (AOPT)"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="MaterialAxisOptionAOPT"
+          valueToolTip="Other Options for AOPT are available to be specified in Additional Properties Modeling Object for this Material Card."
+          valueType="enum"
+          valueChoices="&Choice;Locally Orthotropic with Material Axes using Element Nodes=0">
+<!--Following choices are supported on Modelling Objects : User Co-ordinate System (-1),
+    Locally Orthotropic with Material Axes using Point (1), Globally Orthotropic (2),
+    Locally Orthotropic with Rotation of Material Axes (3) and Locally Orthotropic in Cylindrical Coordinate System (4)-->
+    <DefaultValue value="0"/>
+</Property>
+ 
+<Property name="Material Axes Change Flag (MACF)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="MACF"
+        valueType="enum"
+        valueChoices="&Choice;No Change=1
+                    &Choice;Switch Axes a and b=2
+                    &Choice;Switch Axes a and c=3
+                    &Choice;Switch Axes b and c=4">
+<DefaultValue value="1"/>
+</Property>
+
+<Property name="Material Angle (BETA)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="MaterialAngleBETA"
+        valueType="float"
+        Dimensions="&MeasureAngle;">
+</Property>

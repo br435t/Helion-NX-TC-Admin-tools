@@ -1,0 +1,132 @@
+               <Property name="Define Scale factor for Each Direction"
+                         neutralName="DefineScaleFactorEachDirection"
+                         valueToolTip="Curve values will be exported as is to the material card."
+                         valueType="bool">
+                   <DefaultValue value="&BoolFalse;"/>
+               </Property>
+               <Property name="Scale Factor- Effective Strain Rate (LCSR)"
+                         neutralName="ScaleFactorEffectiveStrainRateLCSR"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"
+                               autocreate="true">
+                           <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>
+               <Property name="Yield Stress Scale Factor - Strain Rate a-Direction (LCSRA)"
+                         neutralName="ScaleFactorStrainRateLCSRA"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"
+                               autocreate="true">
+                           <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>
+               <Property name="Yield Stress Scale Factor - Strain Rate b-Direction (LCSRB)"
+                         neutralName="ScaleFactorStrainRateLCSRB"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"
+                               autocreate="true">
+                               <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>
+               <Property name="Yield Stress Scale Factor - Strain Rate c-Direction (LCSRC)"
+                         neutralName="ScaleFactorStrainRateLCSRC"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"
+                               autocreate="true">
+                           <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>
+               <Property name="Yield Stress Scale Factor - Strain Rate ab-Direction (LCSRAB)"
+                         neutralName="ScaleFactorStrainRateLCSRAB"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"
+                               autocreate="true">
+                           <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>
+               <Property name="Yield Stress Scale Factor - Strain Rate bc-Direction (LCSRBC)"
+                         neutralName="ScaleFactorStrainRateLCSRBC"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"                               
+                               autocreate="true">
+                           <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>
+               <Property name="Yield Stress Scale Factor - Strain Rate ca-Direction (LCSRCA)"
+                         neutralName="ScaleFactorStrainRateLCSRCA"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="DefineScaleFactorEachDirection"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain Name="Logarithmic Strain Rate"
+                               nVariables="1"                               
+                               autocreate="true">
+                           <Variable Name="Logarithmic Strain Rate"
+                                     Measure="&MeasureUnitLess;"/>
+                       </Domain>
+                   </FieldDefn>
+               </Property>

@@ -1,0 +1,99 @@
+
+*** BEGIN MATERIAL
+Material Name       : Silica
+Material Type       : Glass
+Color Shader        : Plain
+Reflectance Shader  : Dielectric
+Color               : 1.0000 1.0000 1.0000
+Translucency        : 0.5000 0.5000 0.5000
+Ambient Factor      : 0.0000
+Diffuse Factor      : 0.0000
+Specular Factor     : 0.9000
+Roughness           : 0.1000
+Mirror Factor       : 0.9000
+Transmission        : 0.9000
+Refraction          : 1.46
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Soda-lime
+Material Type       : Glass
+Color Shader        : Plain
+Reflectance Shader  : Dielectric
+Color               : 1.0000 1.0000 1.0000
+Translucency        : 0.5000 0.5000 0.5000
+Ambient Factor      : 0.0000
+Diffuse Factor      : 0.0000
+Specular Factor     : 0.9000
+Roughness           : 0.1000
+Mirror Factor       : 0.9000
+Transmission        : 0.9000
+Refraction          : 1.51
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Diamond
+Material Type       : Glass
+Color Shader        : Plain
+Reflectance Shader  : Dielectric
+Color               : 1.0000 1.0000 1.0000
+Translucency        : 0.5000 0.5000 0.5000
+Ambient Factor      : 0.0000
+Diffuse Factor      : 0.0000
+Specular Factor     : 0.9000
+Roughness           : 0.1000
+Mirror Factor       : 0.9000
+Transmission        : 0.9000
+Refraction          : 2.417
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Pyrex
+Material Type       : Glass
+Color Shader        : Plain
+Reflectance Shader  : Dielectric
+Color               : 1.0000 1.0000 1.0000
+Translucency        : 0.5000 0.5000 0.5000
+Ambient Factor      : 0.0000
+Diffuse Factor      : 0.0000
+Specular Factor     : 0.9000
+Roughness           : 0.1000
+Mirror Factor       : 0.9000
+Transmission        : 0.9000
+Refraction          : 1.47
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Flint
+Material Type       : Glass
+Color Shader        : Plain
+Reflectance Shader  : Dielectric
+Color               : 1.0000 1.0000 1.0000
+Translucency        : 0.5000 0.5000 0.5000
+Ambient Factor      : 0.0000
+Diffuse Factor      : 0.0000
+Specular Factor     : 0.9000
+Roughness           : 0.1000
+Mirror Factor       : 0.9000
+Transmission        : 0.9000
+Refraction          : 1.7
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Plexiglass
+Material Type       : Glass
+Color Shader        : Plain
+Reflectance Shader  : Dielectric
+Color               : 1.0000 1.0000 1.0000
+Translucency        : 0.9500 0.9900 0.9500
+Ambient Factor      : 0.0000
+Diffuse Factor      : 0.0000
+Specular Factor     : 0.9000
+Roughness           : 0.1000
+Mirror Factor       : 0.9000
+Transmission        : 0.9000
+Refraction          : 1.47
+*** END MATERIAL
+
+
+

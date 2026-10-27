@@ -1,0 +1,67 @@
+    <Property name="Specific Heat Control"
+                neutralName="SpecificHeatControl"
+                valueType="enum"
+                valueChoices="&Choice;Constant or Temperature=0&Choice;Temperature and Pressure=1&Choice;Temperature and Degree of Cure and Glass Transition Temperature=2">
+        <DefaultValue value= "0"/>
+        <LowerBound value="0"
+                    inclusive="true"/>
+        <UpperBound value="2"
+                    inclusive="true"/>
+    </Property>
+    <Property name="Specific Heat (CP)"
+              neutralName="SpecificHeat"
+              valueType="scalarField"
+              Dimensions="&MeasureHeatCapacity;"
+              scaleFactor="false"
+              parentProperty="SpecificHeatControl"
+              parentPropertyValToBeSensitive="0">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"
+                    nVariables="1">
+                <Variable Measure="&MeasureTemperature;"/>
+            </Domain>
+        </FieldDefn>
+    </Property>
+    <Property name="Specific Heat (CP)"
+              neutralName="SpecificHeatTempPress"
+              valueType="scalarField"
+              valueSubtype="&scalarFieldCompactDisplay;"          
+              Dimensions="&MeasureHeatCapacity;"
+              scaleFactor="false"
+              parentProperty="SpecificHeatControl"
+              parentPropertyValToBeSensitive="1">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="1">
+            <Domain type="&DomainTemperature;"
+                    nVariables="1"
+                    hasSecondary="true">
+                <Variable Measure="&MeasureTemperature;"/>
+                <SecondaryDomain type ="&DomainPressure;"/>
+            </Domain>
+        </FieldDefn>
+    </Property>
+    <Property name="Specific Heat (CP)"
+              neutralName="SpecificHeatTempDocTg"
+              valueType="scalarField"
+              Dimensions="&MeasureHeatCapacity;"
+              scaleFactor="false"
+              parentProperty="SpecificHeatControl"
+              parentPropertyValToBeSensitive="2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+    </Property>
+

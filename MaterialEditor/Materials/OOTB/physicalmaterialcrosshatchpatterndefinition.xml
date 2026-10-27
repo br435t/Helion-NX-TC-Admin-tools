@@ -1,0 +1,5 @@
+        <Property name="Crosshatch Pattern"
+                  neutralName="CrosshatchPattern"
+                  valueType="char">
+          <DefaultValue value="&valueBlank;"/>            
+        </Property>

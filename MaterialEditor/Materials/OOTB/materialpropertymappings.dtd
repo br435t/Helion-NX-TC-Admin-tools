@@ -1,0 +1,24 @@
+<!ELEMENT XMLToNXMappings ((Properties)* , (Units)*) >
+
+<!ELEMENT Properties  (NXProperty)*>
+<!ELEMENT NXProperty  (XMLProperty)*>
+<!ATTLIST NXProperty
+    neutralName     CDATA #REQUIRED
+>
+
+<!ELEMENT XMLProperty EMPTY>
+<!ATTLIST XMLProperty
+    name            CDATA #REQUIRED
+>
+
+<!ELEMENT Units  (NXUnit)*>
+<!ELEMENT NXUnit  (XMLUnit)*>
+<!ATTLIST NXUnit
+    name            CDATA #REQUIRED
+>
+
+<!ELEMENT XMLUnit EMPTY>
+<!ATTLIST XMLUnit
+    name            CDATA #REQUIRED
+    scaleFactor     CDATA "1.0"
+>

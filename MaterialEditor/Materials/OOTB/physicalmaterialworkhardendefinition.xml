@@ -1,0 +1,11 @@
+                <Property name="Work Hardening"
+                          neutralName="WorkHardening"
+                          editable="true"
+                          valueType="float"
+                          Dimensions="&MeasureUnitLess;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>

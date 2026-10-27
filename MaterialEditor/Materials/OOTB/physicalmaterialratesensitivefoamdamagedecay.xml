@@ -1,0 +1,16 @@
+<Property name="Tension Damage Decay Constant (BETAT)"
+          neutralName="DamageDecayConstantTension"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolTrue;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Compression Damage Decay Constant (BETAC)"
+          neutralName="DamageDecayConstantCompression"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolTrue;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+ 

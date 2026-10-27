@@ -1,0 +1,32 @@
+<PropertyField name="Stress Life Data Field2"
+               neutralName="StressLifeDataField2"
+               parentProperty="StressLifeDataFormat"
+               parentPropertyValToBeSensitive="1">
+    <DepDomain nVariables="3"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Orthotropic Stress Amplitude">
+        <DepVariable Measure="&MeasureStress;"
+                     Name="Stress Amplitude - 1"
+                     DisplayName="Stress Amplitude - 1"/>
+        <DepVariable Measure="&MeasureStress;"
+                     Name="Stress Amplitude - 2"
+                     DisplayName="Stress Amplitude - 2"/>
+        <DepVariable Measure="&MeasureStress;"
+                     Name="Stress Amplitude - 12"
+                     DisplayName="Stress Amplitude - 12"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainGeneral;"
+                nVariables="1">
+            <Variable Measure="&MeasureFatigueLife;"/>
+        </Domain>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainGeneral;"
+                             nVariables="1">
+                <Variable Measure="&MeasureFatigueLife;"/>
+            </SecondaryDomain>
+        </Domain>
+    </FieldDefn>
+</PropertyField>

@@ -1,0 +1,352 @@
+<!ENTITY CurrentVersion "1">   <!-- This correlates to NX6; materials was viewed to not change often, so the complex -->
+                               <!-- mainVersion.QRMNumber.DevelopVersion was not implemented here.  At some point we -->
+                               <!-- may want to handle this or get the version in sync with the NX version numbers   -->
+<!ENTITY % constants SYSTEM "materialconstants.dtd">
+
+%constants;
+
+<!--  =================================================================
+                               Environments
+      ================================================================ -->
+
+<!ELEMENT Materials (Material)*>
+<!ATTLIST Materials
+    additionalUserProperties CDATA  #FIXED "true"
+>
+
+<!ELEMENT Material  (Property|
+                     PropertyField|
+                     Tab|
+                     Group)*>
+<!ATTLIST Material
+    type (   0 |  1 |  2 |       4 |  5 |  6 |  7 |  8 |  9 | 
+            10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 
+            20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |  
+            30 | 31 | 32 | 33 |      35 | 36 | 37 | 38 | 39 | 
+            40 | 41 | 42 | 43 | 44 | 45 ) #REQUIRED
+>
+
+<!ELEMENT Tab  (Group)* >
+<!ATTLIST Tab
+    label          CDATA "DefaultTabName"
+>
+<!ELEMENT Group  ( (Property|PropertyField)* )>
+<!ATTLIST Group
+    label          CDATA "DefaultGroupName"
+    expanded (true | false) "true"
+    numColumns     CDATA "1"
+>
+
+<!ELEMENT Property ((DefaultValue)?, (LowerBound)?, (UpperBound)?, (ExcludeValue)?, (FieldDefn | MatrixDefn | TableDefn)?, (ReferenceFilterClass)*)>
+<!ATTLIST Property
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    prefixName CDATA  #FIXED "USER_"
+    suffixName CDATA #REQUIRED
+    valueType (nil          |
+               int          |
+               float        |
+               char         |
+               enum         |
+               bool         |
+               vector       |
+               multistring  |
+               coord        |
+               material     |
+               matrix       |
+               field        |
+               scalarField  |
+               axis         |
+               float_array           |
+               float_table           |
+               int_array             ) "nil"
+    valueSubtype CDATA ""
+    selectionLabel CDATA ""
+    selectionBoxLabel CDATA ""
+    icon CDATA #IMPLIED
+    valueChoices CDATA #IMPLIED
+    valueToolTip CDATA #IMPLIED
+    Dimensions ( -1 |  0 |   1 |  2  |   3 |   4 |   5 |   6 |   7 |   8 |   9 | 
+                      10 |  11 |  12 |  13 |  14 |  15 |  16 |  17 |  18 |  19 | 
+                      20 |  21 |  22 |  23 |  24 |  25 |  26 |  27 |  28 |  29 | 
+                      30 |  31 |  32 |  33 |  34 |  35 |  36 |  37 |  38 |  39 | 
+                      40 |  41 |  42 |  43 |  44 |  45 |  46 |  47 |  48 |  49 | 
+                      50 |  51 |  52 |  53 |  54 |  55 |  56 |  57 |  58 |  59 | 
+                      60 |  61 |  62 |  63 |  64 |  65 |  66 |  67 |  68 |  69 | 
+                      70 |  71 |  72 |  73 |  74 |  75 |  76 |  77 |  78 |  79 | 
+                      80 |  81 |  82 |  83 |  84 |  85 |  86 |  87 |  88 |  89 | 
+                      90 |  91 |  92 |  93 |  94 |  95 |  96 |  97 |  98 |  99 | 
+                     100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 
+                     110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 |
+                     120 | 121 ) "-1"  
+    Type (default) "default"
+    parentProperty CDATA ""
+    parentPropertyValToBeSensitive CDATA "0"
+    propertyVisibleOrSensitive ( visible | sensitive ) "visible"
+    retainValue ( true | false ) "false"
+    action CDATA ""
+    plot (true | false) "true"
+    scaleFactor (true | false) "true"
+    scalarOnly (true | false) "false"
+    noObjectSelectedLabel CDATA "None"
+    allowUnspecifiedValue ( true | false ) "true"
+    relatedRegionTargetSets CDATA ""
+    tablePresentation (true | false) "false"
+    customColumns CDATA ""
+    sortAscending (true | false) "true"
+    isOwner (true | false) "false"
+>
+<!ELEMENT DefaultValue EMPTY>
+<!ATTLIST DefaultValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT UpperBound EMPTY>
+<!ATTLIST UpperBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT LowerBound EMPTY>
+<!ATTLIST LowerBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT ExcludeValue EMPTY>
+<!ATTLIST ExcludeValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT ReferenceFilterClass EMPTY>
+<!ATTLIST ReferenceFilterClass
+    name CDATA #IMPLIED
+    groupFilterClassName CDATA #IMPLIED
+    selectionFilterClassName CDATA #IMPLIED
+>
+<!--
+      .=============.
+      |Property...  |
+      |             |
+      .==v==========.
+         |
+         |
+      .=(1)=======.
+      |FieldDefn |
+      |          |
+      .==v=======.
+         |
+         |
+      .=(*)=======.
+      |Domain     |
+      |           |  The "Domain"s are to define the independent variable domains of a Field
+      .==v=====v==.
+         |     |
+         |  .=(?)============.
+         |  |SecondaryDomain |   The optional secondary "Domain" defines heterogeneous
+         |  |                |   independent domain of a Field. 
+         |  .==v=============.   
+         |     |
+         |     |     There can be 'n' number of independent domains for each field
+      .=(*)===(*)=.  and each domain can have 'm' number of variables; note that specified
+      |Variable   |  independent variables need to map to the specified independent domain
+      |           |
+      .===========.
+  -->
+<!ELEMENT FieldDefn ((Domain)*)>
+<!ATTLIST FieldDefn
+    nDomains CDATA "1"
+>
+<!ELEMENT Domain ((Variable)*, (SecondaryDomain)?)>
+<!ATTLIST Domain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 42 | 43 ) "-1"
+    nVariables CDATA "0"
+    hasSecondary (true | false) "false"
+>
+<!ELEMENT Variable EMPTY>
+<!ATTLIST Variable
+    Name CDATA ""
+    Measure ( -1 |  0 |   1 |  2  |   3 |   4 |   5 |   6 |   7 |   8 |   9 | 
+                   10 |  11 |  12 |  13 |  14 |  15 |  16 |  17 |  18 |  19 | 
+                   20 |  21 |  22 |  23 |  24 |  25 |  26 |  27 |  28 |  29 | 
+                   30 |  31 |  32 |  33 |  34 |  35 |  36 |  37 |  38 |  39 | 
+                   40 |  41 |  42 |  43 |  44 |  45 |  46 |  47 |  48 |  49 | 
+                   50 |  51 |  52 |  53 |  54 |  55 |  56 |  57 |  58 |  59 | 
+                   60 |  61 |  62 |  63 |  64 |  65 |  66 |  67 |  68 |  69 | 
+                   70 |  71 |  72 |  73 |  74 |  75 |  76 |  77 |  78 |  79 | 
+                   80 |  81 |  82 |  83 |  84 |  85 |  86 |  87 |  88 |  89 | 
+                   90 |  91 |  92 |  93 |  94 |  95 |  96 |  97 |  98 |  99 | 
+                  100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 
+                  110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 |
+                  120 | 121 ) "-1"  
+    evaluationValue CDATA "-777777."
+    evaluationProperty CDATA ""
+    propertyType (Solution | Step | None ) "None"
+>
+<!ELEMENT SecondaryDomain ((Variable)*)>
+<!ATTLIST SecondaryDomain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 26 | 28 | 42 | 43 ) "-1"
+    nVariables CDATA "0"
+>
+<!ELEMENT MatrixDefn ((ColumnHeading)*, (RowHeading)*, (DisableCell)*, (HideCell)*, (DefaultCellValue)*)>
+<!ATTLIST MatrixDefn
+    nCols (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64) #REQUIRED
+    nRows (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64) #REQUIRED
+    matrixType (symmetric | general) "general"
+>
+<!ELEMENT ColumnHeading EMPTY>
+<!ATTLIST ColumnHeading
+    column CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!ELEMENT RowHeading EMPTY>
+<!ATTLIST RowHeading
+    row CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!ELEMENT HideCell EMPTY>
+<!ATTLIST HideCell
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+>
+<!ELEMENT DisableCell EMPTY>
+<!ATTLIST DisableCell
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+>
+<!ELEMENT DefaultCellValue EMPTY>
+<!ATTLIST DefaultCellValue
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!--
+   Defintion for a Table of Properties
+   A table can have any number of Column, each defined by an
+   included TableProperty.
+   The number of rows in the table is defined by nRows.
+   If nRows is set to "dynamic" then the number of rows in this table is
+   dynamically defined by the user of this descriptor.
+   -->
+<!ELEMENT TableDefn (TableProperty+)>
+<!ATTLIST TableDefn
+    nRows CDATA '"1"'
+>
+<!ELEMENT TableProperty (DefaultValue, (LowerBound)?, (UpperBound)?)>
+<!ATTLIST TableProperty
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    neutralName CDATA #REQUIRED
+    valueType (int | float) "float"
+    Dimensions ( -1 |  0 |   1 |  2  |   3 |   4 |   5 |   6 |   7 |   8 |   9 | 
+                      10 |  11 |  12 |  13 |  14 |  15 |  16 |  17 |  18 |  19 | 
+                      20 |  21 |  22 |  23 |  24 |  25 |  26 |  27 |  28 |  29 | 
+                      30 |  31 |  32 |  33 |  34 |  35 |  36 |  37 |  38 |  39 | 
+                      40 |  41 |  42 |  43 |  44 |  45 |  46 |  47 |  48 |  49 | 
+                      50 |  51 |  52 |  53 |  54 |  55 |  56 |  57 |  58 |  59 | 
+                      60 |  61 |  62 |  63 |  64 |  65 |  66 |  67 |  68 |  69 | 
+                      70 |  71 |  72 |  73 |  74 |  75 |  76 |  77 |  78 |  79 | 
+                      80 |  81 |  82 |  83 |  84 |  85 |  86 |  87 |  88 |  89 | 
+                      90 |  91 |  92 |  93 |  94 |  95 |  96 |  97 |  98 |  99 | 
+                     100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 
+                     110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 |
+                     120 | 121 ) "-1"  
+>
+<!--
+          .===============.
+          |PropertyField  |
+          |               |
+          .v============v=.
+           |            |
+           |            |
+     .=====v======.     |
+     |DepDomain   |     |  The "DepDomain" is used to define the field's dependent domain
+     |            |     |
+     .==v=========.     |  If the specified domain has measures, then variable validation will
+        |               |  simply check that it is a valid domain.  No order is specified or
+        |               |  names for validation, so it is NOT recommended unless all variables
+        |               |  in the domain have unique measures; otherwise it will be impossible
+        |               |  for formatters to differentiate the variables to map to output=
+     .==v=========.     |
+     |DepVariable |     |  If the specified domain has variables, then the specified variables
+     |            |     |  must constitute the valid measures for the domain and variables on
+     .==v=========.     |  the selected field should be mapped in order.
+        |               |
+        |               |  If the specified variables have names, the order is irrelevant, and
+     .=(*)=========.    |  the mapping will be done based on name AND measure.
+     |ExcludeValue |    |
+     |             |    |
+     .=============.    |
+                     .==v=========.
+                     |FieldDefn   |
+                     |            |
+                     .==v=========.
+                        |
+                       .=. See FieldDefn for info on independent domain spec=
+-->
+<!ELEMENT PropertyField (DepDomain, FieldDefn)>
+<!ATTLIST PropertyField
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    neutralName CDATA #REQUIRED
+    valueType (generalField | vectorField) "generalField"
+    inferredSelection (true | false) "false"
+    plot (true | false) "true"
+    scaleFactor (true | false) "true"
+    valueSubtype CDATA ""
+    icon CDATA #IMPLIED
+    valueChoices CDATA #IMPLIED
+    valueToolTip CDATA #IMPLIED
+    Dimensions ( -2 ) "-2"
+    Type (default) "default"
+    parentProperty CDATA ""
+    parentPropertyValToBeSensitive CDATA "0"
+    propertyVisibleOrSensitive ( visible | sensitive ) "visible"
+    menuAttachProp CDATA ""
+    attachType ( attachRight ) "attachRight"
+    retainValue ( true | false ) "false"
+    action CDATA ""
+    scalarOnly ( true | false ) "false"
+    noObjectSelectedLabel CDATA "None"
+    allowUnspecifiedValue ( true | false ) "true"
+    relatedRegionTargetSets CDATA ""
+
+>
+<!ELEMENT DepDomain ((DepVariable)*, (ExcludeValue)*)>
+<!ATTLIST DepDomain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 21 | 22 | 23 | 28 | 42 | 43 ) "-1"
+    nVariables CDATA "0"
+    LowerBound CDATA "-777777."
+    LowerBound_inclusive (true | false) "false"
+    UpperBound CDATA "-777777."
+    UpperBound_inclusive (true | false) "false"
+>
+<!ELEMENT DepVariable ((ExcludeValue)*)>
+<!ATTLIST DepVariable
+    Name CDATA ""
+    DisplayName CDATA ""
+    NeutralName CDATA ""
+    Measure ( -1 |  0 |   1 |  2  |   3 |   4 |   5 |   6 |   7 |   8 |   9 | 
+                   10 |  11 |  12 |  13 |  14 |  15 |  16 |  17 |  18 |  19 | 
+                   20 |  21 |  22 |  23 |  24 |  25 |  26 |  27 |  28 |  29 | 
+                   30 |  31 |  32 |  33 |  34 |  35 |  36 |  37 |  38 |  39 | 
+                   40 |  41 |  42 |  43 |  44 |  45 |  46 |  47 |  48 |  49 | 
+                   50 |  51 |  52 |  53 |  54 |  55 |  56 |  57 |  58 |  59 | 
+                   60 |  61 |  62 |  63 |  64 |  65 |  66 |  67 |  68 |  69 | 
+                   70 |  71 |  72 |  73 |  74 |  75 |  76 |  77 |  78 |  79 | 
+                   80 |  81 |  82 |  83 |  84 |  85 |  86 |  87 |  88 |  89 | 
+                   90 |  91 |  92 |  93 |  94 |  95 |  96 |  97 |  98 |  99 | 
+                  100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 
+                  110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 |
+                  120 | 121 ) "-1"  
+    DefaultValue CDATA "-777777."
+    LowerBound CDATA "-777777."
+    LowerBound_inclusive (true | false) "false"
+    UpperBound CDATA "-777777."
+    UpperBound_inclusive (true | false) "false"
+>

@@ -1,0 +1,34 @@
+        <ReferenceProperty neutralName="DensityControl"
+                           valueChoices="Constant or Temperature or Frequency=0"
+                           defaultValue="0"
+                           showProp="false"
+                           lockProp="true"/>
+        <ReferenceProperty neutralName="MassDensity"/>
+        
+        <ReferenceProperty neutralName="ElasticDependencyControl"
+                           valueChoices="Temperature=0"
+                           defaultValue="0"
+                           showProp="false"
+                           lockProp="true"/>
+
+        <ReferenceProperty neutralName="YoungsModulus"/>
+        <ReferenceProperty neutralName="YoungsModulus2"/>
+        <ReferenceProperty neutralName="YoungsModulus3"/>
+
+
+        <ReferenceProperty neutralName="PoissonsRatioType"
+                           valueChoices="&Choice;Minor Poisson's Ratio=1"
+                           defaultValue="1"
+                           showProp="true"
+                           lockProp="true"/>
+        <ReferenceProperty neutralName="PoissonsRatio"/>
+        <ReferenceProperty neutralName="PoissonsRatio2"/>
+        <ReferenceProperty neutralName="PoissonsRatio3"/>
+
+
+        <ReferenceProperty neutralName="ShearModulus"/>
+        <ReferenceProperty neutralName="ShearModulus2"/>
+        <ReferenceProperty neutralName="ShearModulus3"/>
+
+<ReferenceProperty neutralName="ShearModulusFreqIndep"/>
+<ReferenceProperty neutralName="LimitStressFreqIndep"/>

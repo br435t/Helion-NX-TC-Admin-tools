@@ -1,0 +1,68 @@
+<Property name="All"
+            neutralName="AllFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolTrue;"/>
+</Property>
+<Property name="Strength Limits"
+            neutralName="StrengthLimitsFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Strain Ratio"
+            neutralName="StrainRatioFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Stress Ratio"
+            neutralName="StressRatioFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Tsai-Wu"
+            neutralName="TsaiWuFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Rice and Tracey"
+            neutralName="RiceTraceyFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Maximum Total Strain"
+            neutralName="MaximumTotalStrainFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Maximum Stress"
+            neutralName="MaximumStressFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Hashin"
+            neutralName="HashinFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Hoffman"
+            neutralName="HoffmanFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Tsai-Hill"
+            neutralName="TsaiHillFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+<Property name="Puck"
+            neutralName="PuckFailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+
+<Property name="LaRC04"
+            neutralName="LaRC04FailureCriterion"
+            valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+
+

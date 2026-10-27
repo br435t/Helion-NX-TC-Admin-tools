@@ -1,0 +1,22 @@
+<Property name="Curing Heat (hcur)"
+            neutralName="CuringHeat"
+            valueType="float"
+            Dimensions="&MeasureLatentHeatPerMass;"
+            allowUnspecifiedValue="false">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Matrix Mass Fraction (mmf)"
+            neutralName="MatrixMassFraction"
+            valueType="float"
+            valueSubtype="scale_keyin_limits">
+    <DefaultValue value="&valueOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>

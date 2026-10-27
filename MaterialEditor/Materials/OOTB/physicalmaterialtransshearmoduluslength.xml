@@ -1,0 +1,21 @@
+        <Property name="Transverse Shear Modulus (TSS)"
+                  neutralName="TransverseShearModulus2"
+                  editable="true"
+                  valueType="scalarField"
+                  Dimensions="&MeasurePressurePerLength;"
+                  scaleFactor="false" >
+            <DefaultValue value="0.0"/>
+            <LowerBound value="0.0"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"
+                              evaluationProperty="Default Temperature"
+                              propertyType="Solution"/>
+                </Domain>
+            </FieldDefn>
+        </Property>

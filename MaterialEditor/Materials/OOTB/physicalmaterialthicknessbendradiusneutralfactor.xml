@@ -1,0 +1,50 @@
+        <PropertyField name="Bend Radii - SI Material Stock"
+                       neutralName="SIStockBendRadii">
+            <DepDomain nVariables="1"
+                       autocreate="true"
+                       type="&DomainUser;"
+                       Name="Neutral Factor">
+                <DepVariable Measure="&MeasureUnitLess;"
+                             Name="Neutral Factor"
+                             DisplayName="Neutral Factor"
+                             NeutralName="NeutralFactor"/>
+            </DepDomain>
+            <FieldDefn nDomains="1">
+                <Domain Name="Thickness-Bend Radius"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="2">
+                   <Variable Name="Thickness"
+                             Measure="&MeasureLength;"/>
+                   <Variable Name="Bend Radius"
+                             Measure="&MeasureLength;"/>
+                </Domain>
+            </FieldDefn>
+        </PropertyField>
+
+        <PropertyField name="Bend Radii - English Material Stock"
+                       neutralName="EnglishStockBendRadii">
+            <DepDomain nVariables="1"
+                       autocreate="true"
+                       type="&DomainUser;"
+                       Name="Neutral Factor">
+                <DepVariable Measure="&MeasureUnitLess;"
+                             Name="Neutral Factor"
+                             DisplayName="Neutral Factor"
+                             NeutralName="NeutralFactor"/>
+            </DepDomain>
+            <FieldDefn nDomains="1">
+                <Domain Name="Thickness-Bend Radius"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="2">
+                   <Variable Name="Thickness"
+                             Measure="&MeasureLength;"/>
+                   <Variable Name="Bend Radius"
+                             Measure="&MeasureLength;"/>
+                </Domain>
+            </FieldDefn>
+        </PropertyField>
+
+
+

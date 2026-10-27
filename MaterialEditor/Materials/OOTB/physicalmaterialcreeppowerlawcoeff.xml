@@ -1,0 +1,121 @@
+        <Property name="Check Unit System"
+                  neutralName="CheckUnitSystem"
+                  valueType="enum"
+                  valueChoices="&Choice;No=0;&Choice;Yes=1;"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="1,4,5,6,7,9,11">
+            <DefaultValue value="0"/>
+        </Property>
+        <Property name="Units(Force)(Length)(Mass)(Time)"
+                        neutralName="ForceLengthMassUnits"
+                        valueType="enum"
+                        parentProperty="CheckUnitSystem"
+                        parentPropertyValToBeSensitive="1"
+                        valueChoices="&Choice;(N)(m)(kg)(s)=0;
+                                      &Choice;(lbf)(ft)(slug)(s)=1;
+                                      &Choice;(kgf)(m)(kgf-s^2/m)(s)=2;
+                                      &Choice;(poundal)(ft)(lbm)(s)=3;
+                                      &Choice;(mN)(mm)(kg)(s)=4;
+                                      &Choice;(cN)(cm)(kg)(s)=5;
+                                      &Choice;(lbf)(in)(lbf-s^2/in)(s)=6;
+                                      &Choice;(kgf)(mm)(kgf-s^2/mm)(s)=7;
+                                      &Choice;(N)(mm)(tonne)(s)=8;
+                                      &Choice;(uN)(um)(mg)(ms)=12;
+                                      &Choice;(N)(mm)(N-h^2/mm)(h)=13">
+            <DefaultValue value="0"/>
+        </Property>
+        <Property name="Constant Multiplier (A)"
+                  neutralName="PowerLawCreepParameter_A"
+                  valueType="float"
+                  parentProperty="CreepFormulation"
+                  Dimensions="&MeasureUnitLess;"
+                  parentPropertyValToBeSensitive="1,4">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="SIGMA Exponent (n)"
+                  neutralName="PowerLawCreepParameter_n"
+                  valueType="float"
+                  parentProperty="CreepFormulation"
+                  Dimensions="&MeasureUnitLess;"
+                  parentPropertyValToBeSensitive="1,4">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Hardening Exponent (m)"
+                  neutralName="PowerLawCreepParameter_m"
+                  valueType="float"
+                  parentProperty="CreepFormulation"
+                  Dimensions="&MeasureUnitLess;"
+                  parentPropertyValToBeSensitive="1,4">
+            <DefaultValue value="&valueEmpty;"/>
+        </Property>
+        <Property name="Constant Multiplier (A)"
+                          neutralName="PowerLawCreepParameter_A1"
+                          valueType="scalarField"
+                          parentProperty="CreepFormulation"
+                          Dimensions="&MeasureUnitLess;"
+                          scaleFactor="false"
+                          parentPropertyValToBeSensitive="5">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="SIGMA Exponent (B)"
+                  neutralName="PowerLawCreepParameter_b"
+                  valueType="scalarField"
+                  parentProperty="CreepFormulation"
+                  Dimensions="&MeasureUnitLess;"
+                  scaleFactor="false"
+                  parentPropertyValToBeSensitive="5">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Hardening Exponent (D)"
+                  neutralName="PowerLawCreepParameter_d"
+                  valueType="scalarField"
+                  parentProperty="CreepFormulation"
+                  Dimensions="&MeasureUnitLess;"
+                  scaleFactor="false"
+                  parentPropertyValToBeSensitive="5">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>

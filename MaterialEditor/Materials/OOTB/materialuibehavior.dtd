@@ -1,0 +1,64 @@
+
+<!-- User Material (UMAT) DTD for NX Nastran -->
+<!-- The following constants are maintained in Part_PropTable_IPropDescUI.hxx -->
+<!-- DoNotShow : Used in boxLabel to indicate no group on the UI, but colect the children together. -->
+<!ENTITY DoNotShow "~">
+<!-- Collapse : Used in boxLabel to indicate the group on the UI is to be initially displayed as collasped -->
+<!ENTITY Collapse "-">
+<!-- ColumnLayout : Used in boxLabel to indicate the group on the UI is to have n columns where n is a number -->
+<!--                between 1 and 9 inclusive the immediately follows the ColumnLayout symbol                 -->
+<!--                (e.g. &ColumnLayout;6 indicates this group will have 6 columns).                          -->
+<!ENTITY ColumnLayout "^">
+<!-- Above|Below : (Applies only to TargetSets and valueLabel attribute of properties.)                                                             -->
+<!--          Used in boxLabel to indicate the TargetSet is placed in the UI group above specified property.-->
+<!--          E.g., boxLabel="Model Objects&Choice;&Above;description"                                      -->
+<!--          where  "description" is the neutralName of a property having boxLabel="Model Objects"         -->
+<!--          E.g., boxLabel="Model Objects&Choice;&Above;"                                                 -->
+<!--          E.g., boxLabel="Model Objects&Choice;&Below;"                                                 -->
+<!--          No property name means place at top/bottom of group.                                          -->
+<!--          Default is boxLabel="Model Objects" which means top of group.                                 -->
+<!--                                                                                                        -->
+<!--          Append to the start of the valueLabel string to indicate the ValueLabel widget will be        -->
+<!--          above or below the PropertyComponent UI block.                                                -->
+<!--          To indent the valueLabel, insert extra blank charaters in the string.                         -->
+<!ENTITY Above "+">
+<!ENTITY Below "-">
+
+<!-- Choice : Our universal delimiter. A separator between option choices.  -->
+<!--          changed from # to ~ to avoid clashing with the declash symbol -->
+<!ENTITY Choice "~">
+<!ENTITY ValueLabelChoice "#">
+<!-- Choice operators to use for multi-parent control logic when defining a list of parent choices on the parentProperty attribute. -->
+<!-- Choice : Default delimiter denotes the following parent choice will be evaluated using OR logic relative to other parent choices. -->
+<!-- ChoiceAnd : Denotes the following parent choice will be evaluated using AND logic relative to other parent choices. -->
+<!-- ChoiceNot : Denotes the following parent choice will be evaluated using NOT logic relative to other parent choices. -->
+<!-- Group : Denotes the following group of parent choices will be evaulated using OR logic relative to other parent choices or groups. -->
+<!-- GroupAnd : Denotes the following group of parent choices will be evaluated using AND logic relative to other parent choices or groups. -->
+<!-- GroupNot : Denotes the following group of parent choice will be evaluated using NOT logic relative to other parent choices or groups. -->
+<!-- GroupClose : Denotes the group close of parent choices for multi-parent control logic. -->
+<!-- Example syntax of AND logic between two parent properties: parentProperty="&Choice;neutralName1&ChoiceAnd;neutralName2" -->
+<!-- Example syntax of NOT logic between two parent properties: parentProperty="&Choice;neutralName1&ChoiceNot;neutralName2" -->
+<!-- Example syntax between two groups of parents such as (parent1 OR parent2) AND (parent3 OR parent4): -->
+<!-- parentProperty="&Group;&Choice;neutralName1&Choice;neutralName2&GroupClose;&GroupAnd;&Choice;neutralName3&Choice;neutralName4&GroupClose;" -->
+<!ENTITY ChoiceAnd "~+">
+<!ENTITY ChoiceNot "~!">
+<!ENTITY Group "(">
+<!ENTITY GroupAnd "(^">
+<!ENTITY GroupNot "(*">
+<!ENTITY GroupClose ")">
+
+<!-- Retain Values (Dialog Memory) on UI. -->
+<!ENTITY retainValueDefault "-777777.">
+<!ENTITY retainValueTrue    "true">
+<!ENTITY retainValueFalse   "false">
+
+<!-- Alternate display styles -->
+<!ENTITY defaultDisplay                         "default">
+<!ENTITY floatValueWithLimitsShowSliderDisplay  "scale_keyin_limits">
+<!ENTITY enumRadioButton                        "radio">
+<!ENTITY enumVerticalRadioButton                "radioVert">
+<!ENTITY scalarFieldNoLabelDisplay              "nolabel">
+<!-- Requires multiple domains including constant -->
+<!ENTITY scalarFieldCompactDisplay              "compact">
+
+

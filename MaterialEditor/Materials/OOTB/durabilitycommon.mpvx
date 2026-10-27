@@ -1,0 +1,9 @@
+<ReferenceProperty neutralName="RRatioType"/>
+<ReferenceProperty neutralName="RRatio"/>
+<ReferenceProperty neutralName="TestType"/>
+<ReferenceProperty neutralName="SurvivalProbability"/>
+<ReferenceProperty neutralName="TSigma90-10"/>
+<ReferenceProperty neutralName="EnduranceLimitOption"/>
+<ReferenceProperty neutralName="NumberCycles"/>
+<ReferenceProperty neutralName="StressAmplitude"/>
+<ReferenceProperty neutralName="StrainAmplitude"/>

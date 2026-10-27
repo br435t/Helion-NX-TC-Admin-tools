@@ -1,0 +1,15 @@
+<Property name="Fiber Action (2WAY)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="2WAY"
+        valueType="enum"
+        valueChoices="&Choice;Unidirectional=0&Choice;2-way behavior=1">
+  <DefaultValue value="0"/>
+</Property>
+
+<Property name="Transversal Isotropic Behavior Flag (TI)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="TI"
+        valueType="enum"
+        valueChoices="&Choice;Unidirectional=0&Choice;Transversal=1">
+  <DefaultValue value="0"/>
+</Property>

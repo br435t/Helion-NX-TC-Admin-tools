@@ -1,0 +1,174 @@
+<Property name="Cure Kinetic Model"
+          neutralName="CureKineticModel"
+          valueType="enum"
+          valueChoices="&Choice;Samcef=0&Choice;Auto-Catalytic=1;&Choice;n-th Order=2;&Choice;Kamal and Sourour=3;&Choice;Lee, Chiu and Lin=4;&Choice;Lee, Loos and Springer=5&Choice;User-Defined Cure Kinetics=6">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="5"/>
+</Property>
+
+<Property name="Frequency of Reaction (freq)"
+          neutralName="ReactionFrequency"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="0,1,2,3,4,5"
+          valueType="float"
+          Dimensions="&MeasureFrequency;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Frequency of Reaction (freq2)"
+          neutralName="ReactionFrequency2"
+          valueType="float"
+          Dimensions="&MeasureFrequency;"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="0,3,4,5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Frequency of Reaction (freq3)"
+          neutralName="ReactionFrequency3"
+          valueType="float"
+          Dimensions="&MeasureFrequency;"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Activation Energy (ener) (per Mole)"
+          neutralName="ActivationEnergy"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="0,1,2,3,4,5"
+          valueType="float"
+          Dimensions="&MeasureThermEnergy;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Activation Energy (ener2) (per Mole)"
+          neutralName="ActivationEnergy2"
+          valueType="float"
+          Dimensions="&MeasureThermEnergy;"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="0,3,4,5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Activation Energy (ener3) (per Mole)"
+          neutralName="ActivationEnergy3"
+          valueType="float"
+          Dimensions="&MeasureThermEnergy;"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Threshold Degree of Cure (Xc)"
+          neutralName="ThresholdDegreeOfCure"
+          valueType="float"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="B Constant (B)"
+            neutralName="ConstantB"
+            valueType="float"
+            parentProperty="CureKineticModel"
+            parentPropertyValToBeSensitive="5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Reaction Order (nord)"
+            neutralName="ReactionOrder"
+            valueType="scalarField"
+            parentProperty="CureKineticModel"
+            parentPropertyValToBeSensitive="0,1,2,3,4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Reaction Order (nord2)"
+            neutralName="ReactionOrder2"
+            valueType="scalarField"
+            parentProperty="CureKineticModel"
+            parentPropertyValToBeSensitive="0,1,3,4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Reaction Order (nord3)"
+            neutralName="ReactionOrder3"
+            valueType="scalarField"
+            parentProperty="CureKineticModel"
+            parentPropertyValToBeSensitive="0,4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
+<Property name="ANF"
+          neutralName="CureKineticsFunction"
+          valueType="scalarField"
+          Dimensions="&MeasureFrequency;"
+          parentProperty="CureKineticModel"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    &fieldtempdoctg;
+</Property>
+

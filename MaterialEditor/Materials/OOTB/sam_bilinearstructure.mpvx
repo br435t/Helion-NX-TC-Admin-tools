@@ -1,0 +1,128 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="YoungsModulus"/>
+<ReferenceProperty neutralName="YoungsModulus2"/>
+<ReferenceProperty neutralName="YoungsModulus3"/>
+
+<ReferenceProperty neutralName="CompressionYoungsModulus"/>
+<ReferenceProperty neutralName="CompressionYoungsModulus2"/>
+<ReferenceProperty neutralName="CompressionYoungsModulus3"/>
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+
+
+<ReferenceProperty neutralName="ShearModulus"/>
+<ReferenceProperty neutralName="ShearModulus2"/>
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+<ReferenceProperty neutralName="ThermalExpansion2"/>
+<ReferenceProperty neutralName="ThermalExpansion3"/>
+
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="StrengthLimitsFailureCriterion"/>
+<ReferenceProperty neutralName="AllFailureCriterion"/>
+<ReferenceProperty neutralName="HashinFailureCriterion"/>
+
+<ReferenceProperty neutralName="HoffmanFailureCriterion"/>
+<ReferenceProperty neutralName="LaRC04FailureCriterion"/>
+
+<ReferenceProperty neutralName="PuckFailureCriterion"/>
+
+<ReferenceProperty neutralName="RiceTraceyFailureCriterion"/>
+<ReferenceProperty neutralName="MaximumStressFailureCriterion"/>
+
+<ReferenceProperty neutralName="MaximumTotalStrainFailureCriterion"/>
+<ReferenceProperty neutralName="StrainRatioFailureCriterion"/>
+<ReferenceProperty neutralName="StressRatioFailureCriterion"/>
+<ReferenceProperty neutralName="TsaiHillFailureCriterion"/>
+<ReferenceProperty neutralName="TsaiWuFailureCriterion"/>
+
+<ReferenceProperty neutralName="MaxStressTension"
+                   valueLabel="Tension (ST1)"/>
+<ReferenceProperty neutralName="MaxStressTension2"
+                   valueLabel="Tension (ST2)"/>
+<ReferenceProperty neutralName="MaxStressTension3"
+                   valueLabel="Tension (ST3)"/>
+<ReferenceProperty neutralName="MaxStressCompression"
+                   valueLabel="Compression (SC1)"/>
+<ReferenceProperty neutralName="MaxStressCompress2"
+                   valueLabel="Compression (SC2)"/>
+<ReferenceProperty neutralName="MaxStressCompress3"
+                   valueLabel="Compression (SC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"
+                   valueLabel="Shear (SS12)"/>
+<ReferenceProperty neutralName="ShearStress13"
+                   valueLabel="Shear (SS13)"/>
+<ReferenceProperty neutralName="ShearStress23"
+                   valueLabel="Shear (SS23)"/>
+
+
+
+
+<ReferenceProperty neutralName="MaxStrainTension"
+                   valueLabel="Tension (XT1)"/>
+<ReferenceProperty neutralName="MaxStrainTension2"
+                   valueLabel="Tension (XT2)"/>
+<ReferenceProperty neutralName="MaxStrainTension3"
+                   valueLabel="Tension (XT3)"/>
+<ReferenceProperty neutralName="MaxStrainCompression"
+                   valueLabel="Compression (XC1)"/>
+<ReferenceProperty neutralName="MaxStrainCompression2"
+                   valueLabel="Compression (XC2)"/>
+<ReferenceProperty neutralName="MaxStrainCompression3"
+                   valueLabel="Compression (XC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"
+                   valueLabel="Shear (XS12)"/>
+<ReferenceProperty neutralName="ShearStrain13"
+                   valueLabel="Shear (XS13)"/>
+<ReferenceProperty neutralName="ShearStrain23"
+                   valueLabel="Shear (XS23)"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"
+                   valueLabel="F12"/>
+<ReferenceProperty neutralName="TsaiWu13"
+                   valueLabel="F13"/>
+<ReferenceProperty neutralName="TsaiWu23"
+                   valueLabel="F23"/>
+
+<ReferenceProperty neutralName="AxisShearStrength1"/>
+<ReferenceProperty neutralName="AxisShearStrength2"/>
+<ReferenceProperty neutralName="AxisShearStrength3"/>
+
+
+
+<ReferenceProperty neutralName="ModeICrackReleaseEnergy"/>
+<ReferenceProperty neutralName="ModeIICrackReleaseEnergy"/>
+<ReferenceProperty neutralName="ModeIIICrackReleaseEnergy"/>
+
+
+<ReferenceProperty neutralName="ShapeParameter1"/>
+<ReferenceProperty neutralName="ShapeParameter2"/>
+<ReferenceProperty neutralName="ShapeParameter3"/>
+<ReferenceProperty neutralName="ShapeParameter4"/>
+
+
+<ReferenceProperty neutralName="InPlaneShearComponents"/>
+<ReferenceProperty neutralName="ThicknessTransition"/>
+<ReferenceProperty neutralName="LaminateBehavior"/>
+<ReferenceProperty neutralName="FractureAngle"/>
+<ReferenceProperty neutralName="FrictionCoefficient"/>
+<ReferenceProperty neutralName="RiceParameter"/>
+
+
+

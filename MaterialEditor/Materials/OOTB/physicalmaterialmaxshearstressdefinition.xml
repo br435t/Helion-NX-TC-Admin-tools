@@ -1,0 +1,80 @@
+        <Property name="Max Stress Shear (SS)"
+                  neutralName="MaxInPlaneShearStress"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;HoffmanFailureCriterion&Choice;LaRC04FailureCriterion&Choice;PuckFailureCriterion&Choice;MaximumStressFailureCriterion&Choice;TsaiHillFailureCriterion&Choice;TsaiWuFailureCriterion&Choice;MaterialType"
+                  parentPropertyValToBeSensitive="&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;&MaterialTypeANISOTROPIC;,&MaterialTypeMULTIMECHMICROSTRUCTURE;"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shear (S13)"
+                  neutralName="ShearStress13"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;HoffmanFailureCriterion&Choice;LaRC04FailureCriterion&Choice;PuckFailureCriterion&Choice;MaximumStressFailureCriterion&Choice;TsaiHillFailureCriterion&Choice;TsaiWuFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shear (S23)"
+                  neutralName="ShearStress23"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;HoffmanFailureCriterion&Choice;LaRC04FailureCriterion&Choice;PuckFailureCriterion&Choice;MaximumStressFailureCriterion&Choice;TsaiHillFailureCriterion&Choice;TsaiWuFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Max Stress Shear (SS)"
+                  neutralName="MaxInPlaneShearStressConstant"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="3,4,5,6"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;">
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&minFloat;"
+                      inclusive="true"/>
+          <UpperBound value="&maxFloat;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="1">
+            <Domain type="&DomainConstant;"/>
+          </FieldDefn>
+        </Property>
+        <Property name="Temperature Dependent Max Stress Shear (SS)"
+                  neutralName="MaxInPlaneShearStressTemperature"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="4,6"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="true" >
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&minFloat;"
+                      inclusive="true"/>
+          <UpperBound value="&maxFloat;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="1">
+            <Domain type="&DomainTemperature;"/>
+          </FieldDefn>
+        </Property>        

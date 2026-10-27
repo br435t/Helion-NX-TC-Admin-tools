@@ -1,0 +1,243 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                    valueChoices="&Choice;Temperature=0"
+                    defaultValue="0"
+                    showProp="false"
+                    lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulus"/>
+<ReferenceProperty neutralName="YoungsModulus2"/>
+<ReferenceProperty neutralName="YoungsModulus3"/>
+
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+
+<ReferenceProperty neutralName="ShearModulus"
+                   valueLabel="Shear Modulus (G12)"/>
+<ReferenceProperty neutralName="ShearModulus2"
+                   valueLabel="Shear Modulus (G13)"/>
+<ReferenceProperty neutralName="ShearModulus3"
+                   valueLabel="Shear Modulus (G23)"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="TsaiWuFailureCriterion"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"
+                   valueLabel="Tsai-Wu Interaction Coefficient (F12)"/>
+
+<ReferenceProperty neutralName="MaxStressTension"
+                   valueLabel="Tension (ST1)"/>
+<ReferenceProperty neutralName="MaxStressTension2"
+                   valueLabel="Tension (ST2)"/>
+<ReferenceProperty neutralName="MaxStressCompression"
+                   valueLabel="Compression (SC1)"/>
+<ReferenceProperty neutralName="MaxStressCompress2"
+                   valueLabel="Compression (SC2)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"
+                   valueLabel="Shear (SS12)"/>
+
+<ReferenceProperty neutralName="MaxStrainTension"
+                   valueLabel="Tension (XT1)"/>
+<ReferenceProperty neutralName="MaxStrainTension2"
+                   valueLabel="Tension (XT2)"/>
+<ReferenceProperty neutralName="MaxStrainCompression"
+                   valueLabel="Compression (XC1)"/>
+<ReferenceProperty neutralName="MaxStrainCompression2"
+                   valueLabel="Compression (XC2)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"
+                   valueLabel="Shear (XS12)"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"
+                   valueLabel="Thermal Expansion (X)"/>
+<ReferenceProperty neutralName="ThermalExpansion2"
+                   valueLabel="Thermal Expansion (Y)"/>
+<ReferenceProperty neutralName="ThermalExpansion3"
+                   valueLabel="Thermal Expansion (Z)"/>
+
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="TempConductivityBehaviorType"
+                   valueChoices="&Choice;Orthotropic=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ThermalConductivity"/>
+<ReferenceProperty neutralName="ThermalConductivity2"/>
+<ReferenceProperty neutralName="ThermalConductivity3"/>
+
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="SpecificHeat"/>
+
+
+<ReferenceProperty neutralName="CreepFormulation"
+                   valueChoices="&Choice;##397None=0&Choice;O.R.N.L viscoplastic material (CREEP/TYPE 111-222)=2&Choice;Time Hardening (Norton-Bailey) Power Law (CREEP/TYPE 300)=1&Choice;Strain Hardening Power Law=4"
+                   defaultValue="0"/>
+
+
+<ReferenceProperty neutralName="CreepReferenceTemperature"/>
+
+<ReferenceProperty neutralName="CreepTemperatureDependenceDeltaH"/>
+
+<ReferenceProperty neutralName="CreepHardening"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+
+<ReferenceProperty neutralName="ForceLengthMassUnits"/>
+
+<ReferenceProperty neutralName="TempDependTermType"
+                   valueChoices="&Choice;exp( -DeltaH / ( R * T0 ))=0&Choice;DeltaH=1"/>
+
+<ReferenceProperty neutralName="CreepTemperatureDependence"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_n"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_m"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A1"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_b"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_d"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC3Function"
+                   valueChoices="&Choice;e * [sinh( f * SIGMA )] ^ g=1"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_e"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_f"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_g"/>
+
+
+
+<ReferenceProperty neutralName="ViscoelasticDomain"
+                   valueChoices="&Choice;##397None=0;&Choice;Time Domain Data=1;&Choice;Frequency Domain Data=2"/>
+<ReferenceProperty neutralName="ViscoelasticType"/>
+
+<ReferenceProperty neutralName="ViscoelasticTimeDefn"/>
+
+<ReferenceProperty neutralName="TimeErrorTolerance"/>
+
+<ReferenceProperty neutralName="TimeNMax"/>
+
+<ReferenceProperty neutralName="ViscoelasticTimeDefnCreepTestDataFormat"/>
+
+<ReferenceProperty neutralName="ViscoelasticTimeDefnRelaxTestDataFormat"/>
+
+<ReferenceProperty neutralName="TimeDomainLongTermShearCompliance"/>
+
+<ReferenceProperty neutralName="TimeDomainLongTermBulkCompliance"/>
+
+<ReferenceProperty neutralName="TimeDomainLongTermShearRelaxation"/>
+
+<ReferenceProperty neutralName="TimeDomainLongTermBulkRelaxation"/>
+
+<ReferenceProperty neutralName="TimeNormalizedShearCompliance"/>
+
+<ReferenceProperty neutralName="TimeNormalizedBulkCompliance"/>
+
+<ReferenceProperty neutralName="TimeShearBulkComplianceData"/>
+
+<ReferenceProperty neutralName="TimeNormalizedShearRelaxation"/>
+
+<ReferenceProperty neutralName="TimeNormalizedBulkRelaxation"/>
+
+<ReferenceProperty neutralName="TimeShearBulkRelaxationData"/>
+
+<ReferenceProperty neutralName="ViscoelasticTimeFreqTabularData"/>
+
+<ReferenceProperty neutralName="PronyParameterType"
+                   valueChoices="&Choice;Series=0;"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="ViscoelasticPronyTimeParms"/>
+
+<ReferenceProperty neutralName="ViscoelasticType2"/>
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefn"/>
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefn2"/>
+
+<ReferenceProperty neutralName="FreqErrorTolerance"/>
+
+<ReferenceProperty neutralName="FreqNMax"/>
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefnCreepTestDataFormat"/>
+
+<ReferenceProperty neutralName="ViscoelasticFrequencyDefnRelaxTestDataFormat"/>
+
+<ReferenceProperty neutralName="FreqDomainLongTermShearCompliance"/>
+
+<ReferenceProperty neutralName="FreqDomainLongTermBulkCompliance"/>
+
+<ReferenceProperty neutralName="FreqDomainLongTermShearRelaxation"/>
+
+<ReferenceProperty neutralName="FreqDomainLongTermBulkRelaxation"/>
+
+<ReferenceProperty neutralName="FreqNormalizedShearCompliance"/>
+
+<ReferenceProperty neutralName="FreqNormalizedBulkCompliance"/>
+
+<ReferenceProperty neutralName="FreqShearBulkComplianceData"/>
+
+<ReferenceProperty neutralName="FreqNormalizedShearRelaxation"/>
+
+<ReferenceProperty neutralName="FreqNormalizedBulkRelaxation"/>
+
+<ReferenceProperty neutralName="FreqShearBulkRelaxationData"/>
+
+<ReferenceProperty neutralName="ViscoelasticPronyFreqParms"/>
+
+<ReferenceProperty neutralName="ViscoelasticPreload"/>
+
+<ReferenceProperty neutralName="ViscoelasticPreload2"/>
+
+<ReferenceProperty neutralName="FreqFormulaG1"/>
+
+<ReferenceProperty neutralName="FreqFormulaAlpha"/>
+
+<ReferenceProperty neutralName="FreqFormulaK1"/>
+
+<ReferenceProperty neutralName="FreqFormulaBeta"/>
+
+<ReferenceProperty neutralName="ViscoelasticFreqTabularData"/>
+
+<ReferenceProperty neutralName="ViscoelasticUniaxialData"/>
+
+<ReferenceProperty neutralName="ViscoelasticBulkData"/>
+
+<ReferenceProperty neutralName="FrequencyNormalizedLossShearModuliiField"/>
+
+<ReferenceProperty neutralName="FrequencyUniaxialLossStorageModuliiClosureField"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_Abaqus_AlphaDampingFactor"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_Abaqus_BetaDampingFactor"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_Abaqus_CompositeDampingFraction"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_Abaqus_StructuralDampingFactor"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_Abaqus_HeatGeneration"/>
+
+

@@ -1,0 +1,185 @@
+<Property name="Martensite Rate Equation (A)"
+          neutralName="MartensiteA"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Rate Equation (B)"
+          neutralName="MartensiteB"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Rate Equation (C)"
+          neutralName="MartensiteC"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Rate Equation (D)"
+          neutralName="MartensiteD"
+          valueType="float"
+          Dimensions="&MeasureThermExpansion;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Rate Equation (P)"
+          neutralName="MartensiteP"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Rate Equation (Q)"
+          neutralName="MartensiteQ"
+          valueType="float"
+          Dimensions="&MeasureTemperature;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Rate Equation (E0)"
+          neutralName="MartensiteE0"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Martensite Initial Volume Fraction (VM0)"
+          neutralName="MartensiteVM0"
+          valueType="scalarField"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainStrain;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Hardening Law (AHS)"
+          neutralName="HardeningAHS"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (BHS)"
+          neutralName="HardeningBHS"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (M)"
+          neutralName="HardeningM"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (N)"
+          neutralName="HardeningN"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (EPS0)"
+          neutralName="HardeningEPS0"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (HMART)"
+          neutralName="HardeningHMART"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (K1)"
+          neutralName="HardeningK1"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Law (K2)"
+          neutralName="HardeningK2"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+
+
+
+

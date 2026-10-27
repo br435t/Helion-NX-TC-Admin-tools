@@ -1,0 +1,43 @@
+                <Property name="Initial Gap"
+                          neutralName="InitialGap"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureLength;"
+                          scaleFactor="false" >
+                    <DefaultValue value="0.0"/>
+                    <LowerBound value="0.0"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"
+                                      evaluationProperty="Default Temperature"
+                                      propertyType="Solution"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+
+                <Property name="Initial Gap"
+                          neutralName="InitialGapUnitLess"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          scaleFactor="false" >
+                    <DefaultValue value="0.0"/>
+                    <LowerBound value="0.0"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"
+                                      evaluationProperty="Default Temperature"
+                                      propertyType="Solution"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>

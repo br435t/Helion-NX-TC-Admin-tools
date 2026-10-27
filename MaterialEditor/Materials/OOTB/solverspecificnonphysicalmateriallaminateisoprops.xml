@@ -1,0 +1,49 @@
+<!-- =================================================================================================================================== -->
+<!--                                                   PROGRESSIVE FAILURE MODELS                                                        -->
+<!-- =================================================================================================================================== -->
+<Property name="Progressive Failure Model"
+          solPrefixName="NonPhysicalProp_Abaqus_"
+          solSuffixName="ProgressiveFailureTHEORY"
+          editable="true"
+          valueType="enum"
+          valueChoices="&Choice;None=0&Choice;MCT - UD Fibers=1"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+
+<!-- ================================================================================== -->
+<!--                               MCT for UD fibers                                    -->
+<!-- ================================================================================== -->
+<Property name="Degradation factor for Young Modulus E"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="DE"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="1"
+            scaleFactor="false">
+    <DefaultValue value="&valueZeroPointOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+<Property name="Degradation factor for Poisson's ratio v"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="Dv"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="1"
+            scaleFactor="false">
+    <DefaultValue value="&valueZeroPointOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>

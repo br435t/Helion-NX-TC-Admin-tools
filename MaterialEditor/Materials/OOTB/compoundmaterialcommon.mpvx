@@ -1,0 +1,24 @@
+<ReferenceProperty neutralName="percent1"/>
+<ReferenceProperty neutralName="IsoMatl1"/>
+
+<ReferenceProperty neutralName="percent2"/>
+<ReferenceProperty neutralName="IsoMatl2"/>
+
+<ReferenceProperty neutralName="percent3"/>
+<ReferenceProperty neutralName="IsoMatl3"/>
+
+<ReferenceProperty neutralName="percent4"/>
+<ReferenceProperty neutralName="IsoMatl4"/>
+
+<ReferenceProperty neutralName="percent5"/>
+<ReferenceProperty neutralName="IsoMatl5"/>
+
+<ReferenceProperty neutralName="voidMatl"/>
+
+<ReferenceProperty neutralName="DensityCalcMethod"/>
+
+<ReferenceProperty neutralName="GeneralCalcMethod"/>
+
+<ReferenceProperty neutralName="CalculateProperties"/>
+
+

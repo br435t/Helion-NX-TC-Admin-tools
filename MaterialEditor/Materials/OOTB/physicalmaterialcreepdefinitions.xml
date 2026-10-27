@@ -1,0 +1,204 @@
+
+<!-- Creep Tab                                                                  -->
+<!-- Norton-Bailey (A * ( SIGMA^n ) * ( time^m ))                               -->
+<!-- Kelvin-Maxwell Rheological Model (C1 * ( 1 - e^(-C2 * time )) + C3 * time) -->
+<Property name=""
+            neutralName="CreepFormulation"
+            valueType="enum"
+            valueChoices="&Choice;##397None=0;
+                        &Choice;O.R.N.L viscoplastic material (CREEP/TYPE 111-222)=2;
+                        &Choice;Time Hardening (Norton-Bailey) Power Law (CREEP/TYPE 300)=1;
+                        &Choice;Kelvin-Maxwell, uniaxial creep recovery test, Tabular Input (CREEP/Table)=3;
+                        &Choice;Strain Hardening Power Law=4;
+                        &Choice;Norton-Bailey in Time or Strain Hardening, Temperature-Dependent (MATCRP/Type 301)=5;
+                        &Choice;Strain Hardening Creep (MVPLAS/Law STRNHARD)=6;
+                        &Choice;Norton Creep (MVPLAS/Law NORTON)=7;
+                        &Choice;Generalized Garofalo Creep (MVPLAS/Law GENGAROF)=8;
+                        &Choice;Norton-Bailey in Time Hardening Creep (MVPLAS/Law TIMEHARD)=9;
+                        &Choice;User Creep (MVPLAS/Law USER + MUCRP)=10;
+                        &Choice;Generalized Blackburn Creep=11;"
+            valueLabel="&Below; &ValueLabelChoice;A * ( SIGMA^n ) * ( time^m )&ValueLabelChoice;C1 * ( 1 - e^(-C2 * time )) + C3 * time&ValueLabelChoice; &ValueLabelChoice;A * ( SIGMA^n ) * ( time^m )&ValueLabelChoice;epsilon_cr = A * sigma^B * t^D, Time Hardening: d(epsilon_cr)/dt = A * D * sigma^B * t^(D-1), Strain Hardening: d(epsilon_cr)/dt = D * [A * sigma^B * epsilon_cr^(D-1)]^(1/D)&ValueLabelChoice;d(Eq.Cr.Strain)/dt = C1 * Eq.Stress^C2 * Eq.Cr.Strain^C3 * EXP(-C4/T)&ValueLabelChoice;d(Eq.Cr.Strain)/dt = C1 * Eq.Stress^C2 * EXP(-C4/T)&ValueLabelChoice;d(Eq.Cr.Strain)/dt = C1 * [ SINH( C2 * Eq.Stress) ]^C3 * EXP(-C4/T)&ValueLabelChoice;Eq.Cr.Strain = A * Eq.Stress^B * t^D -> d(Eq.Cr.Strain)/dt = A * D * Eq.Stress^B * t^(D-1)&ValueLabelChoice; &ValueLabelChoice;d(Eq.Cr.Strain)/dt = C1 * (1 - e^(C2 * time)) + (C3 * time)"
+            Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="0"/>
+</Property>
+<Property name="Creep Reference Temperature"
+            neutralName="CreepReferenceTemperature"
+            valueType="float"
+            Dimensions="&MeasureTemperature;"
+            parentProperty="CreepFormulation"
+            parentPropertyValToBeSensitive="1,2,3,4,11">
+    <DefaultValue value="&ZeroDegCelsius;"/>
+    <LowerBound value="&MinTemperature;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+<Property name="Temperature Dependent Term Formulation"
+            neutralName="TempDependTermType"
+            valueType="enum"
+            valueChoices="&Choice;exp( -DeltaH / ( R * T0 ))=0&Choice;DeltaH=1"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="CreepFormulation"
+            parentPropertyValToBeSensitive="1,2,3,4">
+    <DefaultValue value="0"/>
+</Property>
+<Property name="exp( -DeltaH / ( R * T0 ))"
+            neutralName="CreepTemperatureDependence"
+            valueType="float"
+            parentProperty="TempDependTermType"
+            parentPropertyValToBeSensitive="0">
+    <DefaultValue value="1.0E-9"/>
+    <LowerBound value="0.0"
+                inclusive="false"/>
+    <UpperBound value="1.0"
+                inclusive="true"/>
+</Property>
+<Property name="Delta H (per Mole)"
+            neutralName="CreepTemperatureDependenceDeltaH"
+            valueType="float"
+            Dimensions="&MeasureEnergy;"
+            parentProperty="TempDependTermType"
+            parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+<Property name="Creep Threshold"
+            neutralName="CreepThreshold"
+            valueType="float"
+            Dimensions="&MeasureStrain;"
+            parentProperty="CreepFormulation"
+            parentPropertyValToBeSensitive="1,2,3,4,5,11">
+    <DefaultValue value="1.0E-5"/>
+    <LowerBound value="0.0"
+                inclusive="false"/>
+    <UpperBound value="1.0E-3"
+                inclusive="false"/>
+</Property>
+<Property name="Creep Threshold"
+            neutralName="CreepThresholdVPlas"
+            valueType="float"
+            Dimensions="&MeasureStrain;"
+            parentProperty="CreepFormulation"
+            parentPropertyValToBeSensitive="6,7,8,9">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0.0"
+                inclusive="false"/>
+    <UpperBound value="1.0E-3"
+                inclusive="false"/>
+</Property>
+<Property name="Hardening"
+            neutralName="CreepHardening"
+            valueType="enum"
+            valueChoices="&Choice;Strain=0;&Choice;Time=1;"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="CreepFormulation"
+            parentPropertyValToBeSensitive="5">
+    <DefaultValue value="0"/>
+</Property>
+<Property name="Anisotropy"
+            neutralName="AnisotropicType"
+            valueType="enum"
+            valueChoices="&Choice;None=0;&Choice;Hill=1;&Choice;MPLAS=2;"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="CreepFormulation"
+            parentPropertyValToBeSensitive="6,7,8,9,10">
+    <DefaultValue value="0"/>
+</Property>
+<Property name="R11"
+          neutralName="CreepHillRatio11"
+          valueType="scalarField"
+          parentProperty="AnisotropicType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R22"
+          neutralName="CreepHillRatio22"
+          valueType="scalarField"
+          parentProperty="AnisotropicType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R33"
+          neutralName="CreepHillRatio33"
+          valueType="scalarField"
+          parentProperty="AnisotropicType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R12"
+          neutralName="CreepHillRatio12"
+          valueType="scalarField"
+          parentProperty="AnisotropicType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R23"
+          neutralName="CreepHillRatio23"
+          valueType="scalarField"
+          parentProperty="AnisotropicType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R13"
+          neutralName="CreepHillRatio13"
+          valueType="scalarField"
+          parentProperty="AnisotropicType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
+
+
+

@@ -1,0 +1,3 @@
+        <ReferenceProperty neutralName="MaxStrainTension"/>
+        <ReferenceProperty neutralName="MaxStrainCompression"/>
+        <ReferenceProperty neutralName="MaxInPlaneShearStrain"/>

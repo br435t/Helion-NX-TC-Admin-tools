@@ -1,0 +1,160 @@
+<Property name="Progressive Failure Model"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="ProgressiveFailureTHEORY"
+            editable="true"
+            valueType="enum"
+            valueChoices="&Choice;None=0
+                        &Choice;Sudden Degradation=1
+                        &Choice;Woven Fibers (Hochard's model)=2
+                        &Choice;MCT - UD Fibers=3"
+            Dimensions="&MeasureUnitLess;"
+            scaleFactor="false">
+    <DefaultValue value="0"/>
+</Property>
+
+<!-- ================================================================================== -->
+<!--                          SUDDEN DEGRADATION MODEL / MCT UD                         -->
+<!-- ================================================================================== -->
+<Property name="Degradation factor for E11"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="DE11"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="1,3"
+            scaleFactor="false">
+    <DefaultValue value="&valueZeroPointOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+<Property name="Degradation factor for E22"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="DE22"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="1,3"
+            scaleFactor="false">
+    <DefaultValue value="&valueZeroPointOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+<Property name="Degradation factor for G12"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="DG12"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="1,3"
+            scaleFactor="false">
+    <DefaultValue value="&valueZeroPointOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+<Property name="Degradation factor for v12"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="Dv12"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="1,3"
+            scaleFactor="false">
+    <DefaultValue value="&valueZeroPointOne;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+<!-- ================================================================================== -->
+<!--                           WOVEN FIBERS (HOCHARD'S MODEL)                           -->
+<!-- ================================================================================== -->
+<Property name="Breaking threshold in compression (Y11lim-)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="Y11L"
+            valueType="float"
+            Dimensions="&MeasureStress;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+<Property name="Breaking threshold in traction (Y11lim+)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="Y11U"
+            valueType="float"
+            Dimensions="&MeasureStress;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+<Property name="Fiber matrix debonding threshold (Y012)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="Y012"
+            valueType="float"
+            Dimensions="&MeasureStress;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+<Property name="Critical Thermodynamic Force (YC12)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="YC12"
+            valueType="float"
+            Dimensions="&MeasureStress;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+<Property name="Limit Value of Energy in Shear (YF12)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="YF12"
+            valueType="float"
+            Dimensions="&MeasureStress;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+<Property name="Limit Value of Energy in the transverse direction (YF22)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="YF22"
+            valueType="float"
+            Dimensions="&MeasureStress;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+<Property name="Coupling Coefficient (b3)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="b3"
+            valueType="float"
+            Dimensions="&MeasureUnitLess;"
+            parentProperty="NonPhysicalProp_Abaqus_ProgressiveFailureTHEORY"
+            parentPropertyValToBeSensitive="2"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>

@@ -1,0 +1,17 @@
+<FieldDefn nDomains="4">
+    <Domain type="&DomainConstant;"/>
+    <Domain type="&DomainTemperature;"/>
+    <Domain Name ="Degree of Crystallization"
+            autocreate="true"
+            nVariables="1">
+        <Variable Name="Degree of Crystallization"/>
+    </Domain>
+    <Domain Name ="Degree of Crystallization"
+            autocreate="true"
+            hasSecondary="true"
+            nVariables="1">
+        <Variable Name="Degree of Crystallization"/>
+        <SecondaryDomain type="&DomainTemperature;"
+                         autocreate="true"/>
+    </Domain>
+</FieldDefn>

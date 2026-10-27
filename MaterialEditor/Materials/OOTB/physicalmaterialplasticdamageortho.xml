@@ -1,0 +1,48 @@
+<Property name="Alpha"
+          neutralName="RcDcModelAlpha"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Beta"
+          neutralName="RcDcModelBeta"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Gamma"
+          neutralName="RcDcModelGamma"
+          valueType="float"
+          Dimensions="&MeasureStressCompliance;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="D0"
+          neutralName="RcDcModelD0"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="B"
+          neutralName="RcDcModelB"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Lambda"
+          neutralName="RcDcModelLambda"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Ds"
+          neutralName="RcDcModelDs"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>

@@ -1,0 +1,45 @@
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Temperature and Degree of Cure and Glass Transition Temperature=2"/>
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Temperature and Degree of Cure and Glass Transition Temperature=2"/>
+
+<ReferenceProperty neutralName="SpecificHeatTempDocTg" />
+
+
+<ReferenceProperty neutralName="CuringMatConductivityBehaviorType"/>
+
+<ReferenceProperty neutralName="ThermalConductivityTempDocTg"/>
+<ReferenceProperty neutralName="ThermalConductivityTempDocTg2"/>
+<ReferenceProperty neutralName="ThermalConductivityTempDocTg3"/>
+
+
+<ReferenceProperty neutralName="CuringHeat"/>
+<ReferenceProperty neutralName="MatrixMassFraction" />
+
+<ReferenceProperty neutralName="CureKineticModel"/>
+<ReferenceProperty neutralName="ReactionFrequency"/>
+<ReferenceProperty neutralName="ReactionFrequency2"/>
+<ReferenceProperty neutralName="ReactionFrequency3"/>
+<ReferenceProperty neutralName="ActivationEnergy"/>
+<ReferenceProperty neutralName="ActivationEnergy2"/>
+<ReferenceProperty neutralName="ActivationEnergy3"/>
+<ReferenceProperty neutralName="ThresholdDegreeOfCure"/>
+<ReferenceProperty neutralName="ConstantB"/>
+<ReferenceProperty neutralName="ReactionOrder"/>
+<ReferenceProperty neutralName="ReactionOrder2"/>
+<ReferenceProperty neutralName="ReactionOrder3"/>
+<ReferenceProperty neutralName="CureKineticsFunction"/>
+
+<ReferenceProperty neutralName="TgUncuredResin"/>
+<ReferenceProperty neutralName="TgFullyCuredResin"/>
+<ReferenceProperty neutralName="TgLambda"/>
+
+<ReferenceProperty neutralName="CureVitrificationEffectType"/>
+<ReferenceProperty neutralName="MaxCureBDIF"/>
+<ReferenceProperty neutralName="MaxCureBDIF2"/>
+<ReferenceProperty neutralName="MaxCureBDIF3"/>
+<ReferenceProperty neutralName="MaxCureDCUR"/>

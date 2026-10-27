@@ -1,0 +1,51 @@
+<Property name="Young's Modulus (EL)"
+          neutralName="YoungsModulusLinerEL"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+</Property>
+
+<Property name="Poisson's Ratio (PRL)"
+          neutralName="PoissonsRatioLinerPRL"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Thickness Ratio (LRATIO)"
+          neutralName="LinerToFabricThicknessRatio"
+          valueToolTip="Ratio of Liner Thickness to Total Fabric Thickness"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+</Property>
+
+<Property name="Rayleigh Damping Coefficient (DAMP)"
+          neutralName="RayleighDampingCoefficient"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+</Property>
+
+<Property name="Compression Option (LNRC)"
+          neutralName="CompressionLinerFlagLNRC"
+          valueType="enum"
+          valueChoices="&Choice;Off=0;
+                        &Choice;On=1"
+          valueSubtype="radio"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="-1,0,1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Compression Option (LNRC)"
+          neutralName="CompressionLinerFlagLNRCOption"
+          valueType="enum"
+          valueChoices="&Choice;Off=0;
+                        &Choice;On=1;
+                        &Choice;Liner's Resistance Force Follows TSRFAC=2"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="0"/>
+</Property>
+
+

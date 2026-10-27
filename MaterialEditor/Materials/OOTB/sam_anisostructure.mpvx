@@ -1,0 +1,223 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="AnisotropicElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3&Choice;Temperature=4"
+                   defaultValue="3"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="CalculateConstantValuesTempDep"/>
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="G12Constant"/>
+<ReferenceProperty neutralName="G13Constant"/>
+<ReferenceProperty neutralName="G14Constant"/>
+<ReferenceProperty neutralName="G15Constant"/>
+<ReferenceProperty neutralName="G16Constant"/>
+<ReferenceProperty neutralName="G22Constant"/>
+<ReferenceProperty neutralName="G23Constant"/>
+<ReferenceProperty neutralName="G24Constant"/>
+<ReferenceProperty neutralName="G25Constant"/>
+<ReferenceProperty neutralName="G26Constant"/>
+<ReferenceProperty neutralName="G33Constant"/>
+<ReferenceProperty neutralName="G34Constant"/>
+<ReferenceProperty neutralName="G35Constant"/>
+<ReferenceProperty neutralName="G36Constant"/>
+<ReferenceProperty neutralName="G44Constant"/>
+<ReferenceProperty neutralName="G45Constant"/>
+<ReferenceProperty neutralName="G46Constant"/>
+<ReferenceProperty neutralName="G55Constant"/>
+<ReferenceProperty neutralName="G56Constant"/>
+<ReferenceProperty neutralName="G66Constant"/>
+
+<ReferenceProperty neutralName="ShearModulusTemperature"/>
+<ReferenceProperty neutralName="G12Temperature"/>
+<ReferenceProperty neutralName="G13Temperature"/>
+<ReferenceProperty neutralName="G14Temperature"/>
+<ReferenceProperty neutralName="G15Temperature"/>
+<ReferenceProperty neutralName="G16Temperature"/>
+<ReferenceProperty neutralName="G22Temperature"/>
+<ReferenceProperty neutralName="G23Temperature"/>
+<ReferenceProperty neutralName="G24Temperature"/>
+<ReferenceProperty neutralName="G25Temperature"/>
+<ReferenceProperty neutralName="G26Temperature"/>
+<ReferenceProperty neutralName="G33Temperature"/>
+<ReferenceProperty neutralName="G34Temperature"/>
+<ReferenceProperty neutralName="G35Temperature"/>
+<ReferenceProperty neutralName="G36Temperature"/>
+<ReferenceProperty neutralName="G44Temperature"/>
+<ReferenceProperty neutralName="G45Temperature"/>
+<ReferenceProperty neutralName="G46Temperature"/>
+<ReferenceProperty neutralName="G55Temperature"/>
+<ReferenceProperty neutralName="G56Temperature"/>
+<ReferenceProperty neutralName="G66Temperature"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+<ReferenceProperty neutralName="ThermalExpansion2"/>
+<ReferenceProperty neutralName="ThermalExpansion3"/>
+<ReferenceProperty neutralName="ThermalExpansion4"/>
+<ReferenceProperty neutralName="ThermalExpansion5"/>
+<ReferenceProperty neutralName="ThermalExpansion6"/>
+
+<ReferenceProperty neutralName="MaxStressTension"
+                   valueLabel="Tension (ST1)"/>
+<ReferenceProperty neutralName="MaxStressTension2"
+                   valueLabel="Tension (ST2)"/>
+<ReferenceProperty neutralName="MaxStressTension3"
+                   valueLabel="Tension (ST3)"/>
+<ReferenceProperty neutralName="MaxStressCompression"
+                   valueLabel="Compression (SC1)"/>
+<ReferenceProperty neutralName="MaxStressCompress2"
+                   valueLabel="Compression (SC2)"/>
+<ReferenceProperty neutralName="MaxStressCompress3"
+                   valueLabel="Compression (SC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"
+                   valueLabel="Shear (SS12)"/>
+<ReferenceProperty neutralName="ShearStress13"
+                   valueLabel="Shear (SS13)"/>
+<ReferenceProperty neutralName="ShearStress23"
+                   valueLabel="Shear (SS23)"/>
+
+
+<ReferenceProperty neutralName="MaxStrainTension"
+                   valueLabel="Tension (XT1)"/>
+<ReferenceProperty neutralName="MaxStrainTension2"
+                   valueLabel="Tension (XT2)"/>
+<ReferenceProperty neutralName="MaxStrainTension3"
+                   valueLabel="Tension (XT3)"/>
+<ReferenceProperty neutralName="MaxStrainCompression"
+                   valueLabel="Compression (XC1)"/>
+<ReferenceProperty neutralName="MaxStrainCompression2"
+                   valueLabel="Compression (XC2)"/>
+<ReferenceProperty neutralName="MaxStrainCompression3"
+                   valueLabel="Compression (XC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"
+                   valueLabel="Shear (XS12)"/>
+<ReferenceProperty neutralName="ShearStrain13"
+                   valueLabel="Shear (XS13)"/>
+<ReferenceProperty neutralName="ShearStrain23"
+                   valueLabel="Shear (XS23)"/>
+
+<ReferenceProperty neutralName="StressStrainDataType"/>
+
+<ReferenceProperty neutralName="StressStrainFormatType"
+                   displayName="Stress-Strain Format Type"
+                   valueChoices="&Choice;Stress-Strain Curve=0;
+                                 &Choice;Bilinear by Work Hardening Slope (H)=1;"
+                   defaultValue="0"/>
+<ReferenceProperty neutralName="WorkHardeningSlopeH"/>
+<ReferenceProperty neutralName="StressStrainCurveTable"/>
+
+<ReferenceProperty neutralName="MatlNonlinearityType"
+                   valueChoices="&Choice;Elastoplastic: stress-total strain (MATS1/PLASTIC)=1"
+                   defaultValue="1"
+                   showProp="false"
+                   lockProp="true"/>
+
+
+<ReferenceProperty neutralName="YieldFunctionCriterion"
+                   valueChoices="&Choice;von Mises=1&Choice;Raghava=5&Choice;Hill=6;"/>
+
+
+<ReferenceProperty neutralName="CompressiveTensileyieldRatio"/>
+
+
+<ReferenceProperty neutralName="InitialTensilYieldStress2"/>
+
+
+<ReferenceProperty neutralName="InitialTensilYieldStress3"/>
+
+
+<ReferenceProperty neutralName="ShearYieldStress"/>
+
+
+<ReferenceProperty neutralName="ShearYieldStress2"/>
+
+
+<ReferenceProperty neutralName="ShearYieldStress3"/>
+
+
+<ReferenceProperty neutralName="HardeningRule"
+                   valueChoices="&Choice;Isotropic=1&Choice;Kinematic=2&Choice;Mixed Hardening=3"
+                   defaultValue="1"/>
+
+
+<ReferenceProperty neutralName="MixedHardeningRatio"/>
+
+
+<ReferenceProperty neutralName="KinematicLaws"/>
+
+
+<ReferenceProperty neutralName="NonLinearHardeningCoefficient"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticDomain"/>
+
+
+<ReferenceProperty neutralName="Damping"/>
+
+
+<ReferenceProperty neutralName="SecondHookeCoefficient"/>
+
+
+<ReferenceProperty neutralName="ViscoplasticModelType"/>
+
+
+<ReferenceProperty neutralName="CreepParameterEXPN"/>
+
+<ReferenceProperty neutralName="CreepParameterBIGK"/>
+
+
+<ReferenceProperty neutralName="CreepParameterLITK"/>
+
+
+<ReferenceProperty neutralName="IsotropicHardeningEXPM"/>
+
+
+<ReferenceProperty neutralName="KinematicHardeningCOCA"/>
+
+
+<ReferenceProperty neutralName="DamageParameterCOEN"/>
+
+
+
+<ReferenceProperty neutralName="DamageParameterEXEN"/>
+
+
+<ReferenceProperty neutralName="DamageParameterPDEN"/>
+
+
+
+<ReferenceProperty neutralName="DamageParameterDDEN"/>
+
+
+
+<ReferenceProperty neutralName="DamageModelType"/>
+
+
+<ReferenceProperty neutralName="ParameterDelay"/>
+
+
+<ReferenceProperty neutralName="TimeDelay"/>
+
+
+<ReferenceProperty neutralName="EquivalentPlasticStrainLimit"/>
+
+
+<ReferenceProperty neutralName="MaxDamageValue"/>
+
+<ReferenceProperty neutralName="CreepFormulation"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+
+<ReferenceProperty neutralName="CreepHardening"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A1"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_b"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_d"/>
+<ReferenceProperty neutralName="CreepThreshold"/>

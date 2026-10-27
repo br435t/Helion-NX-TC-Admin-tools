@@ -1,0 +1,90 @@
+<Property name="Normal Tensile Strength (SN)"
+          neutralName="NormalTensileSrength"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Longitudinal Tensile Strength (XT)"
+          neutralName="LongitudinalTensileStrength"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Longitudinal Compressive Strength (XC)"
+          neutralName="LongitudinalCompressiveStrength"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Transverse Tensile Stength (YT)"
+          neutralName="TransverseTensileStrength"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Transverse Compressive Strength (YC)"
+          neutralName="TransverseCompressiveStrength"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Shear Strength, AB Plane (SC)"
+          neutralName="ShearStrengthABPlane"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+

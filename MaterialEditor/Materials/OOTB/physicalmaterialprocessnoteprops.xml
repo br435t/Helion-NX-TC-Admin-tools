@@ -1,0 +1,5 @@
+              <Property name="Process Note"
+                        neutralName="ProcessNotes"
+                        valueType="multistring">
+                <DefaultValue value=""/>
+              </Property>

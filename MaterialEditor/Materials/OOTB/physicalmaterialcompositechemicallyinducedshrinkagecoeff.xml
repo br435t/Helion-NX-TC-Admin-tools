@@ -1,0 +1,71 @@
+<Property name="Chemical Properties Method"
+          neutralName="ChemicalPropertiesMethodControl"
+          valueType="enum"
+          valueChoices="&Choice;Mixture Law (HOMB 0)=0&Choice;Rosen Hashin Model (HOMB 1)=1&Choice;Homogenized Properties=2">
+  <DefaultValue value= "0"/>
+  <LowerBound value="0"
+              inclusive="true"/>
+  <UpperBound value="2"
+              inclusive="true"/>
+</Property>
+<Property name="Chemically-Induced Shrinkage Coefficient"
+          neutralName="CompositeChemicallyInducedShrinkageTX"
+          valueType="scalarField_table"
+          parentProperty="ChemicalPropertiesMethodControl"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="3"
+               nCols="3">
+        <RowHeading row="1"
+                    value="CSC1"/>
+        <RowHeading row="2"
+                    value="CSC2"/>
+        <RowHeading row="3"
+                    value="CSC3"/>
+        <TableProperty name="Glassy"
+                       neutralName="CompositeChemicallyInducedShrinkageTX1"
+                       valueType="scalarField"
+                       Dimensions="&MeasureUnitLess;"
+                       scaleFactor="false"
+                       parentProperty="ChemicalPropertiesMethodControl"
+                       parentPropertyValToBeSensitive="2"
+                       allowUnspecifiedValue="true">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </TableProperty>
+        <TableProperty name="Rubbery"
+                       neutralName="CompositeChemicallyInducedShrinkageTX2"
+                       valueType="scalarField"
+                       Dimensions="&MeasureUnitLess;"
+                       scaleFactor="false"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ChemicalPropertiesMethodControl"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </TableProperty>
+        <TableProperty name="Liquid"
+                       neutralName="CompositeChemicallyInducedShrinkageTX3"
+                       valueType="scalarField"
+                       Dimensions="&MeasureUnitLess;"
+                       scaleFactor="false"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ChemicalPropertiesMethodControl"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </TableProperty>
+    </TableDefn>
+</Property>

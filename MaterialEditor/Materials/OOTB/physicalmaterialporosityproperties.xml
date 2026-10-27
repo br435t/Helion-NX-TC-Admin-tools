@@ -1,0 +1,241 @@
+<Property name="Effective Leakage Area (ELA) Option"
+          neutralName="EffectiveLeakageAreaOption"
+          valueType="enum"
+          valueSubtype="radio"
+          valueChoices="&Choice;Constant=0&Choice;Time Varying=1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Effective Leakage Area (ELA)"
+          neutralName="EffectiveLeakageArea"
+          valueType="float"
+          Dimensions="&MeasureArea;"
+          parentProperty="EffectiveLeakageAreaOption"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Effective Leakage Area (ELA)"
+          neutralName="EffectiveLeakageAreaTimeDepend"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          scaleFactor="false"
+          Dimensions="&MeasureArea;"
+          parentProperty="EffectiveLeakageAreaOption"
+          parentPropertyValToBeSensitive="1">
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Fabric Venting Option (FVOPT)"
+          neutralName="FabricVentingOption"
+          valueType="enum"
+          valueChoices="&Choice;1 - Wang-Nefske without Blockage=1;
+                        &Choice;2 - Wang-Nefske with Blockage=2; 
+                        &Choice;3 - Graefe, Krummheuer and Siejak without Blockage=3;
+                        &Choice;4 - Graefe, Krummheuer and Siejak with Blockage=4; 
+                        &Choice;5 - Porous Media flow without Blockage=5; 
+                        &Choice;6 - Porous Media flow with Blockage=6;
+                        &Choice;7 - Gas Volume Flow - Pressure Curve without Blockage=7;
+                        &Choice;8 - Gas Volume Flow - Pressure Curve with Blockage=8;">
+    <DefaultValue value="1"/>
+</Property>
+
+<Property name="Use Leakage Area for Flow Venting (Negative FVOPT)"
+          neutralName="UseLeakageArea"
+          valueType="enum"
+          valueChoices="&Choice;No=0;
+                        &Choice;Yes=1"
+          valueSubtype="radio">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Porous Leakage Flow (FLC) Option"
+          neutralName="PorousLeakageFlowOption"
+          valueType="enum"
+          valueChoices="&Choice;Constant=0;
+                        &Choice;Time Dependent FLC (X0 EQ -1 or 0)=1;
+                        &Choice;Stretching Ratio (A/Ao) Dependent FLC (X0 EQ 1)=2"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="-1,0,1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Porous Leakage Flow Coefficient (FLC)"
+          neutralName="PorousLeakageFlowCoefficientFLC"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="PorousLeakageFlowOption"
+          parentPropertyValToBeSensitive="0">
+</Property>
+
+<Property name="Time Dependent (FLC)"
+          neutralName="PorousLeakageFlowTimeDepend"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          parentProperty="PorousLeakageFlowOption"
+          parentPropertyValToBeSensitive="1">
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Stretching Ratio Dependent (FLC)"
+          neutralName="PorousLeakageFlowStretchRatioDepend"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          parentProperty="PorousLeakageFlowOption"
+          parentPropertyValToBeSensitive="2">
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainDimensionless;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Characteristic Fabric Parameter (FAC) Option"
+          neutralName="CharacteristicFabricParameterOption"
+          valueType="enum"
+          valueChoices="&Choice;Constant=0;
+                        &Choice;Unitless FAC, Absolute Pressure Dependent (X0 EQ -1 or 0, FVOPT LT 7)=1;
+                        &Choice;Volume Flux Rate FAC, Absolute Pressure Dependent (X0 EQ -1 or 0, FVOPT GE 7)=2;
+                        &Choice;Unit FAC, Pressure Ratio Dependent (X0 EQ 1, FVOPT LT 7)=3;
+                        &Choice;Volume Flux Rate FAC, Pressure Ratio Dependent (X0 EQ 1, FVOPT GE 7)=4"
+          parentProperty="X0CoefficientOption"
+          parentPropertyValToBeSensitive="-1,0,1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Characteristic Fabric Parameter (FAC)"
+          neutralName="CharacteristicFabricParameterFAC"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="CharacteristicFabricParameterOption"
+          parentPropertyValToBeSensitive="0">
+</Property>
+
+<Property name="Unitless FAC, Absolute Pressure Dependent"
+          neutralName="CharacteristicFabricParameterAbsPressureDepend"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          scaleFactor="false"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="CharacteristicFabricParameterOption"
+          parentPropertyValToBeSensitive="1">
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainPressure;"/>
+    </FieldDefn>
+</Property>
+
+<PropertyField name="Volume Flux Rate FAC, Absolute Pressure Dependent"
+          neutralName="LeakageVolumeFluxRateAbsPressureDepend"
+          scaleFactor="false"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          parentProperty="CharacteristicFabricParameterOption"
+          parentPropertyValToBeSensitive="2">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Leakage Volume Flux Rate">
+        <DepVariable Measure="&MeasureVelocity;"
+                     Name="Leakage Volume Flux Rate"
+                     DisplayName="Leakage Volume Flux Rate"
+                     LowerBound="&valueZero;"
+                     LowerBound_inclusive="false"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainPressure;"/>
+    </FieldDefn>
+</PropertyField>
+
+<Property name="Unitless FAC, Pressure Ratio Dependent"
+          neutralName="CharacteristicFabricParameterPressureRatioDepend"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          scaleFactor="false"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="CharacteristicFabricParameterOption"
+          parentPropertyValToBeSensitive="3">
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainDimensionless;"/>
+    </FieldDefn>
+</Property>
+
+
+<PropertyField name="Volume Flux Rate FAC, Pressure Ratio Dependent"
+          neutralName="LeakageVolumeFluxRatePressureRatioDepend"
+          scaleFactor="false"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          parentProperty="CharacteristicFabricParameterOption"
+          parentPropertyValToBeSensitive="4">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Leakage Volume Flux Rate">
+        <DepVariable Measure="&MeasureVelocity;"
+                     Name="Leakage Volume Flux Rate"
+                     DisplayName="Leakage Volume Flux Rate"
+                     LowerBound="&valueZero;"
+                     LowerBound_inclusive="false"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainDimensionless;"/>  
+    </FieldDefn>
+</PropertyField>
+
+<Property name="Length of a Unit Cell (L)"
+          neutralName="UnitCellLength"
+          valueType="float"
+          Dimensions="&MeasureLength;"
+          parentProperty="UseLeakageArea"
+          parentPropertyValToBeSensitive="1">
+</Property>
+
+<Property name="Radius of Yarn (R)"
+          neutralName="YarnRadius"
+          valueType="float"
+          Dimensions="&MeasureLength;"
+          parentProperty="UseLeakageArea"
+          parentPropertyValToBeSensitive="1">
+</Property>
+
+<Property name="Pressure Coefficient (C1)"
+          neutralName="PressureCoefficientC1"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="UseLeakageArea"
+          parentPropertyValToBeSensitive="1">
+</Property>
+
+<Property name="Pressure Exponent (C2)"
+          neutralName="PressureExponentC2"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="UseLeakageArea"
+          parentPropertyValToBeSensitive="1">
+</Property>
+
+<Property name="Strain Coefficient (C3)"
+          neutralName="StrainCoefficientC3"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="UseLeakageArea"
+          parentPropertyValToBeSensitive="1">
+</Property>
+
+<Property name="Birth Time (RGBRTH)"
+          neutralName="BirthTimeRGBRTH"
+          valueType="float"
+          Dimensions="&MeasureTime;">
+</Property>

@@ -1,0 +1,137 @@
+<!-- ================================================================================= -->
+<!-- =====================  anisotropic conductivity   =============================== -->
+<!-- ================================================================================= -->
+<PropertyField name="Conductivity"
+               neutralName="AnisotropicLinearElectricConductivity"
+               valueSubtype="compact"
+               parentProperty="&Choice;ElectConductivityMethod"
+               parentPropertyValToBeSensitive="&Choice;2">
+    <DepDomain nVariables="6"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Linear Anisotropic Electric Conductivity">
+        <DepVariable Measure="&MeasureElectricalConductivity;"
+                     Name="Conductivity XX"
+                     DisplayName="XX"
+                     NeutralName="ElectricConductivityXX"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalConductivity;"
+                     Name="Conductivity XY"
+                     DisplayName="XY"
+                     NeutralName="ElectricConductivityXY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalConductivity;"
+                     Name="Conductivity XZ"
+                     DisplayName="XZ"
+                     NeutralName="ElectricConductivityXZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalConductivity;"
+                     Name="Conductivity YY"
+                     DisplayName="YY"
+                     NeutralName="ElectricConductivityYY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalConductivity;"
+                     Name="Conductivity YZ"
+                     DisplayName="YZ"
+                     NeutralName="ElectricConductivityYZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalConductivity;"
+                     Name="Conductivity ZZ"
+                     DisplayName="ZZ"
+                     NeutralName="ElectricConductivityZZ"
+                     LowerBound="&valueZero;"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+<Property name="Calculate Conductivity from %IACS"
+          neutralName="CalculateAnisotropicConductivity"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateAnisoConductivity"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="Calculate Conductivity from %IACS"/>
+</Property>
+
+
+
+<!-- linear anisotropic -->
+<PropertyField name="%IACS"
+               neutralName="AnisotropicLinearElectricConductivityIACS"
+               valueSubtype="compact"
+               parentProperty="&Choice;ElectConductivityMethod"
+               parentPropertyValToBeSensitive="&Choice;2">
+    <DepDomain nVariables="6"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Linear Anisotropic Electric Conductivity %IACS">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="%IACS XX"
+                     DisplayName="XX"
+                     NeutralName="ElectricConductivityIACSXX"
+                     LowerBound="&valuePercentMin;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valuePercentMax;"
+                     UpperBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="%IACS XY"
+                     DisplayName="XY"
+                     NeutralName="ElectricConductivityIACSXY"
+                     LowerBound="&valuePercentMin;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valuePercentMax;"
+                     UpperBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="%IACS XZ"
+                     DisplayName="XZ"
+                     NeutralName="ElectricConductivityIACSXZ"
+                     LowerBound="&valuePercentMin;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valuePercentMax;"
+                     UpperBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="%IACS YY"
+                     DisplayName="YY"
+                     NeutralName="ElectricConductivityIACSYY"
+                     LowerBound="&valuePercentMin;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valuePercentMax;"
+                     UpperBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="%IACS YZ"
+                     DisplayName="YZ"
+                     NeutralName="ElectricConductivityIACSYZ"
+                     LowerBound="&valuePercentMin;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valuePercentMax;"
+                     UpperBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="%IACS ZZ"
+                     DisplayName="ZZ"
+                     NeutralName="ElectricConductivityIACSZZ"
+                     LowerBound="&valuePercentMin;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valuePercentMax;"
+                     UpperBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+<Property name="Calculate %IACS from Conductivity"
+          neutralName="CalculateAnisotropicIACS"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateAnisoIACSPercent"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="Calculate %IACS from Conductivity"/>
+</Property>

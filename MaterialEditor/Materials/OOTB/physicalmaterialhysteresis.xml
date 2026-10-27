@@ -1,0 +1,150 @@
+<Property name="Jiles-Atherton Parameter"
+          neutralName="JilesAthertonScenario"
+          valueType="enum"
+          valueChoices="&Choice;Direct Entry=0&Choice;Calculate using Initial BH Curve and Iron Loss=1&Choice;Calculate from BH Loop Data=2"
+          parentProperty="&Choice;ElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Specify Coercivity"
+          neutralName="SpecifyCoercivity"
+          valueType="bool"
+          parentProperty="JilesAthertonScenario"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+
+<Property name="Coercivity"
+          neutralName="Coercivity"
+          valueType="scalarField"
+          Dimensions="&MeasureMagneticFieldStrength;"
+          scaleFactor="false"
+          parentProperty="SpecifyCoercivity"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Specify Remanence"
+          neutralName="SpecifyRemanence"
+          valueType="bool"
+          parentProperty="JilesAthertonScenario"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>          
+
+
+<Property name="Remanence"
+          neutralName="HystersisRemanence"
+          valueType="scalarField"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          scaleFactor="false"
+          parentProperty="SpecifyRemanence"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<!-- BH Loop Data --> 
+<Property name="Increasing or Decreasing Branch"
+          neutralName="BHLoop"
+          valueType="scalarField_table"
+          plot="true"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          parentProperty="JilesAthertonScenario"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+               nCols="2"
+               minNumRows="1"
+               maxNumRows="5000">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Temperature"
+                       neutralName="isobhtemp"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTemperature;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="JilesAthertonScenario"
+                       parentPropertyValToBeSensitive="2">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Increasing or Decreasing Branch"
+                       neutralName="BHCurve"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureMagneticFluxDensity;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="JilesAthertonScenario"
+                       parentPropertyValToBeSensitive="2">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="H"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFieldStrength;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+<Property name="Calculate Jiles-Atherton Parameters"
+          neutralName="CalculateJiles-AthertonParameters"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateJilesAthertonCoeff"
+          icon="calculate_properties"
+          parentProperty="JilesAthertonScenario"
+          parentPropertyValToBeSensitive="1,2">
+    <DefaultValue value="Calculate Jiles-Atherton Parameters"/>
+</Property>
+
+
+<PropertyField name="Jiles-Atherton Parameters"
+               neutralName="JilesAthertonParameters"
+               valueSubtype="compact"
+               parentProperty="JilesAthertonScenario"
+               parentPropertyValToBeSensitive="0,1,2">
+    <DepDomain nVariables="5"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Jiles-AthertonParams">
+        <DepVariable Measure="&MeasureMagneticFieldStrength;"
+                     Name="Saturation Magnetization (Ms)"
+                     NeutralName="SaturationMagnetization"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Inter-domain Coupling Coefficient (alpha)"
+                     NeutralName="InterdomainCouplingCoefficient"/>
+        <DepVariable Measure="&MeasureMagneticFieldStrength;"
+                     Name="Domain Wall Density (a)"
+                     NeutralName="DomainWallDensity"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Domain Wall Flexibility Coefficient (c)"
+                     NeutralName="DomainWallFlexibilityCoefficient"/>
+        <DepVariable Measure="&MeasureMagneticFieldStrength;"
+                     Name="Pinning Coefficient (k)"
+                     NeutralName="PinningCoefficient"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+

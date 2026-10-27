@@ -1,0 +1,45 @@
+<Property name="Compression Young's Modulus (YC1)"
+          neutralName="CompressionYoungsModulus"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Compression Young's Modulus (YC2)"
+          neutralName="CompressionYoungsModulus2"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Compression Young's Modulus (YC3)"
+          neutralName="CompressionYoungsModulus3"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

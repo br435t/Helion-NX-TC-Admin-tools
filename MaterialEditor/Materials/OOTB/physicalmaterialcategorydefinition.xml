@@ -1,0 +1,45 @@
+
+        <Property name="Alternate Name"
+                  neutralName="AltName"
+                  visible="true"
+                  editable="true"
+                  valueType="char"
+                  valueSubtype="UTF8">
+            <DefaultValue value="&valueBlank;"/>
+        </Property>
+        <Property name="Category"
+                  neutralName="Category"
+                  visible="true"
+                  editable="true"
+                  valueType="char"
+                  valueSubtype="UTF8">
+            <DefaultValue value="&valueBlank;"/>
+        </Property>
+        <Property name="Sub-Category"
+                  neutralName="SubCategory"
+                  visible="true"
+                  editable="true"
+                  valueType="char"
+                  valueSubtype="UTF8">
+            <DefaultValue value="&valueBlank;"/>
+        </Property>
+
+        <!-- These properties are not exposed to the users  -->
+        <Property name="Version"
+                  neutralName="Version"
+                  visible="false"
+                  editable="false"
+                  valueType="char"
+                  valueSubtype="UTF8">
+            <DefaultValue value="&valueBlank;"/>
+        </Property>
+
+        <Property name="Description"
+                  neutralName="Description"
+                  visible="false"
+                  editable="false"
+                  valueType="multistring">
+            <DefaultValue value="&valueBlank;"/>
+        </Property>
+
+

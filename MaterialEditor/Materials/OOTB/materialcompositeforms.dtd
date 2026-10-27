@@ -1,0 +1,12 @@
+<!ENTITY MaterialCompositeFormUNIString "Uni">
+<!ENTITY MaterialCompositeFormWOVENString "Woven">
+<!ENTITY MaterialCompositeFormRANDOMString "Random">
+<!ENTITY MaterialCompositeFormNONCRIMPFABRICString "Non-Crimp Fabric">
+
+<!-- These id values correspond to values in uf_sf_types.h         -->
+<!ENTITY MaterialCompositeFormUNI "0">
+<!ENTITY MaterialCompositeFormWOVEN "1">
+<!ENTITY MaterialCompositeFormRANDOM "2">
+<!ENTITY MaterialCompositeFormNONCRIMPFABRIC "3">
+
+<!ENTITY MATERIALCOMPOSITEFORMCHOICES "&Choice;Uni=&MaterialCompositeFormUNIString;&Choice;Woven=&MaterialCompositeFormWOVENString;&Choice;Random=&MaterialCompositeFormRANDOMString;&Choice;NCF=&MaterialCompositeFormNONCRIMPFABRICString;">

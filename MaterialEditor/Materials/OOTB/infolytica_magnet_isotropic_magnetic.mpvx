@@ -1,0 +1,64 @@
+<!-- Permeability -->
+<ReferenceProperty neutralName="MagnetType"/>
+<ReferenceProperty neutralName="ElectroMagnetPermeabilityMethod"/>
+<ReferenceProperty neutralName="PermanentMagnetPermeabilityMethod"/>
+<ReferenceProperty neutralName="DemagnetizationSpecification"/>
+<ReferenceProperty neutralName="IsotropicLinearPermeability"/>
+<ReferenceProperty neutralName="IsotropicLinearPermeabilityPermMag"/>
+<ReferenceProperty neutralName="ComplexIsotropicLinearPermeability"/>
+<ReferenceProperty neutralName="IsotropicLinearPermeabilityPermanentMagnet"/>
+<ReferenceProperty neutralName="IsotropicLinearPermeabilityPermanentMagnetWithDemagnetization"/>
+<ReferenceProperty neutralName="NonlinearIsotropicPermeability"/>
+<ReferenceProperty neutralName="NonlinearIsotropicPermanentMagnetPermeability"/>
+<ReferenceProperty neutralName="PermanentMagnetPermeabilityDependency"/>
+<ReferenceProperty neutralName="Remanence"/>
+<ReferenceProperty neutralName="Demagnetization"/>
+
+
+<!-- Iron Loss -->
+<ReferenceProperty neutralName="IronLossMethod"/>
+<ReferenceProperty neutralName="IronLoss"/>
+<ReferenceProperty neutralName="CalculateSteinmetz"/>
+<ReferenceProperty neutralName="SteinmetzCoefficients"/>
+
+
+<!-- Hysteresis -->
+<ReferenceProperty neutralName="JilesAthertonScenario"/>
+<ReferenceProperty neutralName="SpecifyCoercivity"/>
+<ReferenceProperty neutralName="Coercivity"/>
+<ReferenceProperty neutralName="SpecifyRemanence"/>
+<ReferenceProperty neutralName="HystersisRemanence"/>
+<ReferenceProperty neutralName="BHLoop"/>
+<ReferenceProperty neutralName="CalculateJiles-AthertonParameters"/>
+<ReferenceProperty neutralName="JilesAthertonParameters"/>
+
+
+<!-- Conductivity/Resistivity -->
+<ReferenceProperty neutralName="ElectConductivityResistivityMode"/>
+<ReferenceProperty neutralName="ElectConductivityMethod"/>
+<ReferenceProperty neutralName="ElectResistivityMethod"/>
+<ReferenceProperty neutralName="ElecConductivity"/>
+<ReferenceProperty neutralName="CalculateConductivity"/>
+<ReferenceProperty neutralName="ElecConductivityIACS"/>
+<ReferenceProperty neutralName="CalculatelinearIACS"/>
+<ReferenceProperty neutralName="NonlinearElecConductivity"/>
+<ReferenceProperty neutralName="CalculateNonLinearConductivity"/>
+<ReferenceProperty neutralName="CalculateIACS"/>
+<ReferenceProperty neutralName="ElecResist"/>
+<ReferenceProperty neutralName="NonlinearElecResist"/>
+
+
+<!-- Permittivity -->
+<ReferenceProperty neutralName="PermittivityType"/>
+<ReferenceProperty neutralName="IsotropicLinearPermittivity"/>
+<ReferenceProperty neutralName="NonLinearPermittivity"/>
+<ReferenceProperty neutralName="ComplexElectricPermittivity"/>
+<ReferenceProperty neutralName="NonLinearPermittivity"/>
+
+
+
+<!-- Lamination Thickness -->
+<ReferenceProperty neutralName="LaminationThickness"/>
+
+
+

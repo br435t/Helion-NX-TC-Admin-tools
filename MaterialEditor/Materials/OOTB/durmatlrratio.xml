@@ -1,0 +1,27 @@
+<Property name="R-Ratio"
+          neutralName="RRatioType"
+          valueType="enum"
+          valueChoices="&Choice;-inf=0&Choice;Specify=1"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="1"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+<Property name=""
+          neutralName="RRatio"
+          valueType="scalarField"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="RRatioType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueMinusOne;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+  <FieldDefn nDomains="2">
+    <Domain type="&DomainConstant;"/>
+    <Domain type="&DomainTemperature;"/>
+  </FieldDefn>
+</Property>

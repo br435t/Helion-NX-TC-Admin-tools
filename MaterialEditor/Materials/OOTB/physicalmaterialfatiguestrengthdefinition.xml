@@ -1,0 +1,100 @@
+               
+        <Property name="Fatigue Strength Coefficient"
+                  neutralName="FatigueStrengthCoeff"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="StressLifeDataFormat"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Fatigue Strength Coefficient 2"
+                  neutralName="FatigueStrengthCoeff2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="StressLifeDataFormat"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Fatigue Strength Coefficient 12"
+                  neutralName="FatigueStrengthCoeff12"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="StressLifeDataFormat"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Fatigue Strength Exponent"
+                  neutralName="FatigueStrengthExp"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="StressLifeDataFormat"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Fatigue Strength Exponent 2"
+                  neutralName="FatigueStrengthExp2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="StressLifeDataFormat"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Fatigue Strength Exponent 12"
+                  neutralName="FatigueStrengthExp12"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="StressLifeDataFormat"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        

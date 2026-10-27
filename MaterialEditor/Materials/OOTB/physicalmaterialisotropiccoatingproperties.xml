@@ -1,0 +1,24 @@
+        <Property name="Young's Modulus (ECOAT)"
+                  neutralName="YoungsModulusCoatMaterial"
+                  valueType="float"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="-14">
+            <DefaultValue value="&valueZero;"/>
+        </Property>
+        <Property name="Yield Stress (SCOAT)"
+                  neutralName="YieldStressCoatMaterial"
+                  valueType="float"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="-14">
+            <DefaultValue value="&valueZero;"/>
+        </Property>
+        <Property name="Thickness (TCOAT)"
+                  neutralName="ThicknessCoatMaterial"
+                  valueType="float"
+                  Dimensions="&MeasureLength;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="-14">
+            <DefaultValue value="&valueZero;"/>
+        </Property>        

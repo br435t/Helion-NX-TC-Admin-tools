@@ -1,0 +1,22 @@
+        <Property name="Loading Curve"
+                  neutralName="LoadingCurve"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  scaleFactor="false"
+                  Dimensions="&MeasureForcePerArea;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <ExcludeValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain Name="Strain-based Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="1">
+                    <Variable Name="Closure Strain"
+                              Measure="&MeasureStrain;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>

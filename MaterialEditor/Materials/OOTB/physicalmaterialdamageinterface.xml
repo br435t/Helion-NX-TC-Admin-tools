@@ -1,0 +1,259 @@
+       <Property name="Transverse Stiffness (K03S)"
+         neutralName="TransverseStiffness_K03S"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasurePressurePerLength;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Shear Stiffness (K02)"
+         neutralName="ShearStiffness_K02"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasurePressurePerLength;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Shear Stiffness (K01)"
+         neutralName="ShearStiffness_K01"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasurePressurePerLength;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "PlyFractureToughness"-->
+        <Property name="Fracture Toughness (GIc - GP)"
+         neutralName="FractureToughness_GIc"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasureForcePerLength;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "PlyFractureToughness2"-->
+        <Property name="Fracture Toughness (GIIc - GP)"
+         neutralName="FractureToughness_GIIc"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasureForcePerLength;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "PlyFractureToughness3"-->
+        <Property name="Fracture Toughness (GIIIc - GP)"
+         neutralName="FractureToughness_GIIIc"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasureForcePerLength;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Coupling Coefficient (DCOU)"
+                  neutralName="CouplingCoefficient"
+                  editable="true"
+                  valueType="float"
+                  Dimensions="&MeasureUnitLess;">
+        </Property>
+        <Property name="Law Option"
+                  neutralName="LawOption"
+                  editable="true"
+                  valueType="enum"
+                  valueChoices="&Choice;Polynomial=0&Choice;Bi-triangular=1&Choice;Exponential=2&Choice;ENS Cachan's Law=3"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0"/>
+            <LowerBound value="0"/>
+            <UpperBound value="3"/>
+        </Property>
+        <Property name="Energy Threshold (Y0S)"
+         neutralName="EnergyThreshold"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasureForcePerLength;"
+         parentProperty="LawOption"
+         parentPropertyValToBeSensitive="0,1,3"
+         scaleFactor="false"
+         allowUnspecifiedValue="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Exponent (EXPN)"
+         neutralName="Exponent"
+         editable="true"
+         valueType="scalarField"
+         Dimensions="&MeasureUnitLess;"
+         parentProperty="LawOption"
+         parentPropertyValToBeSensitive="0"
+         scaleFactor="false"
+         allowUnspecifiedValue="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Tangent of Constitutive Law(TANG)"
+                  neutralName="TangentConstitutiveLaw"
+                  parentProperty="LawOption"
+                  parentPropertyValToBeSensitive="0,1,2"
+                  editable="true"
+                  valueType="enum"
+                  valueChoices="&Choice;Tangent or 0=0&Choice;Secant=1&Choice;Tangent=2"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0"/>
+            <LowerBound value="0"/>
+            <UpperBound value="2"/>
+        </Property>
+        <!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "ParameterDelay"-->
+        <Property name="Parameter for Delay (ADEL)"
+         neutralName="ParameterDelay"
+         parentProperty="LawOption"
+         parentPropertyValToBeSensitive="0,1,2"
+         editable="true"
+         valueType="float"
+         Dimensions="&MeasureUnitLess;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "TimeDelay"-->
+        <Property name="Time for Delay (TAU)"
+         neutralName="TimeDelay"
+         parentProperty="LawOption"
+         parentPropertyValToBeSensitive="0,1,2"
+         editable="true"
+         valueType="float"
+         Dimensions="&MeasureTime;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Crack Density Threshold (R01)"
+         neutralName="CrackDensityThreshold"
+         parentProperty="LawOption"
+         parentPropertyValToBeSensitive="0,1,2"
+         editable="true"
+         valueType="float"
+         Dimensions="&MeasureUnitLess;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Interaction Coefficient (PHI)"
+         neutralName="InteractionCoefficient"
+         parentProperty="LawOption"
+         parentPropertyValToBeSensitive="0,1,2"
+         editable="true"
+         valueType="float"
+         Dimensions="&MeasureUnitLess;"
+         scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Exponent (EXPM)"
+                  neutralName="Expm"
+                  parentProperty="LawOption"
+                  parentPropertyValToBeSensitive="3"
+                  valueType="float"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>

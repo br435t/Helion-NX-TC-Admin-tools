@@ -1,0 +1,113 @@
+<!ENTITY % materialTypes SYSTEM "materialtypes.dtd">
+%materialTypes;
+
+<!ENTITY % materialUnits SYSTEM "materialunits.dtd">
+%materialUnits;
+
+<!ENTITY % materialFieldDomains SYSTEM "materialfielddomains.dtd">
+%materialFieldDomains;
+
+<!ENTITY % materialUIBehavior SYSTEM "materialuibehavior.dtd">
+%materialUIBehavior;
+
+<!ENTITY % materialCommonConstants SYSTEM "materialcommonconstants.dtd">
+%materialCommonConstants;
+
+<!ENTITY % materialUMATConstants SYSTEM "materialumatconstants.dtd">
+%materialUMATConstants;
+
+<!ENTITY % materialCompositeForms SYSTEM "materialcompositeforms.dtd">
+%materialCompositeForms;
+
+<!ENTITY valueAcceleration "9810">
+
+<!ENTITY defaultErrorSussmanBathe "0.01">
+
+<!ENTITY CompressiveTensileyieldRatio "1.3">
+
+<!-- Symbolic output formats are from Part_Field_Domain_External.h.
+ -->
+
+<!ENTITY OutputStringOrPlugin "0">
+<!ENTITY OutputString "1">
+<!ENTITY OutputPlugin "2">
+
+<!ENTITY DamageNone  "-777777.">
+<!ENTITY DamageMAXE  "0">
+<!ENTITY DamageMAXS  "1">
+<!ENTITY DamageMAXPE "2">
+<!ENTITY DamageMAXPS "3">
+<!ENTITY DamageQUADE "4">
+<!ENTITY DamageQUADS "5">
+
+<!ENTITY GasketBehaviorTypeElasticPlastic  "0">
+<!ENTITY GasketBehaviorTypeDamage          "1">
+
+<!ENTITY RiceParameter  "0.283">
+
+<!ENTITY IsotropicPoissonsMinimum  "-1.0">
+<!ENTITY IsotropicPoissonsMaximum  "0.5">
+
+<!ENTITY PlasticPoissonsDefault  "0.04">
+
+<!--                  ====================================
+                        Complex Value Support
+                      ====================================
+ -->
+<!ENTITY ComplexRealImaginaryExpressionChoice "0" >
+<!ENTITY ComplexMagnitudePhaseExpressionChoice "1" >
+<!ENTITY ComplexFieldChoice "2" >
+<!ENTITY ComplexRealImaginaryNumber "complex" >
+<!ENTITY ComplexMagnitudePhaseNumber "complex2" >
+<!ENTITY ComplexFieldDomainName "ComplexNumber" >
+<!ENTITY ComplexFieldRealSuffix "(real)" >
+<!ENTITY ComplexFieldImaginarySuffix "(imaginary)" >
+<!ENTITY ComplexFieldRealMagnitudeSuffix "(realmagnitude)" >
+<!ENTITY ComplexFieldImaginaryPhaseSuffix "(imaginaryphase)" >
+
+
+<!--                  ====================================
+                       LS-DYNA Material Cards                       
+                      ====================================
+                      The enum value is assigned based on : 
+                        1.) older numeric scheme of LS-DYNA material names (MAT_001, MAT002 etc.)
+                            - Multiply the numeric value by 100 for the same.
+                            e.g MAT_ELASTIC (MAT_001) is set to 100
+                        2.) "OPTION" keyword availability for the material types
+                            - If additonal options are present, then add the options by incrementing
+                            by 1 for each possible value
+                            e.g LOG_INTERPOLATION option on MatPiecewiseLinearPlasticity is set to 2401 (2400 +1)
+ -->
+<!ENTITY MatElastic "100" >
+<!ENTITY MatOrthoElastic "200">
+<!ENTITY MatAnisoElastic "201">
+<!ENTITY MatPlasticKinematic "300" >
+<!ENTITY MatViscoelastic "600" >
+<!ENTITY MatNull "900" >
+<!ENTITY MatRigid "2000" >
+<!ENTITY MatCompositeDamage "2200" >
+<!ENTITY MatPiecewiseLinearPlasticity  "2400" >
+<!ENTITY MatPiecewiseLinearPlasticityLogInterpolation "2401" >
+<!ENTITY MatPiecewiseLinearPlasticityStochastic "2402" >
+<!ENTITY MatPiecewiseLinearPlasticityMidfail "2403" >
+<!ENTITY MatPiecewiseLinearPlasticity2D  "2404" >
+<!ENTITY MatEnhancedCompositeDamage "5400" >
+<!ENTITY MatLinearElasticDiscreteBeam "6600">
+<!ENTITY MatPlasticitywithDamage  "8100" >
+<!ENTITY MatPlasticitywithDamageStochastic "8101" >
+<!ENTITY MatPlasticitywithDamageOrtho  "8200" >
+<!ENTITY MatPlasticitywithDamageOrthoRcdc "8201" >
+<!ENTITY MatPlasticitywithDamageOrthoRcdc1980 "8202" >
+<!ENTITY MatPlasticityPolymer "8900" >
+<!ENTITY MatSimplifiedJohnsonCook "9800" >
+<!ENTITY MatSpotweld  "10000" >
+<!ENTITY MatSpotweldDamageFailure "10001" >
+<!ENTITY MatTRIP "11300" >
+<!ENTITY MatCompositeLayup "11600" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticity  "12300" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityLogInterpolation "12301" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityPrestrain  "12302" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityRate "12303" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityRTCL  "12304" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityStochastic "12305" >
+

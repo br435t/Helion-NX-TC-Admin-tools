@@ -1,0 +1,50 @@
+<Property name="Mass Proportional Damping Factor (ALPHA)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="AlphaDampingFactor"
+            valueType="scalarField"
+            Dimensions="&MeasureCoefficientPerTime;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Stiffness Proportional Damping Factor (BETA)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="BetaDampingFactor"
+            valueType="scalarField"
+            Dimensions="&MeasureTime;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Critical Damping Fraction (COMPOSITE)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="CompositeDampingFraction"
+            valueType="float">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+</Property>
+
+<Property name="Stiffness Proportional Structural Damping Factor (STRUCTURAL)"
+            solPrefixName="NonPhysicalProp_Abaqus_"
+            solSuffixName="StructuralDampingFactor"
+            valueType="scalarField">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+

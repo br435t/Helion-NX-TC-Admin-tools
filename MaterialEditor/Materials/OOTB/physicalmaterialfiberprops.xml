@@ -1,0 +1,140 @@
+            <Property name="Longitudinal Young's Modulus (E1)"
+                      neutralName="FiberYoungsModulus"
+                          valueType="scalarField"
+                      Dimensions="&MeasureStress;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="Tranverse Young's Modulus (E2)"
+                                  neutralName="TranverseFiberYoungsModulus"
+                                  valueType="scalarField"
+                                  Dimensions="&MeasureStress;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="In-plane Shear Modulus (G12)"
+                      neutralName="FiberInplaneShearModulus"
+                      valueType="scalarField"
+                      Dimensions="&MeasureStress;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="Transverse Shear Modulus (G23)"
+                      neutralName="FiberTransverseShearModulus"
+                        valueType="scalarField"
+                        Dimensions="&MeasureForcePerArea;">
+              <DefaultValue value="&valueEmpty;"/>
+              <LowerBound value="&valueZero;"
+                          inclusive="true"/>
+              <UpperBound value="&maxFloat;"
+                          inclusive="true"/>
+              <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+              </FieldDefn>
+            </Property>
+
+            <Property name=""
+                      neutralName="FiberPoissonsRatioType"
+                      valueType="enum"
+                      valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1">
+                <DefaultValue value="0"/>
+                <LowerBound value="0"
+                            inclusive="true"/>
+                <UpperBound value="1"
+                            inclusive="true"/>
+            </Property>
+
+            <Property name="Poisson's Ratio (NU12)"
+                      neutralName="FiberPoissonsRatio"
+                      valueType="scalarField">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&minFloat;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="Poisson's Ratio (NU23)"
+                      neutralName="FiberPoissonsRatio2"
+                      valueType="scalarField">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&minFloat;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="Thermal Expansion Coefficient"
+                      neutralName="FiberThermalExpansion"
+                      valueType="scalarField"
+                      Dimensions="&MeasureThermExpansion;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&minFloat;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="Thermal Expansion Coefficient (CTE2)"
+                      neutralName="FiberThermalExpansion2"
+                      valueType="scalarField"
+                      Dimensions="&MeasureThermExpansion;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&minFloat;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="2">
+                    <Domain type="&DomainConstant;"/>
+                    <Domain type="&DomainTemperature;"/>
+                </FieldDefn>
+            </Property>
+
+            <Property name="Fibers Volume Fraction"
+                      neutralName="FibersVolumeFraction"
+                      valueType="float"
+                      valueSubtype="scale_keyin_limits">
+                <DefaultValue value="&valueZero;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="true"/>
+                <UpperBound value="&valueOne;"
+                            inclusive="true"/>
+            </Property>
+

@@ -1,0 +1,21 @@
+<Property name="Damage Initiation (EPFS)"
+          neutralName="DamageInitiation"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="false"/>
+</Property>
+
+<Property name="Final Rupture (EPSR)"
+          neutralName="FinalRupture"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="false"/>
+</Property>

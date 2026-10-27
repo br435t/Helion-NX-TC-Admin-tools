@@ -1,0 +1,14 @@
+<Property name="Resonant Frequency (f-p)"
+          neutralName="magneticResonantFrequency"
+          valueType="scalarField"
+          Dimensions="&MeasureFrequency;"
+          scaleFactor="false"
+          parentProperty="&Choice;HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="&Choice;4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>

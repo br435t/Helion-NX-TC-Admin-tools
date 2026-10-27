@@ -1,0 +1,115 @@
+<Property name="Steinmetz Coefficients"
+          neutralName="IronLossMethod"
+          valueType="enum"
+          valueChoices="&Choice;Direct Entry=0&Choice;Calculate from Iron Loss=1"
+          valueSubtype="radio"
+          parentProperty="&Choice;ElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+
+
+<Property name="Iron Loss"
+          neutralName="IronLoss"
+          valueType="scalarField_table"
+          plot="true"
+          Dimensions="&MeasurePowerToMassRatio;"
+          parentProperty="&Choice;IronLossMethod"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+               nCols="3"
+               minNumRows="1"
+               maxNumRows="5000">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="3"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Temperature"
+                       neutralName="ironlosstemperature"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTemperature;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;IronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Frequency"
+                       neutralName="ironlossfrequency"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureFrequency;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;IronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Iron Loss"
+                       neutralName="IronLoss"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasurePowerToMassRatio;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;IronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="Bpeak"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFluxDensity;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+<Property name="Calculate Steinmetz Coefficients"
+          neutralName="CalculateSteinmetz"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateSteinmetzCoeff"
+          icon="calculate_properties"
+          parentProperty="IronLossMethod"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="Calculate Steinmetz Coefficients"/>
+</Property>
+
+
+<PropertyField name="Steinmetz Coefficients"
+               neutralName="SteinmetzCoefficients"
+               valueSubtype="compact"
+               valueLabel="&Above; P = Kh * F^Alpha * B^Beta + Ke * ( f* B )^2"
+               parentProperty="&Choice;ElectroMagnetPermeabilityMethod"
+               parentPropertyValToBeSensitive="&Choice;2">
+    <DepDomain nVariables="4"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Steinmetz Coefficients">
+        <DepVariable Name="Kh"
+                     NeutralName="Steinmetz_kh"/>
+        <DepVariable Name="Alpha"
+                     NeutralName="Steinmetz_Alpha"/>
+        <DepVariable Name="Beta"
+                     NeutralName="Steinmetz_Beta"/>
+        <DepVariable Name="Ke"
+                     NeutralName="Steinmetz_ke"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+

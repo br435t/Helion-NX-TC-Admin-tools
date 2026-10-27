@@ -1,0 +1,14 @@
+<Property name="Collision Frequency (Ni-c)"
+          neutralName="magneticCollisionFrequency"
+          valueType="scalarField"
+          Dimensions="&MeasureFrequency;"
+          scaleFactor="false"
+          parentProperty="&Choice;HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="&Choice;3">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>

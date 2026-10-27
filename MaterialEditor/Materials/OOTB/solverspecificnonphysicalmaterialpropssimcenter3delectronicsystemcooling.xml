@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Materials SYSTEM "solverspecificnonphysicalmaterialproperties.dtd" >
+<Materials>
+    <Material type="&MaterialTypeISOTROPIC;">
+        <Tab label="Simcenter 3D Electronic System Cooling Specific Properties">
+        </Tab>
+    </Material>
+</Materials>
+

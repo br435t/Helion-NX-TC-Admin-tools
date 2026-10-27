@@ -1,0 +1,46 @@
+<!-- ================================================================================= -->
+<!-- =============================  Linear =========================================== -->
+<!-- ================================================================================= -->
+<Property name="Electrical Resistivity"
+          neutralName="ElecResist"
+          valueType="scalarField"
+          Dimensions="&MeasureElectricalResistivity;"
+          scaleFactor="false"
+          parentProperty="&Choice;ElectromagneticFrequency&Choice;ElectResistivityMethod"
+          parentPropertyValToBeSensitive="&Choice;2&Choice;0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<!-- ================================================================================= -->
+<!-- =============================  Non-Linear ======================================= -->
+<!-- ================================================================================= -->
+<Property name="Electrical Resistivity"
+          neutralName="NonlinearElecResist"
+          valueType="scalarField"
+          valueSubtype="compact"
+          Dimensions="&MeasureElectricalResistivity;"
+          scaleFactor="false"
+          parentProperty="ElectResistivityMethod"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="temperature,electric field strength"
+                autocreate="true"
+                type="&DomainUser;"
+                nVariables="2">
+            <Variable Name="temperature"
+                      Measure="&MeasureTemperature;"/>
+            <Variable Name="electric field strength"
+                      Measure="&MeasureElectricFieldStrength;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+

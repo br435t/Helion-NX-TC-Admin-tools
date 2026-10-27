@@ -1,0 +1,12 @@
+<Property name="Primary Fluid"
+          neutralName="PrimaryFluidMaterial"
+          allowUnspecifiedValue="false"
+          valueType="material"
+          valueSubtype="noinherit">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+    <UpperBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+</Property>
+

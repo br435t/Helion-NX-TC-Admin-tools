@@ -1,0 +1,333 @@
+                <Property name="Thermal Conductivity Control"
+                            neutralName="ThermalConductivityControl"
+                            valueType="enum"
+                            valueChoices="&Choice;Constant or Temperature=0&Choice;Temperature and Pressure=1&Choice;Temperature and Degree of Cure and Glass Transition Temperature=2">
+                    <DefaultValue value= "0"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                    <UpperBound value="2"
+                                inclusive="true"/>
+                </Property>
+
+                <Property name="Behavior Type"
+                          neutralName="TempConductivityBehaviorType"
+                          valueType="enum"
+                          valueChoices="&Choice;Isotropic=0&Choice;Orthotropic=1"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value="0"/>
+                    <LowerBound value="0"/>
+                    <UpperBound value="1"/>
+                </Property>
+
+                <Property name="Thermal Conductivity (K)"
+                          neutralName="ThermalConductivity"
+                          valueType="scalarField"
+                          Dimensions="&MeasureThermConductivity;"
+                          scaleFactor="false"
+                          parentProperty="TempConductivityBehaviorType"
+                          parentPropertyValToBeSensitive="0,1">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="false"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Thermal Conductivity (K2)"
+                          neutralName="ThermalConductivity2"
+                          valueType="scalarField"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="TempConductivityBehaviorType"
+                          parentPropertyValToBeSensitive="1"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Thermal Conductivity (K3)"
+                          neutralName="ThermalConductivity3"
+                          valueType="scalarField"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="TempConductivityBehaviorType"
+                          parentPropertyValToBeSensitive="1"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <!-- dummy property to complement display for Anisotropic material-->
+                <Property name=""
+                          neutralName="DummyThermalConductivity1"
+                          visible="false"
+                          editable="false"
+                          valueType="enum"
+                          valueChoices="&Choice;Empty=0;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value= "0"/>
+                </Property>
+                <!-- dummy property to complement display for Anisotropic material-->
+                <Property name=""
+                          neutralName="DummyThermalConductivity2"
+                          visible="false"
+                          editable="false"
+                          valueType="enum"
+                          valueChoices="&Choice;Empty=0;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value= "0"/>
+                </Property>
+                <Property name="Thermal Conductivity (K21)"
+                          neutralName="ThermalConductivity21"
+                          visible="false"
+                          valueType="scalarField"
+                          valueSubtype="Symmetric"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Thermal Conductivity (K22)"
+                          neutralName="ThermalConductivity22"
+                          valueType="scalarField"
+                          valueSubtype="Symmetric"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Thermal Conductivity (K23)"
+                          neutralName="ThermalConductivity23"
+                          valueType="scalarField"
+                          valueSubtype="Symmetric"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <!-- dummy property to complement display for Anisotropic material-->
+                <Property name=""
+                          neutralName="DummyThermalConductivity3"
+                          visible="false"
+                          editable="false"
+                          valueType="enum"
+                          valueChoices="&Choice;Empty=0;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value= "0"/>
+                </Property>
+                <!-- dummy property to complement display for Anisotropic material-->
+                <Property name=""
+                          neutralName="DummyThermalConductivity4"
+                          visible="false"
+                          editable="false"
+                          valueType="enum"
+                          valueChoices="&Choice;Empty=0;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value= "0"/>
+                </Property>
+
+                <Property name="Thermal Conductivity (K31)"
+                          neutralName="ThermalConductivity31"
+                          visible="false"
+                          valueType="scalarField"
+                          valueSubtype="Symmetric"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Thermal Conductivity (K32)"
+                          neutralName="ThermalConductivity32"
+                          visible="false"
+                          valueType="scalarField"
+                          valueSubtype="Symmetric"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0"
+                          Dimensions="&MeasureThermConductivity;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Thermal Conductivity (K33)"
+                          neutralName="ThermalConductivity33"
+                          valueType="scalarField"
+                          valueSubtype="Symmetric"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="0"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+
+
+                <Property name="Thermal Conductivity (K)"
+                          neutralName="ThermalConductivityTempPress"
+                          valueType="scalarField"
+                          valueSubtype="&scalarFieldCompactDisplay;"          
+                          Dimensions="&MeasureThermConductivity;"
+                          scaleFactor="true"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1"
+                                hasSecondary="true">
+                            <Variable Measure="&MeasureTemperature;"/>
+                            <SecondaryDomain type ="&DomainPressure;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+
+
+                <!-- This property is used in curing material. Override it if ThermalConductivityTempCurGtt is needed somewhere else-->
+                <Property name=""
+                          neutralName="CuringMatConductivityBehaviorType"
+                          valueType="enum"
+                          valueChoices="&Choice;Isotropic=0&Choice;Orthotropic=1"
+                          parentProperty="ThermalConductivityControl"
+                          parentPropertyValToBeSensitive="2">
+                    <DefaultValue value="0"/>
+                    <LowerBound value="0"/>
+                    <UpperBound value="1"/>
+                </Property>
+                <Property name="Thermal Conductivity (K)"
+                          neutralName="ThermalConductivityTempDocTg"
+                          valueType="scalarField"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="CuringMatConductivityBehaviorType"
+                          parentPropertyValToBeSensitive="0,1">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    &fieldtempdoctg;
+                </Property>
+                <Property name="Thermal Conductivity (K2)"
+                          neutralName="ThermalConductivityTempDocTg2"
+                          valueType="scalarField"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="CuringMatConductivityBehaviorType"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    &fieldtempdoctg;
+                </Property>
+                <Property name="Thermal Conductivity (K3)"
+                          neutralName="ThermalConductivityTempDocTg3"
+                          valueType="scalarField"
+                          Dimensions="&MeasureThermConductivity;"
+                          parentProperty="CuringMatConductivityBehaviorType"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    &fieldtempdoctg;
+                </Property>
+

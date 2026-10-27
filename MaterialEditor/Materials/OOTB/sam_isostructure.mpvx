@@ -1,0 +1,178 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3&Choice;Temperature=4"
+                   defaultValue="3"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="CalculateConstantValuesTempDep"/>
+
+<ReferenceProperty neutralName="YoungsModulusConstant"/>
+<ReferenceProperty neutralName="YoungsModulusTemperature"/>
+<ReferenceProperty neutralName="YoungsModulusFrequency"/>
+
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+
+<ReferenceProperty neutralName="PoissonsRatioConstant"/>
+<ReferenceProperty neutralName="PoissonsRatioTemperature"/>
+<ReferenceProperty neutralName="PoissonsRatioFrequency"/>
+
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="ShearModulusTemperature"/>
+<ReferenceProperty neutralName="ShearModulusFrequency"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansionConstant"/>
+<ReferenceProperty neutralName="ThermalExpansionTemperature"/>
+
+
+<ReferenceProperty neutralName="MaxStressTensionConstant"
+                   valueLabel="Tension (ST1)"/>
+<ReferenceProperty neutralName="MaxStressTensionTemperature"
+                   valueLabel="Temperature Dependent Tension (ST1)"/>
+
+<ReferenceProperty neutralName="MaxStressCompressionConstant"
+                   valueLabel="Compression (SC1)"/>
+<ReferenceProperty neutralName="MaxStressCompressionTemperature"
+                   valueLabel="Temperature Dependent Compression (SC1)"/>
+
+<ReferenceProperty neutralName="MaxInPlaneShearStressConstant"
+                   valueLabel="Shear (SS12)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStressTemperature"
+                   valueLabel="Temperature Dependent Shear (SS12)"/>
+
+<ReferenceProperty neutralName="MaxStrainTension"/>
+<ReferenceProperty neutralName="MaxStrainCompression"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="StressStrainDataType"/>
+
+<ReferenceProperty neutralName="StressStrainFormatType"
+                   displayName="Stress-Strain Format Type"
+                   valueChoices="&Choice;Stress-Strain Curve=0;
+                                 &Choice;Bilinear by Work Hardening Slope (H)=1;"
+                   defaultValue="0"/>
+<ReferenceProperty neutralName="WorkHardeningSlopeH"/>
+<ReferenceProperty neutralName="StressStrainCurveTable"/>
+
+<ReferenceProperty neutralName="MatlNonlinearityType"
+                   valueChoices="&Choice;Elastoplastic: stress-total strain (MATS1/PLASTIC)=1"
+                   defaultValue="1"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YieldFunctionCriterion"
+                   valueChoices="&Choice;von Mises=1&Choice;Raghava=5&Choice;Hill=6;"
+                   defaultValue="1"/>
+
+<ReferenceProperty neutralName="CompressiveTensileyieldRatio"/>
+
+<ReferenceProperty neutralName="InitialTensilYieldStress2"/>
+
+<ReferenceProperty neutralName="InitialTensilYieldStress3"/>
+
+<ReferenceProperty neutralName="ShearYieldStress"/>
+
+<ReferenceProperty neutralName="ShearYieldStress2"/>
+
+<ReferenceProperty neutralName="ShearYieldStress3"/>
+
+<ReferenceProperty neutralName="HardeningRule"
+                   valueChoices="&Choice;Isotropic=1&Choice;Kinematic=2&Choice;Mixed Hardening=3"
+                   defaultValue="1"/>
+
+<ReferenceProperty neutralName="MixedHardeningRatio"/>
+
+
+<ReferenceProperty neutralName="KinematicLaws"/>
+
+<ReferenceProperty neutralName="NonLinearHardeningCoefficient"/>
+
+<ReferenceProperty neutralName="ViscoelasticDomain"
+                   defaultValue="0"
+                   valueChoices="&Choice;##397None=0;&Choice;Zener =3&Choice;Maxwell=4&Choice;Kelvin=5;"/>
+
+
+<ReferenceProperty neutralName="Damping"/>
+
+
+<ReferenceProperty neutralName="SecondHookeCoefficient"/>
+
+<ReferenceProperty neutralName="ViscoplasticModelType"
+                   defaultValue="0"
+                   valueChoices="&Choice;None=0&Choice;Lemaitre Law=1&Choice;Prager Law=2;"/>
+
+
+<ReferenceProperty neutralName="CreepParameterEXPN"/>
+
+
+<ReferenceProperty neutralName="CreepParameterBIGK"/>
+
+
+<ReferenceProperty neutralName="CreepParameterLITK"/>
+
+
+<ReferenceProperty neutralName="IsotropicHardeningEXPM"/>
+
+
+<ReferenceProperty neutralName="KinematicHardeningCOCA"/>
+
+
+<ReferenceProperty neutralName="DamageParameterCOEN"/>
+
+
+<ReferenceProperty neutralName="DamageParameterEXEN"/>
+
+
+<ReferenceProperty neutralName="DamageParameterPDEN"/>
+
+
+
+<ReferenceProperty neutralName="DamageParameterDDEN"/>
+
+
+<ReferenceProperty neutralName="CreepFormulation"
+                   lockProp="false"
+                   showProp="true"
+                   defaultValue="0"
+                   valueChoices="&Choice;##397None=0&Choice;Norton-Bailey in Time or Strain Hardening, Temperature-Dependent (MATCRP/Type 301)=5"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+
+<ReferenceProperty neutralName="CreepHardening"
+                   lockProp="true"
+                   showProp="true"
+                   defaultValue="0"
+                   valueChoices="&Choice;Strain=0"/>
+
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A1"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_b"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_d"/>
+<ReferenceProperty neutralName="CreepThreshold"/>
+
+
+<ReferenceProperty neutralName="DamageModelType"/>
+
+
+<ReferenceProperty neutralName="ParameterDelay"/>
+
+
+<ReferenceProperty neutralName="TimeDelay"/>
+
+
+<ReferenceProperty neutralName="EquivalentPlasticStrainLimit"/>
+
+
+<ReferenceProperty neutralName="MaxDamageValue"/>
+
+<ReferenceProperty neutralName="LinearBehavior"/>
+
+

@@ -1,0 +1,152 @@
+<!-- This file needs to remain in sync with constants.dtd -->
+<!ENTITY MaterialTypeISOTROPICString "Isotropic">
+<!ENTITY MaterialTypeORTHOTROPICString "Orthotropic">
+<!ENTITY MaterialTypeANISOTROPICString "Anisotropic">
+<!ENTITY MaterialTypeFORMABILITYString "Formability">
+<!ENTITY MaterialTypeFLUIDString "Fluid">
+<!ENTITY MaterialTypeHYPERELASTICString "Hyperelastic - general">
+<!ENTITY MaterialTypeMOONEYRIVLINString "Mooney-Rivlin">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATAString "Mooney-Rivlin Test Data">
+<!ENTITY MaterialTypePOLYNOMIALString "Polynomial">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIALString "Reduced Polynomial">
+<!ENTITY MaterialTypeOGDENString "Ogden">
+<!ENTITY MaterialTypeOGDENTESTDATAString "Ogden Test Data">
+<!ENTITY MaterialTypeFOAMString "Foam">
+<!ENTITY MaterialTypeFOAMTESTDATAString "Foam Test Data">
+<!ENTITY MaterialTypeBLATZString "Blatz">
+<!ENTITY MaterialTypeARRUDABOYCEString "Arruda-Boyce">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATAString "Arruda-Boyce Test Data">
+<!ENTITY MaterialTypeNEOHOOKEString "Neo Hooke">
+<!ENTITY MaterialTypeNEOHOOKETESTDATAString "Neo Hooke Test Data">
+<!ENTITY MaterialTypeMARLOWString "Marlow">
+<!ENTITY MaterialTypeVANDERWAALSString "Van Der Waals">
+<!ENTITY MaterialTypeYEOHString "Yeoh">
+<!ENTITY MaterialTypeYEOHTESTDATAString "Yeoh Test Data">
+<!ENTITY MaterialTypeGENTString "Gent">
+<!ENTITY MaterialTypeGASKETString "Gasket (Strain)">
+<!ENTITY MaterialTypeGASKETBEHAVIORString "Gasket Behavior">
+<!ENTITY MaterialTypeSHAPEMEMORYALLOYString "Shape Memory Alloy">
+<!ENTITY MaterialTypeSUSSMANBATHEString "Sussman Bathe">
+<!ENTITY MaterialTypeGASKETLENGTHString "Gasket (Displacement)">
+<!ENTITY MaterialTypeDAMAGEINTERFACEString "Damage Interface">
+<!ENTITY MaterialTypeMULTIPLEFLUIDString "Multiple Fluid">
+<!ENTITY MaterialTypeHARTSMITHString "Hart-Smith">
+<!ENTITY MaterialTypeALEXANDERString "Alexander">
+<!ENTITY MaterialTypeCURINGString "Curing">
+<!ENTITY MaterialTypePOROUSString "Porous">
+<!ENTITY MaterialTypeCOMPOUNDISOTROPICString "Compound Isotropic">
+<!ENTITY MaterialTypeLOWDENSITYFOAMString "Low Density Foam">
+<!ENTITY MaterialTypeFABRICString "Fabric">
+<!ENTITY MaterialTypeCRUSHABLEFOAMString "Crushable Foam">
+<!ENTITY MaterialTypeRATESENSITVEFOAMString "Rate Sensitive Foam">
+<!ENTITY MaterialTypeMULTIMECHMICROSTRUCTUREString "Multimech Microstructure">
+<!ENTITY MaterialTypeHONEYCOMBString "Honeycomb">
+<!ENTITY MaterialTypeCOMPOSITEString "Composite">
+<!ENTITY MaterialTypeVISCOTHERMALFLUIDString "Visco-Thermal Fluid">
+<!ENTITY MaterialTypeLAMINATEDGLASSString "Laminated Glass">
+
+
+<!ENTITY MaterialTypeISOTROPICLookUp "IsotropicMaterial">
+<!ENTITY MaterialTypeORTHOTROPICLookUp "OrthotropicMaterial">
+<!ENTITY MaterialTypeANISOTROPICLookUp "AnisotropicMaterial">
+<!ENTITY MaterialTypeFORMABILITYLookUp "FormabilityMaterial">
+<!ENTITY MaterialTypeFLUIDLookUp "FluidMaterial">
+<!ENTITY MaterialTypeHYPERELASTICLookUp "HyperelasticMaterial">
+<!ENTITY MaterialTypeMOONEYRIVLINLookUp "MooneyRivlinMaterial">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATALookUp "MooneyRivlinMaterialTestData">
+<!ENTITY MaterialTypePOLYNOMIALLookUp "PolynomialMaterial">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIALLookUp "ReducedPolynomialMaterial">
+<!ENTITY MaterialTypeOGDENLookUp "OgdenMaterial">
+<!ENTITY MaterialTypeOGDENTESTDATALookUp "OgdenMaterialTestData">
+<!ENTITY MaterialTypeFOAMLookUp "FoamMaterial">
+<!ENTITY MaterialTypeFOAMTESTDATALookUp "FoamMaterialTestData">
+<!ENTITY MaterialTypeBLATZLookUp "BlatzMaterial">
+<!ENTITY MaterialTypeARRUDABOYCELookUp "ArrudaBoyceMaterial">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATALookUp "ArrudaBoyceMaterialTestData">
+<!ENTITY MaterialTypeNEOHOOKELookUp "NeoHookeMaterial">
+<!ENTITY MaterialTypeNEOHOOKETESTDATALookUp "NeoHookeMaterialTestData">
+<!ENTITY MaterialTypeMARLOWLookUp "MarlowMaterial">
+<!ENTITY MaterialTypeVANDERWAALSLookUp "VanDerWaalsMaterial">
+<!ENTITY MaterialTypeYEOHLookUp "YeohMaterial">
+<!ENTITY MaterialTypeYEOHTESTDATALookUp "YeohMaterialTestData">
+<!ENTITY MaterialTypeGENTLookUp "GentMaterial">
+<!ENTITY MaterialTypeGASKETLookUp "GasketMaterial">
+<!ENTITY MaterialTypeGASKETBEHAVIORLookUp "GasketBehaviorMaterial">
+<!ENTITY MaterialTypeSHAPEMEMORYALLOYLookUp "ShapeMemoryAlloy">
+<!ENTITY MaterialTypeSUSSMANBATHELookUp "SussmanBathe">
+<!ENTITY MaterialTypeGASKETLENGTHLookUp "GasketMaterialDisplacement">
+<!ENTITY MaterialTypeDAMAGEINTERFACELookUp "DamageInterface">
+<!ENTITY MaterialTypeMULTIPLEFLUIDLookUp "MultipleFluid">
+<!ENTITY MaterialTypeHARTSMITHLookUp "HartSmithMaterial">
+<!ENTITY MaterialTypeALEXANDERLookUp "AlexanderMaterial">
+<!ENTITY MaterialTypeCURINGLookUp "CuringMaterial">
+<!ENTITY MaterialTypePOROUSLookUp "PorousMaterial">
+<!ENTITY MaterialTypeCOMPOUNDISOTROPICLookUp "CompoundIsotropicMaterial">
+<!ENTITY MaterialTypeLOWDENSITYFOAMLookUp "LowDensityFoamMaterial">
+<!ENTITY MaterialTypeFABRICLookUp "FabricMaterial">
+<!ENTITY MaterialTypeCRUSHABLEFOAMLookup "CrushableFoamMaterial">
+<!ENTITY MaterialTypeRATESENSITIVEFOAMLookUp "RateSensitiveFoamMaterial">
+<!ENTITY MaterialTypeMULTIMECHMICROSTRUCTURELookUp "MultimechMicrostructureMaterial">
+<!ENTITY MaterialTypeHONEYCOMBLookUp "HoneycombMaterial">
+<!ENTITY MaterialTypeCOMPOSITELookUp "CompositeMaterial">
+<!ENTITY MaterialTypeVISCOTHERMALFLUIDLookUp "ViscoThermalFluidMaterial">
+<!ENTITY MaterialTypeLAMINATEDGLASSLookUp "LaminatedGlassMaterial">
+
+<!-- These id values correspond to values in uf_sf_types.h         -->
+<!ENTITY MaterialTypeISOTROPIC "0">
+<!ENTITY MaterialTypeORTHOTROPIC "1">
+<!ENTITY MaterialTypeANISOTROPIC "2">
+<!ENTITY MaterialTypeFORMABILITY "3">
+<!ENTITY MaterialTypeFLUID "4">
+<!ENTITY MaterialTypeHYPERELASTIC "5">
+<!ENTITY MaterialTypeMOONEYRIVLIN "6">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATA "7">
+<!ENTITY MaterialTypePOLYNOMIAL "8">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIAL "9">
+<!ENTITY MaterialTypeOGDEN "10">
+<!ENTITY MaterialTypeOGDENTESTDATA "11">
+<!ENTITY MaterialTypeFOAM "12">
+<!ENTITY MaterialTypeFOAMTESTDATA "13">
+<!ENTITY MaterialTypeBLATZ "14">
+<!ENTITY MaterialTypeARRUDABOYCE "15">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATA "16">
+<!ENTITY MaterialTypeNEOHOOKE "17">
+<!ENTITY MaterialTypeNEOHOOKETESTDATA "18">
+<!ENTITY MaterialTypeMARLOW "19">
+<!ENTITY MaterialTypeVANDERWAALS "20">
+<!ENTITY MaterialTypeYEOH "21">
+<!ENTITY MaterialTypeYEOHTESTDATA "22">
+<!ENTITY MaterialTypeGENT "23">
+<!ENTITY MaterialTypeGASKET "24">
+<!ENTITY MaterialTypeGASKETBEHAVIOR "25">
+<!ENTITY MaterialTypeSHAPEMEMORYALLOY "26">
+<!ENTITY MaterialTypeSUSSMANBATHE "27">
+<!ENTITY MaterialTypeGASKETDISPLACEMENT "28">
+<!ENTITY MaterialTypeDAMAGEINTERFACE "29">
+<!ENTITY MaterialTypeMULTIPLEFLUID "30">
+<!ENTITY MaterialTypeHARTSMITH "31">
+<!ENTITY MaterialTypeALEXANDER "32">
+<!ENTITY MaterialTypeCURING "33">
+<!-- Removed type 34 for thermo-plastic material-->
+<!ENTITY MaterialTypePOROUS "35">
+<!ENTITY MaterialTypeCOMPOUNDISOTROPIC "36">
+<!ENTITY MaterialTypeLOWDENSITYFOAM "37">
+<!ENTITY MaterialTypeFABRIC "38">
+<!ENTITY MaterialTypeCRUSHABLEFOAM "39">
+<!ENTITY MaterialTypeRATESENSITIVEFOAM "40">
+<!ENTITY MaterialTypeMULTIMECHMICROSTRUCTURE "41">
+<!ENTITY MaterialTypeHONEYCOMB "42">
+<!ENTITY MaterialTypeCOMPOSITE "43">
+<!ENTITY MaterialTypeVISCOTHERMALFLUID "44">
+<!ENTITY MaterialTypeLAMINATEDGLASS "45">
+
+<!ENTITY MaterialTypeMinimum "0">
+<!ENTITY MaterialTypeMaximum "45">
+
+
+<!ENTITY MATERIALTYPECHOICES "&Choice;Isotropic=&MaterialTypeISOTROPIC;&Choice;Orthotropic=&MaterialTypeORTHOTROPIC;&Choice;Anisotropic=&MaterialTypeANISOTROPIC;&Choice;Fluid=&MaterialTypeFLUID;&Choice;Hyperelastic=&MaterialTypeHYPERELASTIC;&Choice;Mooney-Rivlin=&MaterialTypeMOONEYRIVLIN;&Choice;Mooney-Rivlin Test Data=&MaterialTypeMOONEYRIVLINTESTDATA;&Choice;Polynomial=&MaterialTypePOLYNOMIAL;&Choice;Reduced Polynomial=&MaterialTypeREDUCEDPOLYNOMIAL;&Choice;Ogden=&MaterialTypeOGDEN;&Choice;Ogden Test Data=&MaterialTypeOGDENTESTDATA;&Choice;Foam=&MaterialTypeFOAM;&Choice;Foam Test Data=&MaterialTypeFOAMTESTDATA;&Choice;Blatz=&MaterialTypeBLATZ;&Choice;Arruda-Boyce=&MaterialTypeARRUDABOYCE;&Choice;Arruda-Boyce Test Data=&MaterialTypeARRUDABOYCETESTDATA;&Choice;Neo-Hooke=&MaterialTypeNEOHOOKE;&Choice;Neo-Hooke Test Data=&MaterialTypeNEOHOOKETESTDATA;&Choice;Marlow=&MaterialTypeMARLOW;&Choice;VanderWaals=&MaterialTypeVANDERWAALS;&Choice;Yeoh=&MaterialTypeYEOH;&Choice;Yeoh Test Data=&MaterialTypeYEOHTESTDATA;&Choice;Gent=&MaterialTypeGENT;&Choice;Gasket=&MaterialTypeGASKET;&Choice;Gasket Behavior=&MaterialTypeGASKETBEHAVIOR;&Choice;Shape Memory Alloy=&MaterialTypeSHAPEMEMORYALLOY;&Choice;Sussman-Bathe=&MaterialTypeSUSSMANBATHE;&Choice;Gasket (Displacement)=&MaterialTypeGASKETDISPLACEMENT;&Choice;Damage Interface=&MaterialTypeDAMAGEINTERFACE;&Choice;Multiple Fluid=&MaterialTypeMULTIPLEFLUID;&Choice;Hart-Smith=&MaterialTypeHARTSMITH;&Choice;Alexander=&MaterialTypeALEXANDER;&Choice;Curing=&MaterialTypeCURING;&Choice;Porous=&MaterialTypePOROUS;&Choice;Compound Isotropic=&MaterialTypeCOMPOUNDISOTROPIC;&Choice;Low Density Foam=&MaterialTypeLOWDENSITYFOAM;&Choice;Fabric=&MaterialTypeFABRIC;&Choice;Crushable Foam=&MaterialTypeCRUSHABLEFOAM;&Choice;Rate Sensitive Foam=&MaterialTypeRATESENSITIVEFOAM;&Choice;Multimech Microstructure=&MaterialTypeMULTIMECHMICROSTRUCTURE;&Choice;Honeycomb=&MaterialTypeHONEYCOMB;&Choice;Composite=&MaterialTypeCOMPOSITE;&Choice;Visco-Thermal Fluid=&MaterialTypeVISCOTHERMALFLUID;&Choice;Laminated Glass= &MaterialTypeLAMINATEDGLASS;">
+
+<!ENTITY MATERIALEXCLUDE_OBSOLETEMATERIALTYPES "&MaterialTypeFORMABILITY;,34">
+
+<!--The following lists are explicit lists of all material types to be excluded. Include every newly added material in here.-->
+<!ENTITY MATERIALEXCLUDE_ALL_EXCEPT_ISOTROPIC_ORTHOTROPIC_ANISOTROPIC_MULTIMECHMICROSTRUCTURE "&MaterialTypeFORMABILITY;,&MaterialTypeFLUID;,&MaterialTypeHYPERELASTIC;,&MaterialTypeMOONEYRIVLIN;,&MaterialTypeMOONEYRIVLINTESTDATA;,&MaterialTypePOLYNOMIAL;,&MaterialTypeREDUCEDPOLYNOMIAL;,&MaterialTypeOGDEN;,&MaterialTypeOGDENTESTDATA;,&MaterialTypeFOAM;,&MaterialTypeFOAMTESTDATA;,&MaterialTypeBLATZ;,&MaterialTypeARRUDABOYCE;,&MaterialTypeARRUDABOYCETESTDATA;,&MaterialTypeNEOHOOKE;,&MaterialTypeNEOHOOKETESTDATA;,&MaterialTypeMARLOW;,&MaterialTypeVANDERWAALS;,&MaterialTypeYEOH;,&MaterialTypeYEOHTESTDATA;,&MaterialTypeGENT;,&MaterialTypeGASKET;,&MaterialTypeGASKETBEHAVIOR;,&MaterialTypeSHAPEMEMORYALLOY;,&MaterialTypeSUSSMANBATHE;,&MaterialTypeGASKETDISPLACEMENT;,&MaterialTypeDAMAGEINTERFACE;,&MaterialTypeMULTIPLEFLUID;,&MaterialTypeHARTSMITH;,&MaterialTypeALEXANDER;,&MaterialTypeCURING;,&MaterialTypePOROUS;,&MaterialTypeLOWDENSITYFOAM;,&MaterialTypeFABRIC;,&MaterialTypeCRUSHABLEFOAM;,&MaterialTypeRATESENSITIVEFOAM;,&MaterialTypeHONEYCOMB;,&MaterialTypeCOMPOSITE;,&MaterialTypeVISCOTHERMALFLUID;,&MaterialTypeLAMINATEDGLASS;,&MaterialTypeCOMPOUNDISOTROPIC;">

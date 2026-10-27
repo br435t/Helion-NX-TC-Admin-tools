@@ -1,0 +1,35 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="BulkModulus"/>
+
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+
+<ReferenceProperty neutralName="DistortionalStrainEnergyOrder"
+                   lockProp="false"
+                   showProp="true"
+                   valueChoices="&Choice;1=1&Choice;2=2&Choice;3=3&Choice;4=4&Choice;5=5&Choice;6=6&Choice;7=7&Choice;8=8&Choice;9=9&Choice;10=10"/>
+           
+<ReferenceProperty neutralName="StrainEnergyInputData"
+                   valueChoices="&Choice;Strain Energy Potential in terms of Bulk Modulus=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+
+<ReferenceProperty neutralName="StrainEnergyCoeff"/>
+
+

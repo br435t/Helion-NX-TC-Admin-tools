@@ -1,0 +1,24 @@
+    <Property name="Mean Stress Magnification Factor"
+              neutralName="MeanStressMagnificationFactor"
+              parentProperty="&Choice;AllFailureCriterion&Choice;PuckFailureCriterion"
+              parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+              valueType="float"
+              Dimensions="&MeasureUnitLess;">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+    </Property>
+    <Property name="Shear Strain Coefficient (SC0)"
+              neutralName="ShearStrainCoefficient"
+              parentProperty="&Choice;AllFailureCriterion&Choice;PuckFailureCriterion"
+              parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+              valueType="float"
+              Dimensions="&MeasureUnitLess;">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+    </Property>

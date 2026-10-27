@@ -1,0 +1,5 @@
+        <Property name="Contact Interface Stiffness Coefficient (KCON)"
+                  neutralName="StiffnessCoefficient"
+                  valueType="float">
+            <DefaultValue value="&valueEmpty;"/>
+        </Property>

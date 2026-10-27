@@ -1,0 +1,62 @@
+<Property name="Membrane Formulation Option (FORM)"
+          neutralName="MembraneFormulationFORM"
+          valueType="enum"
+          valueChoices="&Choice;0 - Default=0;
+                        &Choice;1 - Invariant Local Membrane CSYS=1; 
+                        &Choice;2 - Green-Lagrange Strain Formulation=2; 
+                        &Choice;3 - Large Strain with Non-Orthogonal Material Angles=3; 
+                        &Choice;4 - 3 + Nonlinear Stress Behavior=4; 
+                        &Choice;12 - Enhanced Version of 2=12; 
+                        &Choice;13 - Enhanced Version of 3=13; 
+                        &Choice;14 - Enhanced Version of 4=14; 
+                        &Choice;-14 - Same as 14 with Additional Data=-14; 
+                        &Choice;24 - Enhanced Version of 14=24;">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Initialize Stress Option (ISREFG)"
+          neutralName="InitializeStressOptionISREFG"
+          valueType="enum"
+          valueChoices="&Choice;Off=0;
+                        &Choice;On=1"
+          valueSubtype="radio"
+          parentProperty="MembraneFormulationFORM"
+          parentPropertyValToBeSensitive="12">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Reloading Parameter (RL)"
+          neutralName="ReloadingParameterRL"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="MembraneFormulationFORM"
+          parentPropertyValToBeSensitive="14,24">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Normalized Hysteresis Parameter (H)"
+          neutralName="NormalizedHysteresisParameterH"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="MembraneFormulationFORM"
+          parentPropertyValToBeSensitive="-14">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Strain Rate Averaging Option (DT)"
+          neutralName="StrainRateAveragingOption"
+          valueType="int"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="MembraneFormulationFORM"
+          parentPropertyValToBeSensitive="-14">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+

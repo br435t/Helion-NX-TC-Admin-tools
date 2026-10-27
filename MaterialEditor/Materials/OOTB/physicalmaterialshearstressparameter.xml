@@ -1,0 +1,10 @@
+        <Property name="Shear Stress Parameter (ALPH)"
+                  neutralName="ShearStressParameterALPH"
+                  valueType="float"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="0"
+                        inclusive="false"/>
+            <UpperBound value="0.5"
+                        inclusive="false"/>
+        </Property>

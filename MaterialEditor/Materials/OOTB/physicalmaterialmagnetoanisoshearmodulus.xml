@@ -1,0 +1,57 @@
+<!-- These shear modulus properties are used in anisotropic materials for Magnetostriction. -->
+<!-- Although it would have been preferable to reuse existing shear modulus properties,     -->
+<!-- several neutral name conflicts between the shear modulus properties in file            -->
+<!-- physicalmaterialshearmodulusdefinition.xml and the anisotropic material matrix         -->
+<!-- properties in files physicalmaterialanisomatrixconstantdefinition.xml and              -->
+<!-- physicalmaterialanisomatrixtemperaturedefinition.xml prevented this.  Aso, reusing     -->
+<!-- some of the terms of the anisotropic material matrix properties were not viable for    -->
+<!-- the UI display needed in this use-case.  Therefore, these new shear modulus properties -->
+<!-- were created to avoid neutral name and UI display conflicts in anisotropic materials.  -->
+
+<Property name="Shear Modulus (GXY)"
+          neutralName="ShearModulusXY"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="MaterialType"
+          parentPropertyValToBeSensitive="&MaterialTypeANISOTROPIC;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Shear Modulus (GXZ)"
+          neutralName="ShearModulusXZ"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="MaterialType"
+          parentPropertyValToBeSensitive="&MaterialTypeANISOTROPIC;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Shear Modulus (GYZ)"
+          neutralName="ShearModulusYZ"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="MaterialType"
+          parentPropertyValToBeSensitive="&MaterialTypeANISOTROPIC;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

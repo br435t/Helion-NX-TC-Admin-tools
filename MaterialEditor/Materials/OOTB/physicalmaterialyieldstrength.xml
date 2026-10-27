@@ -1,0 +1,90 @@
+        <!--Property name=""
+                  neutralName="1DirectionYieldLabel"
+                  editable="false"
+                  valueType="char"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;">
+            <DefaultValue value="1-Direction"/>
+        </Property>
+        <Property name=""
+                  neutralName="2DirectionYieldLabel"
+                  editable="false"
+                  valueType="char"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;">
+            <DefaultValue value="2-Direction"/>
+        </Property>
+        <Property name=""
+                  neutralName="12DirectionYieldLabel"
+                  editable="false"
+                  valueType="char"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;">
+            <DefaultValue value="12-Direction"/>
+        </Property-->
+               
+        <Property name="Yield Strength"
+                  neutralName="Yield"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Yield Strength - 2"
+                  neutralName="Yield2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Yield Strength - 12"
+                  neutralName="Yield12"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+
+
+        

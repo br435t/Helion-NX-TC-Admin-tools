@@ -1,0 +1,20 @@
+                <Property name="Transverse Shear Stiffness"
+                          neutralName="TransShearStiffnesss"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasurePressurePerLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"
+                                      evaluationProperty="Default Temperature"
+                                      propertyType="Solution"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>

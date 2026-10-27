@@ -1,0 +1,35 @@
+
+<Property name="Damping"
+          neutralName="Damping"
+          valueType="scalarField"
+          Dimensions="&MeasureTime;"
+          scaleFactor="false"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="3,4,5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive ="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="2nd Hooke Coefficient"
+          neutralName="SecondHookeCoefficient"
+          valueType="scalarField"
+          scaleFactor="false"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+

@@ -1,0 +1,9 @@
+<Property name="Coefficient (X0) Option"
+          neutralName="X0CoefficientOption"
+          valueType="enum"
+          valueChoices="&Choice;X0 EQ -1=-1;
+                        &Choice;X0 EQ 0=0;
+                        &Choice;X0 EQ 1=1;
+                        &Choice;X0 Coefficient=2;">
+    <DefaultValue value="2"/>
+</Property>

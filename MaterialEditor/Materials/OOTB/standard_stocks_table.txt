@@ -1,0 +1,279 @@
+###############################################################################################  
+# This is a sample standard stocks table file. The main purpose of the file is to  
+# describe how to set stock parameters so that it can be read successfully by NX. 
+# The file uses comma , as a delimiter and can be stored/edited with a
+# spreadsheet application.  File extension of .txt and .csv are valid.
+#
+# Following keywords are recognised by NX and should be used to used to
+# define data that can be used by the nesting stocks.
+# STANDARD_STOCKS_FILE_VERSION
+# VERSION
+# UNITS
+# METRIC
+# ENGLISH
+# TABLE
+# STOCK_NAME
+# LENGTH
+# WIDTH
+# THICKNESS
+# PHYSICAL_MATERIAL_NAME
+# END_OF_TABLE
+#
+# The standard stocks table file is divided into 3 functional blocks.
+##BLOCK1##
+#
+# This block determines the version of standard stocks table file. This will provide a clear upgrade path
+# for future format changes to the file. It is important that version numbers are not edited. 
+# The valid value for this release is:
+# STANDARD_STOCKS_FILE_VERSION = 1
+#
+##BLOCK2##
+#
+# Contains the units of the parameters in the standard stocks table file. It can either be METRIC or ENGLISH.
+# A table cannot have more than one unit. Two separate standards files can be used, one for each unit of measure.
+#
+##BLOCK3##
+#
+# Contains the actual standard stocks table. Start and end of a table is defined by TABLE and END_OF_TABLE keywords respectively.
+# Table must have a version. This can be set using the VERSION keyword. Valid value for this release is:
+# VERSION = 1.
+#
+# The first row, following table version, contains the names of the columns. 
+# Columns STOCK_NAME, LENGTH, WIDTH, THICKNESS and PHYSICAL_MATERIAL_NAME are mandatory.
+# 
+# The second row decides the columns properties:  
+# unique    - There must be one column with this identifier. This column should contain unique  
+#             names of the stocks.  
+# show      - These columns will be used for filtering data through UI when selecting a stock
+# hide      - The values of these columns will be stored but will not be used for filtering data
+#
+# Each new line after column properties til END_OF_TABLE will be treated as a separate row containing stock information.
+# Each stock should have an unqiue name defined under STOCK_NAME column, followed by length, width, thickness and a physical material
+# separated by commas. Empty cells should contains at least one blank space character.
+# 
+# TABLE
+# VERSION, 1
+# STOCK_NAME,     LENGTH,    WIDTH,    THICKNESS, PHYSICAL_MATERIAL_NAME,
+# unique,         show,      show,     show,      show,                  
+# Stock1,         3000.0,    2000,     0.63,      Aluminum_2014,         
+# Stock2,         3000.0,    2000,     1.6,       Aluminum_6061,         
+# Stock3,         4000.0,    3000.0,   3.0,       Brass,                 
+# END_OF_TABLE
+#
+#
+# Disclaimer: THIS FILE DOES NOT CONTAIN ACTUAL DATA. PLEASE MODIFY THE TABLES
+#             WITH ACTUAL VALUES BEFORE USING THIS TABLE. SIEMENS IS NOT RESPONSIBLE FOR THE
+#             DATA CONTAINED IN THIS FILE. THIS FILE IS PROVIDED JUST AS A SAMPLE TO EXPLAIN
+#             THE FORMATTING OF A TYPICAL STANDARD STOCKS TABLE FILE.
+###############################################################################################
+#BLOCK1########################################################################################
+# Define the version of the standards file. DO NOT EDIT version numbers.
+###############################################################################################
+STANDARD_STOCKS_FILE_VERSION, 1
+#BLOCK2########################################################################################
+# Define the Units of the standard stock file.
+# It can be METRIC or ENGLISH. If METRIC length will be mm and if ENGLISH, length will be in.
+###############################################################################################
+UNITS, METRIC
+#BLOCK3########################################################################################
+# Define the standard stock table.
+###############################################################################################
+TABLE
+VERSION, 1
+STOCK_NAME,     LENGTH, WIDTH,  THICKNESS,   PHYSICAL_MATERIAL_NAME,    MATERIAL,       Type,           Grade,                  DESCRIPTION,        
+unique,         show,   show,   show,        show,                      show,           show,           show,                   show,               
+Metal1,         2500,   1250,   0.5,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal2,         2000,   1000,   0.6,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal3,         2000,   1000,   0.7,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal4,         2500,   1250,   0.7,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal5,         2000,   1000,   0.8,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal6,         2000,   1000,   1,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal7,         2500,   1250,   1,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal8,         2000,   1000,   1.2,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal9,         2500,   1250,   1.2,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal10,        3000,   1500,   1.2,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal11,        2000,   1000,   1.5,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal12,        2500,   1250,   1.5,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal13,        3000,   1500,   1.5,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal14,        2000,   1000,   2,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal15,        2500,   1250,   2,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal16,        3000,   1500,   2,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal17,        3500,   1000,   2,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal18,        4000,   1500,   2,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal19,        2000,   1000,   2.5,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal20,        2500,   1250,   2.5,         Aluminum_2014,             Metal,          Aluminum,       2014,                   Sheet,              
+Metal21,        2000,   1000,   3,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal22,        2500,   1250,   3,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal23,        3000,   1500,   3,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal24,        4000,   2000,   3,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal25,        2000,   1000,   4,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal26,        2500,   1250,   4,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal27,        2000,   1000,   5,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal28,        2500,   1250,   5,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal29,        2000,   1000,   6,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal30,        2500,   1250,   6,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal31,        2500,   1250,   8,           Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal32,        2500,   1250,   10,          Aluminum_2014,             Metal,          Aluminum,       2014,                   Plate,              
+Metal33,        2000,   1000,   3,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal34,        2500,   1250,   3,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal35,        3000,   1500,   3,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal36,        4000,   2000,   3,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal37,        2000,   1000,   4,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal38,        2500,   1250,   4,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal39,        3000,   1500,   4,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal40,        4000,   2000,   4,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal41,        2000,   1000,   5,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal42,        2500,   1250,   5,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal43,        3000,   1500,   5,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal44,        4000,   2000,   5,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal45,        6000,   2000,   5,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal46,        2000,   1000,   6,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal47,        2500,   1250,   6,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal48,        3000,   1500,   6,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal49,        4000,   2000,   6,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal50,        6000,   2000,   6,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal51,        2000,   1000,   8,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal52,        2500,   1250,   8,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal53,        3000,   1500,   8,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal54,        4000,   2000,   8,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal55,        6000,   2000,   8,,                                     Metal,          Steel,          Mild steel,             Plate,              
+Metal56,        2000,   1000,   10,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal57,        2500,   1250,   10,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal58,        3000,   1500,   10,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal59,        4000,   2000,   10,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal60,        6000,   2000,   10,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal61,        2000,   1000,   12,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal62,        2500,   1250,   12,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal63,        3000,   1500,   12,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal64,        4000,   2000,   12,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal65,        6000,   2000,   12,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal66,        2000,   1000,   15,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal67,        2500,   1250,   15,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal68,        3000,   1500,   15,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal69,        4000,   2000,   15,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal70,        6000,   2000,   15,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal71,        2000,   1000,   20,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal72,        2500,   1250,   20,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal73,        3000,   1500,   20,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal74,        4000,   2000,   20,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal75,        6000,   2000,   20,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal76,        2000,   1000,   25,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal77,        2500,   1250,   25,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal78,        3000,   1500,   25,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal79,        4000,   2000,   25,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal80,        6000,   2000,   25,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal81,        2000,   1000,   30,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal82,        2500,   1250,   30,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal83,        3000,   1500,   30,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal84,        4000,   2000,   30,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal85,        6000,   2000,   30,,                                    Metal,          Steel,          Mild steel,             Plate,              
+Metal86,        2000,   1000,   0.8,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal87,        2500,   1250,   0.8,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal88,        2000,   1000,   0.9,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal89,        2500,   1250,   0.9,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal90,        2000,   1000,   1,,                                     Metal,          Steel,          CR4,                    Plate,              
+Metal91,        2500,   1250,   1,,                                     Metal,          Steel,          CR4,                    Plate,              
+Metal92,        2000,   1000,   1.2,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal93,        2500,   1250,   1.2,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal94,        2000,   1000,   1.6,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal95,        2500,   1250,   1.6,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal96,        3000,   1500,   1.6,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal97,        2000,   1000,   2,,                                     Metal,          Steel,          CR4,                    Plate,              
+Metal98,        2500,   1250,   2,,                                     Metal,          Steel,          CR4,                    Plate,              
+Metal99,        3000,   1500,   2,,                                     Metal,          Steel,          CR4,                    Plate,              
+Metal100,       2000,   1000,   2.5,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal101,       2500,   1250,   2.5,,                                   Metal,          Steel,          CR4,                    Plate,              
+Metal102,       3000,   1500,   2.5,,                                   Metal,          Steel,          CR4,                    Plate,              
+Wood1,          2440,   1220,   3,,                                     Wood,           MDF,            Standard,,                                  
+Wood2,          2440,   1220,   6,,                                     Wood,           MDF,            Standard,,                                  
+Wood3,          2440,   1220,   9,,                                     Wood,           MDF,            Standard,,                                  
+Wood4,          2440,   1220,   12,,                                    Wood,           MDF,            Standard,,                                  
+Wood5,          2440,   1220,   15,,                                    Wood,           MDF,            Standard,,                                  
+Wood6,          2440,   1220,   18,,                                    Wood,           MDF,            Standard,,                                  
+Wood7,          2440,   1220,   22,,                                    Wood,           MDF,            Standard,,                                  
+Wood8,          2440,   1220,   25,,                                    Wood,           MDF,            Standard,,                                  
+Wood9,          2440,   1220,   6,,                                     Wood,           MDF,            Moisture Resistant,,                        
+Wood10,         2440,   1220,   9,,                                     Wood,           MDF,            Moisture Resistant,,                        
+Wood11,         2440,   1220,   12,,                                    Wood,           MDF,            Moisture Resistant,,                        
+Wood12,         2440,   1220,   18,,                                    Wood,           MDF,            Moisture Resistant,,                        
+Wood13,         2440,   1220,   22,,                                    Wood,           MDF,            Moisture Resistant,,                        
+Wood14,         2440,   1220,   25,,                                    Wood,           MDF,            Moisture Resistant,,                        
+Wood15,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Ash,                
+Wood16,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Cherry,             
+Wood17,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Maple,              
+Wood18,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Oak,                
+Wood19,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Pine,               
+Wood20,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Sapele,             
+Wood21,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Streamed Beech,     
+Wood22,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               Walnut,             
+Wood23,         2420,   1200,   19,,                                    Wood,           MDF,            Veneered,               White Beech,        
+Wood24,         1525,   1525,   3,,                                     Wood,           Plywood,        Birch,,                                     
+Wood25,         2440,   1220,   6,,                                     Wood,           Plywood,        Birch,,                                     
+Wood26,         2440,   1220,   9,,                                     Wood,           Plywood,        Birch,,                                     
+Wood27,         2440,   1220,   12,,                                    Wood,           Plywood,        Birch,,                                     
+Wood28,         2440,   1220,   18,,                                    Wood,           Plywood,        Birch,,                                     
+Wood29,         2440,   1220,   9,,                                     Wood,           Plywood,        Marine,,                                    
+Wood30,         2440,   1220,   12,,                                    Wood,           Plywood,        Marine,,                                    
+Wood31,         2440,   1220,   18,,                                    Wood,           Plywood,        Marine,,                                    
+Wood32,         2440,   1220,   25,,                                    Wood,           Plywood,        Marine,,                                    
+Wood33,         2440,   1220,   9,,                                     Wood,           Plywood,        Hardwood,,                                  
+Wood34,         2440,   1220,   12,,                                    Wood,           Plywood,        Hardwood,,                                  
+Wood35,         2440,   1220,   18,,                                    Wood,           Plywood,        Hardwood,,                                  
+Wood36,         2440,   1220,   25,,                                    Wood,           Plywood,        Hardwood,,                                  
+Wood37,         2440,   1220,   12,,                                    Wood,           Plywood,        Softwood,,                                  
+Wood38,         2440,   1220,   18,,                                    Wood,           Plywood,        Softwood,,                                  
+Wood39,         2397,   1197,   11,,                                    Wood,           OSB,,,                                                      
+Wood40,         2397,   1197,   15,,                                    Wood,           OSB,,,                                                      
+Wood41,         2440,   1220,   18,,                                    Wood,           OSB,,,                                                      
+Plastic1,       3050,   2030,   2,           Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic2,       3050,   2030,   3,           Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic3,       3050,   2030,   4,           Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic4,       3050,   2030,   5,           Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic5,       3050,   2030,   6,           Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic6,       3050,   2030,   8,           Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic7,       3050,   2030,   10,          Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic8,       3050,   2030,   12,          Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic9,       3050,   2030,   15,          Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic10,      3050,   2030,   20,          Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic11,      3050,   2030,   25,          Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic12,      3050,   2030,   30,          Acrylic,                   Plastic,        Acrylic,        Clear,,                                     
+Plastic13,      3050,   2030,   3,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Black,              
+Plastic14,      3050,   2030,   5,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Black,              
+Plastic15,      3050,   2030,   8,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Black,              
+Plastic16,      3050,   2030,   10,          Acrylic,                   Plastic,        Acrylic,        Coloured,               Black,              
+Plastic17,      3050,   2030,   3,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Yellow,             
+Plastic18,      3050,   2030,   5,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Yellow,             
+Plastic19,      3050,   2030,   3,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Green,              
+Plastic20,      3050,   2030,   5,           Acrylic,                   Plastic,        Acrylic,        Coloured,               Green,              
+Plastic21,      3050,   2030,   3,           Acrylic,                   Plastic,        Acrylic,        Frosted,                One side frosted,   
+Plastic22,      3050,   2030,   5,           Acrylic,                   Plastic,        Acrylic,        Frosted,                One side frosted,   
+Plastic23,      3050,   2030,   3,           Acrylic,                   Plastic,        Acrylic,        Frosted,                Two side frosted,   
+Plastic24,      3050,   2030,   5,           Acrylic,                   Plastic,        Acrylic,        Frosted,                Two side frosted,   
+Plastic25,      3050,   2030,   2,           Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic26,      3050,   2030,   3,           Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic27,      3050,   2030,   4,           Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic28,      3050,   2030,   5,           Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic29,      3050,   2030,   6,           Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic30,      3050,   2030,   8,           Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic31,      3050,   2030,   12,          Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic32,      3050,   2030,   12,          Polycarbonate,             Plastic,        Polycarbonate,  Clear,,                                     
+Plastic33,      3000,   1000,   3,,                                     Plastic,        Polystyrene,    Clear,                  HIPS,               
+CarbonFiber1,   250,    225,    1,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber2,   450,    250,    1,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber3,   500,    450,    1,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber4,   950,    500,    1,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber5,   1000,   950,    1,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber6,   2000,   950,    1,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber7,   250,    225,    2,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber8,   450,    250,    2,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber9,   500,    450,    2,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber10,  950,    500,    2,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber11,  1000,   950,    2,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber12,  2000,   950,    2,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber13,  250,    225,    3,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber14,  450,    250,    3,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber15,  500,    450,    3,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber16,  950,    500,    3,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber17,  1000,   950,    3,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+CarbonFiber18,  2000,   950,    3,,                                     CarbonFiber,    2x2 Twill,      Single Sided,           Epoxy Resin,        
+END_OF_TABLE

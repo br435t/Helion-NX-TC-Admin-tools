@@ -1,0 +1,8 @@
+<Property name="Material Axis Tracking (ATRACK)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="MaterialAxisTrackingOption"
+        valueType="enum"
+        valueChoices="&Choice;A-Axis Rotates with Element=0
+                      &Choice;A-Axis also Tracks Deformation=1">
+    <DefaultValue value="0"/>
+</Property>

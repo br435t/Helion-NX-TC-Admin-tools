@@ -1,0 +1,454 @@
+<Property name="Material Property Matrix (G11)"
+          neutralName="ShearModulusConstant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G12)"
+          neutralName="G12Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G13)"
+          neutralName="G13Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G14)"
+          neutralName="G14Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G15)"
+          neutralName="G15Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G16)"
+          neutralName="G16Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Material Property Matrix (G21)"
+          neutralName="ShearModulus2Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G22)"
+          neutralName="G22Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G23)"
+          neutralName="G23Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G24)"
+          neutralName="G24Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G25)"
+          neutralName="G25Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G26)"
+          neutralName="G26Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Material Property Matrix (G31)"
+          neutralName="ShearModulus3Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G32)"
+          neutralName="G32Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G33)"
+          neutralName="G33Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G34)"
+          neutralName="G34Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G35)"
+          neutralName="G35Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G36)"
+          neutralName="G36Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Material Property Matrix (G41)"
+          neutralName="ShearModulus4Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G42)"
+          neutralName="G42Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G43)"
+          neutralName="G43Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G44)"
+          neutralName="G44Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G45)"
+          neutralName="G45Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G46)"
+          neutralName="G46Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Material Property Matrix (G51)"
+          neutralName="ShearModulus5Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G52)"
+          neutralName="G52Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G53)"
+          neutralName="G53Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G54)"
+          neutralName="G54Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G55)"
+          neutralName="G55Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G56)"
+          neutralName="G56Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Material Property Matrix (G61)"
+          neutralName="ShearModulus6Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G62)"
+          neutralName="G62Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G63)"
+          neutralName="G63Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G64)"
+          neutralName="G64Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G65)"
+          neutralName="G65Constant"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Material Property Matrix (G66)"
+          neutralName="G66Constant"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+

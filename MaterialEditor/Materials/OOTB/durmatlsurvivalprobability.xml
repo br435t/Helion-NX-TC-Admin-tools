@@ -1,0 +1,15 @@
+<Property name="Survival Probability"
+          neutralName="SurvivalProbability"
+          valueType="scalarField"
+          valueSubtype="&floatValueWithLimitsShowSliderDisplay;"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&value50Percent;"/>
+    <LowerBound value="&valuePercentMin;"
+                inclusive="false"/>
+    <UpperBound value="&valuePercentMax;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

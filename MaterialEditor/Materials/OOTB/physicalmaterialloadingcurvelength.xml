@@ -1,0 +1,45 @@
+        <Property name="Loading Type"
+                  neutralName="LoadingType"
+                  editable="false"
+                  valueType="enum"
+                  valueChoices="&Choice;Force=0&Choice;Stress=1"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="1"/>
+            <LowerBound value="0"
+                        inclusive="true"/>
+            <UpperBound value="1"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Loading Curve"
+                  neutralName="LoadingCurve"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  scaleFactor="false"
+                  Dimensions="&MeasureForcePerArea;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <ExcludeValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain Name="Length-based Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="1">
+                    <Variable Name="Closure Length"
+                              Measure="&MeasureLength;"/>
+                </Domain>
+                <Domain Name="Temperature - Length-based Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="2">
+                    <Variable Name="Closure Length"
+                              Measure="&MeasureLength;"/>
+                    <Variable Name="Temperature"
+                              Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+

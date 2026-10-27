@@ -1,0 +1,67 @@
+<Property name="Y0 Initial Stress"
+          neutralName="Y0InitialStress"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule&ChoiceAnd;StressStrainDataType"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1,7&Choice;6,7&Choice;3">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Additional Exponential Saturated Terms"
+          neutralName="IsotropicSaturatedOption"
+          valueType="bool"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule&ChoiceAnd;StressStrainDataType"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1,7&Choice;6,7&Choice;3">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>
+
+<Property name="Isotropic Saturated Series (True Stress and Plastic Strain)"
+          neutralName="IsotropicSaturatedSeries"
+          valueType="scalarField_table"
+          plot="true"
+          parentProperty="IsotropicSaturatedOption"
+          parentPropertyValToBeSensitive="&BoolTrue;">
+    <DefaultValue value="&valueZero;"/>    
+    <TableDefn nRows="dynamic"
+               nCols="2"
+               minNumRows="1"
+               maxNumRows="20">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Q Stress"
+                       neutralName="QStress"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureStress;"
+                       allowUnspecifiedValue="false">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="B Factor"
+                       neutralName="BFactor"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureUnitLess;"
+                       allowUnspecifiedValue="false">
+            <LowerBound value="&valueZero;"
+                       inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>

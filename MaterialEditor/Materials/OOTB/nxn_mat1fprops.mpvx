@@ -1,0 +1,8 @@
+
+        <ReferenceProperty neutralName="YoungsModulusFrequency"/>
+
+        <ReferenceProperty neutralName="PoissonsRatioFrequency"/>
+
+        <ReferenceProperty neutralName="ShearModulusFrequency"/>
+          
+        <ReferenceProperty neutralName="StructuralDampingFrequency"/>

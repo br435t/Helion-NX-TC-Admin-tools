@@ -1,0 +1,119 @@
+﻿<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulus"/>
+<ReferenceProperty neutralName="YoungsModulus2"/>
+<ReferenceProperty neutralName="YoungsModulus3"/>
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+
+<ReferenceProperty neutralName="ShearModulus"/>
+<ReferenceProperty neutralName="ShearModulus2"/>
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+<ReferenceProperty neutralName="MaxStressTension"
+                   valueLabel="Tension (ST1)"/>
+<ReferenceProperty neutralName="MaxStressTension2"
+                   valueLabel="Tension (ST2)"/>
+<ReferenceProperty neutralName="MaxStressTension3"
+                   valueLabel="Tension (ST3)"/>
+<ReferenceProperty neutralName="MaxStressCompression"
+                   valueLabel="Compression (SC1)"/>
+<ReferenceProperty neutralName="MaxStressCompress2"
+                   valueLabel="Compression (SC2)"/>
+<ReferenceProperty neutralName="MaxStressCompress3"
+                   valueLabel="Compression (SC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"
+                   valueLabel="Shear (SS12)"/>
+<ReferenceProperty neutralName="ShearStress13"
+                   valueLabel="Shear (SS13)"/>
+<ReferenceProperty neutralName="ShearStress23"
+                   valueLabel="Shear (SS23)"/>
+
+<ReferenceProperty neutralName="MaxStrainTension"
+                   valueLabel="Tension (XT1)"/>
+<ReferenceProperty neutralName="MaxStrainTension2"
+                   valueLabel="Tension (XT2)"/>
+<ReferenceProperty neutralName="MaxStrainTension3"
+                   valueLabel="Tension (XT3)"/>
+<ReferenceProperty neutralName="MaxStrainCompression"
+                   valueLabel="Compression (XC1)"/>
+<ReferenceProperty neutralName="MaxStrainCompression2"
+                   valueLabel="Compression (XC2)"/>
+<ReferenceProperty neutralName="MaxStrainCompression3"
+                   valueLabel="Compression (XC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"
+                   valueLabel="Shear (XS12)"/>
+<ReferenceProperty neutralName="ShearStrain13"
+                   valueLabel="Shear (XS13)"/>
+<ReferenceProperty neutralName="ShearStrain23"
+                   valueLabel="Shear (XS23)"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"
+                   valueLabel="F12"/>
+<ReferenceProperty neutralName="TsaiWu13"
+                   valueLabel="F13"/>
+<ReferenceProperty neutralName="TsaiWu23"
+                   valueLabel="F23"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="SpecificHeat"/>
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"
+                   valueLabel="Thermal Expansion (X)"/>
+<ReferenceProperty neutralName="ThermalExpansion2"
+                   valueLabel="Thermal Expansion (Y)"/>
+<ReferenceProperty neutralName="ThermalExpansion3"
+                   valueLabel="Thermal Expansion (Z)"/>
+
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="TempConductivityBehaviorType"
+                   valueChoices="&Choice;Orthotropic=1"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ThermalConductivity"/>
+<ReferenceProperty neutralName="ThermalConductivity2"/>
+<ReferenceProperty neutralName="ThermalConductivity3"/>
+
+<ReferenceProperty neutralName="PlyThickness"/>
+<ReferenceProperty neutralName="PlyFailureTheory"/>
+<ReferenceProperty neutralName="UserDefinedFailureTheories"/>
+<ReferenceProperty neutralName="InterlaminarFailureTheory"/>
+<ReferenceProperty neutralName="UserDefinedInterlaminarFailureTheories"/>
+<ReferenceProperty neutralName="DrapingSolver"/>
+<ReferenceProperty neutralName="LockAngle"/>
+<ReferenceProperty neutralName="DrapingPath"/>
+<ReferenceProperty neutralName="ZoneAngleTolerance"/>
+<ReferenceProperty neutralName="AccountForWovenFiberShear"/>
+<ReferenceProperty neutralName="KE"/>
+
+<ReferenceProperty neutralName="CoatingsVisualizationColor"/>

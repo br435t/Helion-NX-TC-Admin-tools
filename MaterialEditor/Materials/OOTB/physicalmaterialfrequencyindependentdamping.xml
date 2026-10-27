@@ -1,0 +1,24 @@
+                <Property name="Shear Modulus for Frequency Independent Damping (G)"
+                          neutralName="ShearModulusFreqIndep"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;"
+                          parentProperty="MaterialType"
+                          parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+                <Property name="Limit Stress for Frequency Independent Frictional Damping (SIFG)"
+                          neutralName="LimitStressFreqIndep"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;"
+                          parentProperty="MaterialType"
+                          parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>

@@ -1,0 +1,10 @@
+        <Property name="Strain-Life Data"
+                  neutralName="StrainLifeDataFormat"
+                  valueType="enum"
+                  valueChoices="&Choice;Coefficients=0&Choice;Field=1;"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0"/>
+            <LowerBound value="0"/>
+            <UpperBound value="1"/>
+        </Property>
+

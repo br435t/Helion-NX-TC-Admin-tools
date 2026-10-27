@@ -1,0 +1,44 @@
+<Property name="G1"
+          neutralName="FreqFormulaG1"
+          valueType="float_array"
+          valueSubtype="complex"
+          parentProperty="ViscoelasticFrequencyDefn"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0.0,0.0"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <ExcludeValue value="&valueEmpty;"/>
+</Property>
+<Property name="Alpha (a)"
+          neutralName="FreqFormulaAlpha"
+          valueType="float"
+          parentProperty="ViscoelasticFrequencyDefn"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"/>
+    <UpperBound value="&maxFloat;"/>
+</Property>
+<Property name="K1"
+          neutralName="FreqFormulaK1"
+          valueType="float_array"
+          valueSubtype="complex"
+          parentProperty="ViscoelasticFrequencyDefn"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0.0,0.0"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <ExcludeValue value="&valueEmpty;"/>
+</Property>
+<Property name="Beta (b)"
+          neutralName="FreqFormulaBeta"
+          valueType="float"
+          parentProperty="ViscoelasticFrequencyDefn"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"/>
+    <UpperBound value="&maxFloat;"/>
+</Property>

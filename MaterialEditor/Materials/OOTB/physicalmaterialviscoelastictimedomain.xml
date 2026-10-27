@@ -1,0 +1,339 @@
+<Property name="##76Time"
+          neutralName="ViscoelasticTimeDefn"
+          valueType="enum"
+          valueChoices="&Choice;Frequency Data=0;
+                        &Choice;Prony=1;
+                        &Choice;Creep Test Data=2;
+                        &Choice;Relaxation Test Data=3;"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+</Property>
+
+
+<Property name="Time Error Tolerance (ERRTOL)"
+          neutralName="TimeErrorTolerance"
+          valueType="float"
+          parentProperty="ViscoelasticTimeDefn"
+          parentPropertyValToBeSensitive="0,2,3">
+    <DefaultValue value="0.01"/>
+    <LowerBound value="0.0"/>
+    <UpperBound value="100.0"/>
+</Property>
+<Property name="Number of Terms (NMAX)"
+          neutralName="TimeNMax"
+          valueType="enum"
+          valueChoices="&Choice;1=1;
+                        &Choice;2=2;
+                        &Choice;3=3;
+                        &Choice;4=4;
+                        &Choice;5=5;
+                        &Choice;6=6;
+                        &Choice;7=7;
+                        &Choice;8=8;
+                        &Choice;9=9;
+                        &Choice;10=10;
+                        &Choice;11=11;
+                        &Choice;12=12;
+                        &Choice;13=13;"
+          parentProperty="ViscoelasticTimeDefn"
+          parentPropertyValToBeSensitive="0,2,3">
+    <DefaultValue value="13"/>
+</Property>
+
+<Property name=""
+          neutralName="ViscoelasticTimeDefnCreepTestDataFormat"
+          valueType="enum"
+          valueChoices="&Choice;Normalized Shear Compliance Data=0;
+                        &Choice;Normalized Bulk Compliance Data=1;
+                        &Choice;Normalized Shear and Bulk Compliance Data=2;"
+          parentProperty="ViscoelasticTimeDefn"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="0"/>
+</Property>
+<Property name=""
+          neutralName="ViscoelasticTimeDefnRelaxTestDataFormat"
+          valueType="enum"
+          valueChoices="&Choice;Normalized Shear Relaxation Data=0;
+                        &Choice;Normalized Bulk Relaxation Data=1;
+                        &Choice;Normalized Shear and Bulk Relaxation Data=2;"
+          parentProperty="ViscoelasticTimeDefn"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Long-Term Normalized Shear Compliance (SHRINF) - Time Domain"
+          neutralName="TimeDomainLongTermShearCompliance"
+          valueType="float"
+          parentProperty="ViscoelasticTimeDefnCreepTestDataFormat"
+          parentPropertyValToBeSensitive="0,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+<Property name="Long-Term Normalized Bulk Compliance (VOLINF) - Time Domain"
+          neutralName="TimeDomainLongTermBulkCompliance"
+          valueType="float"
+          parentProperty="ViscoelasticTimeDefnCreepTestDataFormat"
+          parentPropertyValToBeSensitive="1,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+
+
+
+<Property name="Long-Term Normalized Shear Relaxation (SHRINF) - Time Domain"
+          neutralName="TimeDomainLongTermShearRelaxation"
+          valueType="float"
+          parentProperty="ViscoelasticTimeDefnRelaxTestDataFormat"
+          parentPropertyValToBeSensitive="0,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+<Property name="Long-Term Normalized Bulk Relaxation (VOLINF) - Time Domain"
+          neutralName="TimeDomainLongTermBulkRelaxation"
+          valueType="float"
+          parentProperty="ViscoelasticTimeDefnRelaxTestDataFormat"
+          parentPropertyValToBeSensitive="1,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+
+<PropertyField name="Normalized Shear Compliance (Time)"
+               neutralName="TimeNormalizedShearCompliance"
+               parentProperty="ViscoelasticTimeDefnCreepTestDataFormat"
+               parentPropertyValToBeSensitive="0">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Normalized Shear Compliance">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Normalized Shear Compliance"
+                     LowerBound="&valueOne;"
+                     LowerBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+<PropertyField name="Normalized Bulk Compliance (Time)"
+               neutralName="TimeNormalizedBulkCompliance"
+               parentProperty="ViscoelasticTimeDefnCreepTestDataFormat"
+               parentPropertyValToBeSensitive="1">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Normalized Bulk Compliance">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Normalized Bulk Compliance"
+                     LowerBound="&valueOne;"
+                     LowerBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+<PropertyField name="Time based Shear and Bulk Compliance Data"
+               neutralName="TimeShearBulkComplianceData"
+               parentProperty="ViscoelasticTimeDefnCreepTestDataFormat"
+               parentPropertyValToBeSensitive="2">
+    <DepDomain nVariables="2"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Shear Relaxation-Bulk Compliance">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Shear Compliance Modulus"
+                     LowerBound="&valueOne;"
+                     LowerBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Bulk Compliance Modulus"
+                     LowerBound="&valueOne;"
+                     LowerBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+<PropertyField name="Normalized Shear Relaxation (Time)"
+               neutralName="TimeNormalizedShearRelaxation"
+               parentProperty="ViscoelasticTimeDefnRelaxTestDataFormat"
+               parentPropertyValToBeSensitive="0">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Normalized Shear Relaxation">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Normalized Shear Relaxation"
+                     LowerBound="&valueOne;"
+                     LowerBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+
+<PropertyField name="Normalized Bulk Relaxation (Time)"
+               neutralName="TimeNormalizedBulkRelaxation"
+               parentProperty="ViscoelasticTimeDefnRelaxTestDataFormat"
+               parentPropertyValToBeSensitive="1">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Normalized Bulk Relaxation">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Normalized Bulk Relaxation"
+                     LowerBound="&valueOne;"
+                     LowerBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+
+<PropertyField name="Normalized Shear and Bulk Relaxation Data (Time)"
+               neutralName="TimeShearBulkRelaxationData"
+               parentProperty="ViscoelasticTimeDefnRelaxTestDataFormat"
+               parentPropertyValToBeSensitive="2">
+    <DepDomain nVariables="2"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Shear Relaxation-Bulk Relaxation">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Shear Relaxation Modulus"
+                     LowerBound="&valueZero;"
+                     LowerBound_inclusive="true"
+                     UpperBound="&valueOne;"
+                     UpperBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Bulk Relaxation Modulus"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+<PropertyField name="Frequency Tabular Data (Time Domain)"
+               neutralName="ViscoelasticTimeFreqTabularData"
+               parentProperty="ViscoelasticTimeDefn"
+               parentPropertyValToBeSensitive="0">
+    <DepDomain nVariables="4"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Real and Imaginary Components of OmegaG and OmegaK">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="OmegaG (real)"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="OmegaG (imaginary)"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="OmegaK (real)"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="OmegaK (imaginary)"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</PropertyField>
+
+<Property name="Prony Parameter Type"
+          neutralName="PronyParameterType"
+          valueType="enum"
+          valueChoices="&Choice;Series=0;
+                        &Choice;Coefficients=1;"
+          valueSubtype="radio"
+          parentProperty="ViscoelasticTimeDefn"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+</Property>
+
+<PropertyField name="Time Prony Series Parameters"
+               neutralName="ViscoelasticPronyTimeParms"
+               parentProperty="PronyParameterType"
+               parentPropertyValToBeSensitive="0">
+    <DepDomain nVariables="2"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Shear Relaxation-Bulk Relaxation Ratio">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Shear Relaxation Modulus Ratio"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Bulk Relaxation Modulus Ratio"/>
+    </DepDomain>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</PropertyField>
+
+<Property name="Elastic Bulk Modulus (BULK)"
+          neutralName="ElasticBulkModulus"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="PronyParameterType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueZero;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Short-term Shear Modulus (G0)"
+               neutralName="ShortTermShearModulusG0"
+               valueType="scalarField"
+               Dimensions="&MeasureStress;"
+               parentProperty="PronyParameterType"
+               parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueZero;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Long-term Shear Modulus (GI)"
+               neutralName="LongTermShearModulusGI"
+               valueType="scalarField"
+               Dimensions="&MeasureStress;"
+               parentProperty="PronyParameterType"
+               parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueZero;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Decay Constant (BETA)"
+               neutralName="DecayConstant"
+               valueType="scalarField"
+               Dimensions="&MeasureCoefficientPerTime;"
+               parentProperty="PronyParameterType"
+               parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueZero;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+

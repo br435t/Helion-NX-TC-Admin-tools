@@ -1,0 +1,15 @@
+<Property name="Damping Coefficient (Delta P)"
+          neutralName="MagneticDampingCoeff"
+          valueType="scalarField"
+          Dimensions="&MeasureCoefficientPerTime;"
+          scaleFactor="false"
+          parentProperty="&Choice;HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="&Choice;4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+

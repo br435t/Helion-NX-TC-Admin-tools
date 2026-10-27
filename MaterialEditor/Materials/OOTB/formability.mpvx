@@ -1,0 +1,43 @@
+﻿<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3"
+                   defaultValue="3"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="WorkHardening"/>
+
+<ReferenceProperty neutralName="FormingLimit"/>
+
+<ReferenceProperty neutralName="PlasticStrainRatio"/>
+
+<ReferenceProperty neutralName="InitialStrain"/>
+
+<ReferenceProperty neutralName="HardeningExponent"/>
+
+<ReferenceProperty neutralName="StrengthCoefficient"/>
+
+<ReferenceProperty neutralName="AnisotropyCoefficientR0"/>
+
+<ReferenceProperty neutralName="AnisotropyCoefficientR45"/>
+
+<ReferenceProperty neutralName="AnisotropyCoefficientR90"/>
+
+<ReferenceProperty neutralName="StressStrainFormatType"
+                   displayName="Stress-Strain Format Type"
+                   valueChoices="&Choice;Stress-Strain Curve=0;
+                                 &Choice;Bilinear by Work Hardening Slope (H)=1;"
+                   defaultValue="0"/>
+<ReferenceProperty neutralName="WorkHardeningSlopeH"/>
+<ReferenceProperty neutralName="StressStrainCurveTable"/>
+
+<ReferenceProperty neutralName="MassDensityConstant"/>
+
+<ReferenceProperty neutralName="YoungsModulusConstant"/>
+
+<ReferenceProperty neutralName="PoissonsRatioConstant"/>
+
+<ReferenceProperty neutralName="Yield"/>
+
+<ReferenceProperty neutralName="SIStockBendRadii"/>
+
+<ReferenceProperty neutralName="EnglishStockBendRadii"/>

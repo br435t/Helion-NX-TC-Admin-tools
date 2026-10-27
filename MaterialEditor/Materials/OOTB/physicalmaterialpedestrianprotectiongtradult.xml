@@ -1,0 +1,21 @@
+
+<Property name="Adult HIC1000 Offset"
+          neutralName="AdultHIC1000deformation"
+          valueType="float"
+          Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="Adult HIC1700 Offset"
+          neutralName="AdultHIC1700deformation"
+          valueType="float"
+          Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>

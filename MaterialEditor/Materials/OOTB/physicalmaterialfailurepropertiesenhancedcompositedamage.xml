@@ -1,0 +1,10 @@
+<Property name="Effective Failure Strain (EFS)"
+          neutralName="EffectiveFailureStrain"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="false"/>
+</Property>

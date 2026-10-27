@@ -1,0 +1,38 @@
+<Property name="Electric Poles"
+          neutralName="electricPoles"
+          valueType="scalarField_table"
+          parentProperty="&Choice;HighFrequencyDielectricModel"
+          parentPropertyValToBeSensitive="&Choice;6">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="dynamic"
+               nCols="3"
+               minNumRows="1"
+               maxNumRows="5000">
+        <TableProperty name="Weight Parameter (Gp)"
+                       neutralName="elecGp"
+                       valueType="scalarField"
+                       scaleFactor="false">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Resonant Frequency (Omega-p)"
+                       neutralName="elecResonantFreq"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureFrequency;">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Damping Coefficient (Delta P)"
+                       neutralName="elecDampingCoeff"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureCoefficientPerTime;">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>

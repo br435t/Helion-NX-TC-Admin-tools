@@ -1,0 +1,18 @@
+<Property name="Strain Rate Averaging Opt (DT)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="DT"
+        valueType="enum"
+        valueChoices="&Choice;Running average=0&Choice;Average of the last 11 steps=-1&Choice;Specified number of time units=1"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="0"/>
+</Property>
+
+<Property name="Specify Time Units"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="DTValue"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="NonPhysicalProp_LSDyna_DT"
+          parentPropertyValToBeSensitive="1">
+</Property>

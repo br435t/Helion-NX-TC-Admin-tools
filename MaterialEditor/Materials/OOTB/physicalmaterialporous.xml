@@ -1,0 +1,187 @@
+<Property name="Porous Models"
+      neutralName="PorousModels"
+      valueType="enum"
+      valueChoices="&Choice;Craggs=0;&Choice;Delany-Bazley-Miki=1;&Choice;Johnson-Champoux-Allard=2;">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="2"/>
+</Property>
+
+
+&soundSpeed;
+
+<Property name="Specific Heat Ratio"
+          neutralName="SpecificHeatRatio"
+          valueType="float"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Dynamic Viscosity"
+          neutralName="DynamicViscConstant"
+          valueType="float"
+          Dimensions="&MeasureDynamicViscosity;"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Prandtl Number"
+          neutralName="PrandtlNumber"
+          valueType="float"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+<Property name="Static Flow Resistivity"
+          neutralName="StaticFlowResistivity"
+          valueType="float"
+          Dimensions="&MeasureFlowResistivity;"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="0,1,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Porosity"
+          neutralName="Porosity"
+          valueType="float"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="0,1,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Tortuosity"
+          neutralName="Tortuosity"
+          valueType="float"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="0,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Characteristic Viscous Length"
+          neutralName="CharacteristicViscousLength"
+          valueType="float"
+          Dimensions="&MeasureLength;"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Characteristic Thermal Length"
+          neutralName="CharacteristicThermalLength"
+          valueType="float"
+          Dimensions="&MeasureLength;"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Frame Type"
+          neutralName="FrameType"
+          valueType="enum"
+          valueChoices="&Choice;Rigid Frame=0;&Choice;Limp Frame=1;"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Frame Type"
+          neutralName="FrameTypeJohnson"
+          valueType="enum"
+          valueChoices="&Choice;Rigid Frame=0;&Choice;Limp Frame=1;&Choice;Elastic Frame=2;"
+          parentProperty="PorousModels"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Frame Density"
+          neutralName="FrameDensity"
+          valueType="float"
+          Dimensions="&MeasureMassDensity;"
+          scaleFactor="true"
+          allowUnspecifiedValue="false"
+          parentProperty="&Choice;FrameType&Choice;FrameTypeJohnson"
+          parentPropertyValToBeSensitive="&Choice;1&Choice;1,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Frame Young's Modulus"
+          neutralName="FrameYoungsModulusFrequency"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="FrameTypeJohnson"
+          parentPropertyValToBeSensitive="2"
+          scaleFactor="true" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frame Poisson's Ratio"
+          neutralName="FramePoissonsRatioFrequency"
+          valueType="scalarField"
+          parentProperty="FrameTypeJohnson"
+          parentPropertyValToBeSensitive="2"
+          scaleFactor="true" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frame Structural Damping Coefficient"
+          neutralName="FrameStructuralDampingFrequency"
+          valueType="scalarField"
+          scaleFactor="true"
+          parentProperty="FrameTypeJohnson"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>

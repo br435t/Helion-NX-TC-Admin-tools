@@ -1,0 +1,45 @@
+<Property name="Speed of Sound Control"
+          neutralName="SpeedofSoundControl"
+          valueType="enum"
+          valueChoices="&Choice;Constant=0&Choice;Complex and Frequency=1">
+    <DefaultValue value= "0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+
+<Property name="Speed of Sound (C)"
+          neutralName="SoundSpeed"
+          valueType="float"
+          Dimensions="&MeasureVelocity;"
+          parentProperty="SpeedofSoundControl"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0.0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Speed of Sound (C)"
+          neutralName="SoundSpeedComplex"
+          valueType="complexField"
+          scaleFactor="false"
+          Dimensions="&MeasureVelocity;"
+          parentProperty="SpeedofSoundControl"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0.0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainFrequency;"
+                nVariables="1">
+            <Variable Measure="&MeasureFrequency;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+

@@ -1,0 +1,144 @@
+        <Property name="A-Axis (LCA)"
+                  neutralName="FieldStressLCA"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="4,14,-14,24"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainStrain;"/>
+                <Domain Name="Strain Rate"
+                        nVariables="1"
+                        hasSecondary="true"
+                        autocreate="true">
+                    <Variable Name="Strain Rate"
+                              Measure="&MeasureCoefficientPerTime;"/>
+                    <SecondaryDomain type="&DomainStrain;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="B-Axis (LCB)"
+                  neutralName="FieldStressLCB"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="4,14,-14,24"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainStrain;"/>
+                <Domain Name="Strain Rate"
+                        nVariables="1"
+                        hasSecondary="true"
+                        autocreate="true">
+                    <Variable Name="Strain Rate"
+                              Measure="&MeasureCoefficientPerTime;"/>
+                    <SecondaryDomain type="&DomainStrain;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Shear in AB-plane (LCAB)"
+                  neutralName="FieldShearStressLCAB"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="4,14,-14,24"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStrain;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Unload/Reload along A-axis (LCUA)"
+                  neutralName="FieldUnloadReloadStressLCUA"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="4,14,-14,24"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStrain;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Unload/Reload along B-Axis (LCUB)"
+                  neutralName="FieldUnloadReloadStressLCUb"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="4,14,-14,24"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStrain;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Unload/Reload Shear in AB-plane (LCUAB)"
+                  neutralName="FieldUnloadReloadShearStressLCUAB"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="4,14,-14,24"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainStrain;"/>
+            </FieldDefn>
+        </Property>
+
+         <Property name="Biaxial A-Axis(LCAA)"
+                  neutralName="FieldStressLCAA"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="-14"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainStrain;"/>
+                <Domain Name="Strain Rate"
+                        nVariables="1"
+                        hasSecondary="true"
+                        autocreate="true">
+                    <Variable Name="Strain Rate"
+                              Measure="&MeasureCoefficientPerTime;"/>
+                    <SecondaryDomain type="&DomainStrain;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Biaxial B-Axis (LCBB)"
+                  neutralName="FieldStressLCBB"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="MembraneFormulationFORM"
+                  parentPropertyValToBeSensitive="-14"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainStrain;"/>
+                <Domain Name="Strain Rate"
+                        nVariables="1"
+                        hasSecondary="true"
+                        autocreate="true">
+                    <Variable Name="Strain Rate"
+                              Measure="&MeasureCoefficientPerTime;"/>
+                    <SecondaryDomain type="&DomainStrain;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>       
+ 

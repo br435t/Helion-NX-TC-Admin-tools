@@ -1,0 +1,324 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulus"/>
+<ReferenceProperty neutralName="YoungsModulus2"/>
+<ReferenceProperty neutralName="YoungsModulus3"/>
+
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+
+
+<ReferenceProperty neutralName="ShearModulus"/>
+<ReferenceProperty neutralName="ShearModulus2"/>
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+<ReferenceProperty neutralName="ThermalExpansion2"/>
+<ReferenceProperty neutralName="ThermalExpansion3"/>
+
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+
+<ReferenceProperty neutralName="StrengthLimitsFailureCriterion"/>
+<ReferenceProperty neutralName="AllFailureCriterion"/>
+<ReferenceProperty neutralName="HashinFailureCriterion"/>
+
+<ReferenceProperty neutralName="HoffmanFailureCriterion"/>
+<ReferenceProperty neutralName="LaRC04FailureCriterion"/>
+
+<ReferenceProperty neutralName="PuckFailureCriterion"/>
+
+<ReferenceProperty neutralName="RiceTraceyFailureCriterion"/>
+<ReferenceProperty neutralName="MaximumStressFailureCriterion"/>
+
+<ReferenceProperty neutralName="MaximumTotalStrainFailureCriterion"/>
+<ReferenceProperty neutralName="StrainRatioFailureCriterion"/>
+<ReferenceProperty neutralName="StressRatioFailureCriterion"/>
+<ReferenceProperty neutralName="TsaiHillFailureCriterion"/>
+<ReferenceProperty neutralName="TsaiWuFailureCriterion"/>
+
+<ReferenceProperty neutralName="MaxStressTension"
+                   valueLabel="Tension (ST1)"/>
+<ReferenceProperty neutralName="MaxStressTension2"
+                   valueLabel="Tension (ST2)"/>
+<ReferenceProperty neutralName="MaxStressTension3"
+                   valueLabel="Tension (ST3)"/>
+<ReferenceProperty neutralName="MaxStressCompression"
+                   valueLabel="Compression (SC1)"/>
+<ReferenceProperty neutralName="MaxStressCompress2"
+                   valueLabel="Compression (SC2)"/>
+<ReferenceProperty neutralName="MaxStressCompress3"
+                   valueLabel="Compression (SC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"
+                   valueLabel="Shear (SS12)"/>
+<ReferenceProperty neutralName="ShearStress13"
+                   valueLabel="Shear (SS13)"/>
+<ReferenceProperty neutralName="ShearStress23"
+                   valueLabel="Shear (SS23)"/>
+
+
+
+
+<ReferenceProperty neutralName="MaxStrainTension"
+                   valueLabel="Tension (XT1)"/>
+<ReferenceProperty neutralName="MaxStrainTension2"
+                   valueLabel="Tension (XT2)"/>
+<ReferenceProperty neutralName="MaxStrainTension3"
+                   valueLabel="Tension (XT3)"/>
+<ReferenceProperty neutralName="MaxStrainCompression"
+                   valueLabel="Compression (XC1)"/>
+<ReferenceProperty neutralName="MaxStrainCompression2"
+                   valueLabel="Compression (XC2)"/>
+<ReferenceProperty neutralName="MaxStrainCompression3"
+                   valueLabel="Compression (XC3)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"
+                   valueLabel="Shear (XS12)"/>
+<ReferenceProperty neutralName="ShearStrain13"
+                   valueLabel="Shear (XS13)"/>
+<ReferenceProperty neutralName="ShearStrain23"
+                   valueLabel="Shear (XS23)"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"
+                   valueLabel="F12"/>
+<ReferenceProperty neutralName="TsaiWu13"
+                   valueLabel="F13"/>
+<ReferenceProperty neutralName="TsaiWu23"
+                   valueLabel="F23"/>
+
+<ReferenceProperty neutralName="AxisShearStrength1"/>
+<ReferenceProperty neutralName="AxisShearStrength2"/>
+<ReferenceProperty neutralName="AxisShearStrength3"/>
+
+
+
+
+<ReferenceProperty neutralName="ModeICrackReleaseEnergy"/>
+<ReferenceProperty neutralName="ModeIICrackReleaseEnergy"/>
+<ReferenceProperty neutralName="ModeIIICrackReleaseEnergy"/>
+
+
+<ReferenceProperty neutralName="ShapeParameter1"/>
+<ReferenceProperty neutralName="ShapeParameter2"/>
+<ReferenceProperty neutralName="ShapeParameter3"/>
+<ReferenceProperty neutralName="ShapeParameter4"/>
+
+
+<ReferenceProperty neutralName="InPlaneShearComponents"/>
+<ReferenceProperty neutralName="ThicknessTransition"/>
+<ReferenceProperty neutralName="LaminateBehavior"/>
+<ReferenceProperty neutralName="FractureAngle"/>
+<ReferenceProperty neutralName="FrictionCoefficient"/>
+<ReferenceProperty neutralName="RiceParameter"/>
+
+
+<ReferenceProperty neutralName="StressStrainDataType"/>
+
+<ReferenceProperty neutralName="StressStrainFormatType"
+                   displayName="Stress-Strain Format Type"
+                   valueChoices="&Choice;Stress-Strain Curve=0;
+                                 &Choice;Bilinear by Work Hardening Slope (H)=1;"
+                   defaultValue="0"/>
+<ReferenceProperty neutralName="WorkHardeningSlopeH"/>
+<ReferenceProperty neutralName="StressStrainCurveTable"/>
+
+
+<ReferenceProperty neutralName="MatlNonlinearityType"
+                   valueChoices="&Choice;Elastoplastic: stress-total strain (MATS1/PLASTIC)=1"
+                   defaultValue="1"
+                   showProp="false"
+                   lockProp="true"/>
+
+
+<ReferenceProperty neutralName="YieldFunctionCriterion"
+                   valueChoices="&Choice;von Mises=1&Choice;Raghava=5&Choice;Hill=6;"/>
+
+
+<ReferenceProperty neutralName="CompressiveTensileyieldRatio"/>
+
+
+<ReferenceProperty neutralName="InitialTensilYieldStress2"/>
+
+
+<ReferenceProperty neutralName="InitialTensilYieldStress3"/>
+
+
+<ReferenceProperty neutralName="ShearYieldStress"/>
+
+
+<ReferenceProperty neutralName="ShearYieldStress2"/>
+
+
+<ReferenceProperty neutralName="ShearYieldStress3"/>
+
+
+<ReferenceProperty neutralName="HardeningRule"
+                   valueChoices="&Choice;Isotropic=1&Choice;Kinematic=2&Choice;Mixed Hardening=3"
+                   defaultValue="1"/>
+
+
+<ReferenceProperty neutralName="MixedHardeningRatio"/>
+
+
+<ReferenceProperty neutralName="KinematicLaws"/>
+
+
+<ReferenceProperty neutralName="NonLinearHardeningCoefficient"/>
+
+
+<ReferenceProperty neutralName="ViscoelasticDomain"/>
+
+
+<ReferenceProperty neutralName="Damping"/>
+
+
+<ReferenceProperty neutralName="SecondHookeCoefficient"/>
+
+
+<ReferenceProperty neutralName="ViscoplasticModelType"/>
+
+
+<ReferenceProperty neutralName="CreepParameterEXPN"/>
+
+
+<ReferenceProperty neutralName="CreepParameterBIGK"/>
+
+
+
+<ReferenceProperty neutralName="CreepParameterLITK"/>
+
+
+<ReferenceProperty neutralName="IsotropicHardeningEXPM"/>
+
+
+<ReferenceProperty neutralName="KinematicHardeningCOCA"/>
+
+
+<ReferenceProperty neutralName="DamageParameterCOEN"/>
+
+
+<ReferenceProperty neutralName="DamageParameterEXEN"/>
+
+
+<ReferenceProperty neutralName="DamageParameterPDEN"/>
+
+<ReferenceProperty neutralName="DamageParameterDDEN"/>
+
+
+<ReferenceProperty neutralName="DamageModelType"/>
+
+<ReferenceProperty neutralName="PlyDamageVersion"/>
+
+<ReferenceProperty neutralName="MaximumDamageValue_dmax"/>
+
+<ReferenceProperty neutralName="MaximumDamageValue_ds"/>
+
+<ReferenceProperty neutralName="3DEffectParameter"/>
+
+<ReferenceProperty neutralName="EnergyThreshold_Y11lim+"/>
+
+<ReferenceProperty neutralName="EnergyThreshold_Y11lim-"/>
+
+<ReferenceProperty neutralName="EnergyThreshold_Y22lim+"/>
+
+<ReferenceProperty neutralName="EnergyThreshold_Y22lim-"/>
+
+<ReferenceProperty neutralName="NonlinearCoeffOption"/>
+
+<ReferenceProperty neutralName="NonlinearOption"/>
+
+<ReferenceProperty neutralName="NonlinearCoefficient_Ksi+"/>
+
+<ReferenceProperty neutralName="NonlinearCoefficient_Ksi-"/>
+
+<ReferenceProperty neutralName="NonlinearFunction_Fonc+"/>
+
+<ReferenceProperty neutralName="NonlinearFunction_Fonc-"/>
+
+<ReferenceProperty neutralName="NonlinearCoefficient_Ksi1+"/>
+
+<ReferenceProperty neutralName="NonlinearCoefficient_Ksi1-"/>
+
+<ReferenceProperty neutralName="EnergyLimitValue"/>
+
+<ReferenceProperty neutralName="DiffuseDamageEnergyThreshold"/>
+
+<ReferenceProperty neutralName="DiffuseDamageCriticalValue"/>
+
+<ReferenceProperty neutralName="ShearEnergyOption"/>
+
+<ReferenceProperty neutralName="EnergyThresholdInShear"/>
+
+<ReferenceProperty neutralName="EnergyCriticalValue"/>
+
+<ReferenceProperty neutralName="DamageNonlinearFunction"/>
+
+<ReferenceProperty neutralName="LimitEnergyTransverseDirection"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_b2"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_b3"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_a"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_k"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_alpha"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_alpha1"/>
+
+<ReferenceProperty neutralName="CouplingCoefficient_alpha2"/>
+
+<ReferenceProperty neutralName="PlyFractureToughness_GIc"/>
+
+<ReferenceProperty neutralName="PlyFractureToughness_GIIc"/>
+
+<ReferenceProperty neutralName="PlyFractureToughness_GIIIc"/>
+
+<ReferenceProperty neutralName="MaxTransMicroCrackDamage"/>
+
+<ReferenceProperty neutralName="InitialPlasticThreshold"/>
+
+<ReferenceProperty neutralName="ParameterPlasticLaw"/>
+
+<ReferenceProperty neutralName="ExponentPlasticLaw"/>
+
+<ReferenceProperty neutralName="TransitionThickness"/>
+
+<ReferenceProperty neutralName="PlasticityStrategyParameter"/>
+
+<ReferenceProperty neutralName="NonLocalParameter"/>
+
+<ReferenceProperty neutralName="ParameterDelay"/>
+
+<ReferenceProperty neutralName="TimeDelay"/>
+
+<ReferenceProperty neutralName="EquivalentPlasticStrainLimit"/>
+
+<ReferenceProperty neutralName="MaxDamageValue"/>
+
+<ReferenceProperty neutralName="CreepFormulation"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+
+<ReferenceProperty neutralName="CreepHardening"/>
+
+<ReferenceProperty neutralName="PowerLawCreepParameter_A1"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_b"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_d"/>
+<ReferenceProperty neutralName="CreepThreshold"/>
+
+<ReferenceProperty neutralName="LinearBehavior"/>

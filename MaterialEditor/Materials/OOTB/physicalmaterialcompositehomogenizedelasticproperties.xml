@@ -1,0 +1,168 @@
+<Group label ="Composite Young's Modulus"
+       expanded ="true">
+  <Property name="Composite Young's Modulus"
+            neutralName="CompositeYoungsModulusTXTg"
+            valueType="scalarField_table">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="3"
+               nCols="3">
+      <RowHeading row="1"
+                  value="Fiber Direction (E1)"/>
+      <RowHeading row="2"
+                  value="Transverse In-Plane (E2)"/>
+      <RowHeading row="3"
+                  value="Out-Of-Plane (E3)"/>
+      <TableProperty name="Glassy"
+                     neutralName="CompositeYoungsModulusTXTg1"
+                     valueType="scalarField"
+                     Dimensions="&MeasureStress;"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+      <TableProperty name="Rubbery"
+                     neutralName="CompositeYoungsModulusTXTg2"
+                     valueType="scalarField"
+                     Dimensions="&MeasureStress;"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+      <TableProperty name="Liquid"
+                     neutralName="CompositeYoungsModulusTXTg3"
+                     valueType="scalarField"
+                     Dimensions="&MeasureStress;"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+    </TableDefn>
+  </Property>
+</Group>
+
+<Group label ="Composite Poisson's Ratio"
+       expanded ="true">
+  <Property name="Composite Poisson's Ratio"
+            neutralName="CompositePoissonsRatioTXTg"
+            valueType="scalarField_table">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="3"
+               nCols="3">
+      <RowHeading row="1"
+                  value="Fiber Direction (Nu12)"/>
+      <RowHeading row="2"
+                  value="Transverse In-Plane (Nu13)"/>
+      <RowHeading row="3"
+                  value="Out-Of-Plane (Nu23)"/>
+      <TableProperty name="Glassy"
+                     neutralName="CompositePoissonsRatioTXTg1"
+                     valueType="scalarField"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+      <TableProperty name="Rubbery"
+                     neutralName="CompositePoissonsRatioTXTg2"
+                     valueType="scalarField"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+      <TableProperty name="Liquid"
+                     neutralName="CompositePoissonsRatioTXTg3"
+                     valueType="scalarField"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+    </TableDefn>
+  </Property>
+</Group>
+
+<Group label ="Composite Shear Modulus"
+       expanded ="true">
+  <Property name="Composite Shear Modulus"
+            neutralName="CompositeShearModulusTXTg"
+            valueType="scalarField_table">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="3"
+               nCols="3">
+      <RowHeading row="1"
+                  value="Fiber Direction (G12)"/>
+      <RowHeading row="2"
+                  value="Transverse In-Plane (G13)"/>
+      <RowHeading row="3"
+                  value="Out-Of-Plane (G23)"/>
+      <TableProperty name="Glassy"
+                     neutralName="CompositeShearModulusTXTg1"
+                     valueType="scalarField"
+                     Dimensions="&MeasureStress;"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+      <TableProperty name="Rubbery"
+                     neutralName="CompositeShearModulusTXTg2"
+                     valueType="scalarField"
+                     Dimensions="&MeasureStress;"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+      <TableProperty name="Liquid"
+                     neutralName="CompositeShearModulusTXTg3"
+                     valueType="scalarField"
+                     Dimensions="&MeasureStress;"
+                     scaleFactor="false"
+                     allowUnspecifiedValue="true">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        &fieldtempdoctg;
+      </TableProperty>
+    </TableDefn>
+  </Property>
+</Group>
+

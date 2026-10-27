@@ -1,0 +1,29 @@
+<Group label="Categorization"
+        expanded="false">
+    &typeProperty;
+    &categoryProperty;
+</Group>
+
+<Group label="Properties">
+    <PropertyOverride neutralName="ElasticDependencyControl"
+                      showProp="true"
+                      valueChoices="&Choice;Constant=3&Choice;Temperature=4&Choice;Frequency=5&Choice;Frequency and Temperature=6"/>
+
+    <PropertyOverride neutralName="AnisotropicElasticDependencyControl"
+                      createProp="false"/>
+    
+    <PropertyOverride neutralName="DensityControl"
+                      createProp="false"/>
+    <PropertyOverride neutralName="MassDensity"
+                      createProp="false"/>
+    <PropertyOverride neutralName="MassDensityComplex"
+                      createProp="false"/>        
+    <PropertyOverride neutralName="MassDensityTempPress"
+                      createProp="false"/>
+    &elasticdepend;
+    &densityProperty;
+</Group>
+
+<Group label="Constant Value Calculation">
+    &constantvaluecalculators;
+</Group>

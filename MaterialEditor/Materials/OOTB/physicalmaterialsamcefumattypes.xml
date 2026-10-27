@@ -1,0 +1,22 @@
+<Property name="Samcef UMAT Model"
+          neutralName="SamcefUMATModel"
+          valueType="enum"
+          valueChoices="&Choice;None=&valueEmpty;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueEmpty;"
+              inclusive="true"/>
+</Property>
+
+<Property name="State Variables to Export to Results File"
+        neutralName="SamcefUMATStateVarOutputModel"
+        valueType="int_array"
+        parentProperty="SamcefUMATModel"
+        parentPropertyValToBeSensitive="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"
+        preserveOrder="false"
+        duplicatesAllowed="false">
+<DefaultValue value="&valueEmpty;"/>
+<LowerBound value="0"
+            inclusive="true"/>
+</Property>
+
+

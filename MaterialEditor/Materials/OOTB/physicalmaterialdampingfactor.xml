@@ -1,0 +1,24 @@
+                <Property name="Axial Damping Factor (DA)"
+                          neutralName="AxialDampingFactor"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          parentProperty="MaterialType"
+                          parentPropertyValToBeSensitive="&MaterialTypeISOTROPIC;,&MaterialTypeCOMPOUNDISOTROPIC;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+                <Property name="Bending Damping Factor (DB)"
+                          neutralName="BendingDampingFactor"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          parentProperty="MaterialType"
+                          parentPropertyValToBeSensitive="&MaterialTypeISOTROPIC;,&MaterialTypeCOMPOUNDISOTROPIC;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>

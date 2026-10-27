@@ -1,0 +1,177 @@
+<!-- ================================================================================= -->
+<!-- ==========================  Anisotropic Iron Loss  ============================ -->
+<!-- ================================================================================= -->
+<Property name="Steinmetz Coefficients"
+          neutralName="AnisoIronLossMethod"
+          valueType="enum"
+          valueChoices="&Choice;Direct Entry=0&Choice;Calculate from Iron Loss=1"
+          valueSubtype="radio"
+          parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+
+
+<Property name="Iron Loss"
+          neutralName="AnisoIronLoss"
+          valueType="scalarField_table"
+          plot="true"
+          Dimensions="&MeasurePowerToMassRatio;"
+          parentProperty="&Choice;AnisoIronLossMethod"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+               nCols="5"
+               minNumRows="1"
+               maxNumRows="5000">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="3"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="4"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="5"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Temperature"
+                       neutralName="anisoironlosstemperature"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTemperature;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoIronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Frequency"
+                       neutralName="anisoironlossfrequency"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureFrequency;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoIronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Iron Loss XX"
+                       neutralName="IronLoss_xx"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasurePowerToMassRatio;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoIronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="Bpeak"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFluxDensity;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Iron Loss YY"
+                       neutralName="IronLoss_yy"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasurePowerToMassRatio;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoIronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="Bpeak"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFluxDensity;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Iron Loss ZZ"
+                       neutralName="IronLoss_zz"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasurePowerToMassRatio;"
+                       allowUnspecifiedValue="false"
+                       parentProperty="&Choice;AnisoIronLossMethod"
+                       parentPropertyValToBeSensitive="&Choice;1">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="Bpeak"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFluxDensity;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+
+<Property name="Calculate Steinmetz Coefficients"
+          neutralName="AnisoCalculateSteinmetz"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateAnisoSteinmetzFromIronLoss"
+          icon="calculate_properties"
+          parentProperty="AnisoIronLossMethod"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="Calculate Steinmetz Coefficients"/>
+</Property>
+
+
+<PropertyField name="Steinmetz Coefficients"
+               neutralName="AnisoSteinmetzCoefficients"
+               valueSubtype="compact"
+               valueLabel="&Above; P = Kh * F^Alpha * B^Beta + Ke * ( f* B )^2"
+               parentProperty="&Choice;AnisoElectroMagnetPermeabilityMethod"
+               parentPropertyValToBeSensitive="&Choice;2">
+    <DepDomain nVariables="12"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Anisotropic Steinmetz Coefficients">
+        <DepVariable Name="Kh (XX)"
+                     NeutralName="Steinmetz_kh_xx"/>
+        <DepVariable Name="Alpha (XX)"
+                     NeutralName="Steinmetz_Alpha_xx"/>
+        <DepVariable Name="Beta (XX)"
+                     NeutralName="Steinmetz_Beta_xx"/>
+        <DepVariable Name="Ke (XX)"
+                     NeutralName="Steinmetz_ke_xx"/>
+        <DepVariable Name="Kh (YY)"
+                     NeutralName="Steinmetz_kh_yy"/>
+        <DepVariable Name="Alpha (YY)"
+                     NeutralName="Steinmetz_Alpha_yy"/>
+        <DepVariable Name="Beta (YY)"
+                     NeutralName="Steinmetz_Beta_yy"/>
+        <DepVariable Name="Ke (YY)"
+                     NeutralName="Steinmetz_ke_yy"/>
+        <DepVariable Name="Kh (ZZ)"
+                     NeutralName="Steinmetz_kh_zz"/>
+        <DepVariable Name="Alpha (ZZ)"
+                     NeutralName="Steinmetz_Alpha_zz"/>
+        <DepVariable Name="Beta (ZZ)"
+                     NeutralName="Steinmetz_Beta_zz"/>
+        <DepVariable Name="Ke (ZZ)"
+                     NeutralName="Steinmetz_ke_zz"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+

@@ -1,0 +1,19 @@
+<Property name="Failure Criterion (CRIT)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="CRIT"
+        valueType="enum"
+        valueChoices="&Choice;Chang-Chang=54&Choice;Tsai Wu=55">
+  <DefaultValue value="54"/>
+</Property>
+
+<Property name="Shear Term Weighting (BETA)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="BETA"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="0.0"
+              inclusive="true"/>
+  <UpperBound value="1.0"
+              inclusive="true"/>
+</Property>

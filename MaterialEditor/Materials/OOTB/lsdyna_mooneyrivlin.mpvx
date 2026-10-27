@@ -1,0 +1,20 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="1"
+                   showProp="true"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="PoissonsRatio"/>
+
+<ReferenceProperty neutralName="StrainEnergyDensityConstantA"/>
+<ReferenceProperty neutralName="StrainEnergyDensityConstantB"/>
+

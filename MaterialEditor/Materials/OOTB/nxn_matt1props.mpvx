@@ -1,0 +1,17 @@
+
+        <ReferenceProperty neutralName="YoungsModulusTemperature"/>
+
+        <ReferenceProperty neutralName="PoissonsRatioTemperature"/>
+
+        <ReferenceProperty neutralName="ShearModulusTemperature"/>
+
+        <ReferenceProperty neutralName="StructuralDampingTemperature"/>
+
+        <ReferenceProperty neutralName="ThermalExpansionTemperature"/>
+
+        <ReferenceProperty neutralName="MaxStressTensionTemperature"/>
+
+        <ReferenceProperty neutralName="MaxStressCompressionTemperature"/>
+
+        <ReferenceProperty neutralName="MaxInPlaneShearStressTemperature"/>
+

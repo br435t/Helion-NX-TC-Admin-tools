@@ -1,0 +1,21 @@
+                <Property name="Tensile Stiffness Factor"
+                          neutralName="TensileStiffnessFactor"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&valueZeroPointOne;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"
+                                      evaluationProperty="Default Temperature"
+                                      propertyType="Solution"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+

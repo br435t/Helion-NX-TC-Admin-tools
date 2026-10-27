@@ -1,0 +1,12 @@
+        <Property name="Bulk Viscosity Activation Flag (BVFLAG)"
+                  neutralName="BulkViscosityActivationFlag"
+                  valueType="enum"
+                  valueChoices="&Choice;Inactive=0&Choice;Active=1">
+            <DefaultValue value= "0"/>
+        </Property>
+        <Property name="Stress Tensor Initialization (REF)"
+                  neutralName="StressTensorInitialization"
+                  valueType="enum"
+                  valueChoices="&Choice;Off=0&Choice;Use Geometry=1">
+            <DefaultValue value= "0"/>
+        </Property>

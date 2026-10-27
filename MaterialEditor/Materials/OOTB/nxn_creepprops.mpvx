@@ -1,0 +1,36 @@
+<ReferenceProperty neutralName="CreepFormulation"
+                   valueChoices="&Choice;O.R.N.L viscoplastic material (CREEP/TYPE 111-222)=2&Choice;Time Hardening (Norton-Bailey) Power Law (CREEP/TYPE 300)=1&Choice;Kelvin-Maxwell, uniaxial creep recovery test, Tabular Input (CREEP/Table)=3"
+                   defaultValue="2"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+
+
+<ReferenceProperty neutralName="CreepReferenceTemperature"/>
+<ReferenceProperty neutralName="TempDependTermType"/>
+<ReferenceProperty neutralName="CreepTemperatureDependence"/>
+<ReferenceProperty neutralName="CreepTemperatureDependenceDeltaH"/>
+<ReferenceProperty neutralName="CreepThreshold"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC1Function"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_a"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_b"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC3Function"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_e"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_f"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_g"/>
+
+<ReferenceProperty neutralName="KelvinMaxwellC2Function"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_c"/>
+<ReferenceProperty neutralName="KelvinMaxwellCreepParameter_d"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+<ReferenceProperty neutralName="ForceLengthMassUnits"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_A"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_n"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_m"/>
+
+<ReferenceProperty neutralName="PrimarySpringCreepTable_Kp"/>
+<ReferenceProperty neutralName="PrimaryDampingCreepTable_Cp"/>
+<ReferenceProperty neutralName="SecondaryDampingCreepTable_Cs"/>

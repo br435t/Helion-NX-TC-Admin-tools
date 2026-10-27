@@ -1,0 +1,97 @@
+<Property name="Strain(Peak-Peak) - B(Peak)"
+          neutralName="StrainBCurve"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStrain;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainUser;"
+                Name="Peak Magnetic Induction"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="peak magnetic induction"
+                      Measure="&MeasureMagneticFluxDensity;"/>
+        </Domain>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainUser;"
+                             Name="Peak Magnetic Induction"
+                             nVariables="1"
+                             autocreate="true">
+                <Variable Name="peak magnetic induction" 
+                          Measure="&MeasureMagneticFluxDensity;"/>
+            </SecondaryDomain>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Strain(Peak-Peak) - B(Peak) YY"
+            neutralName="StrainBCurveYY"
+            valueType="scalarField"
+            valueSubtype="&scalarFieldCompactDisplay;"
+            Dimensions="&MeasureStrain;"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainUser;"
+                Name="Peak Magnetic Induction"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="peak magnetic induction"
+                      Measure="&MeasureMagneticFluxDensity;"/>
+        </Domain>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainUser;"
+                             Name="Peak Magnetic Induction"
+                             nVariables="1"
+                             autocreate="true">
+                <Variable Name="peak magnetic induction" 
+                          Measure="&MeasureMagneticFluxDensity;"/>
+            </SecondaryDomain>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Strain(Peak-Peak) - B(Peak) ZZ"
+            neutralName="StrainBCurveZZ"
+            valueType="scalarField"
+            valueSubtype="&scalarFieldCompactDisplay;"
+            Dimensions="&MeasureStrain;"
+            scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainUser;"
+                Name="Peak Magnetic Induction"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="peak magnetic induction"
+                      Measure="&MeasureMagneticFluxDensity;"/>
+        </Domain>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainUser;"
+                             Name="Peak Magnetic Induction"
+                             nVariables="1"
+                             autocreate="true">
+                <Variable Name="peak magnetic induction" 
+                          Measure="&MeasureMagneticFluxDensity;"/>
+            </SecondaryDomain>
+        </Domain>
+    </FieldDefn>
+</Property>
+     
+ 

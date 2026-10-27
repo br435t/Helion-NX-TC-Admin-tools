@@ -1,0 +1,18 @@
+      <Property name="Warp relative thickness (HW)"
+                neutralName="WovenWarpRelativeThickness"
+                valueType="float">
+        <DefaultValue value="&valueEmpty;"/>
+      </Property>
+
+      <Property name="Relative Fill Thickness (HF)"
+                neutralName="WovenFillRelativeThickness"
+                valueType="float">
+        <DefaultValue value="&valueEmpty;"/>
+      </Property>
+
+      <Property name="Corrective Constant (C)"
+                neutralName="WovenCorrectiveCoefficient"
+                valueType="float">
+        <DefaultValue value="&valueEmpty;"/>
+      </Property>
+

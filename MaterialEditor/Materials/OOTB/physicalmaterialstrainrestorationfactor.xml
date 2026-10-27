@@ -1,0 +1,49 @@
+<Property name="Strain Restoration Factor (TSRFAC) Option"
+          neutralName="StrainRestorationFactorOption"
+          valueType="enum"
+          valueChoices="&Choice;Time Dependent Factor=-1;
+                        &Choice;Factor at Time Zero=0"
+          parentProperty="MembraneFormulationFORM"
+          parentPropertyValToBeSensitive="0,1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Strain Restoration Factor (TSRFAC) Option"
+          neutralName="StrainRestorationFactorAltOption"
+          valueType="enum"
+          valueChoices="&Choice;Time Dependent Factor=-1;
+                        &Choice;Factor at Time Zero=0;
+                        &Choice;Time Dependent Factor (Alternate Method)=1"
+          parentProperty="MembraneFormulationFORM"
+          parentPropertyValToBeSensitive="2,3,4,12,13,14,-14,24">
+    <DefaultValue value="0"/>
+</Property>
+          
+<Property name="Strain Restoration Factor (TSRFAC)"
+          neutralName="StrainRestorationFactorTSRFAC"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="&Choice;StrainRestorationFactorOption&Choice;StrainRestorationFactorAltOption"
+          parentPropertyValToBeSensitive="&Choice;0&Choice;0">
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="false"/>
+</Property>
+
+<Property name="Strain Restoration Factor (TSRFAC)"
+          neutralName="StrainRestorationFactorTimeDepend"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          scaleFactor="false"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="&Choice;StrainRestorationFactorOption&Choice;StrainRestorationFactorAltOption"
+          parentPropertyValToBeSensitive="&Choice;-1&Choice;-1,1">
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&valueOne;"
+                inclusive="false"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTime;"/>
+    </FieldDefn>
+</Property>

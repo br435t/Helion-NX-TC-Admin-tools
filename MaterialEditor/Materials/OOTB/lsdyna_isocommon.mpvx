@@ -1,0 +1,13 @@
+        <ReferenceProperty neutralName="ElasticDependencyControl"
+                           valueChoices="Constant=3"
+                           defaultValue="3"
+                           showProp="false"
+                           lockProp="false"/>
+        <ReferenceProperty neutralName="YoungsModulusConstant"/>
+
+        <ReferenceProperty neutralName="PoissonsRatioType"
+                           valueChoices="&Choice;Minor Poisson's Ratio=1"
+                           defaultValue="1"
+                           showProp="true"
+                           lockProp="true"/>
+        <ReferenceProperty neutralName="PoissonsRatioConstant"/>

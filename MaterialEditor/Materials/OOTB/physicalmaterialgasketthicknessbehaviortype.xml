@@ -1,0 +1,11 @@
+                <Property name="##599Type"
+                          neutralName="GasketThicknessBehaviorType"
+                          valueType="enum"
+                          valueChoices="&Choice;ELASTIC-PLASTIC=&GasketBehaviorTypeElasticPlastic;&Choice;DAMAGE=&GasketBehaviorTypeDamage;"
+                          Dimensions="&MeasureUnitLess;">
+                    <DefaultValue value="&GasketBehaviorTypeElasticPlastic;"/>
+                    <LowerBound value="&GasketBehaviorTypeElasticPlastic;"
+                                inclusive="true"/>
+                    <UpperBound value="&GasketBehaviorTypeDamage;"
+                                inclusive="true"/>
+                </Property>

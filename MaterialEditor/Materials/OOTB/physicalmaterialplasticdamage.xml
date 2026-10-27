@@ -1,0 +1,51 @@
+<Property name="Plastic Damage Option"
+          neutralName="PlasticDamageOption"
+          valueType="enum"
+          valueChoices="&Choice;NonLinear Damage Curve=0;
+                        &Choice;Linear Damage=1;"
+          parentProperty="StrainRatedependency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="1"/>
+</Property>
+
+<Property name="NonLinear Damage Curve (LCDM)"
+          neutralName="NonLinearDamageCurve"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="PlasticDamageOption"
+          parentPropertyValToBeSensitive="0"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainStrain;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="NonLinear Damage Strain Option"
+          neutralName="NonLinearDamageStrainOption"
+          valueType="enum"
+          valueChoices="&Choice;Softening Plastic Strain (EPPF)=0;
+                        &Choice;Rupture Plastic Strain (EPPFR)=1;"
+          parentProperty="PlasticDamageOption"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Softening Plastic Strain (EPPF)"
+          neutralName="EffectivePlasticStrainSoftening"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="&Choice;PlasticDamageOption&Choice;NonLinearDamageStrainOption"
+          parentPropertyValToBeSensitive="&Choice;1&Choice;0">
+    <DefaultValue value="1.0E+12"/>
+</Property>
+
+<Property name="Rupture Plastic Strain (EPPFR)"
+          neutralName="EffectivePlasticStrainRupture"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="&Choice;PlasticDamageOption&Choice;NonLinearDamageStrainOption"
+          parentPropertyValToBeSensitive="&Choice;1&Choice;1">
+    <DefaultValue value="1.0E+14"/>
+</Property>

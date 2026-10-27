@@ -1,0 +1,608 @@
+<Property name="Type of Nonlinearity (TYPE)"
+          neutralName="MatlNonlinearityType"
+          valueType="enum"
+          valueChoices="&Choice;None=-1;
+                        &Choice;Nonlinear elastic: stress-strain (MATS1/NLELAST)=0;
+                        &Choice;Elastoplastic: stress-total strain (MATS1/PLASTIC)=1;
+                        &Choice;Elastoplastic: stress-plastic strain (MATS1/PLSTRN)=2;
+                        &Choice;Elastoplastic: material (MPLAS)=3;">
+    <DefaultValue value="1"/>
+</Property>
+
+<Property name="Yield Function Criterion (YF)"
+          neutralName="YieldFunctionCriterion"
+          valueType="enum"
+          valueChoices="&Choice;von Mises=1;
+                        &Choice;Tresca=2;
+                        &Choice;Mohr-Coulomb=3;
+                        &Choice;Drucker-Prager=4;
+                        &Choice;Raghava=5;
+                        &Choice;Hill=6;
+                        &Choice;Hill by Stress Ratios=7;
+                        &Choice;Grey Cast Iron=8;"
+          valueToolTip="Valid for all Elastoplastic types&Choice;Valid only for Elastoplastic (MATS1) types&Choice;Valid only for Elastoplastic (MATS1) types&Choice;Valid only for Elastoplastic (MATS1) types&Choice;Valid only for Samcef&Choice;Valid only for Samcef&Choice;Valid only for Elastoplastic (MPLAS) type&Choice;Valid only for Elastoplastic (MPLAS) type and Hardening Rule of Isotropic"
+          parentProperty="MatlNonlinearityType"
+          parentPropertyValToBeSensitive="1,2,3">
+    <DefaultValue value="1"/>
+</Property>
+
+<Property name="Ratio of Compressive and Tensile Yield Stresses (S)"
+          neutralName="CompressiveTensileyieldRatio"
+          valueType="float"
+          parentProperty="YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="5">
+    <DefaultValue value="&CompressiveTensileyieldRatio;"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Initial Tensile Yield Stress (XT2)"
+          neutralName="InitialTensilYieldStress2"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="6"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+<Property name="Initial Tensile Yield Stress (XT3)"
+          neutralName="InitialTensilYieldStress3"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="6"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Shear Yield Stress (RST)"
+          neutralName="ShearYieldStress"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+<Property name="Shear Yield Stress (RST2)"
+          neutralName="ShearYieldStress2"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+<Property name="Shear Yield Stress (RST3)"
+          neutralName="ShearYieldStress3"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Hardening Rule (HR)"
+          neutralName="HardeningRule"
+          valueType="enum"
+          valueChoices="&Choice;Isotropic=1
+                        &Choice;Kinematic=2
+                        &Choice;Mixed Hardening=3
+                        &Choice;Sublayer Kinematic=4
+                        &Choice;Isotropic + Chaboche Kinematic=5
+                        &Choice;Isotropic Saturated + Chaboche Kinematic=6
+                        &Choice;Isotropic Saturated=7"
+          valueToolTip="Valid for all Elastoplastic and Yield Function Criterion types&Choice;Valid only for Elastoplastic (MATS1) types&Choice;Valid only for Elastoplastic (MATS1) types&Choice;Valid only for Elastoplastic (MPLAS) type and Yield Function Criterion type of von Mises or Hill by Stress Ratios&Choice;Valid only for Elastoplastic (MPLAS) type and Yield Function Criterion type of von Mises or Hill by Stress Ratios&Choice;Valid only for Elastoplastic (MPLAS) type, Yield Function Criterion type of von Mises or Hill by Stress Ratios, and True Stress-Plastic Strain, &Choice;Valid only for Elastoplastic (MPLAS) type, Yield Function Criterion type of von Mises or Hill by Stress Ratios, and True Stress-Plastic Strain"
+          parentProperty="MatlNonlinearityType"
+          parentPropertyValToBeSensitive="1,2,3">
+    <DefaultValue value="1"/>
+</Property>
+
+<Property name="R11 = Y0,11 / Y0"
+          neutralName="HillRatio11"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;7&Choice;1,4,5,6,7">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R22 = Y022 / Y0"
+          neutralName="HillRatio22"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;7&Choice;1,4,5,6,7">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R33 = Y33 / Y0"
+          neutralName="HillRatio33"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;7&Choice;1,4,5,6,7">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R12 = 3^0.5 * Y0,12 / Y0"
+          neutralName="HillRatio12"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;7&Choice;1,4,5,6,7">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R23 = 3^0.5 * Y0,23 / Y0"
+          neutralName="HillRatio23"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;7&Choice;1,4,5,6,7">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="R13 = 3^0.5 * Y0,13 / Y0"
+          neutralName="HillRatio13"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;7&Choice;1,4,5,6,7">
+    <DefaultValue value="1.0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Hardening Ratio (Between Isotropic and Kinematic)"
+          neutralName="MixedHardeningRatio"
+          valueType="float"
+          valueToolTip="Hardening Parameter (BETA)"
+          valueSubtype="scale_keyin_limits"
+          parentProperty="HardeningRule"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="0.5"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+<Property name="Kinematic Laws"
+          neutralName="KinematicLaws"
+          valueType="enum"
+          valueChoices="&Choice;Prager (KPRA)=0
+                        &Choice;Ziegler (KZIE)=1;"
+          parentProperty="HardeningRule"
+          parentPropertyValToBeSensitive="2,3">
+    <DefaultValue value="0"/>
+</Property>
+<Property name="Non-Linear Hardening Coefficient (NLH)"
+          neutralName="NonLinearHardeningCoefficient"
+          valueType="scalarField"
+          parentProperty="KinematicLaws"
+          parentPropertyValToBeSensitive="0,1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Stress-Strain Format Type"
+          neutralName="StressStrainFormatType"
+          valueType="enum"
+          valueChoices="&Choice;Stress-Strain Curve=0;
+                        &Choice;Bilinear by Work Hardening Slope (H)=1;
+                        &Choice;Bilinear by Tangent Modulus (ETAN)=2;
+                        &Choice;Use Stress-Strain, Strain Rate Table=3;"
+          parentProperty="MatlNonlinearityType"
+          parentPropertyValToBeSensitive="1,2">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Stress-Strain Input Data Type"
+          neutralName="StressStrainDataType"
+          valueType="enum"
+          valueChoices="&Choice;Engineering Stress-Strain=0;
+                        &Choice;Engineering-Plastic Strain=1;
+                        &Choice;True Stress-Log Strain=2;
+                        &Choice;True Stress-Plastic Strain=3;
+                        &Choice;Undefined=4;"
+          parentProperty="MatlNonlinearityType"
+          parentPropertyValToBeSensitive="1,2,3">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Stress-Strain (H)"
+          neutralName="StressStrainCurveTable"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false"
+          parentProperty="&Choice;StressStrainFormatType&Choice;MatlNonlinearityType"
+          parentPropertyValToBeSensitive="&Choice;0&Choice;0">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainStrain;"/>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+
+<Property name="Work Hardening Slope (H)"
+          neutralName="WorkHardeningSlopeH"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="StressStrainFormatType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+</Property>
+
+<Property name="Stress-Strain, StrainRate Table"
+          neutralName="StressStrainCurveStrainRate"
+          valueType="scalarField"
+          valueSubtype="compact"
+          Dimensions="&MeasureStress;"
+          parentProperty="StressStrainFormatType"
+          parentPropertyValToBeSensitive="3"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1"
+                hasSecondary="true"
+                autocreate="true">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Initial Yield Point (LIMIT1)"
+          neutralName="InitialYieldPoint"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="StressStrainFormatType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Initial Friction Angle (LIMIT2)"
+          neutralName="InitialFrictionAngle"
+          valueType="float"
+          Dimensions="&MeasureAngle;"
+          parentProperty="MatlNonlinearityType"
+          parentPropertyValToBeSensitive="1,2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&AngleMin;"
+                inclusive="true"/>
+    <UpperBound value="&Angle45deg;"
+                inclusive="true"/>
+</Property>
+<Property name="Tangent Modulus (ETAN)"
+          neutralName="TangentModulusE"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="&ChoiceAnd;StressStrainFormatType&ChoiceAnd;ElasticDependencyControl"
+          parentPropertyValToBeSensitive="&Choice;2&Choice;0,3">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+<Property name="Temperature Dependent Tangent Modulus (ETAN)"
+          neutralName="TangentModulusETemperature"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          parentProperty="&ChoiceAnd;StressStrainFormatType&ChoiceAnd;ElasticDependencyControl"
+          parentPropertyValToBeSensitive="&Choice;2&Choice;0,4,6">
+    <DefaultValue value="&valueZero;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Strain Rate Dependency"
+          neutralName="StrainRatedependency"
+          valueType="enum"
+          valueChoices="&Choice;Symonds and Cowper=0;
+                        &Choice;General Definition=1;"
+          parentProperty="MatlNonlinearityType"
+          parentPropertyValToBeSensitive="1,2">
+    <DefaultValue value="0"/>
+</Property>
+<Property name="Strain Rate"
+          neutralName="StressStrainCurve2"
+          parentProperty="StrainRatedependency"
+          parentPropertyValToBeSensitive="1"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1"
+                hasSecondary="true"
+                autocreate="true">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Exponent (BVALUE)"
+          neutralName="ExponentBValue"
+          valueType="float"
+          valueToolTip="Strain Rate Parameter P for Cowper Symonds (SRP)"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="StrainRatedependency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Strain Rate Level (TSRATE)"
+          neutralName="StrainRateLevel"
+          valueType="float"
+          valueToolTip="Strain Rate Parameter C for Cowper Symonds (SRC)"
+          Dimensions="&MeasureCoefficientPerTime;"
+          parentProperty="StrainRatedependency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+
+<Property name="Failure flag"
+          neutralName="LSDYNAPlasticfail"
+          valueType="enum"
+          valueChoices="&Choice;(&lt; 0) User defined failure subroutine=-1;
+                        &Choice;(0) Failure is not considered=0;
+                        &Choice;(&gt; 0) Effective plastic strain to failure=1;">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="LS-DYNA User Failure Subroutine Value (FAIL)"
+          neutralName="LSDYNA_matusr_24_fail"
+          valueType="float"
+          parentProperty="LSDYNAPlasticfail"
+          parentPropertyValToBeSensitive="-1">
+          <DefaultValue value="-1.0E+21"/>
+          <LowerBound value="&minFloat;"
+                    inclusive="false"/>
+          <UpperBound value="&valueZero;"
+                    inclusive="false"/>
+</Property>
+
+<Property name="Failure Plastic Strain (FAIL)"
+          neutralName="LSDYNA_fail_plastic_strain"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="LSDYNAPlasticfail"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1.0E+21"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+<Property name="Failure Thinning Strain (EPSTHIN)"
+          neutralName="EPSThin"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+    <DefaultValue value="0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+<Property name="Failure Major In-plane Strain (EPSMAJ)"
+          neutralName="EPSMaj"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+
+<Property name="Effective Plastic Strain for eroding elements (FS)"
+          neutralName="EffectivePlasticStrainFS"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="StrainRatedependency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="1.E+20"/>
+</Property>
+
+<Property name="Formulation for rate effects (VP)"
+          neutralName="FormulationVP"
+          valueType="enum"
+          valueChoices="&Choice;(-1) Cowper-Symonds with deviatoric strain rate=-1;
+                        &Choice;(0) Scale Yield Effects=0;
+                        &Choice;(1) Viscoplastic Formulation=1;"
+          parentProperty="StrainRatedependency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Yield Sress Scaling Curve (LCSR)"
+          neutralName="YieldSressScalingCurve"
+          parentProperty="StressStrainFormatType"
+          parentPropertyValToBeSensitive="0,2"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Plastic hardening modulus (EH)"
+          neutralName="PlasticHardeningModulus"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Effective plastic strain in weld material at failure (EFAIL)"
+          neutralName="EffectiveFailurePlasticStrain"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+
+<Property name="Failure Determination Method"
+          neutralName="LSDYNAPlasticPolymerfailEFTX"
+          valueType="enum"
+          valueChoices="&Choice;(0) Maximum Tensile Strain=0;
+                        &Choice;(1) X Direction Tensile Strain=1;
+                        &Choice;(2) Y Direction Tensile Strain=2;">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Stiffness Damping Ratio (DAMP)"
+          neutralName="StiffnessDampingRatioDAMP"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Filtering Factor (RFAC)"
+          neutralName="FilteringFactorRFAC"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="1.0"
+                inclusive="true"/>
+</Property>
+
+<Property name="Failure Strain-Strain Rate Curve (LCID)"
+          neutralName="FailureStrainToStrainRateCurveLCID"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStrain;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Failure Thinning Strain - Strain Rate Curve (LCTSRF)"
+          neutralName="FailureStrainToStrainRateCurveLCTSRF"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStrain;"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="Strain Rate"
+                nVariables="1"
+                autocreate="true">
+            <Variable Name="Strain Rate"
+                      Measure="&MeasureCoefficientPerTime;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="RTCL Damage (EPSO)"
+          neutralName="RTCLDamageEPS0Option"
+          valueType="enum"
+          valueChoices="&Choice;Inactive=0;
+                        &Choice;Active=1;">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="RTCL Damage (EPSO)"
+          neutralName="RTCLDamageEPS0"
+          valueType="float"
+          parentProperty="RTCLDamageEPS0Option"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="false"/>
+</Property>
+
+
+
+
+
+
+
+

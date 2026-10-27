@@ -1,0 +1,13 @@
+
+<Property name="Lamination Thickness"
+          neutralName="LaminationThickness"
+          valueType="float"
+          Dimensions="&MeasureLength;"
+          scaleFactor="false"
+          parentProperty="&Choice;MagnetType&Choice;AnisoMagnetType"
+          parentPropertyValToBeSensitive="&Choice;0&Choice;0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+

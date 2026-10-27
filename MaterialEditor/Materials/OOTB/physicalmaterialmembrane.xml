@@ -1,0 +1,12 @@
+                <Property name="Membrane Material"
+                          neutralName="MembraneMaterial"
+                          visible="true"
+                          editable="true"
+                          valueType="material"
+                          valueSubtype="noinherit">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&MaterialTypeISOTROPIC;"
+                                inclusive="true"/>
+                    <UpperBound value="&MaterialTypeISOTROPIC;"
+                                inclusive="true"/>
+                </Property>

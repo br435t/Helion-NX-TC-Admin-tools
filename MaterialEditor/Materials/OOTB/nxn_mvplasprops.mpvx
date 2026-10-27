@@ -1,0 +1,46 @@
+<ReferenceProperty neutralName="CreepFormulation"
+                   valueChoices="&Choice;Strain Hardening Creep (MVPLAS/Law STRNHARD)=6;
+                        &Choice;Norton Creep (MVPLAS/Law NORTON)=7;
+                        &Choice;Generalized Garofalo Creep (MVPLAS/Law GENGAROF)=8;
+                        &Choice;Norton-Bailey in Time Hardening Creep (MVPLAS/Law TIMEHARD)=9;
+                        &Choice;User Creep (MVPLAS/Law USER + MUCRP)=10;"
+                   defaultValue="6"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="CreepThresholdVPlas"/>
+
+<ReferenceProperty neutralName="AnisotropicType"/>
+
+<ReferenceProperty neutralName="CreepHillRatio11"/>
+<ReferenceProperty neutralName="CreepHillRatio22"/>
+<ReferenceProperty neutralName="CreepHillRatio33"/>
+<ReferenceProperty neutralName="CreepHillRatio12"/>
+<ReferenceProperty neutralName="CreepHillRatio23"/>
+<ReferenceProperty neutralName="CreepHillRatio13"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+
+<ReferenceProperty neutralName="ForceLengthMassUnits"/>
+
+<ReferenceProperty neutralName="RateStrainFactorC1"/>
+
+<ReferenceProperty neutralName="MainFactorC1Norton"/>
+
+<ReferenceProperty neutralName="MainFactorC1Garafalo"/>
+
+<ReferenceProperty neutralName="MainFactorA"/>
+
+<ReferenceProperty neutralName="StressPowerExponentC2"/>
+
+<ReferenceProperty neutralName="StressPowerExponentC2Garafalo"/>
+
+<ReferenceProperty neutralName="StrainPowerExponentC3"/>
+
+<ReferenceProperty neutralName="ExponentialFactorC4"/>
+
+<ReferenceProperty neutralName="StressPowerExponentB"/>
+
+<ReferenceProperty neutralName="TimePowerExponentD"/>
+

@@ -1,0 +1,37 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3&Choice;Temperature=4"
+                   defaultValue="3"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="CalculateConstantValuesTempDep"/>
+
+<ReferenceProperty neutralName="YoungsModulusConstant"/>
+<ReferenceProperty neutralName="YoungsModulusTemperature"/>
+
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatioConstant"/>
+<ReferenceProperty neutralName="PoissonsRatioTemperature"/>
+
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="ShearModulusTemperature"/>
+
+
+<ReferenceProperty neutralName="RefTemp"/>
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansionConstant"/>
+<ReferenceProperty neutralName="ThermalExpansionTemperature"/>
+
+
+<ReferenceProperty neutralName="DamageModelType"
+                   valueChoices="&Choice;Constant Damage=5"/>
+
+<ReferenceProperty neutralName="LinearBehavior"/>
+
+
+

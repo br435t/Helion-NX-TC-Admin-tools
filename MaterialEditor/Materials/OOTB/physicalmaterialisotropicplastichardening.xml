@@ -1,0 +1,11 @@
+<Property name="Plastic Hardening Modulus"
+            neutralName="PlasticHardeningModulusLaminate"
+            valueType="float"
+            Dimensions="&MeasureStress;">
+        <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Plastic Strain at Failure for Glass"
+            neutralName="PlasticStrainFailureGlass"
+            valueType="float">
+        <DefaultValue value="&valueEmpty;"/>
+</Property>    

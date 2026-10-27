@@ -1,0 +1,23 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3&Choice;Temperature=4"
+                   defaultValue="3"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="CalculateConstantValuesTempDep"/>
+<!-- Density -->
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<!--<ReferenceProperty neutralName="MassDensity"/>-->
+<ReferenceProperty neutralName="MassDensityConstant"/>
+<ReferenceProperty neutralName="MassDensityTemperature"/>
+<ReferenceProperty neutralName="MassDensityFrequency"/>
+
+
+<ReferenceProperty neutralName="ElectromagneticFrequency"
+                   valueChoices="&Choice;High=1"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>

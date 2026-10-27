@@ -1,0 +1,31 @@
+<Property name=""
+          neutralName="ElectConductivityResistivityMode"
+          valueType="enum"
+          valueSubtype="radio"
+          valueChoices="&Choice;Conductivity=0&Choice;Resistivity=1"
+          parentProperty="&Choice;MaterialType&Choice;ElectromagneticFrequency"
+          parentPropertyValToBeSensitive="&Choice;&MaterialTypeANISOTROPIC;&Choice;0">
+    <DefaultValue value="0"/>
+</Property>
+
+
+<Property name=""
+          neutralName="ElectConductivityMethod"
+          valueType="enum"
+          valueSubtype="radio"
+          valueChoices="&Choice;Linear Conductivity=0&Choice;Nonlinea Conductivityr=1&Choice;Anisotropic Conductivity=2"
+          parentProperty="ElectConductivityResistivityMode"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name=""
+          neutralName="ElectResistivityMethod"
+          valueType="enum"
+          valueSubtype="radio"
+          valueChoices="&Choice;Linear Resistivity=0&Choice;Nonlinear Resistivity=1&Choice;Anisotropic Resistivity=2"
+          parentProperty="ElectConductivityResistivityMode"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+</Property>
+

@@ -1,0 +1,10 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<!--<ReferenceProperty neutralName="MassDensity"/>-->
+<ReferenceProperty neutralName="MassDensityConstant"/>
+<ReferenceProperty neutralName="MassDensityTemperature"/>
+<ReferenceProperty neutralName="MassDensityFrequency"/>
+

@@ -1,0 +1,641 @@
+###############################################################################################  
+# This is a sample sheet metal material standards file. The main purpose of the file is to  
+# describe how to set material parameters so that it can be read successfully by the NX Sheet  
+# Metal Application. The file uses comma , as a delimiter and can be stored edited with a
+# spreadsheet application.  File extension of .txt and .csv are valid.
+#
+# Following keywords are recognised by NX Sheet metal and should be used to used to
+# define data that can be used by the features.
+# THICKNESS
+# BEND_RADIUS
+# LENGTH
+# ANGLE
+# NEUTRAL_FACTOR
+# JOGGLE_DEPTH
+# JOGGLE_RADIUS
+# JOGGLE_LENGTH
+# RELIEF_WIDTH
+# RELIEF_DEPTH
+# PHYSICAL_MATERIAL_NAME
+#
+# The sheet metal standards file is divided into 11 functional blocks.
+#
+##BLOCK1## NEW
+#
+# A new block from NX12 that determines the version of each table in the standards file. This will
+# provide a clear upgrade path for future format changes to the file.
+# It is important that the version numbers are not edited.  The valid values for this release are:
+# Standards File VERSION = 1
+# Material Table VERSION = 1
+# Bend Tool ID Standards Table VERSION = 1
+# Tool Selection Tables VERSION = 1
+# Formula VERSION = 0 (eg Joggle, Runout)
+# Neutral Factor Bend Table VERSION = 1
+# Bend Allowance Table VERSION = 1
+# Bend Deduction Table VERSION = 1
+# Feature Table VERSION = 0 (eg Lightening Cutout)
+#
+##BLOCK2##
+#
+# Contains the units of the parameters in the standards file. It can be metric
+# or english. A table cannot have more than one unit.  From NX12, two standards files can be used, one
+# for each unit of measure.
+#
+##BLOCK3## NEW
+#
+# A new block from NX12 that determines how the standards file interprets the bend angles.
+# It can be either INSIDE or OUTSIDE.  If INSIDE, the angle created between the webs will be
+# used in the bend and tool tables. If OUTSIDE, the angle as entered on the dialog will be used.
+# Once set, all tables in the file will use the same method.
+#
+##BLOCK4##
+#
+# Contains parameters used as arguments to tables and formulas that are not defined in this file
+# but must be provided by the feature.
+# E.g.
+# PARAMETERS
+# FEATURE,JOGGLE_DEPTH
+# FEATURE,ANGLE
+# EXPRESSION,BAF
+# END_OF_PARAMETERS
+#
+# The type FEATURE means that the string will be substituted by a value provided
+# by the API that processes the table.  
+# For example FEATURE JOGGLE_DEPTH means that the string JOGGLE_DEPTH will be substituted 
+# by a value before it is used. 
+# 
+# The type EXPRESSION means that the string should correspond to an expression in the 
+# part file.  
+#
+##BLOCK5##
+#
+# Contains the actual materials table
+# MATERIAL_TABLE  
+#
+#MATERIAL_TABLE
+#VERSION,1
+#Material_Name,Material,Grade,Bare_or_Clad,Cat,THICKNESS,BEND_RADIUS,NEUTRAL_FACTOR,RELIEF_DEPTH,RELIEF_WIDTH,JOGGLE_RADIUS,JOGGLE_LENGTH,Lightening_Cutout,DRG_NAME,DRG_BEND_RADIUS,
+#unique,show,show,show,show,show,show,show,hide,hide,show,Hide,Hide,attribute,attribute,
+#Mat1,Aluminium,2014,BARE,METAL,1.2,@Die1_Punch1_TABLE,0.33,2,2,2,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Aluminium 2014 Bare 1.2mm THK,Bend radius defined by tooling,
+#Mat2,Aluminium,2014,BARE,METAL,1.2,@Die2_Punch1_TABLE,@Die2_Punch1_TABLE,2,2,2,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Aluminium 2014 Bare 1.2mm THK,Bend radius defined by tooling,
+#Mat3,Aluminium,2014,BARE,METAL,1.6,@BEND_TOOL_ID_TABLE,@BEND_TOOL_ID_TABLE,2.5,2.5,2,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Aluminium 2014 Bare 1.6mm THK,Bend radius defined by tooling,
+#Mat4,Brass,4340,CLAD,METAL,3,3,@Die1_Punch1_TABLE,3,3,2,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Clad brass 3mm THK,Bend radius = 3mm,
+#Mat5,Bronze,4340,BARE,METAL,3.2,4.8,0.447,3,3,3,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Bronze 3.2mm THK,Bend radius = 4.8mm,
+#Mat6,Iron_Malleable,4340,BARE,METAL,3.6,4.8,0.447,3,3,3,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Malleable Iron, 3.6mm THK,Bend radius = 4.8mm,
+#Mat7,Iron_Nodular,4340,BARE,METAL,3.6,4.8,0.447,3,3,5,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Ductile Iron 3.6mm THK,Bend radius = 4.8mm,
+#Mat8,AISI_Steel,4340,CLAD,METAL,4,8,0.447,4,4,5,@JOGGLE_LENGTH_FORMULA_1,@LIGHTENING_CUTOUT_1,Ni-Chromium-molybdenum steel,Bend radius = 8mm,
+#END_OF_MATERIAL_TABLE
+#
+# 
+# The first row contains the names of the columns. The names should be one word only. 
+# Users can also use the keywords to define values for parameters that are recognised 
+# by NX, for e.g. THICKNESS, BEND_RADIUS and so on.
+# 
+# The second row decides the columns properties:  
+# unique    - There must be one column with this identifier. This column should contain unique  
+#             names of the material.  
+# show      - These columns will be used for filtering data through UI when selecting a material
+# hide      - The values of these columns will be stored but will not be used for filtering data
+# attribute - These columns contain values that are written back to NX as part attributes for use
+#             in, for example, PMI and drawings
+# 
+# A table entry can be a value, string, a pointer to another table or a pointer to a formula.
+# pointer to tables and formulas begin with @, for example @JOGGLE_LENGTH_FORMULA_1
+# 
+##BLOCK6##
+#
+# Contains the primary bend tool table.
+#BEND_TOOL_ID_TABLE
+#VERSION,1
+#Tool_Name,Thickness_Min,Thickness_Max,DIE_NAME,PUNCH_NAME,BEND_RADIUS,NEUTRAL_FACTOR
+#unique,show,show,show,show,show,show
+#ToolSet1,0.5,1,D1,P1,@Die1_Punch1_TABLE,0.33
+#ToolSet2,0.5,1,D1,P2,@Die1_Punch2_TABLE,@Die1_Punch2_TABLE
+#ToolSet3,2,6,D1,P3,3,0.33
+#ToolSet4,2,6,D1,P4,4,0.33
+#ToolSet5,4,10,D2,P1,@Die2_Punch1_TABLE,@Die2_Punch1_TABLE
+#ToolSet6,4,10,D2,P2,6,0.44
+#ToolSet7,4,10,D2,P3,6,0.44
+#ToolSet8,4,10,D2,P4,6,0.44
+#END_OF_BEND_TOOL_ID_TABLE
+#
+# This table provides a constant fixed punch and die tool set formatted in the same way as the
+# material table
+# 
+# The first row contains the names of the columns. The names should be one word only. 
+# Users can also use the keywords to define values for parameters that are recognised 
+# by NX, for e.g. THICKNESS, BEND_RADIUS and so on.
+# 
+# The second row decides the columns properties:  
+# unique    - There must be one column with this identifier. This column should contain unique  
+#             names of the tool set.  
+# show      - These columns will be used for filtering data through UI when selecting a material
+# hide      - The values of these columns will be stored but will not be used for filtering data
+#
+##BLOCK7## NEW
+#
+# Contains the secondary tool selection tables
+#
+#TOOL_SELECTION_TABLES
+#VERSION,1
+#NAME,Die1_Punch1_TABLE
+##DIE_NAME,D1
+##DIE_WIDTH,24
+##DIE_ANGLE,30
+##PUNCH_NAME,P1
+##PUNCH_RADIUS,4
+##MACHINE_NAME,Machine1
+#INPUTS,ANGLE,THICKNESS
+#TYPE,DUAL_COLUMN,#Column 1: Bend Radius, Column 2: Bend Allowance
+#EMPTY,1.6,1.6,2,2
+#454.13,0.5
+#604.13,1.81
+#754.16,3.12
+#904.38,4.56
+#1054.65,2.98
+#1205.36,1.96
+#1356.72,1.22
+#1509.79,0.68
+#16518.73,0.3
+#END_OF_Die1_Punch1_TABLE
+#
+# A separate table is required for each punch and die combination that produce unique output
+# 
+# Following the name and a number of comment rows, the first row is the input parameters
+# the second row is the material thickness.  Two columns are required to return the bend radius and
+# neutral factor/bend allowance/bend deduction in the following table
+# The first column lists the bend angles. Intermediate values are interpolated.
+#
+##BLOCK8##
+#
+# Contains secondary tables pointed to by values in the material table. 
+# A secondary table can have 1,2 or 3 input parameters.,
+# 
+# Example of table with 1 parameter: 
+# TABLE 
+# NAME,BEND_RADIUS_TABLE_1,
+# INPUTS,THICKNESS,
+# 1.6,3.2,
+# 1.7,3.2,
+# 1.8,3.8,
+# 1.9,4.2,
+# END_OF_TABLE 
+# 
+# First row of the table contains a unique name of the table.  
+# The second row contains the input arguments. The possible value of the input  
+# arguments are defined in the first column. The API that reads this table will provide  
+# the thickness value as input.  
+#  
+# Example of table with 2 parameters:  
+# TABLE  
+# NAME,JOGGLE_LENGTH_TABLE1  
+# INPUTS,THICKNESS,JOGGLE_DEPTH  
+# THICKNESS,3,4,4.5,5
+# 1.6,5,5,6,7
+# 1.8,5.5,5.7,6.5,7.4
+# 2.0,5.5,5.8,6.6,7.4
+# END_OF_TABLE  
+#  
+# The first parameter defines the values in the first column. The second parameter defines the  
+# value in the first row. The value in the first column of the first row can be null or any string.  
+# It is not used in a table with two parameters.  
+#  
+##BLOCK9##
+#
+# Contains formulas that are used to generate expressions in NX.,
+# FORMULA,
+# NAME, JOGGLE_LENGTH_FORMULA1 
+# INPUTS,JOGGLE_DEPTH,THICKNESS,JOGGLE_RADIUS
+# sqrt( 2*JOGGLE_DEPTH*(2*JOGGLE_RADIUS + THICKNESS) - pow(JOGGLE_DEPTH,2) ) 
+# END_OF_FORMULA 
+#  
+# The first row contains a unique formula name. The second row contains the list of 
+# input parameters to the formula. The parameters must be either keywords or same as one 
+# of the columns of the material table. 
+# The third row contains an expression that will be recreated in NX with the parameters 
+# substituted with actual values. 
+#
+##BLOCK10## NEW
+#
+# Contains bend tables defined for neutral factor, bend allowance and bend deduction 
+#
+# Example of bend table with neutral factor:
+#
+#NF_BEND_TABLE
+#VERSION,1
+#INPUTS,ANGLE,RADIUS
+#PAGE
+#1.5,1,1.2,1.6,2,2.5
+#45,0.35,0.44,0.58,0.69,0.81
+#90,0.45,0.54,0.68,0.79,0.91
+#135,0.55,0.64,0.78,0.89,1
+#END_OF_PAGE
+#PAGE
+#2,1,1.2,1.6,2,2.5
+#45,0.2,0.29,0.44,0.55,0.66
+#90,0.3,0.39,0.54,0.65,0.76
+#135,0.4,0.49,0.64,0.75,0.86
+#END_OF_PAGE
+#PAGE
+#3,1,1.2,1.6,2,2.5
+#45,0,0.09,0.24,0.35,0.46
+#90,0.1,0.19,0.34,0.45,0.56
+#135,0.2,0.29,0.44,0.55,0.66
+#END_OF_PAGE
+#END_OF_NF_BEND_TABLE
+#
+# The tables have three input parameters, thickness, angle and bend radius
+# A separate page is created for each thickness value
+# The angle is provided in the first column and the bend radius in the first row
+# The neutral factor is the output.
+# For example PAGE 1 contains the thickness of 1.5, for a bend angle of 90 degrees and a
+# bend radius of 2.0, the neutral factor equals 0.79
+#
+##BLOCK11##
+#  
+# Contains the standards values specific to a feature. Currently, only Lightening Cutout has
+# support for a feature table. The feature table can be thought of as a combination of material
+# table and a data table.
+# The first row contains a unique table name. The second row contains the names of
+# feature parameters. The third row contains the type of column. For feature tables
+# only two types are supported, i.e. unique and show. The unique column defines the
+# names of each set of feature data. All the other columns contain data values.
+#
+#
+# Disclaimer: THIS FILE DOES NOT CONTAIN ACTUAL DATA. PLEASE MODIFY THE TABLES
+#             WITH ACTUAL VALUES BEFORE USING THIS TABLE. SIEMENS IS NOT RESPONSIBLE FOR THE
+#             DATA CONTAINED IN THIS FILE. THIS FILE IS PROVIDED JUST AS A SAMPLE TO EXPLAIN
+#             THE FORMATTING OF A TYPICAL MATERIAL STANDARDS FILE.
+#
+#
+###############################################################################################
+#BLOCK1########################################################################################
+# Define the version of the standards file
+# This is a new block introduced for NX12 to determine the version of the standards file. DO NOT EDIT version numbers
+###############################################################################################
+VERSION,2
+#BLOCK2########################################################################################
+# Define the Units of the standards file
+# It can be METRIC or ENGLISH. If METRIC length will be mm and if ENGLISH, length will be in.
+###############################################################################################
+UNITS,METRIC
+#BLOCK3########################################################################################
+# Define the angle reference of the standards file
+# It can be INSIDE or OUTSIDE.  If INSIDE, the angle created between the webs will be used in the bend and
+# tool tables, if OUTSIDE, the angle as entered on the dialog will be used
+###############################################################################################
+ANGLE_REFERENCE,OUTSIDE
+#BLOCK4########################################################################################
+# Define parameters to be used for secondary tables and formulas 
+###############################################################################################
+PARAMETERS 
+FEATURE,JOGGLE_DEPTH 
+FEATURE,ANGLE 
+EXPRESSION,BAF 
+END_OF_PARAMETERS 
+#BLOCK5########################################################################################
+# Main material parameters table
+###############################################################################################
+MATERIAL_TABLE
+VERSION,2
+Material_Name,   	Bare_or_Clad,  Cat,   Type,   THICKNESS, BEND_RADIUS, 			NEUTRAL_FACTOR, 	RELIEF_DEPTH,	RELIEF_WIDTH,	JOGGLE_RADIUS, 	JOGGLE_LENGTH,            	Lightening_Cutout,       	DRG_NAME,								DRG_BEND_RADIUS,                   PHYSICAL_MATERIAL_NAME
+unique,          	show,          show,  show,   show,      show,        			show,           	show,			show,			show,          	hide,                     	hide, 					 	attribute,								attribute,	                       show 
+Aluminum_2014,   	BARE,          METAL, ISO,    0.63,      2.4,         			0.33,           	3.0,			3.0,			4,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Aluminium 2014 Bare 1.2mm THK,			Bend radius defined by tooling,    Aluminum_2014
+Aluminum_6061,   	BARE,          METAL, ISO,    1.6,       2.4,         			0.33,           	3.0,			3.0,			2.4,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Aluminium 2014 Bare 1.2mm THK,		    Bend radius defined by tooling,    Aluminum_6061
+Brass,           	CLAD,          METAL, ISO,    3.0,       3.0,         			0.33,           	3.0,			3.0,			2.4,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Aluminium 2014 Bare 1.2mm THK,			Bend radius defined by tooling,    Brass
+Bronze,          	BARE,          METAL, ISO,    3.2,       4.8,        	 		0.447,          	3.0,			3.0,			3.2,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Aluminium 2014 Bare 1.6mm THK,			Bend radius defined by tooling,    Bronze
+Iron_Malleable,  	BARE,          METAL, ISO,    3.6,       4.8,         			0.447,          	3.0,			3.0,			3.2,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Clad brass 3mm THK,						Bend radius = 3mm,                 Iron_Malleable
+Iron_Nodular,    	BARE,          METAL, ISO,    3.6,       4.8,         			0.447,          	3.0,			3.0,			5.0,           	@JOGGLE_LENGTH_FORMULA_1, 	@LIGHTENING_CUTOUT_1,    	Bronze 3.2mm THK,						Bend radius = 4.8mm,               Iron_Nodular
+AISI_Steel_4340, 	CLAD,          METAL, ISO,    4.0,       8.0,         			0.447,          	3.0,			3.0,			5.0,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Malleable Iron Unfinished 3.6mm THK,   	Bend radius = 4.8mm,	           AISI_Steel_4340
+Aluminum_2014_1,   	BARE,          METAL, ISO,    0.63,      2.4,         			0.33,           	3.0,			3.0,			4.0,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Aluminium 2014 Bare 1.2mm THK,			Bend radius defined by tooling,    Aluminum_2014
+Aluminum_6061_1,   	BARE,          METAL, ISO,    1.6,       @Die1_Punch4_TABLE,	0.33,				2.0,			2.0,			2.0,			@JOGGLE_LENGTH_FORMULA_1,	@LIGHTENING_CUTOUT_1,		Aluminium 2014 Bare 1.2mm THK,			Bend radius defined by tooling,    Aluminum_6061
+Brass_1,           	CLAD,          METAL, ISO,    3.0,       @Die2_Punch2_TABLE,	@Die2_Punch2_TABLE,	2.0,			2.0,			2.0,			@JOGGLE_LENGTH_FORMULA_1,	@LIGHTENING_CUTOUT_1,		Aluminium 2014 Bare 1.2mm THK,			Bend radius defined by tooling,	   Brass
+Bronze_1,          	BARE,          METAL, ISO,    3.2,       @BEND_TOOL_ID_TABLE,	@BEND_TOOL_ID_TABLE,2.5,			2.5,			2.0,			@JOGGLE_LENGTH_FORMULA_1,	@LIGHTENING_CUTOUT_1,		Aluminium 2014 Bare 1.6mm THK,			Bend radius defined by tooling,	   Bronze
+Iron_Malleable_1,  	BARE,          METAL, ISO,    3.6,       4.8,         			@Die2_Punch3_TABLE,	3.0,			3.0,			3.2,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Clad brass 3mm THK,						Bend radius = 3mm,                 Iron_Malleable
+Iron_Nodular_1,    	BARE,          METAL, ISO,    3.6,       4.8,         			0.447,          	3.0,			3.0,			5.0,           	@JOGGLE_LENGTH_FORMULA_1, 	@LIGHTENING_CUTOUT_1,    	Bronze 3.2mm THK,						Bend radius = 4.8mm,               Iron_Nodular
+AISI_Steel_4340_1, 	CLAD,          METAL, ISO,    4.0,       8.0,         			0.447,          	3.0,			3.0,			5.0,           	@JOGGLE_LENGTH_TABLE_1,  	@LIGHTENING_CUTOUT_1,    	Malleable Iron Unfinished 3.6mm THK,   	Bend radius = 4.8mm,	           AISI_Steel_4340
+END_OF_MATERIAL_TABLE
+###############################################################################################
+# Alternative Main material parameters table using bend allowance
+# NEUTRAL_FACTOR, BEND_ALLOWANCE or BEND_DEDUCTION can be used in the material file
+# This example shows Bend Allowance being used
+###############################################################################################
+#MATERIAL_TABLE
+#VERSION,1
+#Material_Name,		Bare_or_Clad,	Cat, 	THICKNESS, 	BEND_RADIUS,	BEND_ALLOWANCE,	RELIEF_DEPTH,	RELIEF_WIDTH,	JOGGLE_RADIUS,	JOGGLE_LENGTH,				Lightening_Cutout,		DRG_NAME,						DRG_BEND_RADIUS
+#unique, 			show, 			show,	show, 		show, 			show, 			show,			show,			show, 			hide,						hide,					attribute,						attribute
+#Aluminium,			BARE,			METAL,	1,			1,				2.1,			2,				2,				2,				@JOGGLE_LENGTH_FORMULA_1,	@LIGHTENING_CUTOUT_1,	Aluminium 2014 Bare 1.2mm THK,	Bend radius defined by tooling
+#Aluminium,			BARE,			METAL,	1,			2,				3.7,			2,				2,				2,				@JOGGLE_LENGTH_FORMULA_1,	@LIGHTENING_CUTOUT_1,	Aluminium 2014 Bare 1.2mm THK,	Bend radius defined by tooling
+#Aluminium,			BARE,			METAL,	2,			1,				2.6,			2.5,			2.5,			2,				@JOGGLE_LENGTH_FORMULA_1,	@LIGHTENING_CUTOUT_1,	Aluminium 2014 Bare 1.6mm THK,	Bend radius defined by tooling
+#END_OF_MATERIAL_TABLE
+#BLOCK6########################################################################################
+# Bend Tool ID Standards Table
+###############################################################################################
+BEND_TOOL_ID_TABLE
+VERSION,1
+Tool_Name,		Thickness_Min,	Thickness_Max,	DIE_NAME,	PUNCH_NAME,	BEND_RADIUS,		NEUTRAL_FACTOR
+unique,			show,			show,			show,		show,		show,				show
+5783-3285T,   	0.5,            1.0,            D1,			P1,			0.1, 				0.33
+2983-1928G,   	0.5,            1.0,            D1, 		P2,			0.2,         		0.33
+8852-2232T,   	0.3,            0.6,          	D1,			P3,			0.1,         		0.44
+ToolSet1,		2.0,			6.0,			D1,			P4,			@Die1_Punch4_TABLE,	@Die2_Punch4_TABLE
+ToolSet2,		2.0,			6.0,			D2,			P1,			4.0,				@Die2_Punch1_TABLE
+ToolSet3,		4.0,			10.0,			D2,			P2,			@Die2_Punch2_TABLE,	@Die2_Punch2_TABLE
+ToolSet4,		4.0,			10.0,			D2,			P3,			@Die2_Punch3_TABLE,	0.44
+ToolSet5,		4.0,			10.0,			D2,			P4,			6.0,				0.44
+END_OF_BEND_TOOL_ID_TABLE
+#BLOCK7########################################################################################
+# Tool selection tables
+###############################################################################################
+TABLE  
+NAME,Die1_Punch4_TABLE  
+#DIE_NAME,D1
+#DIE_WIDTH,24
+#DIE_ANGLE,30
+#PUNCH_NAME,P4
+#PUNCH_RADIUS,4
+#MACHINE_NAME,Machine1
+VERSION,1
+INPUTS,ANGLE,THICKNESS
+TYPE,DUAL_COLUMN
+#Column 1: Bend Radius, Column 2: Neutral Factor
+EMPTY,	1.2,	1.2,	1.6,	1.6,	2,		2,		3,		3					
+10,		2.5,	0.35,	3,		0.4,	4,		0.25,	5,		0.33						
+45,		3,		0.4,	3.5,	0.45,	4,		0.45,	8,		0.5						
+90,		4,		0.54,	4.2,	0.6,	5,		0.55,	7.5,	0.65						
+135,	4.5,	0.67,	6.2,	0.7,	6,		0.64,	8.5,	0.75						
+175,	8,		0.7,	7,		0.75,	7.5,	0.8,	9,		0.9
+END_OF_TABLE
+##############################################################################################
+TABLE
+NAME,Die2_Punch1_TABLE													
+#DIE_NAME	D2													
+#DIE_WIDTH	20													
+#PUNCH_NAME	P1													
+#PUNCH_RADIUS	2													
+#MACHINE_NAME	Machine1
+VERSION,1
+INPUTS,ANGLE,THICKNESS
+TYPE,DUAL_COLUMN	
+#Column 1: Bend Radius, Column 2: Neutral Factor										
+EMPTY,	1.2,	1.2,	1.6,	1.6,	2,		2,		3,		3				
+10,		2.5,	0.35,	3,		0.4,	4,		0.25,	5,		0.33					
+45,		3,		0.4,	3.5,	0.45,	4,		0.45,	8,		0.5					
+90,		4,		0.54,	4.2,	0.6,	5,		0.55,	7.5,	0.65					
+135,	4.5,	0.67,	6.2,	0.7,	6,		0.64,	8.5,	0.75					
+175,	8,		0.7,	7,		0.75,	7.5,	0.8,	9,		0.9					
+END_OF_TABLE	
+############################################################################################
+TABLE
+NAME,Die2_Punch2_TABLE
+#DIE_NAME,D2
+#DIE_WIDTH,16
+#DIE_ANGLE,78
+#PUNCH_NAME,P2
+#PUNCH_RADIUS,1.5
+#MACHINE_NAME,Machine1
+VERSION,1
+INPUTS,ANGLE,THICKNESS
+TYPE,DUAL_COLUMN
+#Column 1: Bend Radius, Column 2: Neutral Factor
+EMPTY,	1.2,	1.2,	1.6,	1.6,	2,		2,		3,		3,		4,		4			
+10,		2.5,	0.35,	3,		0.4,	4,		0.25,	5,		0.33,	5,		0.33			
+45,		3,		0.4,	3.5,	0.45,	4.25,	0.45,	6,		0.5,	6,		0.5		
+90,		4,		0.54,	4.2,	0.6,	5,		0.55,	7.5,	0.65,	7.5,	0.65			
+135,	4.5,	0.67,	6.2,	0.7,	6,		0.64,	8.5,	0.75,	8.5,	0.75				
+175,	8,		0.7,	7,		0.75,	7.5,	0.8,	9,		0.9,	9,		0.9
+END_OF_TABLE
+###############################################################################################
+TABLE
+NAME,Die2_Punch3_TABLE
+#DIE_NAME,D2
+#DIE_WIDTH,16
+#DIE_ANGLE,78
+#PUNCH_NAME,P3
+#PUNCH_RADIUS,1.5
+#MACHINE_NAME,Machine1
+VERSION,1
+INPUTS,ANGLE,THICKNESS
+TYPE,DUAL_COLUMN
+#Column 1: Bend Radius, Column 2: Neutral Factor
+EMPTY,	1.2,	1.2,	1.6,	1.6,	2,		2,		3,		3,		4,		4			
+10,		2.5,	0.35,	3,		0.4,	4,		0.25,	5,		0.33,	5,		0.33			
+45,		3,		0.4,	3.5,	0.45,	4.25,	0.45,	6,		0.5,	6,		0.5		
+90,		4,		0.54,	4.2,	0.6,	5,		0.55,	7.5,	0.65,	7.5,	0.65			
+135,	4.5,	0.67,	6.2,	0.7,	6,		0.64,	8.5,	0.75,	8.5,	0.75			
+175,	8,		0.7,	7,		0.75,	7.5,	0.8,	9,		0.9,	9,		0.9
+END_OF_TABLE
+###############################################################################################
+#BLOCK8########################################################################################
+# Secondary table for Joggle Runout(Length) values  
+###############################################################################################
+TABLE
+VERSION,0  
+NAME,JOGGLE_LENGTH_TABLE_1  
+INPUTS,JOGGLE_DEPTH,THICKNESS  
+EMPTY,  0.65,  0.98, 1.12,  2.0,   3.0,   3.5,  4.4
+0.65,   3.7,   3.8,  3.9,   5.2,   6.6,   7.6,  8.6
+0.98,   4.4,   4.6,  4.7,   5.5,   7.2,   9.2,  10.4
+1.12,   4.6,   4.9,  5.0,   5.6,   7.4,   9.4,  10.9
+2.8,    8.9,   9.1,  9.4,   9.8,   10.2,  12.5, 14.3
+3.75,   12.2,  12.6, 12.8,  13.7,  14.5,  15.7, 16.5
+5.56,   15.2,  15.8, 16.5,  16.8,  17.8,  18.5, 20.5
+6.66,   19.8,  20.8, 21.5,  23.2,  25.1,  26.8, 28.3
+8.01,   20.2,  20.6, 22.5,  25.4,  27.8,  29.3, 31.8
+10.2,   22.8,  23.5, 24.8,  27.5,  29.8,  31.9, 34.5
+END_OF_TABLE
+#BLOCK9########################################################################################
+# Joggle Runout formula  
+###############################################################################################  
+FORMULA  
+VERSION,0 
+NAME,JOGGLE_LENGTH_FORMULA_1  
+INPUTS,JOGGLE_DEPTH,THICKNESS,JOGGLE_RADIUS  
+sqrt( 2*JOGGLE_DEPTH*(2*JOGGLE_RADIUS + THICKNESS) - (JOGGLE_DEPTH*JOGGLE_DEPTH) )  
+END_OF_FORMULA 
+#BLOCK10########################################################################################
+#  Example Neutral Factor Bend Table
+###############################################################################################      
+TABLE
+VERSION,1      
+NAME,BEND_TABLE      
+INPUTS,THICKNESS,BEND_RADIUS,ANGLE   
+PAGE
+45,1,1.2,1.6,2,2.5,3,4,5,6,8,10,12,16,20,25,28,32,36,40,45,50,63,80,100
+0.63,0.55,0.64,0.79,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+1.5,0.35,0.44,0.58,0.69,0.81,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+2,0.20,0.29,0.44,0.55,0.66,0.75,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+2.5,0.09,0.18,0.33,0.44,0.55,0.64,0.79,0.90,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+3,0.00,0.09,0.24,0.35,0.46,0.55,0.69,0.81,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+3.5,0.00,0.01,0.16,0.27,0.38,0.47,0.62,0.73,0.82,0.96,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+4,0.00,0.00,0.09,0.20,0.31,0.41,0.55,0.66,0.75,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+4.5,0.00,0.00,0.03,0.14,0.26,0.35,0.49,0.60,0.69,0.84,0.95,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+5,0.00,0.00,0.00,0.09,0.20,0.29,0.44,0.55,0.64,0.79,0.90,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+6,0.00,0.00,0.00,0.00,0.11,0.20,0.35,0.46,0.55,0.69,0.81,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+7,0.00,0.00,0.00,0.00,0.04,0.13,0.27,0.38,0.47,0.62,0.73,0.82,0.96,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+8,0.00,0.00,0.00,0.00,0.00,0.06,0.20,0.31,0.41,0.55,0.66,0.75,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+9,0.00,0.00,0.00,0.00,0.00,0.00,0.14,0.26,0.35,0.49,0.60,0.69,0.84,0.95,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+10,0.00,0.00,0.00,0.00,0.00,0.00,0.09,0.20,0.29,0.44,0.55,0.64,0.79,0.90,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+11,0.00,0.00,0.00,0.00,0.00,0.00,0.04,0.16,0.25,0.39,0.50,0.59,0.74,0.85,0.96,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+12,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.11,0.20,0.35,0.46,0.55,0.69,0.81,0.92,0.97,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+13,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.07,0.16,0.31,0.42,0.51,0.65,0.77,0.88,0.93,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+14,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.04,0.13,0.27,0.38,0.47,0.62,0.73,0.84,0.90,0.96,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+15,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.09,0.24,0.35,0.44,0.58,0.69,0.81,0.86,0.93,0.99,1.00,1.00,1.00,1.00,1.00,1.00
+16,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.06,0.20,0.31,0.41,0.55,0.66,0.77,0.83,0.90,0.96,1.00,1.00,1.00,1.00,1.00,1.00
+17,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.03,0.17,0.28,0.38,0.52,0.63,0.74,0.80,0.87,0.93,0.98,1.00,1.00,1.00,1.00,1.00
+18,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.14,0.26,0.35,0.49,0.60,0.71,0.77,0.84,0.90,0.95,1.00,1.00,1.00,1.00,1.00
+19,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.12,0.23,0.32,0.46,0.58,0.69,0.74,0.81,0.87,0.92,0.98,1.00,1.00,1.00,1.00
+20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.09,0.20,0.29,0.44,0.55,0.66,0.72,0.79,0.84,0.90,0.96,1.00,1.00,1.00,1.00
+END_OF_PAGE     
+PAGE
+90,1,1.2,1.6,2,2.5,3,4,5,6,8,10,12,16,20,25,28,32,36,40,45,50,63,80,100
+0.63,0.65,0.74,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+1.5,0.45,0.54,0.68,0.79,0.91,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+2,0.30,0.39,0.54,0.65,0.76,0.85,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+2.5,0.19,0.28,0.43,0.54,0.65,0.74,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+3,0.10,0.19,0.34,0.45,0.56,0.65,0.79,0.91,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+3.5,0.02,0.11,0.26,0.37,0.48,0.57,0.72,0.83,0.92,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+4,0.00,0.05,0.19,0.30,0.41,0.51,0.65,0.76,0.85,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+4.5,0.00,0.00,0.13,0.24,0.36,0.45,0.59,0.70,0.79,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+5,0.00,0.00,0.08,0.19,0.30,0.39,0.54,0.65,0.74,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+6,0.00,0.00,0.00,0.10,0.21,0.30,0.45,0.56,0.65,0.79,0.91,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+7,0.00,0.00,0.00,0.02,0.14,0.23,0.37,0.48,0.57,0.72,0.83,0.92,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+8,0.00,0.00,0.00,0.00,0.07,0.16,0.30,0.41,0.51,0.65,0.76,0.85,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+9,0.00,0.00,0.00,0.00,0.01,0.10,0.24,0.36,0.45,0.59,0.70,0.79,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+10,0.00,0.00,0.00,0.00,0.00,0.05,0.19,0.30,0.39,0.54,0.65,0.74,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+11,0.00,0.00,0.00,0.00,0.00,0.00,0.14,0.26,0.35,0.49,0.60,0.69,0.84,0.95,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+12,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.21,0.30,0.45,0.56,0.65,0.79,0.91,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+13,0.00,0.00,0.00,0.00,0.00,0.00,0.06,0.17,0.26,0.41,0.52,0.61,0.75,0.87,0.98,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+14,0.00,0.00,0.00,0.00,0.00,0.00,0.02,0.14,0.23,0.37,0.48,0.57,0.72,0.83,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+15,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.19,0.34,0.45,0.54,0.68,0.79,0.91,0.96,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+16,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.07,0.16,0.30,0.41,0.51,0.65,0.76,0.87,0.93,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+17,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.04,0.13,0.27,0.38,0.48,0.62,0.73,0.84,0.90,0.97,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+18,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.01,0.10,0.24,0.36,0.45,0.59,0.70,0.81,0.87,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+19,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.07,0.22,0.33,0.42,0.56,0.68,0.79,0.84,0.91,0.97,1.00,1.00,1.00,1.00,1.00,1.00
+20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.05,0.19,0.30,0.39,0.54,0.65,0.76,0.82,0.89,0.94,1.00,1.00,1.00,1.00,1.00,1.00
+END_OF_PAGE
+PAGE
+135,1,1.2,1.6,2,2.5,3,4,5,6,8,10,12,16,20,25,28,32,36,40,45,50,63,80,100
+0.63,0.75,0.84,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+1.5,0.55,0.64,0.78,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+2,0.40,0.49,0.64,0.75,0.86,0.95,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+2.5,0.29,0.38,0.53,0.64,0.75,0.84,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+3,0.20,0.29,0.44,0.55,0.66,0.75,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+3.5,0.12,0.21,0.36,0.47,0.58,0.67,0.82,0.93,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+4,0.06,0.15,0.29,0.40,0.51,0.61,0.75,0.86,0.95,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+4.5,0.00,0.09,0.23,0.34,0.46,0.55,0.69,0.80,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+5,0.00,0.04,0.18,0.29,0.40,0.49,0.64,0.75,0.84,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+6,0.00,0.00,0.09,0.20,0.31,0.40,0.55,0.66,0.75,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+7,0.00,0.00,0.01,0.12,0.24,0.33,0.47,0.58,0.67,0.82,0.93,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+8,0.00,0.00,0.00,0.06,0.17,0.26,0.40,0.51,0.61,0.75,0.86,0.95,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+9,0.00,0.00,0.00,0.00,0.11,0.20,0.34,0.46,0.55,0.69,0.80,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+10,0.00,0.00,0.00,0.00,0.06,0.15,0.29,0.40,0.49,0.64,0.75,0.84,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+11,0.00,0.00,0.00,0.00,0.01,0.10,0.24,0.36,0.45,0.59,0.70,0.79,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+12,0.00,0.00,0.00,0.00,0.00,0.06,0.20,0.31,0.40,0.55,0.66,0.75,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+13,0.00,0.00,0.00,0.00,0.00,0.02,0.16,0.27,0.36,0.51,0.62,0.71,0.85,0.97,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+14,0.00,0.00,0.00,0.00,0.00,0.00,0.12,0.24,0.33,0.47,0.58,0.67,0.82,0.93,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+15,0.00,0.00,0.00,0.00,0.00,0.00,0.09,0.20,0.29,0.44,0.55,0.64,0.78,0.89,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+16,0.00,0.00,0.00,0.00,0.00,0.00,0.06,0.17,0.26,0.40,0.51,0.61,0.75,0.86,0.97,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+17,0.00,0.00,0.00,0.00,0.00,0.00,0.03,0.14,0.23,0.37,0.48,0.58,0.72,0.83,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+18,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.11,0.20,0.34,0.46,0.55,0.69,0.80,0.91,0.97,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+19,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.08,0.17,0.32,0.43,0.52,0.66,0.78,0.89,0.94,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.06,0.15,0.29,0.40,0.49,0.64,0.75,0.86,0.92,0.99,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+END_OF_PAGE
+END_OF_TABLE  
+###############################################################################################      
+#  Example Bend Allowance Table
+###############################################################################################      
+TABLE
+NAME,BEND_ALLOWANCE_TABLE														
+VERSION,1													
+INPUTS,ANGLE,BEND_RADIUS,THICKNESS
+PAGE
+0.5,	1.0,		2.0,		3.0
+10,		0.2033,		0.3778,		0.5524
+45,		0.9149,		1.7003,		2.4856
+90,		1.8299,		3.4006,		4.9713
+135,	2.7448,		5.1008,		7.4569
+170,	3.4564,		6.4233,		9.3902
+END_OF_PAGE
+PAGE
+1,		1.0,		2.0,		3.0
+10,		0.2321,		0.4066,		0.5812
+45,		1.0445,		1.8299,		2.6152
+90,		2.0890,		3.6597,		5.2304
+135,	3.1335,		5.4896,		7.8456
+170,	3.9459,		6.9128,		9.8797
+END_OF_PAGE
+PAGE
+2,		1.0,		2.0,		3.0
+10,		0.2897,		0.4642,		0.6388
+45,		1.3037,		2.0890,		2.8744
+90,		2.6074,		4.1781,		5.7488
+135,	3.9110,		6.2671,		8.6231
+170,	4.9250,		7.8919,		10.8588
+END_OF_PAGE
+PAGE
+3,		1.0,		2.0,		3.0
+10,		0.3473,		0.5218,		0.6963
+45,		1.5628,		2.3482,		3.1335
+90,		3.1257,		4.6964,		6.2671
+135,	4.6885,		7.0446,		9.4006
+170,	5.9041,		8.8710,		11.8378
+END_OF_PAGE
+END_OF_TABLE
+###############################################################################################      
+#  Example Bend Deduction Table
+###############################################################################################      
+TABLE
+NAME,BEND_DEDUCTION_TABLE														
+VERSION,1													
+INPUTS,ANGLE,BEND_RADIUS,THICKNESS	
+PAGE
+0.5,	1.0,		2.0,		3.0
+10,		0.0303,		-0.0268,	-0.0840
+45,		0.1981,		-0.0181,	-0.2342
+90,		0.9108,		0.8216,		0.7324
+135,	4.1083,		5.8026,		7.4969
+170,	30.3268,	49.2293,	68.1318
+END_OF_PAGE
+PAGE
+1.0,	1.0,		2.0,		3.0
+10,		0.1178,		0.0607,		0.0035
+45,		0.6123,		0.3961,		0.1800
+90,		1.9107,		1.8215,		1.7323
+135,	6.5223,		8.2166,		9.9109
+170,	41.7511,	60.6536,	79.5561
+END_OF_PAGE
+PAGE
+2.0,	1.0,		2.0,		3.0
+10,		0.2928,		0.2356,		0.1785
+45,		1.4407,		1.2245,		1.0084
+90,		3.9106,		3.8214,		3.7322
+135,	11.3502,	13.0445,	14.7388
+170,	64.5997,	83.5022,	102.4047
+END_OF_PAGE
+PAGE
+3.0,	1.0,		2.0,		3.0
+10,		0.4678,		0.4106,		0.3535
+45,		2.2691,		2.0529,		1.8368
+90,		5.9105,		5.8213,		5.7322
+135,	16.1782,	17.8725,	19.5668
+170,	87.4483,	106.3508,	125.2533
+END_OF_PAGE
+END_OF_TABLE
+#BLOCK11########################################################################################
+# Lightening Cutout Feature Standards Table
+###############################################################################################
+FEATURE_TABLE
+VERSION,0
+NAME,LIGHTENING_CUTOUT_1
+Display Name, Diameter, Length, Die_Radius, Clearance, Angle
+unique,       show,     show,   show,       show,      show
+STD_DIA-35,   35,       5,      3,          7,         45
+STD_DIA-55,   55,       6,      4,          6.5,       45
+STD_DIA-80,   80,       7,      4,          6,         45
+STD_DIA-90,   90,       8,      4,          7.5,       45
+STD_DIA-120,  120,      9,      6,          8,         45
+STD_DIA-180,  180,      10,     12,         28,        45
+END_OF_FEATURE_TABLE
+################################################################################################
+

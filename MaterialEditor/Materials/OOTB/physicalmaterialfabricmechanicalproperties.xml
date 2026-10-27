@@ -1,0 +1,53 @@
+<Property name="Young's Modulus - Longitudinal Direction (EA)"
+          neutralName="YoungsModulusEA"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+<Property name="Young's Modulus - Transverse Direction (EB)"
+          neutralName="YoungsModulusEB"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+<Property name="Major Poisson's Ratio in AB Direction (PRAB)"
+          neutralName="MajorPoissonsRatioPRAB"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+<Property name="Minor Poisson's Ratio in BA Direction (PRBA)"
+          neutralName="MinorPoissonsRatioPRBA"
+          valueType="float"
+          parentProperty="ElasticDependencyControl"
+          parentPropertyValToBeSensitive="3,4,5,6"
+          Dimensions="&MeasureUnitLess;" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+<Property name="Shear Modulus in AB Direction (GAB)"
+          neutralName="ShearModulusGAB"
+          valueType="float"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+<Property name="Compressive Stress Option (CSE)"
+          neutralName="CompressiveStressOptionCSE"
+          valueType="enum"
+          valueChoices="&Choice;Retain=0;
+                        &Choice;Eliminate=1"
+          valueSubtype="radio">
+    <DefaultValue value="0"/>
+</Property>
+
+
+

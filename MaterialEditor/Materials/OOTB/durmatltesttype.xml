@@ -1,0 +1,11 @@
+<Property name="Test Type"
+          neutralName="TestType"
+          valueType="enum"
+          valueChoices="&Choice;Tension=0&Choice;Torsion=1&Choice;Bending=2"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="2"
+                inclusive="true"/>
+</Property>

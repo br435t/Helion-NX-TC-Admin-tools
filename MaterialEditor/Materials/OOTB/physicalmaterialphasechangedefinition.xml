@@ -1,0 +1,57 @@
+                <Property name="Latent Heat (L)"
+                          neutralName="LatentHeat"
+                          valueType="scalarField"
+                          Dimensions="&MeasureLatentHeatPerMass;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Phase Change Temperature"
+                          neutralName="PhaseTemp"
+                          valueType="float"
+                          Dimensions="&MeasureTemperature;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&MinTemperature;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Phase Change Temperature Range"
+                          neutralName="PhaseTempRange"
+                          valueType="float"
+                          Dimensions="&MeasureTemperatureDifference;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Specific Heat Above Phase Change"
+                          neutralName="PhaseSpecificHeat"
+                          valueType="scalarField"
+                          Dimensions="&MeasureHeatCapacity;"
+                          scaleFactor="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                

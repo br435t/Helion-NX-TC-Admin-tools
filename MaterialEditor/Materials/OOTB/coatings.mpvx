@@ -1,0 +1,12 @@
+﻿
+<ReferenceProperty neutralName="CoatingsThickness"/>
+
+<ReferenceProperty neutralName="CoatingsCoverageRatio"/>
+
+<ReferenceProperty neutralName="CoatingsVisualizationColor"/>
+
+<ReferenceProperty neutralName="CoatingsStudioMaterialName"/>
+
+<ReferenceProperty neutralName="StudioMaterialSelectionList"/>
+
+<ReferenceProperty neutralName="ProcessNotes"/>

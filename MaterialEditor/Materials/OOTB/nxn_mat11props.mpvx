@@ -1,0 +1,20 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulus3"/>
+
+<ReferenceProperty neutralName="PoissonsRatio2"/>
+
+<ReferenceProperty neutralName="PoissonsRatio3"/>
+
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="StructuralDamping"/>
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion3"/>

@@ -1,0 +1,157 @@
+<!-- ================================================================================= -->
+<!-- ===========================  Isotropic ========================================== -->
+<!-- ================================================================================= -->
+<Property name="Electrical Conductivity"
+          neutralName="ElecConductivitybasic"
+          valueType="scalarField"
+          Dimensions="&MeasureElectricalConductivity;"
+          scaleFactor="false"
+          parentProperty="&Choice;ElectromagneticFrequency"
+          parentPropertyValToBeSensitive="&Choice;2">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Electrical Conductivity"
+          neutralName="ElecConductivity"
+          valueType="scalarField"
+          Dimensions="&MeasureElectricalConductivity;"
+          scaleFactor="false"
+          parentProperty="ElectConductivityMethod"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Electrical Conductivity"
+          neutralName="ElecConductivityhighfreq"
+          valueType="scalarField"
+          Dimensions="&MeasureElectricalConductivity;"
+          scaleFactor="false"
+          parentProperty="HighFrequencyDielectricModel"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
+<Property name="Calculate Conductivity from %IACS"
+          neutralName="CalculateConductivity"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateConductivity"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;0">
+    <DefaultValue value="Calculate Conductivity from %IACS"/>
+</Property>
+
+
+<Property name="%IACS"
+          neutralName="ElecConductivityIACS"
+          valueType="scalarField"
+          scaleFactor="false"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valuePercentMin;"
+                inclusive="true"/>
+    <UpperBound value="&valuePercentMax;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
+<Property name="Calculate %IACS from Conductivity"
+          neutralName="CalculatelinearIACS"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateIACSPercent"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;0">
+    <DefaultValue value="Calculate %IACS from Conductivity"/>
+</Property>
+
+
+<!-- ================================================================================= -->
+<!-- ============================  Nonlinear ========================================= -->
+<!-- ================================================================================= -->
+
+<Property name="Electrical Conductivity"
+          neutralName="NonlinearElecConductivity"
+          valueType="scalarField"
+          valueSubtype="compact"
+          Dimensions="&MeasureElectricalConductivity;"
+          scaleFactor="false"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="temperature,electric field strength"
+                autocreate="true"
+                type="&DomainUser;"
+                nVariables="2">
+            <Variable Name="temperature"
+                      Measure="&MeasureTemperature;"/>
+            <Variable Name="electric field strength"
+                      Measure="&MeasureElectricFieldStrength;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+
+<Property name="Calculate Conductivity from %IACS"
+          neutralName="CalculateNonLinearConductivity"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateNonLinearConductivity"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="Calculate Conductivity from %IACS"/>
+</Property>
+
+
+<Property name="%IACS"
+          neutralName="NonlinearElecConductivityIACS"
+          valueType="scalarField"
+          valueSubtype="compact"
+          scaleFactor="false"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain Name="temperature,electric field strength"
+                autocreate="true"
+                type="&DomainUser;"
+                nVariables="2">
+            <Variable Name="temperature"
+                      Measure="&MeasureTemperature;"/>
+            <Variable Name="electric field strength"
+                      Measure="&MeasureElectricFieldStrength;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+
+<Property name="Calculate %IACS from Conductivity"
+          neutralName="CalculateIACS"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateNonLinearIACSPercent"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElectConductivityMethod"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="Calculate %IACS from Conductivity"/>
+</Property>
+
+
+
+

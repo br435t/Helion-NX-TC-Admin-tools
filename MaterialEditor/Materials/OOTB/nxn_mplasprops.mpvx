@@ -1,0 +1,54 @@
+<ReferenceProperty neutralName="MatlNonlinearityType"
+                   valueChoices="&Choice;Elastoplastic: material (MPLAS)=3"
+                   defaultValue="3"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="YieldFunctionCriterion"
+                   valueChoices="&Choice;von Mises=1&Choice;Hill by Stress Ratios=7&Choice;Grey Cast Iron=8"
+                   defaultValue="1"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="HillRatio11"/>
+<ReferenceProperty neutralName="HillRatio22"/>
+<ReferenceProperty neutralName="HillRatio33"/>
+<ReferenceProperty neutralName="HillRatio12"/>
+<ReferenceProperty neutralName="HillRatio23"/>
+<ReferenceProperty neutralName="HillRatio13"/>
+
+<ReferenceProperty neutralName="HardeningRule"
+                   valueChoices="&Choice;Isotropic=1
+                                 &Choice;Sublayer Kinematic=4
+                                 &Choice;Isotropic + Chaboche Kinematic=5
+                                 &Choice;Isotropic Saturated + Chaboche Kinematic=6
+                                 &Choice;Isotropic Saturated=7"
+                   defaultValue="1"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="StressStrainDataType"
+                   valueChoices="&Choice;Engineering Stress-Strain=0
+                                 &Choice;Engineering-Plastic Strain=1;
+                                 &Choice;True Stress-Log Strain=2;
+                                 &Choice;Stress-Plastic Strain=3;"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+                   
+<ReferenceProperty neutralName="StressStrainCurvePlastic"/>
+
+<ReferenceProperty neutralName="StressStrainCurveCompression"/>
+
+<ReferenceProperty neutralName="StressStrainCurveTraction"/>
+
+<ReferenceProperty neutralName="PoissonsRatioPlastic"/>
+
+<ReferenceProperty neutralName="ChabocheKinematicHardening"/>
+<ReferenceProperty neutralName="Y0InitialStress"/>
+<ReferenceProperty neutralName="IsotropicSaturatedOption"/>
+<ReferenceProperty neutralName="IsotropicSaturatedSeries"/>

@@ -1,0 +1,28 @@
+<ReferenceProperty neutralName="StressStrainDataType"/>
+
+<ReferenceProperty neutralName="StressStrainFormatType"
+                   displayName="Stress-Strain Format Type"
+                   valueChoices="&Choice;Stress-Strain Curve=0;
+                                 &Choice;Bilinear by Work Hardening Slope (H)=1;"
+                   defaultValue="0"/>
+<ReferenceProperty neutralName="WorkHardeningSlopeH"/>
+<ReferenceProperty neutralName="StressStrainCurveTable"/>
+
+<ReferenceProperty neutralName="MatlNonlinearityType"
+                   valueChoices="&Choice;Nonlinear elastic: stress-strain (MATS1/NLELAST)=0;&Choice;Elastoplastic: stress-total strain (MATS1/PLASTIC)=1;&Choice;Elastoplastic: stress-plastic strain (MATS1/PLSTRN)=2;"
+                   defaultValue="1"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="YieldFunctionCriterion"
+                   valueChoices="&Choice;von Mises=1&Choice;Tresca=2&Choice;Mohr-Coulomb=3&Choice;Drucker-Prager=4"
+                   defaultValue="1"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="HardeningRule"
+                   valueChoices="&Choice;Isotropic=1&Choice;Kinematic=2&Choice;Mixed Hardening=3"
+                   defaultValue="1"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="InitialYieldPoint"/>
+
+<ReferenceProperty neutralName="InitialFrictionAngle"/>

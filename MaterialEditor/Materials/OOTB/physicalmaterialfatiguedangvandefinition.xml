@@ -1,0 +1,23 @@
+
+        <Property name="Fatigue Limit Strength in Bending"
+                  neutralName="DangVanFatigueLimitStrengthBending"
+                  editable="true"
+                  valueType="float"
+                  Dimensions="&MeasureStress;">
+           <DefaultValue value="&valueEmpty;"/>
+           <LowerBound value="0.0"
+                       inclusive="true"/>
+           <UpperBound value="&maxFloat;"
+                       inclusive="true"/>
+        </Property>
+        <Property name="Fatigue Limit Strength in Torsion"
+                  neutralName="DangVanFatigueLimitStrengthTorsion"
+                  editable="true"
+                  valueType="float"
+                  Dimensions="&MeasureStress;">
+           <DefaultValue value="&valueEmpty;"/>
+           <LowerBound value="0.0"
+                       inclusive="true"/>
+           <UpperBound value="&maxFloat;"
+                       inclusive="true"/>
+        </Property>

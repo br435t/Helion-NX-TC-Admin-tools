@@ -1,0 +1,69 @@
+<PropertyField name="Slope Field"
+               neutralName="SlopeField"
+               plot="false"
+               parentProperty="StressLifeDataFormat"
+               parentPropertyValToBeSensitive="2">
+    <DepDomain nVariables="1"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Slope">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Slope"
+                     DisplayName="Slope"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainUser;"
+                autocreate="true"
+                nVariables="1"
+                Name="Stress Amplitude">
+            <Variable Name="Stress Amplitude"
+                      Measure="&MeasureStress;"/>
+        </Domain>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainUser;"
+                             autocreate="true"
+                             nVariables="1"
+                             Name="Stress Amplitude">
+                <Variable Name="Stress Amplitude"
+                          Measure="&MeasureStress;"/>
+            </SecondaryDomain>
+        </Domain>
+    </FieldDefn>
+</PropertyField>
+
+<Property name="Stress Amplitude"
+          neutralName="StressAmplitudePointValue"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="StressLifeDataFormat"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Fatigue Life"
+          neutralName="FatigueLifePointValue"
+          valueType="scalarField"
+          Dimensions="&MeasureFatigueLife;"
+          parentProperty="StressLifeDataFormat"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueOne;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+

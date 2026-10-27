@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Materials SYSTEM "solverspecificnonphysicalmaterialproperties.dtd" >
+
+<Materials>
+    <Material type="&MaterialTypeCOMPOSITE;">
+        <Tab label="Composite">
+            <Group label="Architecture">
+                <Property name="Form"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="Form"
+                            valueType="enum"
+                            valueChoices="&MATERIALCOMPOSITEFORMCHOICES;">
+                    <DefaultValue value="&MaterialCompositeFormWOVEN;"/>
+                </Property>
+                <Property name="Weave Angle"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="WeaveAngle"
+                            valueType="scalarField"
+                            Dimensions="&MeasureAngle;">
+                    <DefaultValue value="&Angle90deg;"/>
+                    <LowerBound value="&AngleMin;"
+                      inclusive="true"/>
+                    <UpperBound value="&Angle180deg;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+
+                <Property name="Bolt Orientation"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="BoltOrientation"
+                            valueType="scalarField"
+                            Dimensions="&MeasureAngle;">
+                    <DefaultValue value="&AngleMin;"/>
+                    <LowerBound value="&AngleMin;"
+                      inclusive="true"/>
+                    <UpperBound value="&Angle180deg;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+            </Group>
+
+            <Group label="Density">
+                <Property name="Areal Density"
+                          solPrefixName="NonPhysicalProp_Composites_"
+                          solSuffixName="ArealDensity"
+                          valueType="scalarField"
+                          Dimensions="&MeasureMassPerArea;">
+                    <DefaultValue value="0.0000002" /> 
+                    <!-- 200 g/mm^2-->
+                    <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+            </Group>
+
+
+            <Group label="Roll">
+                <Property name="Width"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="RollWidth"
+                    valueType="scalarField"
+                    Dimensions="&MeasureLength;">
+                    <DefaultValue value="1219.2"/>
+                    <!-- 48 inches in mm -->
+                    <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+            </Group>
+
+            <Group label="Thickness">
+                <Property name="Uncured Thickness"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="UncuredThickness"
+                    valueType="scalarField"
+                    Dimensions="&MeasureLength;">
+                    <DefaultValue value="0.254"/>
+                    <!-- 0.01 inches in mm -->
+                    <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+
+                <Property name="Cured Thickness"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="CuredThickness"
+                    valueType="scalarField"
+                    Dimensions="&MeasureLength;">
+                    <DefaultValue value="0.254"/>
+                    <!-- 0.01 inches in mm -->
+                    <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+            </Group>
+
+            <Group label="Shear">
+                <Property name="Shear Limit"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="ShearLimit"
+                            valueType="scalarField"
+                            Dimensions="&MeasureAngle;">
+                    <DefaultValue value="&Angle30deg;"/>
+                    <LowerBound value="&AngleMin;"
+                        inclusive="true"/>
+                    <UpperBound value="&Angle90deg;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+            </Group>
+
+            <Group label="Radius of Curvature">
+                <Property name="Curvature Limit"
+                            solPrefixName="NonPhysicalProp_Composites_"
+                            solSuffixName="RadiusOfCurvatureLimit"
+                    valueType="scalarField"
+                    Dimensions="&MeasureLength;">
+                    <DefaultValue value="609.6"/>
+                    <!-- 24 inches in mm -->
+                    <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainConstant;"/>
+                    </FieldDefn>
+                </Property>
+            </Group>
+        </Tab>
+    </Material>
+</Materials>

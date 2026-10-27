@@ -1,0 +1,12 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Direct Complex=1"
+                   lockProp="true"
+                   showProp="false"/>
+<ReferenceProperty neutralName="MassDensityComplex"/>
+
+
+<ReferenceProperty neutralName="SpeedofSoundControl"
+                   valueChoices="&Choice;Complex and Frequency=1"
+                   lockProp="true"
+                   showProp="false"/>
+<ReferenceProperty neutralName ="SoundSpeedComplex"/>

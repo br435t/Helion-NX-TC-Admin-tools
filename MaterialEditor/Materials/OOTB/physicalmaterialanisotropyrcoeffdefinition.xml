@@ -1,0 +1,58 @@
+                <Property name="R0"
+                          neutralName="AnisotropyCoefficientR0"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="R45"
+                          neutralName="AnisotropyCoefficientR45"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="R90"
+                          neutralName="AnisotropyCoefficientR90"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                

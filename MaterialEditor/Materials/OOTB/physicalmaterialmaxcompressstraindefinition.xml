@@ -1,0 +1,52 @@
+        <Property name="Max Strain Compression (XC)"
+                  neutralName="MaxStrainCompression"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;MaximumTotalStrainFailureCriterion&Choice;StrainRatioFailureCriterion&Choice;MaterialType"
+                  parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&MaterialTypeISOTROPIC;,&MaterialTypeCOMPOUNDISOTROPIC;,&MaterialTypeMULTIMECHMICROSTRUCTURE;"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStrain;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Compression (XC2)"
+                  neutralName="MaxStrainCompression2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStrain;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;MaximumTotalStrainFailureCriterion&Choice;StrainRatioFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Compression (XC3)"
+                  neutralName="MaxStrainCompression3"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStrain;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;MaximumTotalStrainFailureCriterion&Choice;StrainRatioFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+

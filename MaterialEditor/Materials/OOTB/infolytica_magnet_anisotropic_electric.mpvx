@@ -1,0 +1,27 @@
+<!-- Conductivity/Resistivity -->
+<ReferenceProperty neutralName="ElectConductivityResistivityMode"/>
+<ReferenceProperty neutralName="ElectConductivityMethod"/>
+<ReferenceProperty neutralName="ElectResistivityMethod"/>
+<ReferenceProperty neutralName="AnisotropicLinearElectricConductivity"/>
+<ReferenceProperty neutralName="CalculateAnisotropicConductivity"/>
+<ReferenceProperty neutralName="AnisotropicLinearElectricConductivityIACS"/>
+<ReferenceProperty neutralName="CalculateAnisotropicIACS"/>
+
+<ReferenceProperty neutralName="NonlinearElecConductivity"/>
+<ReferenceProperty neutralName="CalculateNonLinearConductivity"/>
+<ReferenceProperty neutralName="CalculateIACS"/>
+
+<ReferenceProperty neutralName="AnisotropicLinearElectricResistivity"/>
+
+<ReferenceProperty neutralName="NonlinearElecResist"/>
+
+
+<!-- Permittivity -->
+<ReferenceProperty neutralName="AnisotropicLinearPermittivity"/>
+
+
+
+
+
+
+

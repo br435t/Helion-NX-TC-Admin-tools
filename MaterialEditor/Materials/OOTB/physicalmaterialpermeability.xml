@@ -1,0 +1,365 @@
+<Property name=""
+          neutralName="MagnetType"
+          valueType="enum"
+          valueChoices="&Choice;Soft Magnet=0&Choice;Permanent Magnet=1"
+          valueSubtype="radio"
+          parentProperty="ElectromagneticFrequency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+</Property>
+
+
+<!-- Linear Permeability Soft Electromagnet -->
+<Property name=""
+          neutralName="ElectroMagnetPermeabilityMethod"
+          valueType="enum"
+          valueChoices="&Choice;Linear Permeability=0&Choice;Complex Permeability=1&Choice;Nonlinear Permeability=2"
+          valueSubtype="radio"
+          parentProperty="MagnetType"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+</Property>
+
+
+
+<!-- Linear Permeability Permanent Electromagnet -->
+<Property name=""
+          neutralName="PermanentMagnetPermeabilityMethod"
+          valueType="enum"
+          valueChoices="&Choice;Linear Permeability=0&Choice;Nonlinear Permeability=1"
+          valueSubtype="radio"
+          parentProperty="MagnetType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+</Property>
+
+
+
+<!-- Linear Permeability Permanent Electromagnet -->
+<Property name=""
+          neutralName="PermanentMagnetPermeabilityDependency"
+          valueType="enum"
+          valueChoices="&Choice;Constant=0&Choice;Temperature Dependent=1"
+          valueSubtype="radio"
+          parentProperty="PermanentMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+</Property>
+
+
+<Property name="Specify Demagnetization"
+          neutralName="DemagnetizationSpecification"
+          valueType="bool"
+          parentProperty="PermanentMagnetPermeabilityDependency"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&BoolTrue;"/>
+</Property>
+
+
+<!-- linear -->
+<Property name="Relative Permeability"
+          neutralName="IsotropicLinearPermeability"
+          valueType="scalarField"
+          scaleFactor="false"
+          parentProperty="ElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Relative Permeability"
+          neutralName="IsotropicLinearPermeabilityPermMag"
+          valueType="float"
+          parentProperty="PermanentMagnetPermeabilityDependency"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+
+<!-- Complex Isotropic -->
+<Property name="Relative Permeability"
+          neutralName="ComplexIsotropicLinearPermeability"
+          valueType="complexField"
+          scaleFactor="false"
+          parentProperty="ElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainFrequency;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Relative Permeability"
+          neutralName="HighFreqComplexIsotropicLinearPermeability"
+          valueType="complexField"
+          scaleFactor="false"
+          parentProperty="HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="1,5">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+
+
+<!-- Linear Permanent Magnet -->
+<PropertyField name="Relative Permeability"
+               neutralName="IsotropicLinearPermeabilityPermanentMagnet"
+               valueSubtype="compact"
+               parentProperty="DemagnetizationSpecification"
+               parentPropertyValToBeSensitive="0">
+    <DepDomain nVariables="2"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Permanent Magnet - Relative Permeability">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability"
+                     DisplayName="Relative Permeability"
+                     NeutralName="RelativePermeability"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureMagneticFluxDensity;"
+                     Name="Remanence (Br)"
+                     DisplayName="Remanence (Br)"
+                     NeutralName="Remanence"
+                     DefaultValue="&valueZero;"
+                     LowerBound="&valueZero;"
+                     LowerBound_inclusive="true"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+
+<!-- Linear Permanent Magnet -->
+<PropertyField name="Relative Permeability"
+               neutralName="IsotropicLinearPermeabilityPermanentMagnetWithDemagnetization"
+               valueSubtype="compact"
+               parentProperty="DemagnetizationSpecification"
+               parentPropertyValToBeSensitive="1">
+    <DepDomain nVariables="3"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Permanent Magnet - Relative Permeability with Demagnetization">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permeability"
+                     DisplayName="Relative Permeability"
+                     NeutralName="RelativePermeability"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureMagneticFluxDensity;"
+                     Name="Remanence (Br)"
+                     DisplayName="Remanence (Br)"
+                     NeutralName="Remanence"
+                     DefaultValue="&valueZero;"
+                     LowerBound="&valueZero;"
+                     LowerBound_inclusive="true"/>
+        <DepVariable Measure="&MeasureMagneticFluxDensity;"
+                     Name="Demagnetization"
+                     DisplayName="Demagnetization"
+                     NeutralName="Demagnetization"
+                     DefaultValue="&valueEmpty;"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>
+
+
+<Property name="Remanence (Br)"
+          neutralName="Remanence"
+          valueType="float"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          parentProperty="&Choice;PermanentMagnetPermeabilityDependency"
+          parentPropertyValToBeSensitive="&Choice;0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+<Property name="Demagnetization"
+          neutralName="Demagnetization"
+          valueType="float"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          parentProperty="&Choice;PermanentMagnetPermeabilityDependency"
+          parentPropertyValToBeSensitive="&Choice;0">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+
+<Property name="Relative Permeability at Infinity"
+          neutralName="IsotropicLinearPermeabilityInfinity"
+          valueType="scalarField"
+          scaleFactor="false"
+          parentProperty="HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="2,4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Relative Permeability at Zero"
+          neutralName="IsotropicLinearPermeabilityZero"
+          valueType="scalarField"
+          scaleFactor="false"
+          parentProperty="HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="2,4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+<Property name="Relaxation Time (T0)"
+          neutralName="PermeabilityRelaxationTime"
+          valueType="scalarField"
+          Dimensions="&MeasureTime;"
+          scaleFactor="false"
+          parentProperty="HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>
+
+
+<!-- Nonlinear Permeability  -->
+<Property name="Nonlinear Isotropic (B)"
+          neutralName="NonlinearIsotropicPermeability"
+          valueType="scalarField_table"
+          plot="true"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          parentProperty="ElectroMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+               nCols="2"
+               minNumRows="1"
+               maxNumRows="5000">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Temperature"
+                       neutralName="isobhtemp"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTemperature;"
+                       allowUnspecifiedValue="false">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="BH Curve"
+                       neutralName="BHCurve"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureMagneticFluxDensity;"
+                       allowUnspecifiedValue="false">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="H"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFieldStrength;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+<Property name="Nonlinear Isotropic (B)"
+          neutralName="NonlinearIsotropicPermanentMagnetPermeability"
+          valueType="scalarField_table"
+          plot="true"
+          Dimensions="&MeasureMagneticFluxDensity;"
+          parentProperty="PermanentMagnetPermeabilityMethod"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+               nCols="2"
+               minNumRows="1"
+               maxNumRows="5000">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Temperature"
+                       neutralName="isobhtemp"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTemperature;"
+                       allowUnspecifiedValue="false">
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="BH Curve"
+                       neutralName="BHCurve"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       plot="true"
+                       Dimensions="&MeasureMagneticFluxDensity;"
+                       allowUnspecifiedValue="false">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain Name="H"
+                        type="&DomainGeneral;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureMagneticFieldStrength;"/>
+                </Domain>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+

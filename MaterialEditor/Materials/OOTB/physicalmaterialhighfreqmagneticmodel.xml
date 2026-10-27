@@ -1,0 +1,11 @@
+<Property name="High Frequency Model"
+          neutralName="HighFrequencyMagneticModel"
+          valueType="enum"
+          valueChoices="&Choice;Const+Sigma=1&Choice;Debye 1st Order=2&Choice;Drude 1st Order=3&Choice;Lorentz=4&Choice;Multiple Frequency=5&Choice;Multiple Poles=6"
+          parentProperty="ElectromagneticFrequency"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1"/>
+    <LowerBound value="1"/>
+    <UpperBound value="6"/>
+</Property>
+

@@ -1,0 +1,160 @@
+
+<Property name="Rate Strain Factor (C1) [1/(Pressure^C2 * Time)]"
+          neutralName="RateStrainFactorC1"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Main Factor (C1) [1/(Pressure^C2 * Time)]"
+          neutralName="MainFactorC1Norton"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="7">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Main Factor (C1)"
+          neutralName="MainFactorC1Garafalo"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureCoefficientPerTime;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="8">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Main Factor (A) [1/(Pressure^B * Time^D)]"
+          neutralName="MainFactorA"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="9">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Stress Power Exponent (C2)"
+          neutralName="StressPowerExponentC2"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="6,7">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Stress Power Exponent (C2)"
+          neutralName="StressPowerExponentC2Garafalo"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureStressCompliance;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="8">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Strain Power Exponent (C3)"
+          neutralName="StrainPowerExponentC3"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="6,8">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Exponential Factor (C4)"
+          neutralName="ExponentialFactorC4"
+          valueType="float"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureTemperature;"
+          scaleFactor="false"
+          parentPropertyValToBeSensitive="6,7,8">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Stress Power Exponent (B)"
+          neutralName="StressPowerExponentB"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="9">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Time Power Exponent (D)"
+          neutralName="TimePowerExponentD"
+          valueType="scalarField"
+          parentProperty="CreepFormulation"
+          Dimensions="&MeasureUnitLess;"
+          scaleFactor="false"
+          allowUnspecifiedValue="false"
+          parentPropertyValToBeSensitive="9">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

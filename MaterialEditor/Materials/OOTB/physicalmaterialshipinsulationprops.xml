@@ -1,0 +1,20 @@
+        <Property name="Fixed Stock Thickness"
+                  neutralName="enableTab1"
+                  valueType="bool">
+            <DefaultValue value="&BoolFalse;"/>
+        </Property>
+        <Property name="Default Thickness"
+                  neutralName="DefaultThickness"
+                  valueType="float"
+                  Dimensions="&MeasureLength;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Adhesive"
+                  neutralName="Adhesive"
+                  valueType="char">
+            <DefaultValue value="&valueBlank;"/>
+        </Property>

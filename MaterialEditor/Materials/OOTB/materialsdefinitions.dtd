@@ -1,0 +1,85 @@
+<!ENTITY CurrentVersion "1">
+<!-- This correlates to NX6; materials was viewed to not change often, so the complex -->
+<!-- mainVersion.QRMNumber.DevelopVersion was not implemented here.  At some point we -->
+<!-- may want to handle this or get the version in sync with the NX version numbers   -->
+<!ENTITY % propertyDefinition SYSTEM "materialproperty.dtd">
+<!ENTITY % constants SYSTEM "materialconstants.dtd">
+%constants;
+
+<!--  =================================================================
+                               Environments
+      ================================================================ -->
+
+<!ENTITY minAnlType "0">
+<!ENTITY unknownAnlType "0">
+<!ENTITY structuralAnlType "1">
+<!ENTITY thermalAnlType "2">
+<!ENTITY flowAnlType "3">
+<!ENTITY coupledAnlType "4">
+<!ENTITY mappingAnlType "5">
+<!ENTITY maxAnlTypes "5">
+
+<!ELEMENT Materials (Material)*>
+<!ATTLIST Materials
+    versionNumber CDATA #REQUIRED 
+    additionalUserProperties CDATA  #FIXED "false"
+>
+
+<!ELEMENT Material  (Property|
+                     PropertyField|
+                     Tab|
+                     Group)*>
+<!ATTLIST Material
+    name          CDATA #REQUIRED
+    neutralName   CDATA #REQUIRED
+    type (   0 |  1 |  2 |       4 |  5 |  6 |  7 |  8 |  9 | 
+            10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 
+            20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |  
+            30 | 31 | 32 | 33 |      35 | 36 | 37 | 38 | 39 | 
+            40 | 41 | 42 | 43 | 44 | 45 ) #REQUIRED
+    contextHelp   CDATA ""
+    versionNumber CDATA #REQUIRED 
+>
+
+
+<!ELEMENT Tab  ( (Property|PropertyField|Group|PropertyOverride)* )>
+<!ATTLIST Tab
+    label          CDATA #REQUIRED
+>
+<!ELEMENT Group  (  (PropertyOverride)*, 
+                    (TableRowsOverride)*, 
+                    (MatrixRowColOverride)*, 
+                    (Property|PropertyField)* )>
+<!ATTLIST Group
+    label          CDATA #REQUIRED
+    expanded (true | false) "true"
+    numColumns     CDATA "1"
+>
+
+<!ELEMENT PropertyOverride  EMPTY>
+<!ATTLIST PropertyOverride
+    neutralName          CDATA              #REQUIRED
+    value                CDATA              ""
+    valueChoices         CDATA              ""
+    valueToolTip         CDATA              ""    
+    displayName          CDATA              ""
+    valueLabel           CDATA              ""
+    showProp             (true | false )    "true"
+    lockProp             (true | false )    "false"
+    createProp           (true | false )    "true"
+>
+
+<!ELEMENT TableRowsOverride  EMPTY>
+<!ATTLIST TableRowsOverride
+    neutralName          CDATA #REQUIRED
+    nRows                CDATA #REQUIRED
+>
+
+<!ELEMENT MatrixRowColOverride  EMPTY>
+<!ATTLIST MatrixRowColOverride
+    neutralName          CDATA #REQUIRED
+    nRows                CDATA #REQUIRED
+    nCols                CDATA #REQUIRED
+>
+
+%propertyDefinition;

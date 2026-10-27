@@ -1,0 +1,8 @@
+<Property name="Multimech Input File"
+          neutralName="MicrostructuralModelFileSelector"
+          allowUnspecifiedValue="true"
+          valueSubtype="*.gmm,*.mm"
+          valueType="filename">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+

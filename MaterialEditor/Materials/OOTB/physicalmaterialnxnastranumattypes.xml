@@ -1,0 +1,148 @@
+<Group label="Model Type">
+    <Property name="Model Type"
+              neutralName="NxNastranUMATModelType"
+              valueType="enum"
+              valueChoices="&Choice;None=-777777&Choice;User Defined Material=0&Choice;User Defined Creep=1">
+      <DefaultValue value="-777777"/>
+      <LowerBound value="-777777"
+                  inclusive="true"/>
+      <UpperBound value="2"
+                  inclusive="true"/>
+    </Property>
+
+    <Property name="Threshold Strain (THRESH)"
+              neutralName="NxNastranUMATCreepThresholdStrain"
+              valueType="float"
+              Dimensions="&MeasureStrain;"
+              parentProperty="NxNastranUMATModelType"
+              parentPropertyValToBeSensitive="1">
+        <DefaultValue value="1.0e-12"/>
+        <LowerBound value="&valueZero;"
+                    inclusive="false"/>
+    </Property>
+
+    <Property name="Check Unit System"
+              neutralName="NxNastranUMATCheckUnitSystem"
+              valueType="enum"
+              valueChoices="&Choice;No=0;&Choice;Yes=1;"
+              Dimensions="&MeasureUnitLess;"
+              parentProperty="NxNastranUMATModelType"
+              parentPropertyValToBeSensitive="1">
+        <DefaultValue value="0"/>
+    </Property>
+
+    <Property name="Units(Force)(Length)(Mass)"
+              neutralName="NxNastranUMATForceLengthMassUnits"
+              valueType="enum"
+              parentProperty="NxNastranUMATCheckUnitSystem"
+              parentPropertyValToBeSensitive="1"
+              valueChoices="&Choice;(N)(m)(kg)=0;
+                            &Choice;(lbf)(ft)(slug)=1;
+                            &Choice;(kgf)(m)(kgf-s^2/m)=2;
+                            &Choice;(poundal)(ft)(lbm)=3;
+                            &Choice;(mN)(mm)(kg)=4;
+                            &Choice;(cN)(cm)(kg)=5;
+                            &Choice;(lbf)(in)(lbf-s^2/in)=6;
+                            &Choice;(kgf)(mm)(kgf-s^2/mm)=7;
+                            &Choice;(N)(mm)(tonne)=8">
+        <DefaultValue value="0"/>
+    </Property>
+</Group>
+
+<Group label="Model 1">
+    <Property name="MUMAT"
+              neutralName="NxNastranUMATModel1"
+              valueType="enum"
+              valueChoices="&Choice;None=-777777"
+              parentProperty="NxNastranUMATModelType"
+              parentPropertyValToBeSensitive="0">
+      <DefaultValue value="-777777"/>
+      <LowerBound value="-777777"
+                  inclusive="true"/>
+    </Property>
+    <Property name="MUCRP"
+              neutralName="NxNastranUMATCreepModel1"
+              valueType="enum"
+              valueChoices="&Choice;None=-777777"
+              parentProperty="NxNastranUMATModelType"
+              parentPropertyValToBeSensitive="1">
+      <DefaultValue value="-777777"/>
+      <LowerBound value="-777777"
+                  inclusive="true"/>
+    </Property>
+</Group>
+
+<Group label="Model 1 State Variables Output Request"
+       expanded="false">
+    <Property name="Export to Results File"
+              neutralName="NxNastranUMATStateVarOutputModel1"
+              valueType="int_array"
+              parentProperty="NxNastranUMATModel1"
+              parentPropertyValToBeSensitive="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"
+              preserveOrder="false"
+              duplicatesAllowed="false">
+      <DefaultValue value="&valueEmpty;"/>
+      <LowerBound value="0"
+                  inclusive="true"/>
+    </Property>
+    <Property name="Export to Results File"
+              neutralName="NxNastranUMATCreepStateVarOutputModel1"
+              valueType="int_array"
+              parentProperty="NxNastranUMATCreepModel1"
+              parentPropertyValToBeSensitive="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"
+              preserveOrder="false"
+              duplicatesAllowed="false">
+      <DefaultValue value="&valueEmpty;"/>
+      <LowerBound value="0"
+                  inclusive="true"/>
+    </Property>
+</Group>
+
+<Group label="Model 2">
+    <Property name="MUMAT"
+              neutralName="NxNastranUMATModel2"
+              valueType="enum"
+              valueChoices="&Choice;None=-777777"
+              parentProperty="NxNastranUMATModelType"
+              parentPropertyValToBeSensitive="0">
+      <DefaultValue value="-777777"/>
+      <LowerBound value="-777777"
+                  inclusive="true"/>
+    </Property>
+    <Property name="MUCRP"
+              neutralName="NxNastranUMATCreepModel2"
+              valueType="enum"
+              valueChoices="&Choice;None=-777777"
+              parentProperty="NxNastranUMATModelType"
+              parentPropertyValToBeSensitive="1">
+      <DefaultValue value="-777777"/>
+      <LowerBound value="-777777"
+                  inclusive="true"/>
+    </Property>
+</Group>
+
+<Group label="Model 2 State Variables Output Request"
+       expanded="false">
+  <Property name="Export to Results File"
+              neutralName="NxNastranUMATStateVarOutputModel2"
+              valueType="int_array"
+              parentProperty="NxNastranUMATModel2"
+              parentPropertyValToBeSensitive="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"
+              preserveOrder="false"
+              duplicatesAllowed="false">
+      <DefaultValue value="&valueEmpty;"/>
+      <LowerBound value="0"
+                  inclusive="true"/>
+    </Property>
+  <Property name="Export to Results File"
+              neutralName="NxNastranUMATCreepStateVarOutputModel2"
+              valueType="int_array"
+              parentProperty="NxNastranUMATCreepModel2"
+              parentPropertyValToBeSensitive="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"
+              preserveOrder="false"
+              duplicatesAllowed="false">
+      <DefaultValue value="&valueEmpty;"/>
+      <LowerBound value="0"
+                  inclusive="true"/>
+    </Property>
+</Group>

@@ -1,0 +1,33 @@
+<PropertyField name="Strain Life Data Field"
+               neutralName="StrainLifeDataField"
+               parentProperty="StrainLifeDataFormat"
+               parentPropertyValToBeSensitive="1">
+    <DepDomain nVariables="3"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Orthotropic Strain Amplitude">
+        <DepVariable Measure="&MeasureStrain;"
+                     Name="Strain Amplitude - 1"
+                     DisplayName="Strain Amplitude - 1"/>
+        <DepVariable Measure="&MeasureStrain;"
+                     Name="Strain Amplitude - 2"
+                     DisplayName="Strain Amplitude - 2"/>
+        <DepVariable Measure="&MeasureStrain;"
+                     Name="Strain Amplitude - 12"
+                     DisplayName="Strain Amplitude - 12"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainGeneral;"
+                nVariables="1">
+            <Variable Measure="&MeasureFatigueLife;"/>
+        </Domain>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainGeneral;"
+                             nVariables="1">
+                <Variable Measure="&MeasureFatigueLife;"/>
+            </SecondaryDomain>
+        </Domain>
+    </FieldDefn>
+</PropertyField>
+

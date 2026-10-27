@@ -1,0 +1,27 @@
+<Property name="Material Property Dependency"
+            neutralName="ElasticDependencyControl"
+            valueType="enum"
+            valueChoices="&Choice;Temperature Or Constant=0&Choice;Temperature and Degree of Cure and Glass Transition Temperature=1&Choice;Temperature and Degree of Crystallization=2&Choice;Constant=3&Choice;Temperature=4&Choice;Frequency=5&Choice;Frequency and Temperature=6">
+    <DefaultValue value= "0"/>
+</Property>
+<Property name="Anisotropic Material Property Dependency"
+          neutralName="AnisotropicElasticDependencyControl"
+          valueType="enum"
+          valueChoices="&Choice;Temperature Or Constant=0&Choice;Temperature and Degree of Cure and Glass Transition Temperature=1&Choice;Temperature and Degree of Crystallization=2&Choice;Constant=3&Choice;Temperature=4&Choice;Frequency=5&Choice;Frequency and Temperature=6"
+          parentProperty="MaterialType"
+          parentPropertyValToBeSensitive="&MaterialTypeANISOTROPIC;">
+    <DefaultValue value= "0"/>
+</Property>
+<Property name="Reference Frequency"
+          neutralName="ReferenceFrequency"
+          valueType="float"
+          Dimensions="&MeasureFrequency;"
+          parentProperty="&Choice;ElasticDependencyControl&Choice;AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="&Choice;5,6&Choice;5,6">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="true"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+

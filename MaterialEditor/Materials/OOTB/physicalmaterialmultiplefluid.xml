@@ -1,0 +1,55 @@
+<Property name="Fluid 1"
+          neutralName="Fluid1"
+          allowUnspecifiedValue="false"
+          valueType="material"
+          valueSubtype="noinherit">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+    <UpperBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+</Property>
+<Property name="Fluid 2"
+          neutralName="Fluid2"
+          allowUnspecifiedValue="true"
+          valueType="material"
+          valueSubtype="noinherit">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+    <UpperBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+</Property>
+<Property name="Fluid 3"
+          neutralName="Fluid3"
+          allowUnspecifiedValue="true"
+          valueType="material"
+          valueSubtype="noinherit">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+    <UpperBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+</Property>
+<Property name="Fluid 4"
+          neutralName="Fluid4"
+          allowUnspecifiedValue="true"
+          valueType="material"
+          valueSubtype="noinherit">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+    <UpperBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+</Property>
+<Property name="Fluid 5"
+          neutralName="Fluid5"
+          allowUnspecifiedValue="true"
+          valueType="material"
+          valueSubtype="noinherit">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+    <UpperBound value="&MaterialTypeFLUID;"
+                inclusive="true"/>
+</Property>

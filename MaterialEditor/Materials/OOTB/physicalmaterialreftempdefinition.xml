@@ -1,0 +1,10 @@
+                <Property name="Temperature (TREF)"
+                          neutralName="RefTemp"
+                          valueType="float"
+                          Dimensions="&MeasureTemperature;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&MinTemperature;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>

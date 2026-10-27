@@ -1,0 +1,455 @@
+
+<Property name="Temperature (G11)"
+          neutralName="ShearModulusTemperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G12)"
+          neutralName="G12Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G13)"
+          neutralName="G13Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G14)"
+          neutralName="G14Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G15)"
+          neutralName="G15Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G16)"
+          neutralName="G16Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Temperature (G21)"
+          neutralName="ShearModulus2Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G22)"
+          neutralName="G22Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G23)"
+          neutralName="G23Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G24)"
+          neutralName="G24Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G25)"
+          neutralName="G25Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G26)"
+          neutralName="G26Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Temperature (G31)"
+          neutralName="ShearModulus3Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G32)"
+          neutralName="G32Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G33)"
+          neutralName="G33Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G34)"
+          neutralName="G34Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G35)"
+          neutralName="G35Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G36)"
+          neutralName="G36Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Temperature (G41)"
+          neutralName="ShearModulus4Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G42)"
+          neutralName="G42Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G43)"
+          neutralName="G43Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G44)"
+          neutralName="G44Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G45)"
+          neutralName="G45Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G46)"
+          neutralName="G46Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Temperature (G51)"
+          neutralName="ShearModulus5Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G52)"
+          neutralName="G52Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G53)"
+          neutralName="G53Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G54)"
+          neutralName="G54Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G55)"
+          neutralName="G55Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G56)"
+          neutralName="G56Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Temperature (G61)"
+          neutralName="ShearModulus6Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G62)"
+          neutralName="G62Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G63)"
+          neutralName="G63Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G64)"
+          neutralName="G64Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G65)"
+          neutralName="G65Temperature"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Temperature (G66)"
+          neutralName="G66Temperature"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="4,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+

@@ -1,0 +1,6 @@
+﻿<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="LatentHeat"/>
+<ReferenceProperty neutralName="PhaseTemp"/>
+<ReferenceProperty neutralName="PhaseTempRange"/>
+<ReferenceProperty neutralName="PhaseSpecificHeat"/>
+<ReferenceProperty neutralName="StructuralDampingConstant"/>

@@ -1,0 +1,103 @@
+<Property name="D0"
+          neutralName="FuChangConstantD0"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="N0"
+          neutralName="FuChangConstantN0"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="N1"
+          neutralName="FuChangConstantN1"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="N2"
+          neutralName="FuChangConstantN2"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="N3"
+          neutralName="FuChangConstantN3"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="C0"
+          neutralName="FuChangConstantC0"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="C1"
+          neutralName="FuChangConstantC1"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="C2"
+          neutralName="FuChangConstantC2"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="C3"
+          neutralName="FuChangConstantC3"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="C4"
+          neutralName="FuChangConstantC4"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="C5"
+          neutralName="FuChangConstantC5"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="AIJ"
+          neutralName="FuChangConstantAIJ"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="SIJ"
+          neutralName="FuChangConstantSIJ"
+          valueType="float"
+          parentProperty="DamageDecayOption"
+          parentPropertyValToBeSensitive="&BoolFalse;">
+    <DefaultValue value="&valueZero;"/>
+</Property>

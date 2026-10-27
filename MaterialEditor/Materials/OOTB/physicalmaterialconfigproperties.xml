@@ -1,0 +1,6 @@
+<Property name=""
+            neutralName="ConfigurableProperties"
+            visible="false"
+            valueType="char">
+    <DefaultValue value="&valueBlank;"/>
+</Property>

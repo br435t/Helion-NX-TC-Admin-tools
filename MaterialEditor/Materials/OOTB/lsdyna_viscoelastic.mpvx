@@ -1,0 +1,19 @@
+        <ReferenceProperty neutralName="ViscoelasticDomain"
+                           valueChoices="&Choice;Time Domain Data=1;"
+                           defaultValue="1"
+                           showProp="false"
+                           lockProp="true"/>
+        <ReferenceProperty neutralName="ViscoelasticTimeDefn"
+                           valueChoices="&Choice;Prony Series=1;"
+                           defaultValue="1"
+                           showProp="false"
+                           lockProp="true"/>
+        <ReferenceProperty neutralName="PronyParameterType"
+                           valueChoices="&Choice;Coefficients=1;"
+                           defaultValue="1"
+                           showProp="false"
+                           lockProp="true"/>
+        <ReferenceProperty neutralName="ElasticBulkModulus"/>
+        <ReferenceProperty neutralName="ShortTermShearModulusG0"/>
+        <ReferenceProperty neutralName="LongTermShearModulusGI"/>
+        <ReferenceProperty neutralName="DecayConstant"/>

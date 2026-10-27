@@ -1,0 +1,42 @@
+        <Property name="Cyclic Yield Strength"
+                  neutralName="CyclicYieldStrength"
+                  editable="true"
+                  valueType="float"
+                  Dimensions="&MeasureStress;">
+           <DefaultValue value="&valueEmpty;"/>
+           <LowerBound value="0.0"
+                       inclusive="true"/>
+           <UpperBound value="&maxFloat;"
+                       inclusive="true"/>
+        </Property>
+        <Property name="Cyclic Strength Coefficient"
+                  neutralName="CyclicStrengthCoeff"
+                  editable="true"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;">
+           <DefaultValue value="&valueEmpty;"/>
+           <LowerBound value="0.0"
+                       inclusive="true"/>
+           <UpperBound value="&maxFloat;"
+                       inclusive="true"/>
+          <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+          </FieldDefn>      
+        </Property>
+
+        <Property name="Cyclic Strain Hardening Exponent"
+                  neutralName="CyclicStrainHardeningExp"
+                  editable="true"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;">
+           <DefaultValue value="&valueEmpty;"/>
+           <LowerBound value="0.0"
+                       inclusive="false"/>
+           <UpperBound value="1.0"
+                       inclusive="false"/>
+          <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+          </FieldDefn>
+        </Property>

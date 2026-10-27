@@ -1,0 +1,74 @@
+        <Property name="Structural Damping Coefficient (GE)"
+                  neutralName="StructuralDamping"
+                  valueType="scalarField"
+                  scaleFactor="true"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="3">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+                <Domain type="&DomainFrequency;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureFrequency;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Structural Damping Coefficient (GE)"
+                  neutralName="StructuralDampingConstant"
+                  valueType="scalarField"
+                  scaleFactor="true"
+                  parentProperty="&Choice;ElasticDependencyControl&Choice;AnisotropicElasticDependencyControl"
+                  parentPropertyValToBeSensitive="&Choice;3,4,5,6&Choice;3,4,5,6">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Temperature Dependent Structural Damping Coefficient (GE)"
+                  neutralName="StructuralDampingTemperature"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  scaleFactor="true"
+                  parentProperty="&Choice;ElasticDependencyControl&Choice;AnisotropicElasticDependencyControl"
+                  parentPropertyValToBeSensitive="&Choice;4,6&Choice;4,6">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Frequency Dependent Structural Damping Coefficient (GE)"
+                  neutralName="StructuralDampingFrequency"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  scaleFactor="true"
+                  parentProperty="&Choice;ElasticDependencyControl&Choice;AnisotropicElasticDependencyControl"
+                  parentPropertyValToBeSensitive="&Choice;5,6&Choice;5,6">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainFrequency;"/>
+            </FieldDefn>
+        </Property>
+

@@ -1,0 +1,17 @@
+
+
+<Property name="Leg Impact Offset"
+          neutralName="LegImpactdeformation"
+          valueType="float"
+          Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+
+
+
+
+

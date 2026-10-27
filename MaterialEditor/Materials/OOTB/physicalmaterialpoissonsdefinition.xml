@@ -1,0 +1,166 @@
+
+
+        <Property name="Poisson's Ratio (NU)"
+              neutralName="PoissonsRatioTXTg"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ElasticDependencyControl"
+              parentPropertyValToBeSensitive="1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </Property>
+        <Property name="Poisson's Ratio (NU23)"
+              neutralName="PoissonsRatioTXTg2"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ElasticDependencyControl"
+              parentPropertyValToBeSensitive="1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </Property>
+        <Property name="Poisson's Ratio (NU13)"
+              neutralName="PoissonsRatioTXTg3"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ElasticDependencyControl"
+              parentPropertyValToBeSensitive="1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </Property>
+        
+        
+        <Property name="Poisson's Ratio (NU)"
+                  neutralName="PoissonsRatioConstant"
+                  valueType="scalarField"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="3,4,5,6"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&IsotropicPoissonsMinimum;"
+                        inclusive="true"/>
+            <UpperBound value="&IsotropicPoissonsMaximum;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Temperature Dependent Poisson's Ratio (NU)"
+                  neutralName="PoissonsRatioTemperature"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="4,6"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&IsotropicPoissonsMinimum;"
+                        inclusive="true"/>
+            <UpperBound value="&IsotropicPoissonsMaximum;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Frequency Dependent Poisson's Ratio (NU)"
+                  neutralName="PoissonsRatioFrequency"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="5,6"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&IsotropicPoissonsMinimum;"
+                        inclusive="true"/>
+            <UpperBound value="&IsotropicPoissonsMaximum;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainFrequency;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Poisson's Ratio (NU)"
+                  neutralName="PoissonsRatio"
+                  editable="true"
+                  valueType="scalarField"
+                  scaleFactor="false"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Poisson's Ratio (NU13)"
+                  neutralName="PoissonsRatio3"
+                  editable="true"
+                  valueType="scalarField"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Poisson's Ratio (NU23)"
+                  neutralName="PoissonsRatio2"
+                  editable="true"
+                  valueType="scalarField"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Poisson's Ratio (NU)"
+              neutralName="PoissonsRatioTempDoc"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ElasticDependencyControl"
+              parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoc;
+        </Property>

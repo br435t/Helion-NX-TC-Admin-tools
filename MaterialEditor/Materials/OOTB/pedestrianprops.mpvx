@@ -1,0 +1,39 @@
+<ReferenceProperty neutralName="AdultHIC1000deformation"/>
+<ReferenceProperty neutralName="AdultHIC1700deformation"/>
+<ReferenceProperty neutralName="ChildHIC1000deformation"/>
+<ReferenceProperty neutralName="ChildHIC1700deformation"/>
+
+<ReferenceProperty neutralName="AdultWindshieldHIC1000deformation"/>
+<ReferenceProperty neutralName="AdultWindshieldHIC1700deformation"/>
+<ReferenceProperty neutralName="ChildWindshieldHIC1000deformation"/>
+<ReferenceProperty neutralName="ChildWindshieldHIC1700deformation"/>
+
+<ReferenceProperty neutralName="LegImpactdeformation"/>
+
+<ReferenceProperty neutralName="NCAPAdult650deformation"/>
+<ReferenceProperty neutralName="NCAPChild650deformation"/>
+<ReferenceProperty neutralName="NCAPAdult1000deformation"/>
+<ReferenceProperty neutralName="NCAPChild1000deformation"/>
+<ReferenceProperty neutralName="NCAPAdult1350deformation"/>
+<ReferenceProperty neutralName="NCAPChild1350deformation"/>
+<ReferenceProperty neutralName="NCAPAdult1700deformation"/>
+<ReferenceProperty neutralName="NCAPChild1700deformation"/>
+
+<ReferenceProperty neutralName="NCAPAdultGlass650deformation"/>
+<ReferenceProperty neutralName="NCAPChildGlass650deformation"/>
+<ReferenceProperty neutralName="NCAPAdultGlass1000deformation"/>
+<ReferenceProperty neutralName="NCAPChildGlass1000deformation"/>
+<ReferenceProperty neutralName="NCAPAdultGlass1350deformation"/>
+<ReferenceProperty neutralName="NCAPChildGlass1350deformation"/>
+<ReferenceProperty neutralName="NCAPAdultGlass1700deformation"/>
+<ReferenceProperty neutralName="NCAPChildGlass1700deformation"/>
+
+<ReferenceProperty neutralName="NCAPCyclist650deformation"/>
+<ReferenceProperty neutralName="NCAPCyclist1000deformation"/>
+<ReferenceProperty neutralName="NCAPCyclist1350deformation"/>
+<ReferenceProperty neutralName="NCAPCyclist1700deformation"/>
+<ReferenceProperty neutralName="NCAPCyclistGlass650deformation"/>
+<ReferenceProperty neutralName="NCAPCyclistGlass1000deformation"/>
+<ReferenceProperty neutralName="NCAPCyclistGlass1350deformation"/>
+<ReferenceProperty neutralName="NCAPCyclistGlass1700deformation"/>
+

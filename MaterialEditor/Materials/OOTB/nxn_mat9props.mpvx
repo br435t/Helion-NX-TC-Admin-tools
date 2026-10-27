@@ -1,0 +1,80 @@
+<ReferenceProperty neutralName="ReferenceFrequency"/>
+<ReferenceProperty neutralName="CalculateConstantValuesFreqDep"/>
+<ReferenceProperty neutralName="CalculateConstantValuesTempDep"/>
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="G12Constant"/>
+<ReferenceProperty neutralName="G13Constant"/>
+<ReferenceProperty neutralName="G14Constant"/>
+<ReferenceProperty neutralName="G15Constant"/>
+<ReferenceProperty neutralName="G16Constant"/>
+<ReferenceProperty neutralName="G22Constant"/>
+<ReferenceProperty neutralName="G23Constant"/>
+<ReferenceProperty neutralName="G24Constant"/>
+<ReferenceProperty neutralName="G25Constant"/>
+<ReferenceProperty neutralName="G26Constant"/>
+<ReferenceProperty neutralName="G33Constant"/>
+<ReferenceProperty neutralName="G34Constant"/>
+<ReferenceProperty neutralName="G35Constant"/>
+<ReferenceProperty neutralName="G36Constant"/>
+<ReferenceProperty neutralName="G44Constant"/>
+<ReferenceProperty neutralName="G45Constant"/>
+<ReferenceProperty neutralName="G46Constant"/>
+<ReferenceProperty neutralName="G55Constant"/>
+<ReferenceProperty neutralName="G56Constant"/>
+<ReferenceProperty neutralName="G66Constant"/>
+
+<ReferenceProperty neutralName="ShearModulusTemperature"/>
+<ReferenceProperty neutralName="G12Temperature"/>
+<ReferenceProperty neutralName="G13Temperature"/>
+<ReferenceProperty neutralName="G14Temperature"/>
+<ReferenceProperty neutralName="G15Temperature"/>
+<ReferenceProperty neutralName="G16Temperature"/>
+<ReferenceProperty neutralName="G22Temperature"/>
+<ReferenceProperty neutralName="G23Temperature"/>
+<ReferenceProperty neutralName="G24Temperature"/>
+<ReferenceProperty neutralName="G25Temperature"/>
+<ReferenceProperty neutralName="G26Temperature"/>
+<ReferenceProperty neutralName="G33Temperature"/>
+<ReferenceProperty neutralName="G34Temperature"/>
+<ReferenceProperty neutralName="G35Temperature"/>
+<ReferenceProperty neutralName="G36Temperature"/>
+<ReferenceProperty neutralName="G44Temperature"/>
+<ReferenceProperty neutralName="G45Temperature"/>
+<ReferenceProperty neutralName="G46Temperature"/>
+<ReferenceProperty neutralName="G55Temperature"/>
+<ReferenceProperty neutralName="G56Temperature"/>
+<ReferenceProperty neutralName="G66Temperature"/>
+
+<ReferenceProperty neutralName="ShearModulusFrequency"/>
+<ReferenceProperty neutralName="G12Frequency"/>
+<ReferenceProperty neutralName="G13Frequency"/>
+<ReferenceProperty neutralName="G14Frequency"/>
+<ReferenceProperty neutralName="G15Frequency"/>
+<ReferenceProperty neutralName="G16Frequency"/>
+<ReferenceProperty neutralName="G22Frequency"/>
+<ReferenceProperty neutralName="G23Frequency"/>
+<ReferenceProperty neutralName="G24Frequency"/>
+<ReferenceProperty neutralName="G25Frequency"/>
+<ReferenceProperty neutralName="G26Frequency"/>
+<ReferenceProperty neutralName="G33Frequency"/>
+<ReferenceProperty neutralName="G34Frequency"/>
+<ReferenceProperty neutralName="G35Frequency"/>
+<ReferenceProperty neutralName="G36Frequency"/>
+<ReferenceProperty neutralName="G44Frequency"/>
+<ReferenceProperty neutralName="G45Frequency"/>
+<ReferenceProperty neutralName="G46Frequency"/>
+<ReferenceProperty neutralName="G55Frequency"/>
+<ReferenceProperty neutralName="G56Frequency"/>
+<ReferenceProperty neutralName="G66Frequency"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+<ReferenceProperty neutralName="ThermalExpansion2"/>
+<ReferenceProperty neutralName="ThermalExpansion3"/>
+<ReferenceProperty neutralName="ThermalExpansion4"/>
+<ReferenceProperty neutralName="ThermalExpansion5"/>
+<ReferenceProperty neutralName="ThermalExpansion6"/>
+
+

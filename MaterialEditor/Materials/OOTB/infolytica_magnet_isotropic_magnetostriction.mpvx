@@ -1,0 +1,24 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=4"
+                   defaultValue="4"
+                   showProp="true"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulusTemperature"
+                   minValue="&valueZero;"
+                   minValueInclude="false"
+                   requiredInView="true"/>
+
+<ReferenceProperty neutralName="PoissonsRatioTemperature"
+                   minValue="&valueZero;"
+                   minValueInclude="true"
+                   maxValue="&IsotropicPoissonsMaximum;"
+                   maxValueInclude="true"
+                   requiredInView="true"/>
+
+
+<ReferenceProperty neutralName="StrainBCurve"
+                   minValue="&valueZero;"
+                   minValueInclude="true"
+                   requiredInView="true"/>
+

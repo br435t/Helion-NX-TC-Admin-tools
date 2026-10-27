@@ -1,0 +1,10 @@
+<ReferenceProperty neutralName="MatlNonlinearityType"
+                   commonProps="union"/>
+
+<ReferenceProperty neutralName="StrainRatedependency"/>
+
+<ReferenceProperty neutralName="StressStrainCurve2"/>
+
+<ReferenceProperty neutralName="ExponentBValue"/>
+
+<ReferenceProperty neutralName="StrainRateLevel"/>

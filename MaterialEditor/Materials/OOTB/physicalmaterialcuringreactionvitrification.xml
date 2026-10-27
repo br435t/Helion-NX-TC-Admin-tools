@@ -1,0 +1,66 @@
+<Property name="Model"
+            neutralName="CureVitrificationEffectType"
+            valueType="enum"
+            valueChoices="&Choice;None=0&Choice;Glass Transition (Tg) Based=1&Choice;Fournier model (Maximum Degree of Cure Based)=2"
+            parentProperty="CureKineticModel"
+            parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="2"/>
+</Property>
+
+<Property name="Diffusion Coefficient (bdif)"
+            neutralName="MaxCureBDIF"
+            valueType="float"
+            allowUnspecifiedValue="false"
+            parentProperty="CureVitrificationEffectType"
+            parentPropertyValToBeSensitive="1,2" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Diffusion Coefficient (bdif2)"
+            neutralName="MaxCureBDIF2"
+            valueType="float"
+            allowUnspecifiedValue="false"
+            parentProperty="CureVitrificationEffectType"
+            parentPropertyValToBeSensitive="1" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Diffusion Coefficient (bdif3)"
+            neutralName="MaxCureBDIF3"
+            valueType="float"
+            allowUnspecifiedValue="false"
+            parentProperty="CureVitrificationEffectType"
+            parentPropertyValToBeSensitive="1" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Maximum Degree of Cure (dcur)"
+            neutralName="MaxCureDCUR"
+            valueType="scalarField"
+            allowUnspecifiedValue="false"
+            parentProperty="CureVitrificationEffectType"
+            parentPropertyValToBeSensitive="2" >
+    <DefaultValue value="&valueOne;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

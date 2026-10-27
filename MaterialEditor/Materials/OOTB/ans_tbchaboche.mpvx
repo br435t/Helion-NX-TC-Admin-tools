@@ -1,0 +1,28 @@
+﻿<ReferenceProperty neutralName="MatlNonlinearityType"
+                   valueChoices="&Choice;Elastoplastic: material (MPLAS)=3;"
+                   showProp="false"/>
+
+<ReferenceProperty neutralName="YieldFunctionCriterion"
+                   valueChoices="&Choice;von Mises=1;&Choice;Hill by Stress Ratios=7;"/>
+
+<ReferenceProperty neutralName="HardeningRule"
+                   valueChoices="&Choice;Isotropic=1;&Choice;Kinematic=2"/>
+
+<ReferenceProperty neutralName="HillRatio11"/>
+
+<ReferenceProperty neutralName="HillRatio22"/>
+
+<ReferenceProperty neutralName="HillRatio33"/>
+
+<ReferenceProperty neutralName="HillRatio12"/>
+
+<ReferenceProperty neutralName="HillRatio23"/>
+
+<ReferenceProperty neutralName="HillRatio13"/>
+
+<ReferenceProperty neutralName="Yield"/>
+
+<ReferenceProperty neutralName="ChabocheNonlinearKinematicHardeningOption"/>
+
+<ReferenceProperty neutralName="ChabocheNonlinearKinematicHardening"
+                   rowSpecifierTitle="Number of Models to be Superimposed"/>

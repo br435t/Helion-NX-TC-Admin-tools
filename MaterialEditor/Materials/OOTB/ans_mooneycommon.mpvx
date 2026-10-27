@@ -1,0 +1,24 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="ThermalExpansion"/>
+
+<ReferenceProperty neutralName="BulkModulus"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="StructuralDamping"/>
+
+<ReferenceProperty neutralName="DistortionalStrainEnergyOrder"
+                   valueChoices="&Choice;2=2&Choice;3=3&Choice;5=5&Choice;9=9"/>
+
+<ReferenceProperty neutralName="DistortionalDeformationConstants"/>
+
+<ReferenceProperty neutralName="VDDefinitionMethod"/>
+
+<ReferenceProperty neutralName="VolumetricDeformationConstants"/>
+
+<ReferenceProperty neutralName="PureVolumetricCompressionTable"/>

@@ -1,0 +1,11 @@
+            <Property name="Gas Constant"
+                      neutralName="GasConstant"
+                      editable="true"
+                      valueType="float"
+                      Dimensions="&MeasureHeatCapacity;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="false"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+            </Property>

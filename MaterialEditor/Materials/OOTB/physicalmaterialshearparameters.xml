@@ -1,0 +1,60 @@
+        <Property name="Shape Parameters (K01S)"
+                    neutralName="ShapeParameter1"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;PuckFailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0.15"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shape Parameters (K01S)"
+                    neutralName="ShapeParameter2"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;PuckFailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0.27"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shape Parameters (K01S)"
+                    neutralName="ShapeParameter3"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;PuckFailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0.30;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shape Parameters (K01S)"
+                    neutralName="ShapeParameter4"
+                    parentProperty="&Choice;AllFailureCriterion&Choice;PuckFailureCriterion"
+                    parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                    valueType="scalarField"
+                    Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="0.30"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>

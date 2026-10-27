@@ -1,0 +1,42 @@
+                <Property name="A"
+                          neutralName="HartSmithLawA"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="false"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"/>
+                    </FieldDefn>
+                </Property>
+                <Property name="B"
+                          neutralName="HartSmithLawB"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="false"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"/>
+                    </FieldDefn>
+                </Property>
+                <Property name="C"
+                          neutralName="HartSmithLawC"
+                          valueType="scalarField">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="false"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"/>
+                    </FieldDefn>
+                </Property>
+                

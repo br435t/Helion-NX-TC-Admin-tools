@@ -1,0 +1,25 @@
+
+<ReferenceProperty neutralName="YoungsModulusConstant"/>
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+
+<ReferenceProperty neutralName="PoissonsRatioConstant"/>
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+
+<ReferenceProperty neutralName="AnisotropicElasticDependencyControl"/>
+<ReferenceProperty neutralName="StructuralDampingConstant"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansionConstant"/>
+
+<ReferenceProperty neutralName="MaxStressTensionConstant"/>
+
+<ReferenceProperty neutralName="MaxStressCompressionConstant"/>
+
+<ReferenceProperty neutralName="MaxInPlaneShearStressConstant"/>

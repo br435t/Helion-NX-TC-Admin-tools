@@ -1,0 +1,51 @@
+        <Property name="Max Strain Shear (XS)"
+                  neutralName="MaxInPlaneShearStrain"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;MaximumTotalStrainFailureCriterion&Choice;MaterialType"
+                  parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&MaterialTypeISOTROPIC;,&MaterialTypeCOMPOUNDISOTROPIC;,&MaterialTypeMULTIMECHMICROSTRUCTURE;"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStrain;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shear (X13)"
+                  neutralName="ShearStrain13"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStrain;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;MaximumTotalStrainFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Shear (X23)"
+                  neutralName="ShearStrain23"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStrain;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;MaximumTotalStrainFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+
+

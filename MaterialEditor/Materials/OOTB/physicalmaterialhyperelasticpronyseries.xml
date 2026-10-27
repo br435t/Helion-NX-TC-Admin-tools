@@ -1,0 +1,97 @@
+<Property name="Prony Series on Total Strain Energy"
+          neutralName="OnePronySeries"
+          valueType="scalarField_table"
+          plot="true"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>    
+    <TableDefn nRows="dynamic"
+               nCols="2"
+               minNumRows="1"
+               maxNumRows="20">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Weight Factor for Usage Modulus Ratio (Beta)"
+                       neutralName="WeightFactorBeta"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureUnitLess;">
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Relaxation Time (Tau)"
+                       neutralName="RelaxationTimeTau"
+                       valueType="float"
+                       Dimensions="&MeasureTime;">
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+<Property name="Prony Series on Deviatoric and Volume Strain Energy"
+          neutralName="TwoPronySeries"
+          valueType="scalarField_table"
+          plot="true"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="7">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="dynamic"
+               nCols="3"
+               minNumRows="1"
+               maxNumRows="20">
+        <DefaultCellValue row="1"
+                          column="1"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="2"
+                          value="&valueEmpty;"/>
+        <DefaultCellValue row="1"
+                          column="3"
+                          value="&valueEmpty;"/>
+        <TableProperty name="Weight Factor for Usage Modulus Ratio (Beta)"
+                       neutralName="WeightFactorBeta"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureUnitLess;">
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Relaxation Time (Tau)"
+                       neutralName="RelaxationTimeTau"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureTime;">
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Usage (Deviatoric=0, Volume=1)"
+                       neutralName="PronySeriesUsage"
+                       valueType="scalarField"
+                       Dimensions="&MeasureUnitLess;">
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&valueOne;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>

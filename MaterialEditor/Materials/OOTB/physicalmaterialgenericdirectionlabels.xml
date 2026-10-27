@@ -1,0 +1,28 @@
+        <Property name=""
+                  neutralName="1DirectionLabel"
+                  editable="false"
+                  valueType="char"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;">
+            <DefaultValue value="1-Direction"/>
+        </Property>
+        <Property name=""
+                  neutralName="2DirectionLabel"
+                  editable="false"
+                  valueType="char"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;">
+            <DefaultValue value="2-Direction"/>
+        </Property>
+        <Property name=""
+                  neutralName="12DirectionLabel"
+                  editable="false"
+                  valueType="char"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;">
+            <DefaultValue value="12-Direction"/>
+        </Property>
+               

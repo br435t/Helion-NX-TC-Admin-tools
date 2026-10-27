@@ -1,0 +1,27 @@
+<Property name="Max Strain Element Removal (DFAILM)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="DFAILM"
+        valueType="float"
+        Dimensions="&MeasureStrain;"
+        parentProperty="NonPhysicalProp_LSDyna_DFAILTcheck"
+        parentPropertyValToBeSensitive="1">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+
+<Property name="Max Tensorial Shear Strain Element Removal (DFAILS)"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="DFAILS"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="NonPhysicalProp_LSDyna_DFAILTcheck"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>

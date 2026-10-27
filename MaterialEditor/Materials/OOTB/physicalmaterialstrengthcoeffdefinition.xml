@@ -1,0 +1,19 @@
+                <Property name="Strength Coefficient"
+                          neutralName="StrengthCoefficient"
+                          editable="true"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;"
+                          scaleFactor="false" >
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>

@@ -1,0 +1,41 @@
+<Property name="NCAP Adult 650 Offset"
+          neutralName="NCAPAdult650deformation"
+          valueType="float"
+          Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="NCAP Adult 1000 Offset"
+                  neutralName="NCAPAdult1000deformation"
+                  valueType="float"
+                  Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="NCAP Adult 1350 Offset"
+          neutralName="NCAPAdult1350deformation"
+          valueType="float"
+          Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="NCAP Adult 1700 Offset"
+          neutralName="NCAPAdult1700deformation"
+          valueType="float"
+          Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+

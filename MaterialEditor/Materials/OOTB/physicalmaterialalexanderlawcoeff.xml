@@ -1,0 +1,83 @@
+        <Property name="C1"
+                  neutralName="AlexanderC1"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="C2"
+                  neutralName="AlexanderC2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="C3"
+                  neutralName="AlexanderC3"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="C4"
+                  neutralName="AlexanderC4"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="C5"
+                  neutralName="AlexanderC5"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="K"
+                  neutralName="AlexanderK"
+                  valueType="float"
+                  Dimensions="&MeasureStress;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+
+

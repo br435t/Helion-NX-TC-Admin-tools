@@ -1,0 +1,83 @@
+        <Property name="Max Stress Tension (ST)"
+                  neutralName="MaxStressTension"
+                  valueType="scalarField"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;HoffmanFailureCriterion&Choice;LaRC04FailureCriterion&Choice;PuckFailureCriterion&Choice;MaximumStressFailureCriterion&Choice;TsaiHillFailureCriterion&Choice;TsaiWuFailureCriterion&Choice;MaterialType"
+                  parentPropertyValToBeSensitive="&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;&MaterialTypeGASKETDISPLACEMENT;,&MaterialTypeANISOTROPIC;,&MaterialTypeMULTIMECHMICROSTRUCTURE;"
+                  Dimensions="&MeasureStress;">
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&minFloat;"
+                      inclusive="true"/>
+          <UpperBound value="&maxFloat;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+          </FieldDefn>
+        </Property>     
+        <Property name="Tension (ST2)"
+                  neutralName="MaxStressTension2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;HoffmanFailureCriterion&Choice;LaRC04FailureCriterion&Choice;PuckFailureCriterion&Choice;MaximumStressFailureCriterion&Choice;TsaiHillFailureCriterion&Choice;TsaiWuFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Tension (ST3)"
+                  neutralName="MaxStressTension3"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;HoffmanFailureCriterion&Choice;LaRC04FailureCriterion&Choice;PuckFailureCriterion&Choice;MaximumStressFailureCriterion&Choice;TsaiHillFailureCriterion&Choice;TsaiWuFailureCriterion"
+                  parentPropertyValToBeSensitive="&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1&Choice;1"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+        <Property name="Max Stress Tension (ST)"
+                  neutralName="MaxStressTensionConstant"
+                  valueType="scalarField"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="3,4,5,6"
+                  Dimensions="&MeasureStress;">
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&minFloat;"
+                      inclusive="true"/>
+          <UpperBound value="&maxFloat;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="1">
+            <Domain type="&DomainConstant;"/>
+          </FieldDefn>
+        </Property>
+        <Property name="Temperature Dependent Max Stress Tension (ST)"
+                  neutralName="MaxStressTensionTemperature"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="4,6"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="true" >
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&minFloat;"
+                      inclusive="true"/>
+          <UpperBound value="&maxFloat;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="1">
+            <Domain type="&DomainTemperature;"/>
+          </FieldDefn>
+        </Property>
+

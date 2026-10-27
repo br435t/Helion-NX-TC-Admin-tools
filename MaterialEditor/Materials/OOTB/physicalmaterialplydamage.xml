@@ -1,0 +1,678 @@
+<Property name=""
+          neutralName="DamageModelType"
+          valueType="enum"
+          valueChoices="&Choice;UD Ply Damage=0;
+                        &Choice;Enhanced UD Ply Damage=1;
+                        &Choice;WF Ply Damage=2;
+                        &Choice;None=3;
+                        &Choice;Rupture with Damage=4;
+                        &Choice;Constant Damage=5;
+                        &Choice;Mullins Effect=6;">
+    <DefaultValue value="3"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="6"
+                inclusive="true"/>
+</Property>
+<Property name="Enhanced UD Ply Damage Version"
+          neutralName="PlyDamageVersion"
+          valueType="enum"
+          valueChoices="&Choice;PLYENH=0&Choice;PLYENH2=1"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="1"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+<Property name="Maximum Damage Value (dmax)"
+          neutralName="MaximumDamageValue_dmax"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2">
+</Property>
+<Property name="Maximum Damage Value (ds)"
+          neutralName="MaximumDamageValue_ds"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1">
+</Property>
+<Property name="3D Effect Parameter (PE)"
+          neutralName="3DEffectParameter"
+          valueType="enum"
+          valueChoices="&Choice;Plane Stress Effect=0&Choice;3D Effect=1"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+<Property name="Energy Threshold of Fiber Direction 1 (Y11lim+)"
+          neutralName="EnergyThreshold_Y11lim+"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Energy Threshold of Fiber Direction 1 (Y11lim-)"
+          neutralName="EnergyThreshold_Y11lim-"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Energy Threshold of Fiber Direction 2 (Y22lim+)"
+          neutralName="EnergyThreshold_Y22lim+"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="2"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Energy Threshold of Fiber Direction 2 (Y22lim-)"
+          neutralName="EnergyThreshold_Y22lim-"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="2"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name=""
+          neutralName="NonlinearCoeffOption"
+          valueType="enum"
+          valueChoices="&Choice;Depends on Strain (PLYUNI2)=0&Choice;Depends on Stress  (PLYUNI3)=1"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0">
+    <DefaultValue value="1"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+
+<Property name="Nonlinear Option for Fiber Direction"
+          neutralName="NonlinearOption"
+          valueType="enum"
+          valueChoices="&Choice;Constant Coefficient=0&Choice;Function=1"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="1"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+
+<Property name="Non-linear Coefficient for Fiber Direction (Ksi+)"
+          neutralName="NonlinearCoefficient_Ksi+"
+          valueType="scalarField"
+          parentProperty="NonlinearOption"
+          parentPropertyValToBeSensitive="0"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Non-linear Coefficient for Fiber Direction (Ksi-)"
+          neutralName="NonlinearCoefficient_Ksi-"
+          valueType="scalarField"
+          parentProperty="NonlinearOption"
+          parentPropertyValToBeSensitive="0"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Non-linear Function for Fiber Direction 1"
+          neutralName="NonlinearFunction_Fonc+"
+          valueType="scalarField"
+          parentProperty="NonlinearOption"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainStrain;"
+                nVariables="1">
+            <Variable Measure="&MeasureStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Non-linear Function for Fiber Direction 2"
+          neutralName="NonlinearFunction_Fonc-"
+          valueType="scalarField"
+          parentProperty="NonlinearOption"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainStrain;"
+                nVariables="1">
+            <Variable Measure="&MeasureStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "NonlinearCoefficient_Ksi+"-->
+<Property name="Non-linear Coefficient for Fiber Direction (Ksi+)"
+          neutralName="NonlinearCoefficient_Ksi1+"
+          valueType="scalarField"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<!--This property has a common property in physicalmaterialplydamage.xml with a nuetral name "NonlinearCoefficient_Ksi-"-->
+<Property name="Non-linear Coefficient for Fiber Direction (Ksi-)"
+          neutralName="NonlinearCoefficient_Ksi1-"
+          valueType="scalarField"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Limit Value of Energy in Shear (YS12)"
+          neutralName="EnergyLimitValue"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,2"   
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Energy Threshold in Diffuse Damage (Y012)"
+          neutralName="DiffuseDamageEnergyThreshold"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Diffuse Damage Critical Value (YC12)"
+          neutralName="DiffuseDamageCriticalValue"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name=""
+          neutralName="ShearEnergyOption"
+          valueType="enum"
+          valueChoices="&Choice;Linear Damage Law for Shear=0&Choice;Non-linear Damage Law for Shear=1"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,2">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+<Property name="Energy Threshold in Shear (Y012)"
+          neutralName="EnergyThresholdInShear"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="ShearEnergyOption"
+          parentPropertyValToBeSensitive="0"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Critical Value of Energy in Shear (YC12)"
+          neutralName="EnergyCriticalValue"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="ShearEnergyOption"
+          parentPropertyValToBeSensitive="0"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Non-linear Function for Damage in Shear (Y12G)"
+          neutralName="DamageNonlinearFunction"
+          valueType="scalarField"
+          parentProperty="ShearEnergyOption"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainStress;"
+                nVariables="1">
+            <Variable Measure="&MeasureStress;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Limit Energy in the Transverse Direction (YS22)"
+          neutralName="LimitEnergyTransverseDirection"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0"  
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Coupling Coefficient (b2)"
+          neutralName="CouplingCoefficient_b2"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Coupling Coefficient (b3)"
+          neutralName="CouplingCoefficient_b3"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Coupling Coefficient (a)"
+          neutralName="CouplingCoefficient_a"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Coupling Coefficient (k)"
+          neutralName="CouplingCoefficient_k"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Coupling Coefficient (alpha)"
+          neutralName="CouplingCoefficient_alpha"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Coupling Coefficient (alpha1)"
+          neutralName="CouplingCoefficient_alpha1"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Coupling Coefficient (alpha2)"
+          neutralName="CouplingCoefficient_alpha2"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Ply Fracture Toughness (GIc)"
+          neutralName="PlyFractureToughness_GIc"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Ply Fracture Toughness (GIIc)"
+          neutralName="PlyFractureToughness_GIIc"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Ply Fracture Toughness (GIIIc)"
+          neutralName="PlyFractureToughness_GIIIc"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Maximum Transverse Micro-cracking Damage (R01)"
+          neutralName="MaxTransMicroCrackDamage"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0.7"/>
+</Property>
+<Property name="Initial Plastic Threshold (LITK)"
+          neutralName="InitialPlasticThreshold"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Parameter of Plastic Law (BIGK)"
+          neutralName="ParameterPlasticLaw"
+          valueType="scalarField"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2"
+          Dimensions="&MeasureStress;"     
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Exponent of Plastic Law (EXPN)"
+          neutralName="ExponentPlasticLaw"
+          valueType="scalarField"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2"          
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"
+                nVariables="1">
+            <Variable Measure="&MeasureTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Transition Thickness (HBAR)"
+          neutralName="TransitionThickness"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1"            
+          Dimensions="&MeasureLength;">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Parameter for Delay (ADEL)"
+          neutralName="ParameterDelay"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2,4">
+    <DefaultValue value="1.0"/>
+</Property>
+<Property name="Time for Delay (TAU)"
+          neutralName="TimeDelay"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2,4" 
+          Dimensions="&MeasureTime;">
+    <DefaultValue value="0.0"/>
+</Property>
+<Property name="Strategy for Maximum Damage (USER)"
+          neutralName="PlasticityStrategyParameter"
+          valueType="enum"
+          valueChoices="&Choice;Applied on delayed damage=0&Choice;Applied on static damage=1"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="1"/>
+</Property>
+<Property name="Non Local Parameter (QYT)"
+          neutralName="NonLocalParameter"
+          valueType="float"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="0,1,2"          
+          Dimensions="&MeasureLength;">
+    <DefaultValue value="0.0"/>
+</Property>
+
+
+<Property name="Equivalent Plastic Strain Limit"
+            neutralName="EquivalentPlasticStrainLimit"
+            valueType="scalarField"
+            Dimensions="&MeasureStrain;"
+            scaleFactor="false"
+            parentProperty="DamageModelType"
+            parentPropertyValToBeSensitive="4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Maximum Damage Value (DDEN)"
+            neutralName="MaxDamageValue"
+            valueType="float"
+            parentProperty="DamageModelType"
+            parentPropertyValToBeSensitive="4">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name=""
+          neutralName="LinearBehavior"
+          valueType="enum"
+          valueChoices="&Choice;Relative Damaged Poisson's Ratio (mode 1)=0&Choice;Damaged Poisson's Ratio (mode 2)=1"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="5">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>

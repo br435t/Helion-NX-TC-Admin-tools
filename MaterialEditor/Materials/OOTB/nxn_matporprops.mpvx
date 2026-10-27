@@ -1,0 +1,51 @@
+
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="PorousModels"
+                   valueChoices="&Choice;Craggs=0;&Choice;Delany-Bazley-Miki=1;&Choice;Johnson-Champoux-Allard=2;"/>
+
+<ReferenceProperty neutralName="FrameType"/>
+
+<ReferenceProperty neutralName="FrameTypeJohnson"         
+                   valueChoices="&Choice;Rigid Frame=0;&Choice;Limp Frame=1;"/> 
+
+<ReferenceProperty neutralName="SpeedofSoundControl"
+                   valueChoices="&Choice;Constant=0"
+                   defaultValue="0"
+                   showProp="false"/>
+<ReferenceProperty neutralName ="SoundSpeed"/>
+
+
+<ReferenceProperty neutralName="SpecificHeatRatio" />
+
+
+<ReferenceProperty neutralName="DynamicViscConstant" />
+
+
+<ReferenceProperty neutralName="PrandtlNumber" />
+
+
+
+<ReferenceProperty neutralName="StaticFlowResistivity" />
+
+
+<ReferenceProperty neutralName="Porosity" />
+
+
+<ReferenceProperty neutralName="Tortuosity" />
+
+<ReferenceProperty neutralName="CharacteristicViscousLength" />
+
+
+<ReferenceProperty neutralName="CharacteristicThermalLength" />
+
+
+<ReferenceProperty neutralName="FrameType" />
+
+
+<ReferenceProperty neutralName="FrameDensity" />

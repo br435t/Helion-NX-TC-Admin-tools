@@ -1,0 +1,6 @@
+<Property name="Heat Generation"
+    solPrefixName="NonPhysicalProp_Abaqus_"
+    solSuffixName="HeatGeneration"
+    valueType="bool">
+    <DefaultValue value="&BoolFalse;"/>
+</Property>

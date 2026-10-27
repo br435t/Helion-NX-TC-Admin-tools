@@ -1,0 +1,65 @@
+<Property name="Stress Limit Factors (SLIMT1)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SLIMT1"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Stress Limit Factors (SLIMC1)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SLIMC1"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Stress Limit Factors (SLIMT2)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SLIMT2"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Stress Limit Factors (SLIMC2)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SLIMC2"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="&valueEmpty;"/>
+</Property>
+<Property name="Stress Limit Factors (SLIMS)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SLIMS"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="&valueEmpty;"/>
+</Property>
+
+<Property name="Softening Reduction Factor (SOFTG)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SOFTG"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="1.0"/>
+</Property>
+
+<Property name="Number of Cycles (NCYRED)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="NCYRED"
+        valueType="int"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="1"/>
+</Property>

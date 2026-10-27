@@ -1,0 +1,65 @@
+<!-- ================================================================================================ -->
+<!-- TODO:  These are Isotropic Properties and need to get their corresponding Anisotropic Properties -->
+<!-- ================================================================================================ -->
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   defaultValue="0"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Temperature=0"/>
+
+<!-- Thermal Conductivity -->
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="TempConductivityBehaviorType"
+                   valueChoices="&Choice;Orthotropic=1"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ThermalConductivity"/>
+<ReferenceProperty neutralName="ThermalConductivity2"/>
+<ReferenceProperty neutralName="ThermalConductivity3"/>
+<ReferenceProperty neutralName="ThermalConductivity21"
+                   showProp="false"/>
+<ReferenceProperty neutralName="ThermalConductivity22"/>
+<ReferenceProperty neutralName="ThermalConductivity23"/>
+<ReferenceProperty neutralName="ThermalConductivity31"
+                   showProp="false"/>
+<ReferenceProperty neutralName="ThermalConductivity32"
+                   showProp="false"/>
+<ReferenceProperty neutralName="ThermalConductivity33"/>
+
+
+<!-- Specific Heat Capacity -->
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="SpecificHeat"/>
+
+
+<ReferenceProperty neutralName="PhaseSpecificHeat"/>
+
+
+<!-- Volumetric Expansion Coefficient / Ideal Gas -->
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"
+                   displayName="Thermal Expansion Coefficient (B)"/>
+<ReferenceProperty neutralName="ThermalExpansion2"/>
+<ReferenceProperty neutralName="ThermalExpansion3"/>
+<ReferenceProperty neutralName="ThermalExpansion4"/>
+<ReferenceProperty neutralName="ThermalExpansion5"/>
+<ReferenceProperty neutralName="ThermalExpansion6"/>
+
+<!-- Dynamic Viscosity -->
+<ReferenceProperty neutralName="DynamicViscosityControl"
+                   defaultValue="0"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Constant or Temperature=0"/>
+<ReferenceProperty neutralName="DynamicVisc"/>
+<ReferenceProperty neutralName="DynamicViscTempPress"/>
+

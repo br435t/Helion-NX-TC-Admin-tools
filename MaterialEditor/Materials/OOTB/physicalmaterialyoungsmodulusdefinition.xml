@@ -1,0 +1,171 @@
+
+        <Property name="Young's Modulus (E)"
+                  neutralName="YoungsModulusTXTg"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="false"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </Property>
+
+        <Property name="Young's Modulus (E2)"
+                  neutralName="YoungsModulusTXTg2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="false"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </Property>
+
+        <Property name="Young's Modulus (E3)"
+                  neutralName="YoungsModulusTXTg3"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="false"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="1">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </Property>
+        
+        <Property name="Young's Modulus (E)"
+                  neutralName="YoungsModulusConstant"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="3,4,5,6"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Temperature Dependent Young's Modulus (E)"
+                  neutralName="YoungsModulusTemperature"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="4,6"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Frequency Dependent Young's Modulus (E)"
+                  neutralName="YoungsModulusFrequency"
+                  valueType="scalarField"
+                  valueSubtype="&scalarFieldCompactDisplay;"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="5,6"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainFrequency;"/>
+            </FieldDefn>
+        </Property>
+
+        <Property name="Young's Modulus (E)"
+                  neutralName="YoungsModulus"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0"
+                  scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Young's Modulus (E2)"
+                  neutralName="YoungsModulus2"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+        <Property name="Young's Modulus (E3)"
+                  neutralName="YoungsModulus3"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="0"
+                  scaleFactor="false">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+
+        
+        <Property name="Young's Modulus (E)"
+                  neutralName="YoungsModulusTX"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="false"
+                  parentProperty="ElasticDependencyControl"
+                  parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoc;
+        </Property>
+

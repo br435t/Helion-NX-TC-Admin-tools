@@ -1,0 +1,63 @@
+
+<!-- Domains are from Part_Field_Domain_External.h.
+     The domain numbers are maintained as their enums
+ -->
+
+<!ENTITY DomainUser "-1">
+<!ENTITY DomainGeneral "0">
+<!ENTITY DomainParameter "1">
+<!ENTITY DomainLength "2">
+<!ENTITY DomainAngle "3">
+<!ENTITY DomainFrequency "4">
+<!ENTITY DomainTime "5">
+<!ENTITY DomainTemperature "6">
+<!ENTITY DomainGeneral2d "7">
+<!ENTITY DomainParameterPlane "8">
+<!ENTITY DomainPlane "9">
+<!ENTITY DomainPole "10">
+<!ENTITY DomainGeneral3d "11">
+<!ENTITY DomainParameterSpace "12">
+<!ENTITY DomainSpatial "13">
+<!ENTITY DomainCylindrical "14">
+<!ENTITY DomainSpherical "15">
+<!ENTITY DomainConstant "16">
+<!ENTITY DomainAngleAngle "17">
+<!ENTITY DomainNodeID "18">
+<!ENTITY DomainArea "19">
+<!ENTITY DomainVolume "20">
+<!ENTITY DomainStrain "21">
+<!ENTITY DomainStrainEnergy "22">
+<!ENTITY DomainStrainEnergyDensity "23">
+<!ENTITY DomainAcceleration "24">
+<!ENTITY DomainForce "25">
+<!ENTITY DomainPressure "26">
+<!ENTITY DomainMoment "27">
+<!ENTITY DomainStress "28">
+<!ENTITY DomainVelocity "29">
+<!ENTITY DomainComponentAcceleration "30">
+<!ENTITY DomainComponentForce "31">
+<!ENTITY DomainComponentPressure "32">
+<!ENTITY DomainComponentMoment "33">
+<!ENTITY DomainComponentVelocity "34">
+<!-- ENTITY DomainAxisSymmetricPlane "35" -->
+<!ENTITY DomainRadial "36">
+<!-- ENTITY DomainGeneralND "37" -->
+<!ENTITY DomainAxial "38">
+<!-- ENTITY DomainGapDistance "39" -->
+<!-- ENTITY DomainElementID "40" -->
+<!-- ENTITY DomainElementNodeID "41" -->
+<!ENTITY DomainStressTensor "42">
+<!ENTITY DomainStrainTensor "43">
+<!ENTITY DomainExcitation "44">
+<!ENTITY DomainDimensionless "45">
+<!ENTITY DomainDimensionlessPlane "46">
+<!ENTITY DomainDimensionlessSpace "47">
+<!ENTITY DomainDepth "48">
+<!ENTITY DomainBalancedStrainTensor "49">
+<!ENTITY DomainYAxis "50">
+<!ENTITY DomainZAxis "51">
+<!ENTITY DomainYZPlane "52">
+<!ENTITY DomainZXPlane "53">
+<!ENTITY DomainGeneralLength "54">
+
+

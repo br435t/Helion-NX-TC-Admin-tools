@@ -1,0 +1,720 @@
+
+        <!-- Mechanical Tab -->
+        <Tab label="Mechanical">
+            <Group label="Elastic Constants">
+                <PropertyOverride neutralName="YoungsModulus"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="YoungsModulus2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="YoungsModulus3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTXTg"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTXTg2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTXTg3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTX"
+                                  createProp="false"/>                
+                <PropertyOverride neutralName="PoissonsRatio"
+                                  createProp="false"/>                
+                <PropertyOverride neutralName="PoissonsRatio2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatio3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTXTg"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTXTg2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTXTg3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTempDoc"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ShearModulus"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ShearModulus2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ShearModulus3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="StructuralDamping"
+                                  createProp="false"/>
+                &youngsmodulusProperty;
+                &poissonsType;
+                &poissonsProperty;
+                &shearmodulusProperty;
+                &structuraldampingProperty;
+            </Group>
+            <Group label="Stress-Strain Related Properties">
+                &stressstrainProperty;
+            </Group>
+            <Group label="Stress-Strain Table">
+                &stressstrainPlastic;
+            </Group>
+            <Group label="Enhanced Composite Damage - Shear Properties">
+              &shearEnhancedCompositeProps;
+            </Group>
+            <Group label="Enhanced Composite Damage - Failure Properties">
+              &failureEnhancedCompositeProps;
+            </Group>
+            <Group label="Enhanced Composite Damage - Damage Properties">
+                &damageEnhancedCompositeProps;
+            </Group>
+            <Group label="Grey Cast Iron">
+                &stressstrainGreyCastIron;
+            </Group>
+            <Group label="Isotropic Saturated Portion (True Stress and Plastic Strain)">
+                &isotropicSaturated;
+            </Group>
+            <Group label="Chaboche Kinematic Hardening Portion (True Stress and Plastic Strain)">
+                &chabochekinematichardeningcoefficients;
+            </Group>
+            <Group label="Thermal Mechanical">
+                &thermalmechanicalProperty;
+            </Group>
+            <Group label="Damping Factor Properties">
+                &dampingfactor;
+            </Group>
+            <Group label="Transformation Induced Plasticity">
+                &transformInducedPlasticity;
+            </Group>
+            <Group label="Plastic Hardening">
+                &isotropicplastichardening;
+            </Group>
+            <Group label="Plasticity">
+                &ansysTBPlastic;
+            </Group>
+            <Group label="Chaboche Nonlinear Kinematic Hardening">
+                &chabocheNonlinearKinematicHardening;
+            </Group>
+        </Tab>
+        <!-- Strength Tab -->
+        <Tab label="Strength">
+            <Group label="Strength Properties">
+                <PropertyOverride neutralName="Yield1"
+                                  displayName="Yield Strength"/>
+                <PropertyOverride neutralName="Yield2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="Yield12"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="UltTensile2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="UltTensile12"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="TsaiWu13"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="TsaiWu23"
+                                  createProp="false"/>
+                &yieldStrengthProperty;
+                &ultTensileStrengthProperty;
+                &tsaiwuProperty;
+            </Group>
+            <Group label="Stress Limits">
+                <PropertyOverride neutralName="MaxStressTension"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStressTension2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStressTension3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStressCompression"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStressCompress2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStressCompress3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxInPlaneShearStress"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ShearStress13"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ShearStress23"
+                                  createProp="false"/>
+                &maxtensilestressProperty;
+                &maxcompressstressProperty;
+                &maxshearstressProperty;
+                &compositedamageprops;
+            </Group>
+            <Group label="Load Curve IDs">
+                &enhancedcompositedamageprops;
+            </Group>
+            <Group label="Strain Limits">
+                <PropertyOverride neutralName="MaxStrainTension"
+                                  displayName="Tension (XT)"/>
+                <PropertyOverride neutralName="MaxStrainTension2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStrainTension3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStrainCompression"
+                                  displayName="Compression (XC)"/>
+                <PropertyOverride neutralName="MaxStrainCompression2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxStrainCompression3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="MaxInPlaneShearStrain"
+                                  displayName="Shear (XS)"/>
+                <PropertyOverride neutralName="ShearStrain13"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ShearStrain23"
+                                  createProp="false"/>
+                &maxtensilestrainProperty;
+                &maxcompressstrainProperty;
+                &maxshearstrainProperty;
+            </Group>
+        </Tab>
+        <!-- Durability Tab -->
+        <Tab label="Durability">
+            <Group label="Fatigue Strength">
+                <PropertyOverride neutralName="FatigueStrengthCoeff2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="FatigueStrengthCoeff12"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="FatigueStrengthExp2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="FatigueStrengthExp12"
+                                  createProp="false"/>
+                &fatigueStressLifeType;
+                &fatigueStrength;
+                &fatigueStressLife;
+                &slopefield;
+            </Group>
+            <Group label="Fatigue Ductility">
+                <PropertyOverride neutralName="FatigueDuctCoeff2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="FatigueDuctCoeff12"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="FatigueDuctExp2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="FatigueDuctExp12"
+                                  createProp="false"/>
+                &fatigueStrainLifeType;
+                &fatigueDuctility;
+                &fatigueStrainLife;
+            </Group>
+            <Group label="Cyclic Parameters">
+                &fatigueCyclicParms;
+            </Group>
+            <Group label="Dang Van Parameters">
+                &fatigueDangVan;
+            </Group>
+            <Group label="ASME Parameters">
+                &areaReduction;
+            </Group>
+            <Group label="Test Condition Parameter">
+                &rratio;
+                &testtype;
+                &survivalprobability;
+                &tsigma;
+            </Group>
+            <Group label="Endurance Limit">
+                <PropertyOverride neutralName="EnduranceLimitOption"
+                                  displayName=""/>
+                &endurancelimitopt;
+            </Group>
+        </Tab>
+        <!-- Formability Tab -->
+        <Tab label="Formability">
+            <Group label="Properties">
+                &workHardening;
+                &formingLimit;
+                &plasticStrainRatio;
+                &initialStrain;
+                &hardeningExp;
+                &strengthCoeff;
+            </Group>
+            <Group label="Anisotropy Coefficients"
+                   numColumns="3">
+                <PropertyOverride neutralName="AnisotropyCoefficientR0"
+                                  valueLabel="R0"/>
+                <PropertyOverride neutralName="AnisotropyCoefficientR45"
+                                  valueLabel="R45"/>
+                <PropertyOverride neutralName="AnisotropyCoefficientR90"
+                                  valueLabel="R90"/>
+                &anisotropyRCoeff;
+            </Group>
+            <Group label="Thickness - Bend Radius - Neutral Factor"
+                   expanded="false">
+                <PropertyOverride neutralName="SIStockBendRadii"
+                                  valueLabel="Bend Radii - SI Material Stock"/>
+                <PropertyOverride neutralName="EnglishStockBendRadii"
+                                  valueLabel="Bend Radii - English Material Stock"/>
+                &thicknessBendRadiusNeutralFactor;
+            </Group>
+        </Tab>
+        <!-- Thermal Tab -->
+        <Tab label="Thermal">
+            <Group label="Thermal"
+                   expanded="true">
+                <PropertyOverride neutralName="SpecificHeatControl"
+                                  lockProp="true"
+                                  showProp="false"
+                                  valueChoices="&Choice;Constant or Temperature=0"/>
+                <PropertyOverride neutralName="ThermalConductivityControl"
+                                  lockProp="true"
+                                  showProp="false"
+                                  valueChoices="&Choice;Constant or Temperature=0"/>
+                <PropertyOverride neutralName="TempConductivityBehaviorType"
+                                  lockProp="true"
+                                  showProp="false"
+                                  valueChoices="&Choice;Isotropic=0"/>
+                <PropertyOverride neutralName="ThermalConductivity2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivity3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivity21"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivity22"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivity23"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivity31"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivity32"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivityTempPress"
+                                  createProp="false"/>                
+                <PropertyOverride neutralName="CuringMatConductivityBehaviorType"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivityTempDocTg"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivityTempDocTg2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalConductivityTempDocTg3"
+                                  createProp="false"/>                
+                <PropertyOverride neutralName="ThermalConductivity33"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalExpansion"
+                                  createProp="false"/>                
+                <PropertyOverride neutralName="ThermalExpansion2"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalExpansion3"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalExpansion4"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalExpansion5"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalExpansion6"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="ThermalExpansionA"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="SpecificHeatTempPress"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="SpecificHeatTempDocTg"
+                                  createProp="false"/>                
+                &reftempProperty;
+                &thermalexpansionProperty;
+                &thermalconductivityProperty;
+                &specificheatProperty;
+            </Group>
+            <Group label="Thermal Phase Change"
+                   expanded="false">
+                &phaseChangeProperty;
+            </Group>
+            <Group label="Infrared (IR) Coefficients"
+                   expanded="false">
+                <PropertyOverride neutralName="IrScatterCoeff"
+                                  displayName="Scattering"/>
+                <PropertyOverride neutralName="IrExtinctCoeff"
+                                  displayName="Extinction"/>
+                &ircoeffProperty;
+            </Group>
+            <Group label="Solar Coefficients"
+                   expanded="false">
+                <PropertyOverride neutralName="SolarScatterCoeff"
+                                  displayName="Scattering"/>
+                <PropertyOverride neutralName="SolarExtinctCoeff"
+                                  displayName="Extinction"/>
+                &solarcoeffProperty;
+            </Group>
+        </Tab>
+        <!-- Electromagnetic Tab -->
+        <Tab label="Electromagnetic">
+            <Group label="Model"
+                   expanded="true">
+                &electromagneticstype;
+            </Group>
+            <Group label="Electrical Properties"
+                   expanded="true">
+                <PropertyOverride neutralName="ElectConductivityResistivityMode"
+                                  displayName=""/>
+                <PropertyOverride neutralName="ElectConductivityMethod"
+                                  lockProp="false"
+                                  showProp="true"
+                                  valueChoices="&Choice;Linear=0&Choice;Nonlinear=1"/>
+                <PropertyOverride neutralName="ElectResistivityMethod"
+                                  lockProp="false"
+                                  showProp="true"
+                                  valueChoices="&Choice;Linear=0&Choice;Nonlinear=1"/>
+                <PropertyOverride neutralName="ElecResist"
+                                  displayName="Resistivity"/>
+                &highfreqelecmodel;
+                &elecrconductresistmode;
+                &elecrconductProperty;
+                &elecresistProperty;
+                &permittivity;
+                &dielectricplasmafreq;
+                &dielectriccollisionfreq;
+                &dielectricresonantfreq;
+                &dielectdampingcoeff;
+                &dielectpoles;
+            </Group>
+            <Group label="Magnetic Properties"
+                   expanded="true">
+                <PropertyOverride neutralName="ElecResist"
+                                  displayName="Resistivity"/>
+                <PropertyOverride neutralName="ElectroMagnetPermeabilityMethod"
+                                  displayName=""/>
+                <PropertyOverride neutralName="PermanentMagnetPermeabilityMethod"
+                                  displayName=""/>
+                &highfreqmagnmodel;
+                &magneticconductProperty;
+                &permeability;
+                &permeabilitylamination;
+                &ironloss;
+                &hysteresis;
+                &magneticplasmafreq;
+                &magneticcollisionfreq;
+                &magneticresonantfreq;
+                &magneticdampingcoeff;
+                &magneticpoles;
+            </Group>
+            <Group label="Magnetostriction Properties"
+                   expanded="true">
+                <PropertyOverride neutralName="StrainBCurveYY"
+                                  createProp="false"/>
+                <PropertyOverride neutralName="StrainBCurveZZ"
+                                  createProp="false"/>
+                &magnetoStrainBProps;
+            </Group>
+        </Tab>
+
+        <!-- Creep Tab -->
+        <Tab label="Creep">
+            <PropertyOverride neutralName="CreepReferenceTemperature"
+                              displayName="Reference Temperature (T0)"/>
+            <PropertyOverride neutralName="CreepThreshold"
+                              displayName="Threshold Strain (THRESH)"/>
+            <PropertyOverride neutralName="CreepThresholdVPlas"
+                              displayName="Threshold Strain (THRESH)"/>
+            &creepProperties;
+            <Group label="Power Law Creep Coefficients">
+                &creepPowerLaw;
+            </Group>
+            <Group label="C1 Coefficient">
+                &creepKMC1;
+            </Group>
+            <Group label="C2 Coefficient">
+                &creepKMC2;
+            </Group>
+            <Group label="C3 Coefficient">
+                &creepKMC3;
+            </Group>
+            <Group label="Uniaxial Rheological Parameters">
+                &creepUniaxialRheologic;
+            </Group>
+            <Group label="Viscoplastic Creep Coefficients">
+                &creepViscoplastic;
+            </Group>
+        </Tab>
+        <!-- ViscoElasticity Tab        -->
+        <Tab label="Viscoelasticity">
+            <PropertyOverride neutralName="ViscoelasticType"
+                              displayName="Viscoelastic Type"
+                              lockProp="true"/>
+            <PropertyOverride neutralName="ViscoelasticType2"
+                              displayName="Viscoelastic Type"
+                              lockProp="true"/>
+            <PropertyOverride neutralName="ViscoelasticDomain"
+                              lockProp="false"
+                              valueChoices="&Choice;##397None=0;
+                                            &Choice;Time Domain Data=1;
+                                            &Choice;Frequency Domain Data=2;
+                                            &Choice;Zener=3;
+                                            &Choice;Maxwell=4;
+                                            &Choice;Kelvin=5;"/>
+            &viscoelasticDefn;
+            <Group label="Time Domain Viscoelasticity Properties">
+                <PropertyOverride neutralName="TimeDomainLongTermShearCompliance"
+                                  displayName="Long-Term Normalized Shear Compliance (SHRINF)"/>
+                <PropertyOverride neutralName="TimeDomainLongTermBulkCompliance"
+                                  displayName="Long-Term Normalized Bulk Compliance (VOLINF)"/>
+                <PropertyOverride neutralName="TimeDomainLongTermShearRelaxation"
+                                  displayName="Long-Term Normalized Shear Relaxation (SHRINF)"/>
+                <PropertyOverride neutralName="TimeDomainLongTermBulkRelaxation"
+                                  displayName="Long-Term Normalized Bulk Relaxation (VOLINF)"/>
+                <PropertyOverride neutralName="TimeNormalizedShearCompliance"
+                                  displayName="Normalized Shear Compliance"
+                                  valueLabel="Time Domain - Normalized Shear Compliance"/>
+                <PropertyOverride neutralName="TimeNormalizedBulkCompliance"
+                                  displayName="Normalized Bulk Compliance"
+                                  valueLabel="Time Domain - Normalized Bulk Compliance"/>
+                <PropertyOverride neutralName="TimeShearBulkComplianceData"
+                                  displayName="Shear and Bulk Compliance Data"
+                                  valueLabel="Time Domain - Shear and Bulk Compliance Data"/>
+                <PropertyOverride neutralName="TimeNormalizedShearRelaxation"
+                                  displayName="Normalized Shear Relaxation"
+                                  valueLabel="Time Domain - Normalized Shear Relaxation"/>
+                <PropertyOverride neutralName="TimeNormalizedBulkRelaxation"
+                                  displayName="Normalized Bulk Relaxation"
+                                  valueLabel="Time Domain - Normalized Bulk Relaxation"/>
+                <PropertyOverride neutralName="TimeShearBulkRelaxationData"
+                                  displayName="Normalized Shear and Bulk Relaxation Data"
+                                  valueLabel="Time Domain - Normalized Shear and Bulk Relaxation Data"/>
+                <PropertyOverride neutralName="ViscoelasticPronyTimeParms"
+                                  displayName="Prony Series Parameters"
+                                  valueLabel="Time Domain - Prony Series Parameters"/>
+                <PropertyOverride neutralName="ViscoelasticTimeFreqTabularData"
+                                  displayName="Frequency Tabular Data"
+                                  valueLabel="Time Domain - Frequency Tabular Data"/>
+                &viscoelasticTimeDomain;
+            </Group>
+            <Group label="Frequency Domain Viscoelasticity Properties">
+                <PropertyOverride neutralName="FreqDomainLongTermShearCompliance"
+                                  displayName="Long-Term Normalized Shear Compliance (SHRINF)"/>
+                <PropertyOverride neutralName="FreqDomainLongTermBulkCompliance"
+                                  displayName="Long-Term Normalized Bulk Compliance (VOLINF)"/>
+                <PropertyOverride neutralName="FreqDomainLongTermShearRelaxation"
+                                  displayName="Long-Term Normalized Shear Relaxation (SHRINF)"/>
+                <PropertyOverride neutralName="FreqDomainLongTermBulkRelaxation"
+                                  displayName="Long-Term Normalized Bulk Relaxation (VOLINF)"/>
+                <PropertyOverride neutralName="FreqNormalizedShearCompliance"
+                                  displayName="Normalized Shear Compliance"
+                                  valueLabel="Frequency Domain - Normalized Shear Compliance"/>
+                <PropertyOverride neutralName="FreqNormalizedBulkCompliance"
+                                  displayName="Normalized Bulk Compliance"
+                                  valueLabel="Frequency Domain - Normalized Bulk Compliance"/>
+                <PropertyOverride neutralName="FreqShearBulkComplianceData"
+                                  displayName="Shear and Bulk Compliance Data"
+                                  valueLabel="Frequency Domain - Shear and Bulk Compliance Data"/>
+                <PropertyOverride neutralName="FreqNormalizedShearRelaxation"
+                                  displayName="Normalized Shear Relaxation"
+                                  valueLabel="Frequency Domain - Normalized Shear Relaxation"/>
+                <PropertyOverride neutralName="FreqNormalizedBulkRelaxation"
+                                  displayName="Normalized Bulk Relaxation"
+                                  valueLabel="Frequency Domain - Normalized Bulk Relaxation"/>
+                <PropertyOverride neutralName="FreqShearBulkRelaxationData"
+                                  displayName="Normalized Shear and Bulk Relaxation Data"
+                                  valueLabel="Frequency Domain - Normalized Shear and Bulk Relaxation Data"/>
+                <PropertyOverride neutralName="ViscoelasticPronyFreqParms"
+                                  displayName="Prony Series Parameters"
+                                  valueLabel="Frequency Domain - Prony Series Parameters"/>
+                <PropertyOverride neutralName="ViscoelasticFreqTabularData"
+                                  displayName="Frequency Tabular Data"
+                                  valueLabel="Frequency Domain - Frequency Tabular Data"/>
+                <PropertyOverride neutralName="ViscoelasticUniaxialData"
+                                  displayName="Uniaxial Loss and Storage"
+                                  valueLabel="Frequency Domain - Uniaxial Loss and Storage"/>
+                <PropertyOverride neutralName="ViscoelasticBulkData"
+                                  displayName="Bulk Loss and Storage"
+                                  valueLabel="Frequency Domain - Bulk Loss and Storage"/>
+                <PropertyOverride neutralName="FrequencyNormalizedLossShearModuliiField"
+                                  displayName="Frequency Tabular Data"
+                                  valueLabel="Frequency Domain - Normalized Tabular Data"/>
+                <PropertyOverride neutralName="FrequencyUniaxialLossStorageModuliiClosureField"
+                                  displayName="Frequency Tabular Data"
+                                  valueLabel="Frequency Domain - Uniaxial Tabular Data"/>
+                <PropertyOverride neutralName="ViscoelasticFrequencyDefn2"
+                                  valueLabel="&Below;G(w) = G1 * Frequency^(-Alpha) and K(w) = K1 * Frequency^(-Beta)&ValueLabelChoice; &ValueLabelChoice; &ValueLabelChoice; &ValueLabelChoice; "/>
+                <PropertyOverride neutralName="ViscoelasticFrequencyDefn"
+                                  valueLabel="&Below;G(w) = G1 * Frequency^(-Alpha) and K(w) = K1 * Frequency^(-Beta)&ValueLabelChoice; &ValueLabelChoice; &ValueLabelChoice; &ValueLabelChoice; "/>
+                &viscoelasticFreqDomain;
+            </Group>
+            <Group label="Power Law Coefficients">
+                &viscoelasticPowerLaw;
+            </Group>
+            <Group label="Viscoelastic Properties">
+                &viscoelasticProperties;
+            </Group>
+        </Tab>
+        <!-- Viscoplastic Tab -->
+        <Tab label="Viscoplasticity">
+            <Group label="Viscoplasticity Properties">
+                &viscoplasticProperties;
+            </Group>
+        </Tab>
+
+        <Tab label="Damage">
+            <PropertyOverride neutralName="DamageModelType"
+                              lockProp="false"
+                              showProp="true"
+                              valueChoices="&Choice;None=3&Choice;Rupture with Damage=4&Choice;Constant Damage=5"/>
+            <PropertyOverride neutralName="LinearBehavior"
+                              lockProp="true"/>
+            <PropertyOverride neutralName="PlyDamageVersion"
+                              createProp="false"/>
+            <PropertyOverride neutralName="MaximumDamageValue_dmax"
+                              createProp="false"/>
+            <PropertyOverride neutralName="MaximumDamageValue_ds"
+                              createProp="false"/>
+            <PropertyOverride neutralName="3DEffectParameter"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyThreshold_Y11lim+"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyThreshold_Y11lim-"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyThreshold_Y22lim+"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyThreshold_Y22lim-"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearCoeffOption"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearOption"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearCoefficient_Ksi+"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearCoefficient_Ksi-"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearFunction_Fonc+"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearFunction_Fonc-"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearCoefficient_Ksi1+"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonlinearCoefficient_Ksi1-"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyLimitValue"
+                              createProp="false"/>
+            <PropertyOverride neutralName="DiffuseDamageEnergyThreshold"
+                              createProp="false"/>
+            <PropertyOverride neutralName="DiffuseDamageCriticalValue"
+                              createProp="false"/>
+            <PropertyOverride neutralName="ShearEnergyOption"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyThresholdInShear"
+                              createProp="false"/>
+            <PropertyOverride neutralName="EnergyCriticalValue"
+                              createProp="false"/>
+            <PropertyOverride neutralName="DamageNonlinearFunction"
+                              createProp="false"/>
+            <PropertyOverride neutralName="LimitEnergyTransverseDirection"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_b2"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_b3"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_a"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_k"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_alpha"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_alpha1"
+                              createProp="false"/>
+            <PropertyOverride neutralName="CouplingCoefficient_alpha2"
+                              createProp="false"/>
+            <PropertyOverride neutralName="PlyFractureToughness_GIc"
+                              createProp="false"/>
+            <PropertyOverride neutralName="PlyFractureToughness_GIIc"
+                              createProp="false"/>
+            <PropertyOverride neutralName="PlyFractureToughness_GIIIc"
+                              createProp="false"/>
+            <PropertyOverride neutralName="MaxTransMicroCrackDamage"
+                              createProp="false"/>
+            <PropertyOverride neutralName="InitialPlasticThreshold"
+                              createProp="false"/>
+            <PropertyOverride neutralName="ParameterPlasticLaw"
+                              createProp="false"/>
+            <PropertyOverride neutralName="ExponentPlasticLaw"
+                              createProp="false"/>
+            <PropertyOverride neutralName="TransitionThickness"
+                              createProp="false"/>
+            <PropertyOverride neutralName="PlasticityStrategyParameter"
+                              createProp="false"/>
+            <PropertyOverride neutralName="NonLocalParameter"
+                              createProp="false"/>
+            <PropertyOverride neutralName="TransitionThickness"
+                              createProp="false"/>
+            &plydamageProperty;
+            <Group label="Plastic Damage">
+                &plasticdamage;
+            </Group>
+            <Group label="Rc-Dc Model">
+                &plasticdamageortho;
+            </Group>
+            <Group label="Shear Stress Parameters">
+                &shearStressParameter;
+            </Group>
+            <Group label="Bulk Modulus">
+                &bulkModulusFailedMaterial;
+            </Group>
+        </Tab>
+
+        <Tab label="Other Physical Properties">
+            <PropertyOverride neutralName="DynamicViscosityControl"
+                              lockProp="true"
+                              showProp="false"
+                              valueChoices="&Choice;Constant or Temperature=0"/>
+            <Group label="Dynamic Viscosity ">
+                <PropertyOverride neutralName="DynamicVisc"
+                                  displayName="Dynamic Viscosity (MU)"/>
+                &dynamicViscProperty;
+            </Group>
+        </Tab>
+        <Tab label="Pedestrian Protection">
+            <Group label="Global Technical Regulation (GTR) - Child">
+                <PropertyOverride neutralName="ChildHIC1000deformation"
+                                  displayName="Bonnet HIC1000 Offset"/>
+                <PropertyOverride neutralName="ChildHIC1700deformation"
+                                  displayName="Bonnet HIC1700 Offset"/>
+                &automotivePedestrianGTRChild;
+            </Group>
+            <Group label="Global Technical Regulation (GTR) - Adult">
+                <PropertyOverride neutralName="AdultHIC1000deformation"
+                                  displayName="Bonnet HIC1000 Offset"/>
+                <PropertyOverride neutralName="AdultHIC1700deformation"
+                                  displayName="Bonnet HIC1700 Offset"/>
+                &automotivePedestrianGTRAdult;
+            </Group>
+            <Group label="Leg Impact">
+                <PropertyOverride neutralName="LegImpactdeformation"
+                                  displayName="Offset"/>
+                &automotivePedestrian;
+            </Group>
+            <Group label="New Car Assessment Programs (NCAPs) - Child">
+                <PropertyOverride neutralName="NCAPChild650deformation"
+                                  displayName="Bonnet 650 Offset"/>
+                <PropertyOverride neutralName="NCAPChild1000deformation"
+                                  displayName="Bonnet 1000 Offset"/>
+                <PropertyOverride neutralName="NCAPChild1350deformation"
+                                  displayName="Bonnet 1350 Offset"/>
+                <PropertyOverride neutralName="NCAPChild1700deformation"
+                                  displayName="Bonnet 1700 Offset"/>
+                &automotivePedestrianNCAPChild;
+            </Group>
+            <Group label="New Car Assessment Programs (NCAPs) - Adult">
+                <PropertyOverride neutralName="NCAPAdult650deformation"
+                                  displayName="Bonnet 650 Offset"/>
+                <PropertyOverride neutralName="NCAPAdult1000deformation"
+                                  displayName="Bonnet 1000 Offset"/>
+                <PropertyOverride neutralName="NCAPAdult1350deformation"
+                                  displayName="Bonnet 1350 Offset"/>
+                <PropertyOverride neutralName="NCAPAdult1700deformation"
+                                  displayName="Bonnet 1700 Offset"/>
+                &automotivePedestrianNCAPAdult;
+            </Group>
+        </Tab>
+
+        <!-- Miscellaneous Tab -->
+        <Tab label="Miscellaneous">
+            <Group label="Visual Properties">
+                &crosshatchPatternProperty;
+                &configurationProperties;
+            </Group>
+            <Group label="Coating Layer Attributes">
+                &coatingproperties;
+            </Group>          
+            <Group label="Shipbuilding Insulation Attributes"
+                   expanded="false">
+                &shipbuildingInsulation;
+            </Group>
+            <Group label="Process Note">
+              &processnoteproperties;
+            </Group>
+        </Tab>
+
+        <!-- Simcenter Nastran UMAT Tab -->
+        <Tab label="User Models - Simcenter Nastran">
+            &nxnastranumattypes;
+        </Tab>
+        <!-- Samcef UMAT Tab -->
+        <Tab label="User Models - Simcenter Samcef">
+            &samcefumattypes;
+        </Tab>
+

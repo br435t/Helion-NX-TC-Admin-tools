@@ -1,0 +1,138 @@
+   <Material name="Honeycomb Material"
+                neutralName="HoneycombMaterial"
+                type="&MaterialTypeHONEYCOMB;"
+                contextHelp="nxnas_str_honeycomb_material"
+                versionNumber="1">
+        <Group label="Categorization">
+            &typeProperty;
+            &categoryProperty;
+        </Group>
+        <Group label="Properties">
+            <PropertyOverride neutralName="ElasticDependencyControl"
+                                    lockProp="true"
+                                    showProp="false"
+                                valueChoices="&Choice;Constant=3"/>
+            <PropertyOverride neutralName="DensityControl"
+                                    lockProp="true"
+                                    showProp="false"
+                                    valueChoices="&Choice;Constant or Temperature or Frequency=0"/>
+            <PropertyOverride neutralName="MassDensity"
+                                    showProp ="false"/>
+            <PropertyOverride neutralName="MassDensityTemperature"
+                                    showProp ="false"/>
+            <PropertyOverride neutralName="MassDensityFrequency"
+                                    showProp ="false"/>
+            &elasticdepend;
+            &densityProperty;
+        </Group>
+        <Tab label="Mechanical">
+            <Group label="Elastic Constants">
+                <PropertyOverride neutralName="YoungsModulus"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTemperature"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusFrequency"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTXTg"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTXTg2"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTXTg3"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulusTX"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulus2"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="YoungsModulus3"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatio"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTemperature"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioFrequency"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTempDoc"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTXTg"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTXTg2"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatioTXTg3"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatio2"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="PoissonsRatio3"
+                                     showProp="false"/>
+                <PropertyOverride neutralName="Yield2"
+                                     showProp="false"/>
+                &youngsmodulusProperty;
+                &poissonsProperty;
+                &yieldStrengthProperty;                   
+            </Group>
+            <Group label="Honeycomb Properties">
+                <Property name="Relative Volume when fully compacted (VF)"
+                          neutralName="RelativeVolumeVF"
+                          valueType="float">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                </Property>
+            </Group>
+            <Group label="Viscosity">
+                <Property name="Bulk Viscosity Option (BULK)"
+                          neutralName="BulkViscosityFlagBULK"
+                          valueType="enum"
+                          valueChoices="&Choice;Inactive=0
+                                        &Choice;Active=1;">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Material Viscosity Coefficient (MU)"
+                          neutralName="DynamicViscConstant"
+                          valueType="float"
+                          Dimensions="&MeasureDynamicViscosity;"
+                          parentProperty="&Choice;BulkViscosityFlagBULK"
+                          parentPropertyValToBeSensitive="0">
+                          <DefaultValue value="0.05"/>
+                </Property>              
+            </Group>
+        </Tab>
+       <Tab label="Stress-Strain">
+           <Group label="Option">
+               <Property name="Use Transversely Isotropic Surface"
+                         neutralName="UseTransverselyIsotropicSurface"
+                         valueType="bool">
+                   <DefaultValue value="&BoolFalse;"/>
+               </Property>
+           </Group>
+           <Group label="Stress-Strain Curves">
+               &honeycombstressstrainratefields;
+           </Group>
+           <Group label="Uncompressed Configuration Properties">
+               &honeycomborthrotropicelasticmoduli;
+           </Group>
+           <Group label="Strain Rate Effects">
+               &orthotropicstrainratefields;
+           </Group>
+           
+       </Tab>
+       <Tab label="Damage">
+            <Group label="Failure">
+                <Property name="Tensile strain at element failure (TSEF)"
+                          neutralName="TensileStrainTSEF"
+                          valueType="float">
+                </Property>
+                <Property name="Shear strain at element failure (SSEF)"
+                          neutralName="ShearStrainSSEF"
+                          valueType="float">
+                </Property>
+            </Group>
+       </Tab>
+        <Tab label="Miscellaneous">
+            <Group label="Visual Properties">
+                &crosshatchPatternProperty;
+                &configurationProperties;
+            </Group>
+        </Tab>
+
+       &envViewProps;       
+    </Material>

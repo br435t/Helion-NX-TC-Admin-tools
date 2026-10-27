@@ -1,0 +1,67 @@
+<Property name="Gel Point "
+          neutralName="GelPoint"
+          valueType="float">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+</Property>
+
+<Property name="Elastic Data Selection"
+          neutralName="ElasticDataSelection"
+          valueType="enum"
+          valueChoices="&Choice;Long-Term=0&Choice;Instantaneous=1">
+    <DefaultValue value="1"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+
+<Property name="Prony-Model"
+            neutralName="PronyModel"
+            valueType="scalarField_table">
+    <DefaultValue value="&valueZero;"/>
+    <TableDefn nRows="dynamic"
+                nCols="2"
+                minNumRows="1"
+                maxNumRows="30">
+        <TableProperty name="Weighting Factor"
+                       neutralName="WeightingFactor"
+                       valueType="scalarField"
+                       Dimensions="&MeasureUnitLess;"
+                       allowUnspecifiedValue="true">
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Relaxation Time"
+                       neutralName="RelaxationTime"
+                       valueType="scalarField"
+                       Dimensions="&MeasureTime;"
+                       allowUnspecifiedValue="true">
+            <DefaultValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+
+<Property name="Time Shift Factor"
+          neutralName="TimeShiftFactor"
+          valueType="scalarField"
+          allowUnspecifiedValue="true">
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
+
+

@@ -1,0 +1,11 @@
+                <Property name="Plastic Strain Ratio"
+                          neutralName="PlasticStrainRatio"
+                          editable="true"
+                          valueType="float"
+                          Dimensions="&MeasureUnitLess;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>

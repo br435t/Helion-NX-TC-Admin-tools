@@ -1,0 +1,13 @@
+        <Property name="Material Type"
+                  neutralName="MaterialType"
+                  visible="false"
+                  editable="false"
+                  valueType="enum"
+                  valueChoices="&MATERIALTYPECHOICES;"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="&MaterialTypeISOTROPIC;"/>
+            <LowerBound value="&MaterialTypeMinimum;"/>
+            <UpperBound value="&MaterialTypeMaximum;"/>
+            <ExcludeValue value="&MATERIALEXCLUDE_OBSOLETEMATERIALTYPES;"/>
+        </Property>
+        

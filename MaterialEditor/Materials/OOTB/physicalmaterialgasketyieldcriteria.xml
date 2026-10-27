@@ -1,0 +1,56 @@
+                <Property name="Yield Criteria"
+                          neutralName="YieldCriteria"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0&Choice;Slope Drop=1&Choice;Yield Onset=2"
+                          Dimensions="&MeasureUnitLess;"
+                          parentProperty="GasketThicknessBehaviorType"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value="0"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                    <UpperBound value="2"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Slope Drop"
+                          neutralName="SlopeDrop"
+                          valueType="scalarField"
+                          Dimensions="&MeasureUnitLess;"
+                          parentProperty="YieldCriteria"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="0.1"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"
+                                      evaluationProperty="Default Temperature"
+                                      propertyType="Solution"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Yield Onset"
+                          neutralName="YieldOnset"
+                          valueType="scalarField"
+                          Dimensions="&MeasureLength;"
+                          parentProperty="YieldCriteria"
+                          parentPropertyValToBeSensitive="2">
+                    <DefaultValue value="0.1"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainTemperature;"
+                                nVariables="1">
+                            <Variable Measure="&MeasureTemperature;"
+                                      evaluationProperty="Default Temperature"
+                                      propertyType="Solution"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                

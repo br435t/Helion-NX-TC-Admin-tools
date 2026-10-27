@@ -1,0 +1,24 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   lockProp="true"
+                   showProp="false"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="BulkModulus"/>
+<ReferenceProperty neutralName="BulkModulusRatio"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="StructuralDamping"/>
+
+<ReferenceProperty neutralName="SpeedofSoundControl"
+                   valueChoices="&Choice;Constant=0"
+                   defaultValue="0"
+                   lockProp="true"
+                   showProp="false"/>
+<ReferenceProperty neutralName ="SoundSpeed"/>

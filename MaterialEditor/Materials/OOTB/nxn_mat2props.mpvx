@@ -1,0 +1,38 @@
+<ReferenceProperty neutralName="ReferenceFrequency"/>
+<ReferenceProperty neutralName="CalculateConstantValuesFreqDep"/>
+<ReferenceProperty neutralName="CalculateConstantValuesTempDep"/>
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="G12Constant"/>
+<ReferenceProperty neutralName="G14Constant"/>
+<ReferenceProperty neutralName="G22Constant"/>
+<ReferenceProperty neutralName="G24Constant"/>
+<ReferenceProperty neutralName="G44Constant"/>
+
+<ReferenceProperty neutralName="ShearModulusTemperature"/>
+<ReferenceProperty neutralName="G12Temperature"/>
+<ReferenceProperty neutralName="G14Temperature"/>
+<ReferenceProperty neutralName="G22Temperature"/>
+<ReferenceProperty neutralName="G24Temperature"/>
+<ReferenceProperty neutralName="G44Temperature"/>
+
+<ReferenceProperty neutralName="ShearModulusFrequency"/>
+<ReferenceProperty neutralName="G12Frequency"/>
+<ReferenceProperty neutralName="G14Frequency"/>
+<ReferenceProperty neutralName="G22Frequency"/>
+<ReferenceProperty neutralName="G24Frequency"/>
+<ReferenceProperty neutralName="G44Frequency"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+<ReferenceProperty neutralName="ThermalExpansion2"/>
+<ReferenceProperty neutralName="ThermalExpansion4"/>
+
+<ReferenceProperty neutralName="MaxStressTension"/>
+<ReferenceProperty neutralName="MaxStressCompression"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"/>
+
+
+
+

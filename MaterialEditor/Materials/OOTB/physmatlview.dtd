@@ -1,0 +1,157 @@
+<!-- ============================================================================= -->
+<!-- "Include" the standard constant definitions for use within the umat xml files -->
+<!-- ============================================================================= -->
+
+<!ENTITY % materialTypes SYSTEM "materialtypes.dtd">
+%materialTypes;
+
+<!ENTITY % materialconstants SYSTEM "materialconstants.dtd">
+%materialconstants;
+
+
+
+<!ENTITY % materialUIBehavior SYSTEM "materialuibehavior.dtd">
+%materialUIBehavior;
+
+<!-- ============================================================================= -->
+<!-- Define the layout of the nx nastran umat xml files                            -->
+<!--  <MaterialViews>  main element                                                -->
+<!--                                                                               -->
+<!--              <<== Views are defined here                                      -->
+<!--                                                                               -->
+<!--  </MaterialViews>                                                             -->
+<!-- ============================================================================= -->
+
+<!ELEMENT MaterialViews (MaterialView*)>
+<!ATTLIST MaterialView>
+
+<!-- Environment mappings -->
+<!ENTITY ViewEnvGeneral "0">
+<!ENTITY ViewEnvSimcenterNastran "1">
+<!ENTITY ViewEnvSimcenterSamcef "2">
+<!ENTITY ViewEnvSimcenter3DThermalFlow "3">
+<!ENTITY ViewEnvSimcenter3DSpaceSystemsThermal "4">
+<!ENTITY ViewEnvSimcenter3DElectroncsSystemsCooling "5">
+<!ENTITY ViewEnvSimcenterMultiPhysics "6">
+<!ENTITY ViewEnvSimcenter3DAcousticsBEM "7">
+<!ENTITY ViewEnvSimcenter3DAcousticsTransientBEM "8">
+<!ENTITY ViewEnvSimcenterRayAcoustics "9">
+<!ENTITY ViewEnvSimcenterNoiseVibration "10">
+<!ENTITY ViewEnvSimcenterMAGNET "11">
+<!ENTITY ViewEnvDesignSim "12">
+<!ENTITY ViewEnvMSCNastran "13">
+<!ENTITY ViewEnvAbaqus "14">
+<!ENTITY ViewEnvAnsys "15">
+<!ENTITY ViewEnvLSDyna "16">
+<!ENTITY ViewEnvSimcenter3DMotion "17">
+<!ENTITY ViewEnvSimcenterHighFrequencyElectromagnetic "18">
+<!ENTITY ViewEnvModeling "19">
+<!ENTITY ViewEnvCoatings "20">
+<!ENTITY ViewEnvADINANastran "21">
+
+<!-- ============================================================================== -->
+<!-- Define a View                                                                  -->
+<!--    Attribute Definitions:                                                      -->
+<!--        type                fixed as NxInternal                                 -->
+<!--        displayName         Name to appear in the UI                            -->
+<!--        lookupKey           Name to use when searching                          -->
+<!--        materialTypes       The material types this view applies to each is     -->
+<!--                            separated by &Choice;                               -->
+<!--        environments        The environments that this view is valid separated  -->
+<!--                            by the &Choice; The environments should be          -->
+<!--                            specified using the &ViewEnvXXX; where the valid    -->
+<!--                            options are defined above                           -->
+<!--        viewType            Indicates if it is a primary view (base) or a view  -->
+<!--                            that gets added to a base view (addon) or a         -->
+<!--                            combination view (combo).                           -->
+<!--        parentViews         List of views separated by &Choice; that this view  -->
+<!--                            can be added to.  If blank and viewType is addon,   -->
+<!--                            then it can be added to any view.                   -->
+<!--        validationCallback  If specified, the callback to validate the property -->
+<!--                            values.                                             -->
+<!--        callbackLibrary     The library the validataion callback is in.         -->
+<!--                                                                                -->
+<!--  <MaterialView displayName="NX Nastran Structural"     Name displayed in UI    -->
+<!--                     lookupKey="NXNStructural"          Lookup key used when    -->
+<!--                                                        searching               -->
+<!--                     viewID="1"                         Unique view identifier  -->
+<!--                     materialType="IsotropicMaterial"   View applies to which   -->
+<!--                                                        material type           -->
+<!--                                                                                -->
+<!--              <<== Define the ui layout here using tabs, groups, etc.)          -->
+<!--                                                                                -->
+<!--  </MaterialView>                                                               -->
+<!-- ============================================================================== -->
+
+<!ELEMENT MaterialView  (ReferenceProperty|ReferencedMatlView)* >
+<!ATTLIST MaterialView
+    type                    CDATA #FIXED                            "NxInternal"
+    displayName             CDATA #REQUIRED
+    description             CDATA #IMPLIED
+    lookupKey               CDATA #REQUIRED
+    viewID                  CDATA #IMPLIED
+    materialType            CDATA #REQUIRED
+    environments            CDATA #REQUIRED                          
+    viewType                (base | addon | singleaddon | combo | legacy )   "legacy"
+    parentViews             CDATA #IMPLIED
+    invalidViewCombos       CDATA #IMPLIED
+    commonProps             ( union | replace )   "union" 
+    visible                 (true | false )                         "true"
+    validationCallback      CDATA #IMPLIED
+    callbackLibrary         CDATA                                   "libphymat"
+>
+
+<!ELEMENT ReferencedMatlView EMPTY>
+<!ATTLIST ReferencedMatlView 
+    lookupKey               CDATA #REQUIRED 
+>
+
+
+
+<!-- ============================================================================== -->
+<!-- Define ReferenceProperty                                                       -->
+<!--    Attribute Definitions:                                                      -->
+<!--        neutralName         Lookup name to find the property                    -->
+<!--        valueChoices        Overrides the (eum) valueChoices                    -->
+<!--        minValue            Minimum value for the property                      -->
+<!--        maxValue            Maximum value for the property                      -->
+<!--        defaultValue        Default value for the property                      -->
+<!--        validDomains        Default value for the property (Note: some ids are  -->
+<!--                            skipped because they don't apply to materials)      -->
+<!--        displayName         Name to appear in the UI                            -->
+<!--        valueLabel          Name to appear in the UI                            -->
+<!--        showProp            Indicates whether the property is visible or not    -->
+<!--        lockProp            Indicates whether the property is editable or not   -->
+<!--                                                                                -->
+<!--  <ReferenceProperty neutralName="MassDensity"/>        Lookup for the property -->
+<!--                                                        defined on the material -->
+<!--                                                        that will be in the view-->
+<!-- ============================================================================== -->
+<!ELEMENT ReferenceProperty  EMPTY>
+<!ATTLIST ReferenceProperty
+    neutralName             CDATA #REQUIRED
+    valueChoices            CDATA #IMPLIED
+    minValue                CDATA #IMPLIED
+    minValueInclude         ( true | false )                        "false"
+    maxValue                CDATA #IMPLIED
+    maxValueInclude         ( true | false )                        "false"
+    excludeValues           CDATA #IMPLIED
+    defaultValue            CDATA #IMPLIED
+    validDomains            ( -1 |  0 |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 
+                                   10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 
+                                   20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 
+                                   30 | 31 | 32 | 33 | 34 | 35 | 36 |      38 |
+                                             42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
+                                   50 | 51 | 52 | 53 | 54 ) "-1"
+    validVariableMeasures   CDATA #IMPLIED                                      
+    displayName             CDATA #IMPLIED
+    valueLabel              CDATA #IMPLIED
+    requiredInView          ( true | false)                         "false"
+    showProp                ( true | false )                        "true"
+    lockProp                ( true | false )                        "false"
+    commonProps             ( union | replace | replaceAndMerge | inherited)          "inherited" 
+    mergePropValue          CDATA #IMPLIED
+    maxNumRows              CDATA #IMPLIED
+    rowSpecifierTitle       CDATA #IMPLIED
+>
+

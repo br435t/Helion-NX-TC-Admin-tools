@@ -1,0 +1,15 @@
+                <Property name="##599Type"
+                          neutralName="ExpansionType"
+                          visible="true"
+                          editable="false"
+                          valueType="enum"
+                          valueChoices="&Choice;Isotropic=0&Choice;Orthotropic=1&Choice;Anisotropic=2"
+                          Dimensions="&MeasureUnitLess;"
+                          parentProperty="MaterialType"
+                          parentPropertyValToBeSensitive="&MaterialTypeGASKETBEHAVIOR;">
+                    <DefaultValue value="0"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                    <UpperBound value="2"
+                                inclusive="true"/>
+                </Property>

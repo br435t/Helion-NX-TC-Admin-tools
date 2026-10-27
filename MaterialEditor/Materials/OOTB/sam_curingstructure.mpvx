@@ -1,0 +1,75 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Temperature and Degree of Cure and Glass Transition Temperature=1"/>
+
+
+<ReferenceProperty neutralName="YoungsModulusTXTg"/>
+<ReferenceProperty neutralName="YoungsModulusTXTg2"/>
+<ReferenceProperty neutralName="YoungsModulusTXTg3"/>
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Major Poisson's Ratio=0&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+
+<ReferenceProperty neutralName="PoissonsRatioTXTg"/>
+
+<ReferenceProperty neutralName="PoissonsRatioTXTg2"/>
+
+<ReferenceProperty neutralName="PoissonsRatioTXTg3"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="MatrixThermalExpansionTXTg"/>
+<ReferenceProperty neutralName="MatrixThermalExpansionTXTg2"/>
+<ReferenceProperty neutralName="MatrixThermalExpansionTXTg3"/>
+
+
+<ReferenceProperty neutralName="MatrixChemicallyInducedShrinkageTX"/>
+<ReferenceProperty neutralName="MatrixChemicallyInducedShrinkageTX2"/>
+<ReferenceProperty neutralName="MatrixChemicallyInducedShrinkageTX3"/>
+
+<ReferenceProperty neutralName="GelPoint"/>
+
+<ReferenceProperty neutralName="ElasticDataSelection"/>
+<ReferenceProperty neutralName="PronyModel"/>
+<ReferenceProperty neutralName="TimeShiftFactor"/>
+
+<ReferenceProperty neutralName="FiberYoungsModulus"/>
+<ReferenceProperty neutralName="TranverseFiberYoungsModulus"/>
+<ReferenceProperty neutralName="FiberInplaneShearModulus"/>
+<ReferenceProperty neutralName="FiberTransverseShearModulus"/>
+<ReferenceProperty neutralName="FiberPoissonsRatioType"/>
+<ReferenceProperty neutralName="FiberPoissonsRatio"/>
+<ReferenceProperty neutralName="FiberPoissonsRatio2"/>
+<ReferenceProperty neutralName="FiberThermalExpansion"/>
+<ReferenceProperty neutralName="FiberThermalExpansion2"/>
+<ReferenceProperty neutralName="FibersVolumeFraction"/>
+
+
+<ReferenceProperty neutralName="CompositeControl"
+                   lockProp="true"
+                   showProp="false"
+                   valueChoices="&Choice;Curing=0"/>
+<ReferenceProperty neutralName="ThermalExpansionHomogenizationMethodControl"
+                   lockProp="false"
+                   showProp="true"
+                   valueChoices="&Choice;Mixture Law (HOMA 0)=0&Choice;Rosen Hashin Model (HOMA 1)=1&Choice;Homogenized Properties=2"/>
+<ReferenceProperty neutralName="ChemicalPropertiesMethodControl"
+                   lockProp="false"
+                   showProp="true"
+                   valueChoices="&Choice;Mixture Law (HOMB 0)=0&Choice;Rosen Hashin Model (HOMB 1)=1&Choice;Homogenized Properties=2"/>
+<ReferenceProperty neutralName="CompositeThermalExpansionTXTg"/>
+<ReferenceProperty neutralName="CompositeChemicallyInducedShrinkageTX"/>
+
+<ReferenceProperty neutralName="WovenWarpRelativeThickness"/>
+<ReferenceProperty neutralName="WovenFillRelativeThickness"/>
+<ReferenceProperty neutralName="WovenCorrectiveCoefficient"/>
+
+
+<ReferenceProperty neutralName="CompositeYoungsModulusTXTg"/>
+<ReferenceProperty neutralName="CompositePoissonsRatioTXTg"/>
+<ReferenceProperty neutralName="CompositeShearModulusTXTg"/>
+

@@ -1,0 +1,22 @@
+<Property name="R"
+          neutralName="MullinEffectParameterR"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="false"/>
+</Property>
+
+<Property name="M"
+          neutralName="MullinEffectParameterM"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="DamageModelType"
+          parentPropertyValToBeSensitive="6">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0"
+                inclusive="false"/>
+</Property>
+

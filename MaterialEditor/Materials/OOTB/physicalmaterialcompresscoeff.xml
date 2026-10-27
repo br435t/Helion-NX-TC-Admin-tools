@@ -1,0 +1,15 @@
+        <Property name="Compressibility Coefficient (BULK)"
+                  neutralName="CompressCoeff"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="1">
+                <Domain type="&DomainConstant;"/>
+            </FieldDefn>
+        </Property>
+

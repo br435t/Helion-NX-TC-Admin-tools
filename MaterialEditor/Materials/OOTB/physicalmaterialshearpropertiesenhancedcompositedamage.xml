@@ -1,0 +1,10 @@
+<Property name="Transverse Shear (TSMD)"
+          neutralName="TransverseShearCompositeDamage"
+          valueType="float"
+          Dimensions="&MeasureStrain;">
+  <DefaultValue value="0.9"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="false"/>
+</Property>

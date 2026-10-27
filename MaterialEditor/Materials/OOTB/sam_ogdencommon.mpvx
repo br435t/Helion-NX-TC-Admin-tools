@@ -1,0 +1,26 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="YoungsModulus"/>
+
+
+<ReferenceProperty neutralName="StrainEnergyInputData"
+                   valueChoices="&Choice;Strain Energy Potential in terms of Compressibility=1"
+                   defaultValue="1"
+                   showProp="true"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="DistortionalStrainEnergyOrder"/>
+
+<ReferenceProperty neutralName="StrainEnergyCoeff"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+
+
+

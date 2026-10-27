@@ -1,0 +1,9 @@
+<Property name="Use Reference Geometry (REF)"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="InitializeStressTensorRefGeometry"
+          valueType="enum"
+          valueChoices="&Choice;Off=0
+                        &Choice;On=1">
+          <DefaultValue value="0"/>
+</Property>
+ 

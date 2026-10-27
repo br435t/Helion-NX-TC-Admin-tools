@@ -1,0 +1,51 @@
+﻿<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="&Choice;Minor Poisson's Ratio=1"
+                   defaultValue="1"
+                   showProp="true"
+                   lockProp="false"/>
+
+<ReferenceProperty neutralName="BulkModulusFailedMaterial"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_MaterialAxisTrackingOption"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_2WAY"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_TI"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_MaterialAngleBETA"
+                   showProp="true"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_TFAIL"/>
+
+<ReferenceProperty neutralName="ShearStressParameterALPH"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_SOFT"/>
+
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_FBRT"/>
+
+<!-- 2WAY -->
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_BETA"/>
+
+<ReferenceProperty neutralName="MaxStressCompression"/>
+
+<ReferenceProperty neutralName="LongitudinalTensileStrength"/>
+
+<ReferenceProperty neutralName="LongitudinalCompressiveStrength"/>
+
+<ReferenceProperty neutralName="TransverseTensileStrength"/>
+
+<ReferenceProperty neutralName="TransverseCompressiveStrength"/>
+
+<ReferenceProperty neutralName="ShearStrengthABPlane"/>

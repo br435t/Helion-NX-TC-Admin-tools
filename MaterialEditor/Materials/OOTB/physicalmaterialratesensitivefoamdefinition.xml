@@ -1,0 +1,46 @@
+<Property name="Damping Effect Viscous Coefficient (DAMP)"
+          neutralName="VCDAMP"
+          valueType="float">
+    <DefaultValue value="0.05"/>
+    <LowerBound value="0.05"
+                inclusive="true"/>
+    <UpperBound value="&valueZeroPointFive;"
+                inclusive="false"/>
+</Property>
+          
+<Property name="Table ID Option"
+          neutralName="TBIDOption"
+          valueType="enum"
+          valueChoices="&Choice;Positive (Strain Rate Dependent Unloading Curve)=0&Choice;Negative (Strain Rate Independent Unloading Curve)=1">
+    <DefaultValue value="0"/>
+</Property>
+          
+<Property name="Nominal Stress Strain Table (TBID)"
+          neutralName="NominalStressStrainTable"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          scaleFactor="false"
+          Dimensions="&MeasureStress;">
+    <DefaultValue value= "&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainGeneral;"
+                nVariables="1"
+                hasSecondary="true">
+            <Variable Measure="&MeasureCoefficientPerTime;"/>
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Optional Triaxial Loading (PVID)"
+          neutralName="TriaxialLoadingCurve"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          scaleFactor="false"
+          Dimensions="&MeasureForcePerArea;">
+    <DefaultValue value="&valueZero;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainStrain;"/>
+    </FieldDefn>
+</Property>
+

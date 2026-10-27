@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Materials SYSTEM "nx1980_solverspecificnonphysicalmaterialproperties.dtd" [
+]>
+
+<Materials>
+
+    <!-- ================================================================== -->
+    <!--                        Isotropic Materials                         -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeISOTROPIC;">
+        <Tab label="Mechanical">
+            <Group label="LS-DYNA Formulation Option">
+                <Property name="*Material Card Option (OPTION)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MaterialCardOption"
+                          valueType="enum"
+                          valueChoices="&Choice;*MAT_ELASTIC=&MatElastic;
+                                        &Choice;*MAT_PLASTIC_KINEMATIC=&MatPlasticKinematic;
+                                        &Choice;*MAT_VISCOELASTIC=&MatViscoelastic;
+                                        &Choice;*MAT_NULL=&MatNull;
+                                        &Choice;*MAT_RIGID=&MatRigid;
+                                        &Choice;*MAT_PIECEWISE_LINEAR_PLASTICITY =&MatPiecewiseLinearPlasticity;
+                                        &Choice;*MAT_PIECEWISE_LINEAR_PLASTICITY_LOG_INTERPOLATION=&MatPiecewiseLinearPlasticityLogInterpolation;
+                                        &Choice;*MAT_PIECEWISE_LINEAR_PLASTICITY_STOCHASTIC=&MatPiecewiseLinearPlasticityStochastic;
+                                        &Choice;*MAT_PIECEWISE_LINEAR_PLASTICITY_MIDFAIL=&MatPiecewiseLinearPlasticityMidfail;
+                                        &Choice;*MAT_PIECEWISE_LINEAR_PLASTICITY_2D =&MatPiecewiseLinearPlasticity2D;
+                                        &Choice;*MAT_LINEAR_ELASTIC_DISCRETE_BEAM =&MatLinearElasticDiscreteBeam;;
+                                        &Choice;*MAT_PLASTICITY_WITH_DAMAGE = &MatPlasticitywithDamage;
+                                        &Choice;*MAT_PLASTICITY_WITH_DAMAGE_STOCHASTIC= &MatPlasticitywithDamageStochastic;
+                                        &Choice;*MAT_PLASTICITY_WITH_DAMAGE_ORTHO = &MatPlasticitywithDamageOrtho;
+                                        &Choice;*MAT_PLASTICITY_WITH_DAMAGE_ORTHO_RCDC=&MatPlasticitywithDamageOrthoRcdc;
+                                        &Choice;*MAT_PLASTICITY_WITH_DAMAGE_ORTHO_RCDC1980=&MatPlasticitywithDamageOrthoRcdc1980;
+                                        &Choice;*MAT_PLASTICITY_POLYMER=&MatPlasticityPolymer;
+                                        &Choice;*MAT_SIMPLIFIED_JOHNSON_COOK=&MatSimplifiedJohnsonCook;
+                                        &Choice;*MAT_SPOTWELD =&MatSpotweld;
+                                        &Choice;*MAT_SPOTWELD_DAMAGE-FAILURE=&MatSpotweldDamageFailure;
+                                        &Choice;*MAT_TRIP=&MatTRIP;
+                                        &Choice;*MAT_MODIFIED_PIECEWISE_LINEAR_PLASTICITY =&MatModifiedPiecewiseLinearPlasticity;
+                                        &Choice;*MAT_MODIFIED_PIECEWISE_LINEAR_PLASTICITY_LOG_INTERPOLATION=&MatModifiedPiecewiseLinearPlasticityLogInterpolation;
+                                        &Choice;*MAT_MODIFIED_PIECEWISE_LINEAR_PLASTICITY_PRESTRAIN =&MatModifiedPiecewiseLinearPlasticityPrestrain;
+                                        &Choice;*MAT_MODIFIED_PIECEWISE_LINEAR_PLASTICITY_RATE=&MatModifiedPiecewiseLinearPlasticityRate;
+                                        &Choice;*MAT_MODIFIED_PIECEWISE_LINEAR_PLASTICITY_RTCL =&MatModifiedPiecewiseLinearPlasticityRTCL;
+                                        &Choice;*MAT_MODIFIED_PIECEWISE_LINEAR_PLASTICITY_STOCHASTIC=&MatModifiedPiecewiseLinearPlasticityStochastic;">
+                    <DefaultValue value="0"/>
+                </Property>                
+            </Group>
+        </Tab>
+        <Tab label="Damage">
+            <Group label="Automatic Element Deletion">
+                <Property name="Minimum Time Step (TDEL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MinTimeStepTDEL"
+                          valueType="float"
+                          Dimensions="&MeasureTime;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Failing Integration Points Option"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NumIntFailShellDelOption"
+                          valueType="enum"
+                          valueChoices="&Choice;Number=0
+                                        &Choice;Percentage=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Number of Failing Integration Points for Shell Deletion (NUMINT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NumIntFailShellDelNUMINT"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_NumIntFailShellDelOption"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value="0"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Percentage of Integration Points/Layers (NUMINT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NumIntFailShellDelPercentage"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_NumIntFailShellDelOption"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="100"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Characteristic Element Length for Material (L)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="CharElemLengthL"
+                          valueType="float">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+            </Group>
+            <Group label="Relative Volume for Erosion">
+                <Property name="Tension (TEROD)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TensionTEROD"
+                          valueType="float">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="Compression (CEROD)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="CompressionCEROD"
+                          valueType="float">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+            </Group>
+            <Group label="Thermal">
+                <Property name="Adiabatic Temperature Option (CP)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="AdiabaticTempOptionCP"
+                          valueType="enum"
+                          valueChoices="&Choice;Calculation Disabled=0
+                                        &Choice;Enable Using Specific Heat=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Initial Adiabatic Temperature (T0)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="InitialAdiabaticTemp"
+                          valueType="float"
+                          Dimensions="&MeasureTemperature;"
+                          parentProperty="NonPhysicalProp_LSDyna_AdiabaticTempOptionCP"
+                          parentPropertyValToBeSensitive="1"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="Specific Heat (CP)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="SpecificHeatAdiabatic"
+                          valueType="float"
+                          Dimensions="&MeasureHeatCapacity;"
+                          parentProperty="NonPhysicalProp_LSDyna_AdiabaticTempOptionCP"
+                          parentPropertyValToBeSensitive="1"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                </Property>
+            </Group>
+
+            <Group label="RTCL Accumulation">
+                <Property name="Limit"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RTCLAccumulationLimit"
+                          valueType="enum"
+                          valueChoices="&Choice;No Limit=0
+                                        &Choice;Damage does not Accumulate Above Triaxiality Limit=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Triaxiality Limit (TRIAX)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RTCLAccumulationTRIAXLimit"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_RTCLAccumulationLimit"
+                          parentPropertyValToBeSensitive="1"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"/>
+                </Property>
+            </Group>  
+            
+            <Group label="Prestrain">
+                <Property name="Flag (IPS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PrestrainOption"
+                          valueType="enum"
+                          valueChoices="&Choice;No Prestrain Added=0
+                                        &Choice;*INITIAL_STRAIN_SHELL Used as Prestrain=1">
+                    <DefaultValue value="0"/>
+                </Property>
+            </Group>        
+            
+        </Tab>
+        <Tab label="Failure">
+            <Group label="Damage-Failure ">
+                <Property name="Failure Option (OPT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="FailureOption"
+                          valueType="enum"
+                          valueChoices="&Choice;Stress Based Failure from Resultants (Rate Dependent Failure Model) and Written to swforc (-9)=-9
+                                        &Choice;Stress Based Failure Computed from Resultants and Written to swforc (-2)=-2
+                                        &Choice;Resultant Based Failure and Written to swforc (-1)=-1
+                                        &Choice;Resultant Based Failure (0)=0
+                                        &Choice;Stress Based Failure Computed from Resultants (1)=1
+                                        &Choice;User Subroutine uweldfail (2)=2
+                                        &Choice;Notch Stress based Failure (3)=3
+                                        &Choice;Stress Intensity Factor at Failure (4)=4
+                                        &Choice;Structural Stress at Failure (5)=5
+                                        &Choice;Stress based Failure Computed from Resultants (6)=6
+                                        &Choice;Stress based Failure for Solids (7)=7
+                                        &Choice;Stress based Failure from Resultants (9)=9
+                                        &Choice;Stress based Failure with Rate Effects (10)=10
+                                        &Choice;Resultant based Failure in Beams (11)=11
+                                        &Choice;User Subroutine uweldfail12 (damage and failure) (12)=12
+                                        &Choice;User Subroutine uweldfail22(damage)(22)=22"
+                          parentProperty="NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&MatSpotweldDamageFailure;">
+                    <DefaultValue value="0"/>
+                </Property>
+            </Group>
+            
+            <Group label="Resultant Based Failure">
+                <Property name="Axial Force (NRR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldFailureAxialForceNRR"
+                          valueType="scalarField"
+                          Dimensions="&MeasureForce;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-2,-1,0&Choice;&MatSpotweld;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Resultant Force (NRS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldFailureForceNRS"
+                          valueType="scalarField"
+                          Dimensions="&MeasureForce;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-2,-1,0&Choice;&MatSpotweld;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Resultant Force (NRT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldFailureForceNRT"
+                          valueType="scalarField"
+                          Dimensions="&MeasureForce;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-2,-1,0&Choice;&MatSpotweld;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Axial Moment (MRR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldFailureAxialMomentMRR"
+                          valueType="scalarField"
+                          Dimensions="&MeasureMoment;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-2,-1,0&Choice;&MatSpotweld;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Resultant Moment (MSS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldFailureMomentMSS"
+                          valueType="scalarField"
+                          Dimensions="&MeasureMoment;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-2,-1,0&Choice;&MatSpotweld;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Resultant Moment (MTT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldFailureMomentMTT"
+                          valueType="scalarField"
+                          Dimensions="&MeasureMoment;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-2,-1,0&Choice;&MatSpotweld;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Number of Force Vectors Stored (NF)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NForceVectorsNF"
+                          valueType="int"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_FailureOption&Choice;NonPhysicalProp_LSDyna_MaterialCardOption"
+                          parentPropertyValToBeSensitive="&Choice;-9,-2,-1,0,1,2,3,4,6,7,9,10,11,12,22&Choice;&MatSpotweld;">
+                    <DefaultValue value="0"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Time for Joint Failure (TFAIL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="JointFailureTimeTFAIL"
+                          valueType="float"
+                          Dimensions="&MeasureTime;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Time Step Size for Mass Scaling (DT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TimeStepDT"
+                          valueType="float"
+                          Dimensions="&MeasureTime;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Resultant Force in Tension (LCT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="ResultantForceTensionLCT"
+                          valueType="scalarField"
+                          Dimensions="&MeasureForce;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="11"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainAngle;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1"
+                                hasSecondary="true">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                            <SecondaryDomain type="&DomainAngle;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Resultant Force in Compression (LCC)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="ResultantForceCompressionLCC"
+                          valueType="scalarField"
+                          Dimensions="&MeasureForce;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="11"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainAngle;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1"
+                                hasSecondary="true">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                            <SecondaryDomain type="&DomainAngle;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+            </Group>
+            
+            <Group label="Stress Failure">
+                <Property name="Maximum Axial Stress (SIGAX)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MaximumAxialStressSIGAX"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+                <Property name="Maximun Shear Stress (SIGTAU)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MaximumShearStressSIGTAU"
+                          valueType="scalarField"
+                          Dimensions="&MeasureStress;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="2">
+                        <Domain type="&DomainConstant;"/>
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Strain Rate"
+                                nVariables="1">
+                            <Variable Name="Strain Rate"
+                                      Measure="&MeasureCoefficientPerTime;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+
+                <Property name="Notch Diameter (ZD)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureDiameter"
+                          valueType="float"
+                          Dimensions="&MeasureLength;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3,4,5"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Sheet Thickness (ZT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureThickness"
+                          valueType="float"
+                          Dimensions="&MeasureLength;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3,4,5"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Second Sheet Thickness (ZT2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureThickness2"
+                          valueType="float"
+                          Dimensions="&MeasureLength;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="5"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Correction Factor (Alpha 1)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureCorrectionFactorAlpha1"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3,4">
+                    <DefaultValue value="&valueOne;"/>
+                </Property>
+                <Property name="Correction Factor (Alpha 2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureCorrectionFactorAlpha2"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3,4">
+                    <DefaultValue value="&valueOne;"/>
+                </Property>
+                <Property name="Correction Factor (Alpha 3)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureCorrectionFactorAlpha3"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3,4">
+                    <DefaultValue value="&valueOne;"/>
+                </Property>
+                <Property name="Notch Root Radius (ZRRAD)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NotchSressFailureRootRadius"
+                          valueType="float"
+                          Dimensions="&MeasureLength;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+            </Group>
+            
+            
+            <Group label="User Subroutine Failure">
+                <Property name="User Failure Constant (USRV1)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV1"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="2,12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>               
+                <Property name="User Failure Constant (USRV2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV2"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="2,12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV3)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV3"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="2,12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>                
+                <Property name="User Failure Constant (USRV4)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV4"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="2,12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>               
+                <Property name="User Failure Constant (USRV5)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV5"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="2,12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV6)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV6"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="2,12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                
+                <Property name="User Failure Constant (USRV7)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV7"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>               
+                <Property name="User Failure Constant (USRV8)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV8"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV9)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV9"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>                
+                <Property name="User Failure Constant (USRV10)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV10"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>               
+                <Property name="User Failure Constant (USRV11)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV11"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV12)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV12"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV13)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV13"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV14)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV14"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                
+                <Property name="User Failure Constant (USRV15)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV15"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>               
+                <Property name="User Failure Constant (USRV16)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV16"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV17)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV17"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>                
+                <Property name="User Failure Constant (USRV18)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV18"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>               
+                <Property name="User Failure Constant (USRV19)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV19"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV20)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV20"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV21)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV21"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="User Failure Constant (USRV22)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="USERFAILURECONSTANTUSRV22"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12,22">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+            </Group>
+            
+            <Group label="Damage Failure">
+	            <Property name="Include Additional Damage Fields"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="AdditionalDamageOptionToggle"
+                          valueType="bool">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Damage Option (DMGOPT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="DamageOption"
+                          valueType="enum"
+                          valueChoices="&Choice;Plastic Strain based Damage (0)=0
+                                        &Choice;Plastic Strain with Post Damage Stress Limit (1)=1
+                                        &Choice;Time Based Damage (2)=2
+                                        &Choice;Plastic Strain Failure Option will Initiate Damage (10)=10
+                                        &Choice;Plastic Strain with Post Damage Stress Limit Failure Option will Initiate Damage (11)=11
+                                        &Choice;Time based Damage Failure Option will Initiate Damage (12)=12"
+			              parentProperty="NonPhysicalProp_LSDyna_AdditionalDamageOptionToggle"
+                          parentPropertyValToBeSensitive="0">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Damage Option (DMGOPT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="AdditionalDamageOptionFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;Plastic Strain based Damage (0)=0
+                                        &Choice;Plastic Strain based Damage with Post Damage Stress Limit (1)=1
+                                        &Choice;Time Strain based Damage with Post Damage Stress Limit (2)=2
+                                        &Choice;Plastic Strain based Damage Failure Option Initiates Damage (10)=10
+                                        &Choice;Plastic Strain based Damage with Post Damage Stress Limit Failure Option Initiates Damage(11)=11
+                                        &Choice;Time Strain based Damage with Post Damage Stress Limit Failure Option Initiates Damage (12)=12"
+                          parentProperty="NonPhysicalProp_LSDyna_AdditionalDamageOptionToggle"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Rupture Strain (RS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RuptureStrainRS"
+                          valueType="float"
+                          Dimensions="&MeasureStrain;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_DamageOption&Choice;NonPhysicalProp_LSDyna_AdditionalDamageOptionFlag"
+                          parentPropertyValToBeSensitive="&Choice;0,1,10,11&Choice;0,1,10,11">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"/>
+                </Property>
+                <Property name="Rupture Time (RS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RuptureTimeRS"
+                          valueType="float"
+                          Dimensions="&MeasureTime;"
+                          parentProperty="&Choice;NonPhysicalProp_LSDyna_DamageOption&Choice;NonPhysicalProp_LSDyna_AdditionalDamageOptionFlag"
+                          parentPropertyValToBeSensitive="&Choice;2,12&Choice;2,12">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"/>
+                </Property>
+                <Property name="Number of History Variables in User Subroutine (FVAL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NHistVarFailureParameterFVAL"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="12">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>                
+                <Property name="Notch Stress/Structural Stress at Failure (FVAL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="StressFailureParameterFVAL"
+                          valueType="float"
+                          Dimensions="&MeasureStress;"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="3,5">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="Number of Cycles to trigger Beam Deletion (FVAL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="NCyclesFailureParameterFVAL"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="6,9">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Stress Intensity Factor at Failure (FVAL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="StressIntensityFailureParameterFVAL"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_FailureOption"
+                          parentPropertyValToBeSensitive="4">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>                
+                <Property name="True Weld Thickness (TRUE_T)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TrueWeldThickness"
+                          valueType="float"
+                          Dimensions="&MeasureLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Weld Assembly Failure Flag (ASFF)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="WeldAssemblyFailureFlagASFF"
+                          valueType="enum"
+                          valueChoices="&Choice;Damaged Elements Fail Individually=0
+                                        &Choice;Damaged Elements Fail when First Element Reaches Failure Criterion=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Damage Model Decay Rate (BETA)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="DamageModelDecayBeta"
+                          valueType="float">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+
+	
+                <Property name="Failure Surface Ratio (FMODE)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="FailureSurfaceRatio"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_AdditionalDamageOptionFlag"
+                          parentPropertyValToBeSensitive="10,11,12">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="Failure Function Limit (FFCAP)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="FailureFunctionLimit"
+                          valueType="float"
+                          parentProperty="NonPhysicalProp_LSDyna_AdditionalDamageOptionFlag"
+                          parentPropertyValToBeSensitive="10,11,12">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="True Thickness (TRUE_T) Options (TTOPT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TrueThicknessOptionsTTOPT"
+                          valueType="enum"
+                          valueChoices="&Choice;TRUE_T Behavior of Version R9 and Later (0)=0
+                                        &Choice;TRUE_T Behavior of Version R8 and Earlier (1)=1
+                                        &Choice;TRUE_T Behavior of Version R8 and Earlier with Weld Failure (2)=2"
+                          parentProperty="NonPhysicalProp_LSDyna_AdditionalDamageOptionToggle"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="0"/>
+                </Property>
+            </Group>        
+        </Tab>
+        <Tab label="External Coupling">
+            <Group label="MADYMO3D 5.4">
+                <Property name="Rigid Body Coupling Flag (N)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MADYMO3DRigidBodyCouplingFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;Normal LS-DYNA Updates=0
+                                        &Choice;Coupled with Ellipsoid=1
+                                        &Choice;Coupled with Plane=-1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Ellipsoid ID"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RigidEllipsoidID"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_MADYMO3DRigidBodyCouplingFlag"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="1"/>
+                    <LowerBound value="1"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Plane ID"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RigidPlaneID"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_MADYMO3DRigidBodyCouplingFlag"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="1"/>
+                    <LowerBound value="1"
+                                inclusive="true"/>
+                </Property>
+
+                <Property name="Coupling Option (COUPLE)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="CouplingOption"
+                          valueType="enum"
+                          valueChoices="&Choice;VDA Surface in Alias=-1
+                                        &Choice;Undeformed Geometry Corresponds to Local MADYMO 5.4 / CAL3D=0
+                                        &Choice;Undeformed Geometry Corresponds to Global MADYMO 5.4 / CAL3D=1
+                                        &Choice;Generate Mesh Internally=2">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="VDA Surface Alias (ALIAS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="VDASurfaceAlias"
+                          valueType="char"
+                          parentProperty="NonPhysicalProp_LSDyna_CouplingOption"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="&valueBlank;"/>
+                </Property>
+                <Property name="MADYMO Reference Number (RE)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MADYMOReferenceNumber"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_CouplingOption"
+                          parentPropertyValToBeSensitive="0,1,2"
+                          allowUnspecifiedValue="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Update Flag (M)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="UpdateFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;Normal LS-DYNA Rigid Body updates=0
+                                        &Choice;Corresponds to MADYMO Rigid Body=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="MADYMO Rigid Body Number"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RigidBodyNumber"
+                          valueType="int"
+                          parentProperty="NonPhysicalProp_LSDyna_UpdateFlag"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="1"/>
+                    <LowerBound value="1"
+                                inclusive="true"/>
+                </Property>
+            </Group>     
+        </Tab>
+        <Tab label="Constraints">
+            <Group label="Global">
+                <Property name="Center of Mass Options (CMO)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="CenterOfMassConstraint"
+                          valueType="enum"
+                          valueChoices="&Choice;No Constraints=0
+                                        &Choice;Constraints Applied in Global Directions=1
+                                        &Choice;Constraints Applied in Local Directions=-1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Translational (CON1)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="GlobalTranslationalConstraint"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0
+                                        &Choice;X Displacement=1
+                                        &Choice;Y Displacement=2
+                                        &Choice;Z Displacement=3
+                                        &Choice;X and Y Displacements=4
+                                        &Choice;Y and Z Displacements=5
+                                        &Choice;Z and X Displacements=6
+                                        &Choice;X, Y and Z Displacements=7"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Rotational (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="GlobalRotationalConstraint"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0
+                                        &Choice;X Rotation=1
+                                        &Choice;Y Rotation=2
+                                        &Choice;Z Rotation=3
+                                        &Choice;X and Y Rotations=4
+                                        &Choice;Y and Z Rotations=5
+                                        &Choice;Z and X Rotations=6
+                                        &Choice;X, Y and Z Rotations=7"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Local Coordinate System (CON1)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalTranslationalConstraint"
+                          valueType="coord"
+                          valueSubtype="ondialog"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>                
+                <Property name="Specify Local X Translational SPC Constraint (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalXTranslationalConstraint"
+                          valueType="bool"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="false"/>
+                </Property>
+                <Property name="Specify Local Y Translational SPC Constraint (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalYTranslationalConstraint"
+                          valueType="bool"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="false"/>
+                </Property>
+                <Property name="Specify Local Z Translational SPC Constraint (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalZTranslationalConstraint"
+                          valueType="bool"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="false"/>
+                </Property>
+                <Property name="Specify Local X Rotational SPC Constraint (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalXRotationalConstraint"
+                          valueType="bool"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="false"/>
+                </Property>
+                <Property name="Specify Local Y Rotational SPC Constraint (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalYRotationalConstraint"
+                          valueType="bool"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="false"/>
+                </Property>
+                <Property name="Specify Local Z Rotational SPC Constraint (CON2)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="LocalZRotationalConstraint"
+                          valueType="bool"
+                          parentProperty="NonPhysicalProp_LSDyna_CenterOfMassConstraint"
+                          parentPropertyValToBeSensitive="-1">
+                    <DefaultValue value="false"/>
+                </Property>                                                                       
+            </Group>
+        </Tab>
+        <Tab label="Spring">
+            <Group label ="Stiffness">
+                <Property name="Translational Stiffness along r-Axis (TKR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TranslationalStiffnessTKR"
+                          valueType="float"
+                          Dimensions="&MeasureForcePerLength;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+                <Property name="Translational Stiffness along s-Axis (TKS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TranslationalStiffnessTKS"
+                          valueType="float"
+                          Dimensions="&MeasureForcePerLength;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+                <Property name="Translational Stiffness along t-Axis (TKT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TranslationalStiffnessTKT"
+                          valueType="float"
+                          Dimensions="&MeasureForcePerLength;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+                <Property name="Rotational Stiffness about r-Axis (RKR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RotationalStiffnessRKR"
+                          valueType="float"
+                          Dimensions="&MeasureMomentPerAngle;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+                <Property name="Rotational Stiffness about s-Axis (RKS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RotationalStiffnessRKS"
+                          valueType="float"
+                          Dimensions="&MeasureMomentPerAngle;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+                <Property name="Rotational Stiffness about t-Axis (RKT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RotationalStiffnessRKT"
+                          valueType="float"
+                          Dimensions="&MeasureMomentPerAngle;">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+            </Group>
+            <Group label ="Viscous Dampers">
+                <Property name="Translational Viscous Damper along r-Axis (TDR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TranslationalViscousDamperTDR"
+                          valueType="float"
+                          Dimensions="&MeasureViscousDamping;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+                </Property>
+                <Property name="Translational Viscous Damper along s-Axis (TDS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TranslationalViscousDamperTDS"
+                          valueType="float"
+                          Dimensions="&MeasureViscousDamping;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>                
+                </Property>
+                <Property name="Translational Viscous Damper along t-Axis (TDT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TranslationalViscousDamperTDT"
+                          valueType="float"
+                          Dimensions="&MeasureViscousDamping;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>                
+                </Property>
+                <Property name="Rotational Viscous Damper about r-Axis (RDR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RotationalViscousDamperRDR"
+                          valueType="float"
+                          Dimensions="&MeasureAngularMomentumPerAngle;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>                
+                </Property>
+                <Property name="Rotational Viscous Damper about s-Axis (RDS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RotationalViscousDamperRDS"
+                          valueType="float"
+                          Dimensions="&MeasureAngularMomentumPerAngle;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>                
+                </Property>
+                <Property name="Rotational Viscous Damper about t-Axis (RDT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RotationalViscousDamperRDT"
+                          valueType="float"
+                          Dimensions="&MeasureAngularMomentumPerAngle;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                        inclusive="true"/>                
+                </Property>
+            </Group>
+            <Group label ="Preload">
+                <Property name="Preload Force in r-Direction (FOR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PreloadForceFOR"
+                          valueType="float"
+                          Dimensions="&MeasureForce;">
+                     <DefaultValue value="&valueEmpty;"/>                    
+                </Property>
+                <Property name="Preload Force in s-Direction (FOS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PreloadForceFOS"
+                          valueType="float"
+                          Dimensions="&MeasureForce;">
+                      <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Preload Force in t-Direction (FOT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PreloadForceFOT"
+                          valueType="float"
+                          Dimensions="&MeasureForce;">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Preload Moment about r-Axis (MOR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PreloadMomentMOR"
+                          valueType="float"
+                          Dimensions="&MeasureMoment;">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Preload Moment about s-Axis (MOS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PreloadMomentMOS"
+                          valueType="float"
+                          Dimensions="&MeasureMoment;">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+                <Property name="Preload Moment about t-Axis (MOT)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PreloadMomentMOT"
+                          valueType="float"
+                          Dimensions="&MeasureMoment;">
+                    <DefaultValue value="&valueEmpty;"/>
+                </Property>
+            </Group>
+        </Tab>
+    </Material>    
+
+    <!-- ================================================================== -->
+    <!--                       Orthotropic Materials                        -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeORTHOTROPIC;">
+        <Tab label="Material CSYS">
+            <Group label="Brick Element Behavior">
+                <Property name="Material Axes Change Flag (MACF)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MACF"
+                          valueType="enum"
+                          valueChoices="&Choice;No Change=1
+                                        &Choice;Switch Axes a and b=2
+                                        &Choice;Switch Axes a and c=3
+                                        &Choice;Switch Axes b and c=4">
+                    <DefaultValue value="1"/>
+                </Property>
+            </Group>
+        </Tab>
+        <Tab label="Solver Initialization">
+            <Group label="Initialization">
+                <Property name="Anisotropic Stiffness Terms (IHIS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="IHIS"
+                          valueType="enum"
+                          valueChoices="&Choice;Initialized from Material Cards=0
+                                        &Choice;Initialized from History Data=1">
+                    <DefaultValue value="0"/>
+                </Property>
+              <Property name="Use Reference Geometry (REF)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="InitializeStressTensorRefGeometry"
+        valueType="enum"
+        valueChoices="&Choice;Off=0
+                        &Choice;On=1">
+                <DefaultValue value="0"/>
+              </Property>
+
+            </Group>
+        </Tab>
+    </Material>
+
+    <!-- ================================================================== -->
+    <!--                       Anisotropic Materials                        -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeANISOTROPIC;">
+        <Tab label="Material CSYS">
+            <Group label="Brick Element Behavior">
+                <Property name="Material Axes Change Flag (MACF)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MACF"
+                          valueType="enum"
+                          valueChoices="&Choice;No Change=1
+                                        &Choice;Switch Axes a and b=2
+                                        &Choice;Switch Axes a and c=3
+                                        &Choice;Switch Axes b and c=4">
+                          <DefaultValue value="1"/>
+                </Property>
+            </Group>
+        </Tab>
+        <Tab label="Solver Initialization">
+            <Group label="Initialization">
+                <Property name="Anisotropic Stiffness Terms (IHIS)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="IHIS"
+                          valueType="enum"
+                          valueChoices="&Choice;Initialized from Material Cards=0
+                                        &Choice;Initialized from History Data=1">
+                    <DefaultValue value="0"/>
+                </Property>
+              <Property name="Use Reference Geometry (REF)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="InitializeStressTensorRefGeometry"
+        valueType="enum"
+        valueChoices="&Choice;Off=0
+                        &Choice;On=1">
+                <DefaultValue value="0"/>
+              </Property>
+
+            </Group>
+        </Tab>
+    </Material>
+
+    <!-- ================================================================== -->
+    <!--                      Mooney Rivlin Materials                       -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeMOONEYRIVLIN;">
+        <Tab label="Initialization">
+            <Group label="Stress Tensor">
+              <Property name="Use Reference Geometry (REF)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="InitializeStressTensorRefGeometry"
+        valueType="enum"
+        valueChoices="&Choice;Off=0
+                        &Choice;On=1">
+                <DefaultValue value="0"/>
+              </Property>
+
+            </Group>
+        </Tab>
+        <Tab label="Specimen">
+            <Group label="Stress Tensor">
+                <Property name="Gauge Length (SGL)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="SpecimenGaugeLengthSGL"
+                          valueType="float"
+                          Dimensions="&MeasureLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"/>
+                </Property>
+                <Property name="Width (SW)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="SpecimenWidthSW"
+                          valueType="float"
+                          Dimensions="&MeasureLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"/>
+                </Property>
+                <Property name="Thickness (ST)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="SpecimenThicknessST"
+                          valueType="float"
+                          Dimensions="&MeasureLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"/>
+                </Property>
+                <Property name="Load Curve (LCID)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="ForceVsGaugeLengthChangeLCID"
+                          valueType="scalarField"
+                          valueSubtype="compact"
+                          Dimensions="&MeasureForce;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainUser;"
+                                autocreate="true"
+                                Name="Gauge Length Change"
+                                nVariables="1">
+                            <Variable Name="DeltaL"
+                                      Measure="&MeasureLength;"/>
+                        </Domain>
+                    </FieldDefn>
+                </Property>
+            </Group>
+        </Tab>    
+    </Material>
+    
+    <!-- ================================================================== -->
+    <!--                    Low Density Foam Materials                      -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeLOWDENSITYFOAM;">
+    </Material>
+
+    <!-- ================================================================== -->
+    <!--                         Fabric Materials                           -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeFABRIC;">
+        <Tab label="Porosity Leakage">
+            <Group label="Calculation Option">
+                <Property name="Initial Area (A0REF)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="PorosityLeakageCalcOptA0REF"
+                          valueType="enum"
+                          valueChoices="&Choice;Use Initial Geometry Defined on *NODE=0
+                                        &Choice;Use Reference Geometry Defined on *AIRBAG_REFERENCE_GEOMETRY or *AIRBAG_SHELL_REFERNCE_GEOMETRY=1">
+                    <DefaultValue value="0"/>
+                </Property>
+            </Group>
+        </Tab>
+    </Material>
+
+    <!-- ================================================================== -->
+    <!--                 Crushable Foam Materials                           -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeCRUSHABLEFOAM;">
+        <Tab label="Bilkhu/DuBois Model">
+            <Group label="Solver Initialization">
+                <Property name="Strain Rate Averaging Cycles (NCYCLE)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="StrainRateAveragingCyclesNCYCLE"
+                          valueType="int">
+                    <DefaultValue value="1"/>
+                    <LowerBound value="0"/>
+                    <UpperBound value="100"/>
+                </Property>
+            </Group>
+        </Tab>
+    </Material>
+
+    <!-- ================================================================== -->
+    <!--                 Rate Sensitive Foam Materials                      -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeRATESENSITIVEFOAM;">
+        <Tab label="Solver Initialization">
+            <Group label="Initialization">
+              <Property name="Use Reference Geometry (REF)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="InitializeStressTensorRefGeometry"
+        valueType="enum"
+        valueChoices="&Choice;Off=0
+                        &Choice;On=1">
+                <DefaultValue value="0"/>
+              </Property>
+
+            </Group>
+        </Tab>
+        <Tab label="Loading/Unloading">
+            <Group label="Fu Chang Model">
+                <Property name="Strain Rate Flag (SFLAG)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="StrainRateFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;True Constant Strain Rate=0&Choice;Engineering Strain Rate=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Strain Rate Evaluation Flag (RFLAG)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="StrainRateEvaluationFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;First Principal Direction=0&Choice;Principal Strain Rates=1&Choice;Volumetric Strain Rate=2">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Tensile Stress Evaluation Flag (TFLAG)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="TensileStressEvaluationFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;Linear in Tension=0&Choice;Input with Load Curves=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Strain Rate Averaging Flag (SRAF)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="StrainRateAveragingFlag"
+                          valueType="enum"
+                          valueChoices="&Choice;Exponential Moving Average=-1&Choice;Weighted Running Average=0&Choice;Average Last 12 Values=1">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Hysteretic Factor (HU)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="HystereticUnloadingFactor"
+                          valueType="float">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                    <UpperBound value="&valueOne;"
+                                inclusive="true"/>
+                </Property>
+            </Group>
+            <Group label="Unloading">
+                <Property name="Unloading Exponent (EXPON)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="UnloadingExponent"
+                          valueType="float">
+                    <DefaultValue value="&valueOne;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="false"/>
+                </Property>
+                <Property name="Rate Independent Unloading Flag (RIULD)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="RateIndependentUnloadingFlag"
+                          valueType="bool">
+                    <DefaultValue value="false"/>
+                </Property>
+            </Group>
+        </Tab>
+        <Tab label="Constants/Damage Decay">
+            <Group label="Fu Chang Constants">
+                <Property name="Minimum Strain Rate Of Interest (MINR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MinimumStrainRate"
+                          valueType="float"
+                          Dimensions="&MeasureCoefficientPerTime;">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="Maximum Strain Rate Of Interest (MAXR)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="MaximumStrainRate"
+                          valueType="float"
+                          Dimensions="&MeasureCoefficientPerTime;">
+                    <DefaultValue value="&valueZero;"/>
+                </Property>
+                <Property name="Unloading Shape Factor (SHAPE)"
+                          solPrefixName="NonPhysicalProp_LSDyna_"
+                          solSuffixName="UnloadingShapeFactor"
+                          valueType="float">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="&valueZero;"
+                                inclusive="true"/>
+                </Property>
+            </Group>
+        </Tab>
+    </Material>
+
+    
+</Materials>
+

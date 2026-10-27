@@ -1,0 +1,147 @@
+<Group label="Constituent Materials"
+       numColumns="2">
+    <Property name="Percent Material 1"
+              neutralName="percent1"
+              allowUnspecifiedValue="false"
+              valueType="float"
+              valueSubtype="spin_integer_incr">
+        <DefaultValue value="&valuePercentMin;"/>
+        <LowerBound value="&valuePercentMin;"
+                    inclusive="true"/>
+        <UpperBound value="&valuePercentMax;"
+                    inclusive="true"/>
+    </Property>
+    <Property name=""
+              neutralName="IsoMatl1"
+              allowUnspecifiedValue="false"
+              valueType="material"
+              valueSubtype="noinherit">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+        <UpperBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+    </Property>
+
+    <Property name="Percent Material 2"
+              neutralName="percent2"
+              valueType="float"
+              valueSubtype="spin_integer_incr">
+        <DefaultValue value="&valuePercentMin;"/>
+        <LowerBound value="&valuePercentMin;"
+                    inclusive="true"/>
+        <UpperBound value="&valuePercentMax;"
+                    inclusive="true"/>
+    </Property>
+    <Property name=""
+              neutralName="IsoMatl2"
+              valueType="material"
+              valueSubtype="noinherit">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+        <UpperBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+    </Property>
+
+    <Property name="Percent Material 3"
+              neutralName="percent3"
+              valueType="float"
+              valueSubtype="spin_integer_incr">
+        <DefaultValue value="&valuePercentMin;"/>
+        <LowerBound value="&valuePercentMin;"
+                    inclusive="true"/>
+        <UpperBound value="&valuePercentMax;"
+                    inclusive="true"/>
+    </Property>
+    <Property name=""
+              neutralName="IsoMatl3"
+              allowUnspecifiedValue="true"
+              valueType="material"
+              valueSubtype="noinherit">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+        <UpperBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+    </Property>
+
+    <Property name="Percent Material 4"
+              neutralName="percent4"
+              valueType="float"
+              valueSubtype="spin_integer_incr">
+        <DefaultValue value="&valuePercentMin;"/>
+        <LowerBound value="&valuePercentMin;"
+                    inclusive="true"/>
+        <UpperBound value="&valuePercentMax;"
+                    inclusive="true"/>
+    </Property>
+    <Property name=""
+              neutralName="IsoMatl4"
+              allowUnspecifiedValue="true"
+              valueType="material"
+              valueSubtype="noinherit">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+        <UpperBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+    </Property>
+    <Property name="Percent Material 5"
+              neutralName="percent5"
+              valueType="float"
+              valueSubtype="spin_integer_incr">
+        <DefaultValue value="&valuePercentMin;"/>
+        <LowerBound value="&valuePercentMin;"
+                    inclusive="true"/>
+        <UpperBound value="&valuePercentMax;"
+                    inclusive="true"/>
+    </Property>
+    <Property name=""
+              neutralName="IsoMatl5"
+              allowUnspecifiedValue="true"
+              valueType="material"
+              valueSubtype="noinherit">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+        <UpperBound value="&MaterialTypeISOTROPIC;"
+                    inclusive="true"/>
+    </Property>
+</Group>
+<Group label="Void Material">
+    <Property name="Void Material"
+              neutralName="voidMatl"
+              allowUnspecifiedValue="true"
+              valueType="material"
+              valueSubtype="noinherit">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&MaterialTypeFLUID;"
+                    inclusive="true"/>
+        <UpperBound value="&MaterialTypeFLUID;"
+                    inclusive="true"/>
+    </Property>
+</Group>
+
+<Group label="Property Calculation">
+    <Property name="Density Method"
+              neutralName="DensityCalcMethod"
+              editable="false"
+              valueType="enum"
+              valueChoices="&Choice;Voigt (Volume Based)=0&Choice;Reuss (Volume Fraction Based)=1&Choice;Voigt-Reuss-Hill Average=2&Choice;User Specified (reset to defaults)=3">
+        <DefaultValue value="0"/>
+    </Property>
+    <Property name="Method"
+              neutralName="GeneralCalcMethod"
+              valueType="enum"
+              valueChoices="&Choice;Voigt (Volume Based)=0&Choice;Reuss (Volume Fraction Based)=1&Choice;Voigt-Reuss-Hill Average=2&Choice;User Specified (reset to defaults)=3">
+        <DefaultValue value="0"/>
+    </Property>
+    <Property name="Calculate Properties"
+              neutralName="CalculateProperties"
+              valueType="action"
+              action="PartUI_ActionValue_MaterialCB__CalculateCompoundMatlProps"
+              icon="calculate_properties">
+        <DefaultValue value="Calculate Resultant Properties"/>
+    </Property>
+</Group>

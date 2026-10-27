@@ -1,0 +1,48 @@
+        <Property name=""
+                  neutralName="KelvinMaxwellC2Function"
+                  valueType="enum"
+                  valueChoices="&Choice;c * exp( d * SIGMA )=1&Choice;c * SIGMA ^ d=2&Choice;c * ( SIGMA / d ) ^ x=3"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="2,11">
+            <DefaultValue value="1"/>
+            <LowerBound value="1"/>
+            <UpperBound value="2"/>
+        </Property>
+        <Property name="c"
+                  neutralName="KelvinMaxwellCreepParameter_c"
+                  valueType="float"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="2,11">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="d"
+                  neutralName="KelvinMaxwellCreepParameter_d"
+                  valueType="float"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="2,11">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>
+        
+        <Property name="x"
+                  neutralName="GeneralizedBlackburnCreepParameter_x"
+                  valueType="float"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="CreepFormulation"
+                  parentPropertyValToBeSensitive="11">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+        </Property>

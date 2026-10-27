@@ -1,0 +1,9 @@
+<Property name="Time Step Size Criteria (TFAIL)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="TFAIL"
+        valueType="float"
+        Dimensions="&MeasureTime;">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+</Property>

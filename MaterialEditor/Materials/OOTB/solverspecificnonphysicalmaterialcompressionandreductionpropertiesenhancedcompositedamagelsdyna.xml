@@ -1,0 +1,76 @@
+<Property name="Softening for Fiber Strength (FBRT)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="FBRT"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;">
+    <LowerBound value="0.0"
+                inclusive="true"/>
+</Property>
+
+<Property name="Material Softening Reduction (SOFT)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SOFT"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;">
+  <DefaultValue value="1.0"/>
+</Property>
+
+<Property name="Compression Reduction Factor (YCFAC)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="YCFAC"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;">
+  <DefaultValue value="2.0"/>
+</Property>
+
+<Property name="DFAILT"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="DFAILTcheck"
+          valueType="enum"
+          valueChoices="&Choice;0.0=0&Choice;Nonzero=1">
+    <DefaultValue value="0"/>
+</Property>
+
+<Property name="Max Strain Fiber Tension (DFAILT)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="DFAILT"
+        valueType="float"
+        Dimensions="&MeasureStrain;"
+        parentProperty="NonPhysicalProp_LSDyna_2WAY"
+        parentPropertyValToBeSensitive="0">
+  <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0.0"/>
+</Property>
+
+<Property name="Fiber Tensile Failure Strain in 'A' and 'B' Directions (DFAILT)"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="DFAILTABDirection"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="NonPhysicalProp_LSDyna_2WAY"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="0.0"/>
+</Property>
+
+<Property name="Max Strain Fiber Compression (DFAILC)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="DFAILC"
+        valueType="float"
+        Dimensions="&MeasureStrain;"
+        parentProperty="NonPhysicalProp_LSDyna_2WAY"
+        parentPropertyValToBeSensitive="0">
+  <DefaultValue value="&valueEmpty;"/>
+    <UpperBound value="0.0"/>
+</Property>
+
+<Property name="Fiber Compressive Failure Strain in 'A' and 'B' Directions (DFAILC)"
+          solPrefixName="NonPhysicalProp_LSDyna_"
+          solSuffixName="DFAILCABDirection"
+          valueType="float"
+          Dimensions="&MeasureStrain;"
+          parentProperty="NonPhysicalProp_LSDyna_2WAY"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <UpperBound value="0.0"/>
+</Property>

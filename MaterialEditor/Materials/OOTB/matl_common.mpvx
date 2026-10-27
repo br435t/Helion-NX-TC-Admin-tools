@@ -1,0 +1,5 @@
+<ReferenceProperty neutralName="MaterialType"
+                   showProp="false"/>
+<ReferenceProperty neutralName="AltName"/>
+<ReferenceProperty neutralName="Category"/>
+<ReferenceProperty neutralName="SubCategory"/>

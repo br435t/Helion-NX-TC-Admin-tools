@@ -1,0 +1,60 @@
+<Property name="Stress-Strain Curve"
+          neutralName="StressStrainCurveCompression"
+          valueLabel="&Above;Compression"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;HardeningRule&ChoiceAnd;YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1&Choice;8"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainStrain;"/>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Stress-Strain Curve"
+          neutralName="StressStrainCurveTraction"
+          valueLabel="&Above;Traction"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;HardeningRule&ChoiceAnd;YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1&Choice;8"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainStrain;"/>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+
+<Property name="Tensile Plastic Poisson's Ratio (NUPL)"
+          neutralName="PoissonsRatioPlastic"
+          valueType="scalarField"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;HardeningRule&ChoiceAnd;YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1&Choice;8"
+          scaleFactor="false" >
+    <DefaultValue value="&PlasticPoissonsDefault;"/>
+    <LowerBound value="&IsotropicPoissonsMinimum;"
+                inclusive="false"/>
+    <UpperBound value="&IsotropicPoissonsMaximum;"
+                inclusive="false"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
+
+
+
+

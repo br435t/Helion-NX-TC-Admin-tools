@@ -1,0 +1,74 @@
+<!-- Electric Model -->
+<ReferenceProperty neutralName="HighFrequencyDielectricModel"/>
+
+<!-- Conductivity -->
+<ReferenceProperty neutralName="ElectConductivityResistivityMode"
+                   valueChoices="&Choice;Conductivity=0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ElectConductivityMethod"
+                   valueChoices="&Choice;Linear Conductivity=0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ElecConductivityhighfreq"/> 
+
+
+<!-- Permittivity -->
+<ReferenceProperty neutralName="ComplexElectricPermittivity"/>
+<ReferenceProperty neutralName="PermittivityAtInfinity"/>
+<ReferenceProperty neutralName="PermittivityAtZero"/>
+<ReferenceProperty neutralName="PermittityRelaxationTime"/>
+
+
+<!-- Radiant Plasma Frequency -->
+<ReferenceProperty neutralName="dielectricRadiantPlasmaFrequency"/>
+
+
+<!-- Collision Frequency -->
+<ReferenceProperty neutralName="dielectricCollisionFrequency"/>
+
+
+<!-- Resonant Frequency -->
+<ReferenceProperty neutralName="dielectricResonantFrequency"/>
+
+
+<!-- Damping Coefficient -->
+<ReferenceProperty neutralName="DielectricDampingCoeff"/>
+
+
+<!-- Poles -->
+<ReferenceProperty neutralName="electricPoles"/>
+
+
+<!-- Magnetic Model -->
+<ReferenceProperty neutralName="HighFrequencyMagneticModel"/>
+
+
+<!-- Permeability -->
+<ReferenceProperty neutralName="HighFreqComplexIsotropicLinearPermeability"/>
+<ReferenceProperty neutralName="IsotropicLinearPermeabilityInfinity"/>
+<ReferenceProperty neutralName="IsotropicLinearPermeabilityZero"/>
+<ReferenceProperty neutralName="PermeabilityRelaxationTime"/>
+
+
+<!-- Collision Frequency -->
+<ReferenceProperty neutralName="magneticCollisionFrequency"/>
+
+<ReferenceProperty neutralName="MagneticConductivity"/>
+
+
+<ReferenceProperty neutralName="MagneticDampingCoeff"/>
+
+
+<ReferenceProperty neutralName="magneticRadiantPlasmaFrequency"/>
+
+
+<ReferenceProperty neutralName="magneticPoles"/>
+
+
+<ReferenceProperty neutralName="magneticResonantFrequency"/>
+
+
+<ReferenceProperty neutralName="MultiPoleWeightParam"/>
+
+

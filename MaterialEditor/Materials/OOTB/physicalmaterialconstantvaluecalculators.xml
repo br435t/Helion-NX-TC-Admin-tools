@@ -1,0 +1,19 @@
+<Property name="Calculate Constant Values from Frequency Dependent Fields"
+          neutralName="CalculateConstantValuesFreqDep"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateConstantValuesFreqDep"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElasticDependencyControl&Choice;AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="&Choice;5,6&Choice;5,6">
+    <DefaultValue value="Calculate Constant Values from Frequency Dependent Fields"/>
+</Property>
+
+<Property name="Calculate Constant Values from Temperature Dependent Fields"
+          neutralName="CalculateConstantValuesTempDep"
+          valueType="action"
+          action="PartUI_ActionValue_MaterialCB_CalculateConstantValuesTempDep"
+          icon="calculate_properties"
+          parentProperty="&Choice;ElasticDependencyControl&Choice;AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="&Choice;4,6&Choice;4,6">
+    <DefaultValue value="Calculate Constant Values from Temperature Dependent Fields"/>
+</Property>

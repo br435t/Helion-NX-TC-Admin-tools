@@ -1,0 +1,42 @@
+
+<Property name="NCAP Child 650 Offset"
+                  neutralName="NCAPChild650deformation"
+                  valueType="float"
+                  Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="NCAP Child 1000 Offset"
+                  neutralName="NCAPChild1000deformation"
+                  valueType="float"
+                  Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="NCAP Child 1350 Offset"
+                  neutralName="NCAPChild1350deformation"
+                  valueType="float"
+                  Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+<Property name="NCAP Child 1700 Offset"
+                  neutralName="NCAPChild1700deformation"
+                  valueType="float"
+                  Dimensions="&MeasureLength;">
+  <DefaultValue value="&valueEmpty;"/>
+  <LowerBound value="&valueZero;"
+              inclusive="false"/>
+  <UpperBound value="&maxFloat;"
+              inclusive="true"/>
+</Property>
+

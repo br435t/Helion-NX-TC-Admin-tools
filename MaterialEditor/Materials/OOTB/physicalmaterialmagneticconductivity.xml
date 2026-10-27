@@ -1,0 +1,14 @@
+<Property name="Magnetic Conductivity"
+          neutralName="MagneticConductivity"
+          valueType="scalarField"
+          Dimensions="&MeasureMagneticConductivity;"
+          scaleFactor="false"
+          parentProperty="&Choice;HighFrequencyMagneticModel"
+          parentPropertyValToBeSensitive="&Choice;1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>

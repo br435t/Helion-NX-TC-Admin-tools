@@ -1,0 +1,14 @@
+<!-- Permeability -->
+<ReferenceProperty neutralName="AnisoElectroMagnetPermeabilityMethod"/>
+<ReferenceProperty neutralName="AnisotropicLinearPermeability"/>
+<ReferenceProperty neutralName="ComplexAnisotropicLinearPermeability"/>
+<ReferenceProperty neutralName="AnisotropicNonLinearPermeability"/>
+<ReferenceProperty neutralName="LaminationThickness"/>
+
+
+<!-- Iron Loss -->
+<ReferenceProperty neutralName="AnisoIronLossMethod"/>
+<ReferenceProperty neutralName="AnisoIronLoss"/>
+<ReferenceProperty neutralName="AnisoCalculateSteinmetz"/>
+<ReferenceProperty neutralName="AnisoSteinmetzCoefficients"/>
+

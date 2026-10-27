@@ -1,0 +1,101 @@
+###############################################################################################
+# This is a sample layer scheme file. The main purpose of the file is to describe how to set layer scheme
+# parameters so that it can be read successfully by the NX Flexible Printed Circuit Design Application.
+# This file uses comma , as a delimiter and can be stored or edited with a spreadsheet application.
+#
+# Following keywords are recognised by NX Flexible Printed Circuit Design and should be used to
+# define layer scheme tables that can be used by the features.
+# VERSION
+# UNITS
+# METRIC
+# ENGLISH
+# TABLE
+# NAME
+# END_OF_TABLE
+#
+# The layer scheme table file is divided into 3 functional blocks.
+#
+##BLOCK1##
+#
+# This block determines the version of layer scheme file. This will provide a clear upgrade path
+# for future format changes to the file. It is important that version numbers are not edited. 
+# The valid values for this release is:
+# VERSION = 1
+#
+##BLOCK2##
+#
+# Contains the units of the parameters in the layer scheme file. It can either be METRIC or ENGLISH.
+# A table cannot have more than one unit. Two separate standards files can be used, one for each unit of measure.
+#
+##BLOCK3##
+#
+# Contains the actual layer scheme table. Start and end of a table is defined by TABLE and END_OF_TABLE keywords respectively.
+# Each table must have a version. This can be set using the VERSION keyword. Valid values for this release is:
+# VERSION = 1.
+#
+# Each table must have an unique name. This can be set using the NAME keyword.
+# Each new line after NAME til END_OF_TABLE will be treated as a separate row containing zone information in following format:
+# Zone name, Thickness, Offset
+#
+# Every zone should have an unique name (per table) followed by thickness and offset of that zone separated by comma ','
+# 
+# TABLE
+# VERSION, 1
+# NAME, Layer Scheme 1
+# New Zone 1, 8.000000, 3.000000
+# New Zone 2, 6.000000, 4.000000
+# New Zone 3, 3.500000, 4.500000
+# New Zone 4, 2.000000, 5.000000
+# New Zone 5, 1.000000, 5.000000
+# New Zone 6, 5.000000, 3.000000
+# New Zone 7, 3.500000, 5.500000
+# New Zone 8, 7.000000, 4.000000
+# END_OF_TABLE
+#
+#
+# Disclaimer: THIS FILE DOES NOT CONTAIN ACTUAL DATA. PLEASE MODIFY THE TABLES
+#             WITH ACTUAL VALUES BEFORE USING THIS TABLE. SIEMENS IS NOT RESPONSIBLE FOR THE
+#             DATA CONTAINED IN THIS FILE. THIS FILE IS PROVIDED JUST AS A SAMPLE TO EXPLAIN
+#             THE FORMATTING OF A TYPICAL LAYER SCHEME FILE.
+###############################################################################################
+#BLOCK1########################################################################################
+VERSION, 1
+# Define the version of the standards file. DO NOT EDIT version numbers.
+###############################################################################################
+#BLOCK2########################################################################################
+# Define the Units of the layer scheme file.
+# It can be METRIC or ENGLISH. If METRIC length will be mm and if ENGLISH, length will be in.
+###############################################################################################
+UNITS, METRIC
+#BLOCK3########################################################################################
+# Define the layer scheme tables.
+###############################################################################################
+TABLE
+VERSION, 1
+NAME, Layer Scheme 1
+# Zone Name, Thickness, Offset
+Rigid Zone, 1.600000, 0.000000
+Flex Zone, 0.200000, 0.700000
+END_OF_TABLE
+
+TABLE
+VERSION, 1
+NAME, Layer Scheme 2
+# Zone Name, Thickness, Offset
+Rigid Zone, 3.000000, 0.000000
+Flex Zone 1, 0.300000, 0.000000
+Flex Zone 2, 0.300000, 1.350000
+Flex Zone 3, 0.300000, 2.700000
+END_OF_TABLE
+
+TABLE
+VERSION, 1
+NAME, Layer Scheme 3
+# Zone Name, Thickness, Offset
+Rigid Zone, 1.500000, 0.000000
+Flex Zone 1, 0.150000, 0.000000
+Flex Zone 2, 0.200000, 0.350000
+Flex Zone 3, 0.200000, 0.950000
+Flex Zone 4, 0.150000, 1.350000
+END_OF_TABLE
+

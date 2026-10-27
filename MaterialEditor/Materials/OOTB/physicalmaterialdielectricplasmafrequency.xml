@@ -1,0 +1,14 @@
+<Property name="Radiant Plasma Frequency (Omega-p)"
+          neutralName="dielectricRadiantPlasmaFrequency"
+          valueType="scalarField"
+          Dimensions="&MeasureAngularVelocity;"
+          scaleFactor="false"
+          parentProperty="&Choice;HighFrequencyDielectricModel"
+          parentPropertyValToBeSensitive="&Choice;3">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainConstant;"/>
+    </FieldDefn>
+</Property>

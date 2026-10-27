@@ -1,0 +1,73 @@
+        <Property name="Unloading Curve 1"
+                  neutralName="UnloadingCurve1"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  scaleFactor="false"
+                  Dimensions="&MeasureForcePerArea;"
+                  parentProperty="GasketThicknessBehaviorType"
+                  parentPropertyValToBeSensitive="&GasketBehaviorTypeElasticPlastic;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <ExcludeValue value="&valueEmpty;"/>
+            <FieldDefn nDomains="2">
+                <Domain Name="Length-based Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="1">
+                    <Variable Name="Closure Length"
+                              Measure="&MeasureLength;"/>
+                </Domain>
+                <Domain Name="Temperature - Length-based Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="2">
+                    <Variable Name="Closure Length"
+                              Measure="&MeasureLength;"/>
+                    <Variable Name="Temperature"
+                              Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>
+
+
+
+        <Property name="Unloading Curve 1 (Damage)"
+                  neutralName="UnloadingCurve1Damage"
+                  valueType="scalarField"
+                  valueSubtype="compact"
+                  scaleFactor="false"
+                  Dimensions="&MeasureForcePerArea;"
+                  parentProperty="GasketThicknessBehaviorType"
+                  parentPropertyValToBeSensitive="&GasketBehaviorTypeDamage;">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain Name="Length Closure-Max Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="2">
+                    <Variable Name="Closure Length"
+                              Measure="&MeasureLength;"/>
+                    <Variable Name="Maximum Closure"
+                              Measure="&MeasureLength;"/>
+                </Domain>
+                <Domain Name="Temperature-Length Closure-Max Closure"
+                        autocreate="true"
+                        type="&DomainUser;"
+                        nVariables="3">
+                    <Variable Name="Closure Length"
+                              Measure="&MeasureLength;"/>
+                    <Variable Name="Maximum Closure"
+                              Measure="&MeasureLength;"/>
+                    <Variable Name="Temperature"
+                              Measure="&MeasureTemperature;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>        
+

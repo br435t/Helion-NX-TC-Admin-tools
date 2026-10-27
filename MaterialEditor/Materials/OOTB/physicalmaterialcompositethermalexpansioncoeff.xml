@@ -1,0 +1,128 @@
+<Property name="Composite Control"
+          neutralName="CompositeControl"
+          valueType="enum"
+          valueChoices="&Choice;Curing=0&Choice;ThermoPlastic=1">
+    <DefaultValue value= "1"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+
+<Property name="Thermal Expansion Homogenization Method"
+          neutralName="ThermalExpansionHomogenizationMethodControl"
+          valueType="enum"
+          valueChoices="&Choice;Mixture Law (HOMA 0)=0&Choice;Rosen Hashin Model (HOMA 1)=1&Choice;Homogenized Properties=2"
+          parentProperty="CompositeControl"
+          parentPropertyValToBeSensitive="0">
+  <DefaultValue value= "0"/>
+  <LowerBound value="0"
+              inclusive="true"/>
+  <UpperBound value="2"
+              inclusive="true"/>
+</Property>
+
+<Property name="Thermal Expansion (A)"
+          neutralName="CompositeThermalExpansionTXTg"
+          valueType="scalarField_table"
+          Dimensions="&MeasureThermExpansion;"
+          parentProperty="ThermalExpansionHomogenizationMethodControl"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="&valueEmpty;"/>
+    <TableDefn nRows="3"
+               nCols="3">
+        <RowHeading row="1"
+                    value="CTE1"/>
+        <RowHeading row="2"
+                    value="CTE2"/>
+        <RowHeading row="3"
+                    value="CTE3"/>
+        <TableProperty name="Glassy"
+                       neutralName="CompositeThermalExpansionTXTg1"
+                       valueType="scalarField"
+                       Dimensions="&MeasureThermExpansion;"
+                       scaleFactor="false"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ThermalExpansionHomogenizationMethodControl"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </TableProperty>
+        <TableProperty name="Rubbery"
+                       neutralName="CompositeThermalExpansionTXTg2"
+                       valueType="scalarField"
+                       Dimensions="&MeasureThermExpansion;"
+                       scaleFactor="false"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ThermalExpansionHomogenizationMethodControl"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </TableProperty>
+        <TableProperty name="Liquid"
+                       neutralName="CompositeThermalExpansionTXTg3"
+                       valueType="scalarField"
+                       Dimensions="&MeasureThermExpansion;"
+                       scaleFactor="false"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ThermalExpansionHomogenizationMethodControl"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            &fieldtempdoctg;
+        </TableProperty>
+    </TableDefn>
+</Property>
+
+<Property name="CTE"
+          neutralName="CompositeThermalExpansion"
+          valueType="scalarField"
+          Dimensions="&MeasureThermExpansion;"
+          parentProperty="CompositeControl"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    &fieldtempdoc;
+</Property>
+<Property name="CTE2"
+          neutralName="CompositeThermalExpansion2"
+          valueType="scalarField"
+          Dimensions="&MeasureThermExpansion;"
+          parentProperty="CompositeControl"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    &fieldtempdoc;
+</Property>
+
+<Property name="CTE3"
+          neutralName="CompositeThermalExpansion3"
+          valueType="scalarField"
+          Dimensions="&MeasureThermExpansion;"
+          parentProperty="CompositeControl"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    &fieldtempdoc;
+</Property>
+

@@ -1,0 +1,11 @@
+            <Property name="Molar Mass"
+                      neutralName="MolarMass"
+                      editable="true"
+                      valueType="float"
+                      Dimensions="&MeasureMass;">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="0.0"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+            </Property>

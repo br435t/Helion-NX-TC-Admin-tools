@@ -1,0 +1,28 @@
+            <Property name=""
+                      neutralName="CoatingsVisualizationColor"
+                      allowUnspecifiedValue="false"
+                      valueType="float_array"
+                      valueSubtype="RGB">
+              <DefaultValue value="0.0,0.0,0.0"/>
+            </Property>
+
+            <Property name="Studio Material"
+                            editable="false"
+                            neutralName="CoatingsStudioMaterialName"
+                            valueType="char">
+              <DefaultValue value=""/>
+            </Property>
+
+            <Property name="Studio Materials List"
+                            neutralName="StudioMaterialSelectionList"
+                            valueType="action"
+                            action="PartUI_ActionValue_MaterialCB_StudioMaterialSelectionList"
+                            icon="calculate_properties">
+              <DefaultValue value="Select Studio Material Name"/>
+            </Property>
+
+            <Property name="Crosshatch Pattern"
+                      neutralName="CrosshatchPattern"
+                      valueType="char">
+              <DefaultValue value="&valueBlank;"/>
+            </Property>

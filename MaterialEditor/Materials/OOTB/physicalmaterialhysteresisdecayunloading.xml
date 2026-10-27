@@ -1,0 +1,28 @@
+        <Property name="Hysteretic Factor (HU)"
+                  neutralName="HystereticFactor"
+                  valueType="float">
+            <DefaultValue value="1.0"/>
+            <LowerBound value="0.0"
+                        inclusive="true"/>
+            <UpperBound value="1.0"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Shape Factor (SHAPE)"
+                  neutralName="ShapeFactor"
+                  valueType="float">
+            <DefaultValue value="&valueEmpty;"/>
+        </Property>
+        <Property name="Decay Constant to Model Creep (BETA)"
+                  neutralName="DecayConstantModelCreep"
+                  valueType="float">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+        </Property>
+        <Property name="Decay Constant (BETA1)"
+                  neutralName="DecayConstant"
+                  valueType="float">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+        </Property>

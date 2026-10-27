@@ -1,0 +1,50 @@
+<Property name="Model"
+          neutralName="ViscoelasticDomain"
+          valueType="enum"
+          valueChoices="&Choice;##397None=0;
+                        &Choice;Time Domain Data=1;
+                        &Choice;Frequency Domain Data=2;
+                        &Choice;Zener=3;
+                        &Choice;Maxwell=4;
+                        &Choice;Kelvin=5;
+                        &Choice;One Prony Series (Total Strain Energy)=6;
+                        &Choice;Two Prony Series (Deviatoric, Volume)=7;">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="7"
+                inclusive="true"/>
+</Property>
+
+<Property name="Viscoelastic Type"
+          neutralName="ViscoelasticType"
+          valueType="enum"
+          valueChoices="&Choice;Isotropic=0;&Choice;Traction=1;"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="1">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+
+<Property name="Viscoelastic Type"
+          neutralName="ViscoelasticType2"
+          valueType="enum"
+          valueChoices="&Choice;Isotropic=0;&Choice;Traction=1;"
+          parentProperty="ViscoelasticDomain"
+          parentPropertyValToBeSensitive="2">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="1"
+                inclusive="true"/>
+</Property>
+
+
+
+
+
+
+

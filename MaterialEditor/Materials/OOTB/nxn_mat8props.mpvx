@@ -1,0 +1,27 @@
+<ReferenceProperty neutralName="TsaiWuFailureCriterion"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="ShearModulus3"/>
+
+<ReferenceProperty neutralName="MaxStressTension"
+                   displayName="Tension (Xt)"/>
+<ReferenceProperty neutralName="MaxStressTension2"
+                   displayName="Tension (Yt)"/>
+<ReferenceProperty neutralName="MaxStressCompression"
+                   displayName="Compression (Xc)"/>
+<ReferenceProperty neutralName="MaxStressCompress2"
+                   displayName="Compression (Yc)"/>
+<ReferenceProperty neutralName="MaxInPlaneShearStress"
+                   displayName="Shear (S)"/>
+<!-- ReferenceProperty neutralName="StressStrainDataType"/ -->
+
+<!-- missing allowable stresses or strains in the longitudinal and lateral directions-->
+<!-- missing allowable for in-plane shear for composite ply failure calculations-->
+<!-- missing indicate whether stresses or strains are stress or strain allowable-->

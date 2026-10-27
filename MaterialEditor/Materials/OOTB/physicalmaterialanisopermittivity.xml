@@ -1,0 +1,44 @@
+<!-- linear anisotropic -->
+<PropertyField name="Permittivity"
+               neutralName="AnisotropicLinearPermittivity"
+               valueSubtype="compact">
+    <DepDomain nVariables="6"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Linear Anisotropic Permittivity (Er)">
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permittivity XX"
+                     DisplayName="XX"
+                     NeutralName="RelativePermittivityXX"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permittivity XY"
+                     DisplayName="XY"
+                     NeutralName="RelativePermittivityXY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permittivity XZ"
+                     DisplayName="XZ"
+                     NeutralName="RelativePermittivityXZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permittivity YY"
+                     DisplayName="YY"
+                     NeutralName="RelativePermittivityYY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permittivity YZ"
+                     DisplayName="YZ"
+                     NeutralName="RelativePermittivityYZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureUnitLess;"
+                     Name="Relative Permittivity ZZ"
+                     DisplayName="ZZ"
+                     NeutralName="RelativePermittivityZZ"
+                     LowerBound="&valueZero;"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>

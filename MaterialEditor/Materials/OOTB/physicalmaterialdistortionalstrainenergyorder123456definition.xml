@@ -1,0 +1,12 @@
+        <Property name="Polynomial Order (N)"
+                  neutralName="DistortionalStrainEnergyOrder"
+                  editable="true"
+                  valueType="enum"
+                  valueChoices="&Choice;1=1&Choice;2=2&Choice;3=3&Choice;4=4&Choice;5=5&Choice;6=6"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="1"/>
+            <LowerBound value="1"
+                        inclusive="true"/>
+            <UpperBound value="9"
+                        inclusive="true"/>
+        </Property>

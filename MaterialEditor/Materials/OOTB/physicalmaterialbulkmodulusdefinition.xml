@@ -1,0 +1,42 @@
+        <Property name="Bulk Modulus (K)"
+                  neutralName="BulkModulus"
+                  valueType="scalarField"
+                  Dimensions="&MeasureStress;"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="3">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureTemperature;"/>
+                </Domain>
+                <Domain type="&DomainFrequency;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureFrequency;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>      
+        <Property name="Bulk Modulus Ratio (GAMMA)"
+                  neutralName="BulkModulusRatio"
+                  valueType="scalarField"
+                  Dimensions="&MeasureUnitLess;"
+                  parentProperty="MaterialType"
+                  parentPropertyValToBeSensitive="&MaterialTypeFLUID;"
+                  scaleFactor="true" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&minFloat;"
+                        inclusive="true"/>
+            <UpperBound value="&maxFloat;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainFrequency;"
+                        nVariables="1">
+                    <Variable Measure="&MeasureFrequency;"/>
+                </Domain>
+            </FieldDefn>
+        </Property>      

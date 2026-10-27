@@ -1,0 +1,24 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+
+
+<ReferenceProperty neutralName="BulkModulus"/>
+
+<ReferenceProperty neutralName="DistortionalStrainEnergyOrder"/>
+
+
+<ReferenceProperty neutralName="DistortionalDeformationConstants"/>
+
+
+<ReferenceProperty neutralName="StrainEnergyInputData"/>
+
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+<ReferenceProperty neutralName="ThermalExpansion"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+

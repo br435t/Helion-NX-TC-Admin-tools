@@ -1,0 +1,21 @@
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_AdiabaticTempOptionCP"/>
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_SpecificHeatAdiabatic"/>
+<ReferenceProperty neutralName="NonPhysicalProp_LSDyna_InitialAdiabaticTemp"/>
+
+<ReferenceProperty neutralName="MartensiteA"/>
+<ReferenceProperty neutralName="MartensiteB"/>
+<ReferenceProperty neutralName="MartensiteC"/>
+<ReferenceProperty neutralName="MartensiteD"/>
+<ReferenceProperty neutralName="MartensiteP"/>
+<ReferenceProperty neutralName="MartensiteQ"/>
+<ReferenceProperty neutralName="MartensiteE0"/>
+<ReferenceProperty neutralName="MartensiteVM0"/>
+
+<ReferenceProperty neutralName="HardeningAHS"/>
+<ReferenceProperty neutralName="HardeningBHS"/>
+<ReferenceProperty neutralName="HardeningM"/>
+<ReferenceProperty neutralName="HardeningN"/>
+<ReferenceProperty neutralName="HardeningEPS0"/>
+<ReferenceProperty neutralName="HardeningHMART"/>
+<ReferenceProperty neutralName="HardeningK1"/>
+<ReferenceProperty neutralName="HardeningK2"/>

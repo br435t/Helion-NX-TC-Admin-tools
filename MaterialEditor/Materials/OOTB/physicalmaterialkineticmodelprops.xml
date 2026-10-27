@@ -1,0 +1,74 @@
+<Property name="Avrami's Index"
+            neutralName="AvramisIndex"
+            valueType="scalarField">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="4">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+        <Domain Name="Cooling Rate"
+                type="&DomainUser;"
+                nVariables="1">
+            <Variable Name="Cooling Rate"/>
+        </Domain>
+        <Domain Name="Cooling Rate"
+                type="&DomainUser;"
+                nVariables="1"
+                hasSecondary="true"
+                autocreate="true">
+            <Variable Name="Cooling Rate"/>
+            <SecondaryDomain type="&DomainTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Half-Crystallization Time"
+            neutralName="HalfCrystallizationTime"
+            valueType="scalarField"
+            Dimensions="&MeasureTime;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="4">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+        <Domain Name="Cooling Rate"
+                type="&DomainUser;"
+                nVariables="1">
+            <Variable Name="Cooling Rate"/>
+        </Domain>
+        <Domain Name="Cooling Rate"
+                type="&DomainUser;"
+                nVariables="1"
+                hasSecondary="true"
+                autocreate="true">
+            <Variable Name="Cooling Rate"/>
+            <SecondaryDomain type="&DomainTemperature;"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+<Property name="Crystallization Starting Temperature"
+            neutralName="CrystallizationStartingTemperature"
+            valueType="scalarField"
+            Dimensions="&MeasureTemperature;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&MinTemperature;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain Name="Cooling Rate"
+                type="&DomainUser;"
+                nVariables="1"
+                hasSecondary="false"
+                autocreate="true">
+            <Variable Name="Cooling Rate"/>
+        </Domain>
+    </FieldDefn>
+</Property>
+

@@ -1,0 +1,83 @@
+      <Property name="Shear Modulus (G)"
+                 neutralName="ShearModulusConstant"
+                 valueType="scalarField"
+                 Dimensions="&MeasureStress;"
+                 parentProperty="ElasticDependencyControl"
+                 parentPropertyValToBeSensitive="3,4,5,6"
+                 scaleFactor="false" >
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&valueZero;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="1">
+            <Domain type="&DomainConstant;"/>
+          </FieldDefn>
+      </Property>
+      <Property name="Temperature Dependent Shear Modulus (G)"
+                neutralName="ShearModulusTemperature"
+                valueType="scalarField"
+                valueSubtype="&scalarFieldCompactDisplay;"
+                parentProperty="ElasticDependencyControl"
+                parentPropertyValToBeSensitive="4,6"
+                Dimensions="&MeasureStress;"
+                scaleFactor="true" >
+              <DefaultValue value="&valueEmpty;"/>
+              <LowerBound value="&valueZero;"
+                          inclusive="true"/>
+              <FieldDefn nDomains="1">
+                <Domain type="&DomainTemperature;"/>
+              </FieldDefn>
+      </Property>
+      <Property name="Frequency Dependent Shear Modulus (G)"
+                neutralName="ShearModulusFrequency"
+                valueType="scalarField"
+                valueSubtype="&scalarFieldCompactDisplay;"
+                Dimensions="&MeasureStress;"
+                parentProperty="ElasticDependencyControl"
+                parentPropertyValToBeSensitive="5,6"
+                scaleFactor="true" >
+          <DefaultValue value="&valueEmpty;"/>
+          <LowerBound value="&valueZero;"
+                      inclusive="true"/>
+          <FieldDefn nDomains="1">
+            <Domain type="&DomainFrequency;"/>
+          </FieldDefn>
+      </Property>
+      <Property name="Shear Modulus (G)"
+                neutralName="ShearModulus"
+                valueType="scalarField"
+                Dimensions="&MeasureStress;"
+                scaleFactor="false" >
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+      </Property>
+      <Property name="Shear Modulus (G13)"
+                neutralName="ShearModulus2"
+                valueType="scalarField"
+                Dimensions="&MeasureStress;"
+                parentProperty="MaterialType"
+                parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;"
+                scaleFactor="false" >
+          <DefaultValue value="&valueEmpty;"/>
+          <FieldDefn nDomains="2">
+              <Domain type="&DomainConstant;"/>
+              <Domain type="&DomainTemperature;"/>
+          </FieldDefn>
+      </Property>
+      <Property name="Shear Modulus (G23)"
+                neutralName="ShearModulus3"
+                valueType="scalarField"
+                Dimensions="&MeasureStress;"
+                parentProperty="MaterialType"
+                parentPropertyValToBeSensitive="&MaterialTypeORTHOTROPIC;"
+                scaleFactor="false" >
+          <DefaultValue value="&valueEmpty;"/>
+          <FieldDefn nDomains="2">
+              <Domain type="&DomainConstant;"/>
+              <Domain type="&DomainTemperature;"/>
+          </FieldDefn>
+      </Property>

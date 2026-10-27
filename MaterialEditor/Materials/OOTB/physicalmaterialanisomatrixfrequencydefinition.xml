@@ -1,0 +1,456 @@
+
+<Property name="Frequency (G11)"
+          neutralName="ShearModulusFrequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G12)"
+          neutralName="G12Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G13)"
+          neutralName="G13Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G14)"
+          neutralName="G14Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G15)"
+          neutralName="G15Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G16)"
+          neutralName="G16Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frequency (G21)"
+          neutralName="ShearModulus2Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G22)"
+          neutralName="G22Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G23)"
+          neutralName="G23Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G24)"
+          neutralName="G24Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G25)"
+          neutralName="G25Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G26)"
+          neutralName="G26Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frequency (G31)"
+          neutralName="ShearModulus3Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G32)"
+          neutralName="G32Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G33)"
+          neutralName="G33Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G34)"
+          neutralName="G34Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G35)"
+          neutralName="G35Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G36)"
+          neutralName="G36Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frequency (G41)"
+          neutralName="ShearModulus4Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G42)"
+          neutralName="G42Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G43)"
+          neutralName="G43Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G44)"
+          neutralName="G44Frequency"
+          editable="true"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G45)"
+          neutralName="G45Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G46)"
+          neutralName="G46Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frequency (G51)"
+          neutralName="ShearModulus5Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G52)"
+          neutralName="G52Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G53)"
+          neutralName="G53Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G54)"
+          neutralName="G54Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G55)"
+          neutralName="G55Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G56)"
+          neutralName="G56Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+<Property name="Frequency (G61)"
+          neutralName="ShearModulus6Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G62)"
+          neutralName="G62Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G63)"
+          neutralName="G63Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G64)"
+          neutralName="G64Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G65)"
+          neutralName="G65Frequency"
+          visible="false"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+<Property name="Frequency (G66)"
+          neutralName="G66Frequency"
+          valueType="scalarField"
+          valueSubtype="Symmetric"
+          Dimensions="&MeasureStress;"
+          parentProperty="AnisotropicElasticDependencyControl"
+          parentPropertyValToBeSensitive="5,6" >
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="1">
+        <Domain type="&DomainFrequency;"/>
+    </FieldDefn>
+</Property>
+
+

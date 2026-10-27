@@ -1,0 +1,51 @@
+<Property name="Axis Shear Strength (U)"
+          neutralName="AxisShearStrength1"
+          parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;TsaiWuFailureCriterion"
+          parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Axis Shear Strength (V)"
+          neutralName="AxisShearStrength2"
+          parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;TsaiWuFailureCriterion"
+          parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Axis Shear Strength (W)"
+          neutralName="AxisShearStrength3"
+          parentProperty="&Choice;StrengthLimitsFailureCriterion&Choice;AllFailureCriterion&Choice;HashinFailureCriterion&Choice;TsaiWuFailureCriterion"
+          parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&BoolTrue;"
+          valueType="scalarField"
+          Dimensions="&MeasureStress;"
+          scaleFactor="false" >
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="false"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>

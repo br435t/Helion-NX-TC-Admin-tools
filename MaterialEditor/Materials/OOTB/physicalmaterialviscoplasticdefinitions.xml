@@ -1,0 +1,237 @@
+    <Property name="Viscoplastic Type"
+              neutralName="ViscoplasticModelType"
+              valueType="enum"
+              valueChoices="&Choice;None=0&Choice;Lemaitre Law=1&Choice;Prager Law=2&Choice;Johnson and Cook=3;">
+        <DefaultValue value="0"/>
+        <LowerBound value="0"/>
+        <UpperBound value="2"/>
+    </Property>
+
+    <Property name="Creep Parameter (EXPN)"
+              neutralName="CreepParameterEXPN"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1,2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Creep Parameter (BIGK)"
+              neutralName="CreepParameterBIGK"
+              valueType="scalarField"
+              Dimensions="&MeasureStress;"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1,2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Creep Parameter (LITK)"
+              neutralName="CreepParameterLITK"
+              valueType="scalarField"
+              Dimensions="&MeasureStress;"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Isotropic Harderning (EXPM)"
+              neutralName="IsotropicHardeningEXPM"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="false"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="false"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Kinematic Hardening (COCA)"
+              neutralName="KinematicHardeningCOCA"
+              valueType="scalarField"
+              scaleFactor="false"
+              Dimensions="&MeasureStress;"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Damage Parameter (COEN)"
+              neutralName="DamageParameterCOEN"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1,2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Damage Parameter (EXEN)"
+              neutralName="DamageParameterEXEN"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1,2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Damage Parameter (PDEN)"
+              neutralName="DamageParameterPDEN"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1,2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+    <Property name="Damage Parameter (DDEN)"
+              neutralName="DamageParameterDDEN"
+              valueType="scalarField"
+              scaleFactor="false"
+              parentProperty="ViscoplasticModelType"
+              parentPropertyValToBeSensitive="1,2">
+        <DefaultValue value="&valueEmpty;"/>
+        <LowerBound value="&minFloat;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+        <FieldDefn nDomains="2">
+            <Domain type="&DomainConstant;"/>
+            <Domain type="&DomainTemperature;"/>
+        </FieldDefn>
+    </Property>
+
+
+<Property name="Johnson and Cook Constant A"
+          neutralName="JohnsonCookConstantA"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+</Property>
+
+<Property name="Johnson and Cook Constant B"
+          neutralName="JohnsonCookConstantB"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Johnson and Cook Constant N"
+          neutralName="JohnsonCookConstantN"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Johnson and Cook Constant C"
+          neutralName="JohnsonCookConstantC"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="&valueZero;"/>
+</Property>
+
+<Property name="Effective Plastic Strain at Failure (PSFAIL)"
+          neutralName="EffectiveFailurePlastStrain"
+          valueType="float"
+          Dimensions="&MeasureUnitLess;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="1.0E+17"/>
+</Property>
+
+<Property name="Max Stress from Work Hardening (SIGMAX)"
+          neutralName="MaxStressWorkHardening"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+</Property>
+
+<Property name="Saturation Stress (SIGSAT)"
+          neutralName="SaturationStress"
+          valueType="float"
+          Dimensions="&MeasureStress;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="1.0E+28"/>
+</Property>
+
+<Property name="Quasi-static threshold strain rate (EPSO)"
+          neutralName="QuasiStaticThresholdStrainRate"
+          valueType="float"
+          Dimensions="&MeasureCoefficientPerTime;"
+          parentProperty="ViscoplasticModelType"
+          parentPropertyValToBeSensitive="3">
+    <DefaultValue value="1.0"/>
+</Property>
+
+

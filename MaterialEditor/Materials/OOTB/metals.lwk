@@ -1,0 +1,532 @@
+
+*** BEGIN MATERIAL
+Material Name       : Silver 
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.973 0.955 0.908
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 0.138
+Refraction Green    : 0.128
+Refraction Blue     : 0.157
+Absorption Red      : 4.377
+Absorption Green    : 3.174
+Absorption Blue     : 2.344
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Aluminium
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.900 0.922 0.924
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.4000
+Refraction Red      : 1.801
+Refraction Green    : 0.863
+Refraction Blue     : 0.592
+Absorption Red      : 8.002
+Absorption Green    : 6.383
+Absorption Blue     : 5.341
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Gold
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.952 0.697 0.389
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 0.186
+Refraction Green    : 0.590
+Refraction Blue     : 1.518
+Absorption Red      : 3.756
+Absorption Green    : 2.297
+Absorption Blue     : 1.897
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Chromium
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.640 0.669 0.695
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.6000
+Refraction Red      : 3.749
+Refraction Green    : 2.869
+Refraction Blue     : 1.837
+Absorption Red      : 4.364
+Absorption Green    : 4.440
+Absorption Blue     : 4.010
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Cobalt
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.693 0.649 0.612
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.6000
+Refraction Red      : 2.286
+Refraction Green    : 1.973
+Refraction Blue     : 1.694
+Absorption Red      : 4.358
+Absorption Green    : 3.697
+Absorption Blue     : 3.194
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Copper
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.929 0.613 0.540
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.6000
+Refraction Red      : 0.302
+Refraction Green    : 1.051
+Refraction Blue     : 1.168
+Absorption Red      : 3.916
+Absorption Green    : 2.582
+Absorption Blue     : 2.338
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Iron
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .562783 .562783 .562783
+Ambient Factor      : 0.4000
+Diffuse Factor      : 0.4000
+Specular Factor     : 0.4000
+Roughness           : 0.4000
+Mirror Factor       : 0.2000
+Refraction Red      : 2.36
+Refraction Green    : 2.36
+Refraction Blue     : 2.36
+Absorption Red      : 3.2096
+Absorption Green    : 3.2096
+Absorption Blue     : 3.2096
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Nickel
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.663 0.596 0.520
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.4000
+Refraction Red      : 2.131
+Refraction Green    : 1.726
+Refraction Blue     : 1.628
+Absorption Red      : 3.932
+Absorption Green    : 3.105
+Absorption Blue     : 2.581
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Lead
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .624524 .689588 .684989
+Ambient Factor      : 0.4000
+Diffuse Factor      : 0.4000
+Specular Factor     : 0.4000
+Roughness           : 0.4000
+Mirror Factor       : 0.1000
+Refraction Red      : 2.02027
+Refraction Green    : 2.26255
+Refraction Blue     : 1.72076
+Absorption Red      : 3.52139
+Absorption Green    : 4.30247
+Absorption Blue     : 3.801
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Tin
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .817189 .800309 .724838
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.3000
+Refraction Red      : 1.45443
+Refraction Green    : 1.11005
+Refraction Blue     : .758091
+Absorption Red      : 5.07931
+Absorption Green    : 4.21699
+Absorption Blue     : 2.81592
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Zinc
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .744156 .747539 .73005
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.3000
+Refraction Red      : 2.45435
+Refraction Green    : 1.5106
+Refraction Blue     : .95619
+Absorption Red      : 5.14198
+Absorption Green    : 4.19892
+Absorption Blue     : 3.21585
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Mercury
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.780 0.779 0.773
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 2.250
+Refraction Green    : 1.426
+Refraction Blue     : 1.034
+Absorption Red      : 5.515
+Absorption Green    : 4.464
+Absorption Blue     : 3.748
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Tungsten
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.508 0.492 0.467
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.5000
+Refraction Red      : 3.695
+Refraction Green    : 3.453
+Refraction Blue     : 3.338
+Absorption Red      : 2.830
+Absorption Green    : 2.714
+Absorption Blue     : 2.498
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Graphite
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.365 0.299 0.291
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.3000
+Mirror Factor       : 0.0100
+Refraction Red      : 2.925
+Refraction Green    : 2.663
+Refraction Blue     : 2.630
+Absorption Red      : 1.737
+Absorption Green    : 1.332
+Absorption Blue     : 1.286
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Platinum
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.683 0.629 0.581
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 2.489
+Refraction Green    : 2.054
+Refraction Blue     : 1.814
+Absorption Red      : 4.389
+Absorption Green    : 3.581
+Absorption Blue     : 3.067
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Palladium
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.743 0.690 0.649
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 1.837
+Refraction Green    : 1.582
+Refraction Blue     : 1.385
+Absorption Red      : 4.529
+Absorption Green    : 3.704
+Absorption Blue     : 3.180
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Titanium
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.589108 0.575275 0.562632
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.6000
+Refraction Red      : 2.692002
+Refraction Green    : 2.345471
+Refraction Blue     : 1.887334
+Absorption Red      : 3.554014
+Absorption Green    : 3.327377
+Absorption Blue     : 3.015747
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Commercial Brass
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .826083 .59041 .5057529
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.3000
+Mirror Factor       : 0.2000
+Refraction Red      : 0.823482
+Refraction Green    : 1.122115 
+Refraction Blue     : 1.131474
+Absorption Red      : 3.720061
+Absorption Green    : 2.584284
+Absorption Blue     : 2.181381
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Red Brass
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .822616 0.599138 .518213
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.3000
+Refraction Red      : 0.914085
+Refraction Green    : 1.143698
+Refraction Blue     : 1.121736
+Absorption Red      : 3.799057
+Absorption Green    : 2.673986
+Absorption Blue     : 2.238852
+*** END MATERIAL 
+
+*** BEGIN MATERIAL
+Material Name       : Cartridge Brass
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .812215 .625326 .55559
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.5000
+Refraction Red      : 1.185897
+Refraction Green    : 1.208445
+Refraction Blue     : 1.092522
+Absorption Red      : 4.036044
+Absorption Green    : 2.943092
+Absorption Blue     : 2.411263
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Naval Brass
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .80528 0.64278 .580518
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 1.367104
+Refraction Green    : 1.251610
+Refraction Blue     : 1.073046
+Absorption Red      : 4.194035
+Absorption Green    : 3.122496
+Absorption Blue     : 2.526204
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : A Bronze
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.831434 0.595663 0.505232
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.3000
+Mirror Factor       : 0.4000
+Refraction Red      : 0.723490
+Refraction Green    : 1.082060
+Refraction Blue     : 1.119386
+Absorption Red      : 3.713794
+Absorption Green    : 2.586091
+Absorption Blue     : 2.141388
+*** END MATERIAL 
+
+*** BEGIN MATERIAL
+Material Name       : C Bronze
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.828269 0.641140 0.554033
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.4000
+Refraction Red      : 0.885921
+Refraction Green    : 1.088280
+Refraction Blue     : 1.039098
+Absorption Red      : 4.017243
+Absorption Green    : 2.948514
+Absorption Blue     : 2.291284
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Steel
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : .582846 .563761 .548233
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.4000
+Roughness           : 0.4000
+Mirror Factor       : 0.4000
+Refraction Red      : 2.62215
+Refraction Green    : 2.24633
+Refraction Blue     : 1.8535
+Absorption Red      : 3.46746
+Absorption Green    : 3.17153
+Absorption Blue     : 2.87553
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Stainless Steel
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.589108 0.575275 0.562632
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.8000
+Refraction Red      : 2.692002
+Refraction Green    : 2.345471
+Refraction Blue     : 1.887334
+Absorption Red      : 3.554014
+Absorption Green    : 3.327377
+Absorption Blue     : 3.015747
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Solder
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.720852 0.744794 0.704494
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.3000
+Mirror Factor       : 0.1000
+Refraction Red      : 1.737345
+Refraction Green    : 1.687275
+Refraction Blue     : 1.239430
+Absorption Red      : 4.300345
+Absorption Green    : 4.259435
+Absorption Blue     : 3.307
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Monel
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.7012 0.5850 0.5166
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.1000
+Mirror Factor       : 0.1000
+Refraction Red      : 1.4786
+Refraction Green    : 1.3918
+Refraction Blue     : 1.3184
+Absorption Red      : 3.6472
+Absorption Green    : 2.8272
+Absorption Blue     : 2.4148
+*** END MATERIAL
+
+*** BEGIN MATERIAL
+Material Name       : Iconel
+Material Type       : Metal
+Color Shader        : Plain
+Reflectance Shader  : Conductor
+Color               : 0.6488 0.6172 0.5732
+Ambient Factor      : 0.1000
+Diffuse Factor      : 0.1000
+Specular Factor     : 0.8000
+Roughness           : 0.3000
+Mirror Factor       : 0.1000
+Refraction Red      : 2.1868
+Refraction Green    : 1.9140
+Refraction Blue     : 1.6328
+Absorption Red      : 3.8452
+Absorption Green    : 3.3848
+Absorption Blue     : 2.9616
+*** END MATERIAL

@@ -1,0 +1,117 @@
+            <Group label="Default Ply Properties">
+                <Property name="Ply Thickness"
+                          neutralName="PlyThickness"
+                          valueType="float"
+                          Dimensions="&MeasureLength;"
+                          scaleFactor="false">
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Ply Failure Theory"
+                          neutralName="PlyFailureTheory"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0
+                                        &Choice;Hill=1
+                                        &Choice;Hoffman=2
+                                        &Choice;Tsai-Wu=3
+                                        &Choice;Maximum Stress=4
+                                        &Choice;Maximum Strain=5
+                                        &Choice;Von Mises Yield=30
+                                        &Choice;Von Mises Ultimate=31
+                                        &Choice;User Defined=100"
+                          scaleFactor="false">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="User Defined Failure Theories"
+                          neutralName="UserDefinedFailureTheories"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0"
+                          parentProperty="PlyFailureTheory"
+                          parentPropertyValToBeSensitive="100"
+                          scaleFactor="false">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Interlaminar Failure Theory"
+                          neutralName="InterlaminarFailureTheory"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0
+                                        &Choice;Transverse Shear=1
+                                        &Choice;User Defined=3"
+                          scaleFactor="false">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="User Defined Interlaminar Failure Theories"
+                          neutralName="UserDefinedInterlaminarFailureTheories"
+                          valueType="enum"
+                          valueChoices="&Choice;None=0"
+                          parentProperty="InterlaminarFailureTheory"
+                          parentPropertyValToBeSensitive="3"
+                          scaleFactor="false">
+                    <DefaultValue value="0;"/>
+                </Property>
+            </Group>
+            <Group label="Default Draping Parameters">
+                <Property name="Draping Solver"
+                          neutralName="DrapingSolver"
+                          valueType="enum"
+                          valueChoices="&Choice;Woven=0
+                                        &Choice;Unidirectional=1
+                                        &Choice;Projection=2"
+                          scaleFactor="false">
+                    <DefaultValue value="0"/>
+                </Property>
+                <Property name="Lock Angle"
+                          neutralName="LockAngle"
+                          valueType="float"
+                          Dimensions="&MeasureAngle;"
+                          scaleFactor="false">
+                    <DefaultValue value="&Angle15deg;"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Draping Path"
+                          neutralName="DrapingPath"
+                          valueType="enum"
+                          valueChoices="&Choice;Geodesic=0
+                                        &Choice;Seed Curve=1"
+                          scaleFactor="false">
+                    <DefaultValue value="&valueZero;"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                    <UpperBound value="1"
+                                inclusive="true"/>
+                </Property>
+                <Property name="Zone Angle Tolerance"
+                          neutralName="ZoneAngleTolerance"
+                          valueType="float"
+                          Dimensions="&MeasureAngle;"
+                          scaleFactor="false">
+                    <DefaultValue value="&Angle10deg;"/>
+                    <LowerBound value="0"
+                                inclusive="true"/>
+                </Property>
+            </Group>
+            <Group label="Improved Woven Material">
+                <Property name="Account for Woven Fiber Shear"
+                          neutralName="AccountForWovenFiberShear"
+                          valueType="bool"
+                          scaleFactor="false">
+                    <DefaultValue value="&BoolFalse;"/>
+                </Property>
+            </Group>
+            <Group label="Ply Fibrous Influence Coefficient">
+                <Property name="Ke"
+                          neutralName="KE"
+                          valueType="float"
+                          Dimensions="&MeasureUnitLess;"
+                          propertyVisibleOrSensitive="visible"
+                          parentProperty="AccountForWovenFiberShear"
+                          parentPropertyValToBeSensitive="&BoolTrue;"
+                          scaleFactor="false">
+                    <DefaultValue value="0.988"/>
+                    <LowerBound value="0"
+                                inclusive="false"/>
+                    <UpperBound value="1"
+                                inclusive="false"/>
+                </Property>
+            </Group>

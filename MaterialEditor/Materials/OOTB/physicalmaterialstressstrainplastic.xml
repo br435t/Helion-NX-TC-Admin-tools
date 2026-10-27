@@ -1,0 +1,18 @@
+<Property name="Stress-Strain Curve"
+          neutralName="StressStrainCurvePlastic"
+          valueLabel="&Above;Only applicable to Hardening Rule of Isotropic, Sublayer Kinematic or Isotropic + Chaboche Kinematic for MPLAS"
+          valueType="scalarField"
+          valueSubtype="&scalarFieldCompactDisplay;"
+          Dimensions="&MeasureStress;"
+          parentProperty="&Choice;MatlNonlinearityType&ChoiceAnd;HardeningRule&ChoiceAnd;YieldFunctionCriterion"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1,4,5&Choice;1,7"
+          scaleFactor="false">
+    <DefaultValue value="&valueEmpty;"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainStrain;"/>
+        <Domain type="&DomainTemperature;"
+                hasSecondary="true">
+            <SecondaryDomain type="&DomainStrain;"/>
+        </Domain>
+    </FieldDefn>
+</Property>

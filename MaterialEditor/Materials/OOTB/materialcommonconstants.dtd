@@ -1,0 +1,47 @@
+
+<!ENTITY valueAutoAssign "-666666.">
+<!ENTITY valueEmpty "-777777.">
+<!ENTITY valueBlank "">
+<!ENTITY maxFloat "-888888.">
+<!ENTITY minFloat "-999999.">
+
+<!ENTITY valueInherit "inherited">
+
+<!-- Boolean values -->
+<!ENTITY BoolMin       "0">
+<!ENTITY BoolMax       "1">
+<!ENTITY BoolFalse     "0">
+<!ENTITY BoolTrue      "1">
+
+<!-- Angle values -->
+<!ENTITY AngleMin            "0">
+<!ENTITY AngleMax            "6.28318530717955">
+<!ENTITY Angle180deg         "3.14159265358979">
+<!ENTITY Angle30deg          "0.52359877559829">
+<!ENTITY Angle360deg         "6.28318530717955">
+<!ENTITY Angle45deg          "0.78539816339744">
+<!ENTITY Angle53deg          "0.92502450355699">
+<!ENTITY Angle90deg          "1.57079632679490">
+<!ENTITY Angle10deg          "0.17453292519943">
+<!ENTITY Angle15deg          "0.26179938779916">
+
+
+<!-- Minimum Temperature -->
+<!ENTITY MinTemperature "0.0">
+<!ENTITY ZeroDegCelsius "273.15">
+
+<!-- Other Values -->
+<!ENTITY valueZero "0.">
+<!ENTITY valueZeroPointOne "0.1">
+<!ENTITY valueZeroPointFive "0.5">
+<!ENTITY valueOne "1.">
+<!ENTITY valueOnePointFive "1.5">
+<!ENTITY valueMinusOne "-1.">
+<!ENTITY valueThousand "1000.">
+
+<!ENTITY valuePercentMin "0.0">
+<!ENTITY valuePercentMax "100.0">
+<!ENTITY value50Percent "50.0">
+
+<!ENTITY valueDistTol "0.0254">
+

@@ -1,0 +1,29 @@
+              <Property name="Default Coating Thickness"
+                      neutralName="CoatingsThickness"
+                      valueType="scalarField"
+                      Dimensions="&MeasureLength;"
+                      scaleFactor="false">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="1">
+                  <Domain type="&DomainConstant;"/>
+                </FieldDefn>
+              </Property>
+
+              <Property name="Coverage Ratio"
+                        neutralName="CoatingsCoverageRatio"
+                        valueType="scalarField"
+                        Dimensions="&MeasureUnitLess;"
+                        scaleFactor="false">
+                <DefaultValue value="&valueEmpty;"/>
+                <LowerBound value="&valueZero;"
+                            inclusive="true"/>
+                <UpperBound value="&maxFloat;"
+                            inclusive="true"/>
+                <FieldDefn nDomains="1">
+                  <Domain type="&DomainConstant;"/>
+                </FieldDefn>
+              </Property>

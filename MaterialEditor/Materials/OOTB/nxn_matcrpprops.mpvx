@@ -1,0 +1,16 @@
+<ReferenceProperty neutralName="CreepFormulation"
+                   valueChoices="&Choice;Norton-Bailey in Time or Strain Hardening, Temperature-Dependent (MATCRP/Type 301)=5"
+                   defaultValue="5"
+                   showProp="true"
+                   lockProp="false"
+                   commonProps="replace"/>
+
+<ReferenceProperty neutralName="CreepThreshold"/>
+
+<ReferenceProperty neutralName="CreepHardening"/>
+
+<ReferenceProperty neutralName="CheckUnitSystem"/>
+<ReferenceProperty neutralName="ForceLengthMassUnits"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_A1"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_b"/>
+<ReferenceProperty neutralName="PowerLawCreepParameter_d"/>

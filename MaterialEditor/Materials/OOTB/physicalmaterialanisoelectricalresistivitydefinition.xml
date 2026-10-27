@@ -1,0 +1,48 @@
+<!-- ================================================================================= -->
+<!-- ==========================  Anisotropic Resistivity  ============================ -->
+<!-- ================================================================================= -->
+<PropertyField name="Resistivity"
+               neutralName="AnisotropicLinearElectricResistivity"
+               valueSubtype="compact"
+               parentProperty="ElectResistivityMethod"
+               parentPropertyValToBeSensitive="2">
+    <DepDomain nVariables="6"
+               autocreate="true"
+               type="&DomainUser;"
+               Name="Linear Anisotropic Electric Resistivity">
+        <DepVariable Measure="&MeasureElectricalResistivity;"
+                     Name="Resistivity XX"
+                     DisplayName="XX"
+                     NeutralName="ElectricResistivityXX"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalResistivity;"
+                     Name="Resistivity XY"
+                     DisplayName="XY"
+                     NeutralName="ElectricResistivityXY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalResistivity;"
+                     Name="Resistivity XZ"
+                     DisplayName="XZ"
+                     NeutralName="ElectricResistivityXZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalResistivity;"
+                     Name="Resistivity YY"
+                     DisplayName="YY"
+                     NeutralName="ElectricResistivityYY"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalResistivity;"
+                     Name="Resistivity YZ"
+                     DisplayName="YZ"
+                     NeutralName="ElectricResistivityYZ"
+                     LowerBound="&valueZero;"/>
+        <DepVariable Measure="&MeasureElectricalResistivity;"
+                     Name="Resistivity ZZ"
+                     DisplayName="ZZ"
+                     NeutralName="ElectricResistivityZZ"
+                     LowerBound="&valueZero;"/>
+    </DepDomain>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</PropertyField>

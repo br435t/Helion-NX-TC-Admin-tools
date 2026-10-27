@@ -1,0 +1,5 @@
+        <Property name="Young's Modulus (ED)"
+                  neutralName="YoungsRelaxationModulus"
+                  valueType="float">
+            <DefaultValue value="&valueEmpty;"/>
+        </Property>

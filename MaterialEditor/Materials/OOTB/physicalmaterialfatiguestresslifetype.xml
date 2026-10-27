@@ -1,0 +1,9 @@
+<Property name="Stress-Life Data"
+          neutralName="StressLifeDataFormat"
+          valueType="enum"
+          valueChoices="&Choice;Coefficients=0&Choice;Fatigue Life-Stress Field=1&Choice;Slope Field=2"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="2"/>
+</Property>

@@ -1,0 +1,185 @@
+               <Property name="Stress-Strain (LCA)"
+                         neutralName="StressStrainCurveLCA"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         allowUnspecifiedValue="false"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>              
+               <Property name="Stress-Strain (LCB)"
+                         neutralName="StressStrainCurveLCB"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="Stress-Strain (LCC)"
+                         neutralName="StressStrainCurveLCC"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="Stress-Strain (LCS)"
+                         neutralName="StressStrainCurveLCS"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+                <Property name="Stress-Strain (LCAB)"
+                          neutralName="StressStrainCurveLCAB"
+                          valueType="scalarField"
+                          valueSubtype="compact"
+                          Dimensions="&MeasureStress;"
+                          parentProperty="UseTransverselyIsotropicSurface"
+                          parentPropertyValToBeSensitive="&BoolFalse;"
+                          scaleFactor="false">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <FieldDefn nDomains="1">
+                        <Domain type="&DomainStrain;"/>
+                    </FieldDefn>
+                </Property>
+               <Property name="Stress-Strain (LCBC)"
+                         neutralName="StressStrainCurveLCBC"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="Stress-Strain (LCCA)"
+                         neutralName="StressStrainCurveLCCA"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolFalse;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+
+               <Property name="Yield Stress Function (LCA)"
+                         neutralName="YieldStressLCA"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         allowUnspecifiedValue="false"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainAngle;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="Strong Axis Hardening Stress (LCB)"
+                         neutralName="StrongAxisHardeningStressLCB"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="Weak Axis Hardening Stress (LCC)"
+                         neutralName="WeakAxisHardeningStressLCC"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureStress;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="Shear Stress Multiplier (LCS)"
+                         neutralName="ShearStressMultiplierLCS"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="ab-Direction Stress Multiplier (LCAB)"
+                         neutralName="ABStressMultiplierLCAB"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="bc-Direction Stress Multiplier (LCBC)"
+                         neutralName="BCStressMultiplierLCBC"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>
+               <Property name="ca-Direction Stress Multiplier (LCCA)"
+                         neutralName="CAStressMultiplierLCCA"
+                         valueType="scalarField"
+                         valueSubtype="compact"
+                         Dimensions="&MeasureUnitLess;"
+                         parentProperty="UseTransverselyIsotropicSurface"
+                         parentPropertyValToBeSensitive="&BoolTrue;"
+                         scaleFactor="false">
+                   <DefaultValue value="&valueEmpty;"/>
+                   <FieldDefn nDomains="1">
+                       <Domain type="&DomainStrain;"/>
+                   </FieldDefn>
+               </Property>

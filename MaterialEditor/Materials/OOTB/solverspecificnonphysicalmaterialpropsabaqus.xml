@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Materials SYSTEM "solverspecificnonphysicalmaterialproperties.dtd" [
+<!ENTITY rayleighDampingProps SYSTEM "solverspecificnonphysicalmaterialrayleighdampingprops.xml">
+<!ENTITY heatGenerationProps  SYSTEM "solverspecificnonphysicalmaterialheatgenerationprops.xml">
+<!ENTITY laminateIsoProps  SYSTEM "solverspecificnonphysicalmateriallaminateisoprops.xml">
+<!ENTITY laminateOrthoProps  SYSTEM "solverspecificnonphysicalmateriallaminateorthoprops.xml">
+]>
+
+<Materials>
+    <!-- ================================================================== -->
+    <!--                        Isotropic Materials                         -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeISOTROPIC;">
+        <Tab label="Mechanical">
+            <Group label="Rayleigh Damping Properties">
+                &rayleighDampingProps;
+            </Group>
+        </Tab>
+        <Tab label="Thermal">
+            <Group label="Heat Generation">
+                &heatGenerationProps;
+            </Group>
+        </Tab>
+        <Tab label="Damage" >
+ 			<Group label="Progressive Failure Model">
+                &laminateIsoProps;
+            </Group>     
+        </Tab>				
+    </Material>
+    <!-- ================================================================== -->
+    <!--                       Orthotropic Materials                        -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeORTHOTROPIC;">
+        <Tab label="Mechanical">
+            <Group label="Rayleigh Damping Properties">
+                &rayleighDampingProps;
+            </Group>
+        </Tab>
+        <Tab label="Thermal">
+            <Group label="Heat Generation">
+                &heatGenerationProps;
+            </Group>
+        </Tab>
+        <Tab label="Damage">
+            <Group label="Progressive Failure Model">
+                &laminateOrthoProps;
+            </Group>
+        </Tab>
+    </Material>
+    <!-- ================================================================== -->
+    <!--                       Anisotropic Materials                        -->
+    <!-- ================================================================== -->
+    <Material type="&MaterialTypeANISOTROPIC;">
+        <Tab label="Mechanical">
+            <Group label="Rayleigh Damping Properties">
+                &rayleighDampingProps;
+            </Group>
+        </Tab>
+        <Tab label="Thermal">
+            <Group label="Heat Generation">
+                &heatGenerationProps;
+            </Group>
+        </Tab>
+    </Material>
+</Materials>
+

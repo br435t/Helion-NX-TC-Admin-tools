@@ -1,0 +1,61 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="PorousModels"
+                   lockProp="true"
+                   valueChoices="&Choice;Johnson-Champoux-Allard=2"/>
+
+<ReferenceProperty neutralName="FrameType"
+                   showProp="false"
+                   lockProp="true"/>
+
+<ReferenceProperty neutralName="FrameTypeJohnson"
+                   lockProp="true"
+                   valueChoices="&Choice;Elastic Frame=2"/>
+
+<ReferenceProperty neutralName="SpeedofSoundControl"
+                   valueChoices="&Choice;Constant=0"
+                   defaultValue="0"
+                   showProp="false"/>
+<ReferenceProperty neutralName ="SoundSpeed"/>
+
+
+<ReferenceProperty neutralName="SpecificHeatRatio" />
+
+
+<ReferenceProperty neutralName="DynamicViscConstant" />
+
+
+<ReferenceProperty neutralName="PrandtlNumber" />
+
+
+
+<ReferenceProperty neutralName="StaticFlowResistivity" />
+
+
+<ReferenceProperty neutralName="Porosity" />
+
+
+<ReferenceProperty neutralName="Tortuosity" />
+
+<ReferenceProperty neutralName="CharacteristicViscousLength" />
+
+
+<ReferenceProperty neutralName="CharacteristicThermalLength" />
+
+
+<ReferenceProperty neutralName="FrameDensity" />
+
+
+<ReferenceProperty neutralName="FrameYoungsModulusFrequency" />
+
+
+<ReferenceProperty neutralName="FramePoissonsRatioFrequency" />
+
+
+<ReferenceProperty neutralName="FrameStructuralDampingFrequency" />
+

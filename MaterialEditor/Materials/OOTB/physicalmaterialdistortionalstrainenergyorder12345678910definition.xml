@@ -1,0 +1,11 @@
+        <Property name="Number of Points (NPTS)"
+                  neutralName="DistortionalStrainEnergyOrder"
+                  valueType="enum"
+                  valueChoices="&Choice;1=1&Choice;2=2&Choice;3=3&Choice;4=4&Choice;5=5&Choice;6=6&Choice;7=7&Choice;8=8&Choice;9=9&Choice;10=10"
+                  Dimensions="&MeasureUnitLess;">
+            <DefaultValue value="1"/>
+            <LowerBound value="1"
+                        inclusive="true"/>
+            <UpperBound value="20"
+                        inclusive="true"/>
+        </Property>

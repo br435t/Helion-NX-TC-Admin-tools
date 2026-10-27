@@ -1,0 +1,407 @@
+<!-- ============================================================================= -->
+<!-- "Include" the standard constant definitions for use within the umat xml files -->
+<!-- ============================================================================= -->
+
+<!ENTITY % materialTypes SYSTEM "materialtypes.dtd">
+%materialTypes;
+<!ENTITY % materialUnits SYSTEM "materialunits.dtd">
+%materialUnits;
+<!ENTITY % materialFieldDomains SYSTEM "materialfielddomains.dtd">
+%materialFieldDomains;
+
+<!ENTITY % materialUIBehavior SYSTEM "materialuibehavior.dtd">
+%materialUIBehavior;
+
+<!ENTITY % materialCommonConstants SYSTEM "materialcommonconstants.dtd">
+%materialCommonConstants;
+
+<!ENTITY % materialUMATConstants SYSTEM "materialumatconstants.dtd">
+%materialUMATConstants;
+
+<!-- ============================================================================= -->
+<!-- Define the layout of the nx nastran umat xml files                            -->
+<!--  <UserMaterialModels>  main element and classifies models as NX Samcef type   -->
+<!--                                                                               -->
+<!--              <<== Models are defined here                                     -->
+<!--                                                                               -->
+<!-- ============================================================================= -->
+
+<!ELEMENT UserMaterialModels (UserMaterialModel*)>
+<!ATTLIST UserMaterialModels>
+
+<!-- ============================================================================== -->
+<!-- Define a Model                                                                 -->
+<!--  <UserMaterialModel modelType="plastic"                Match ValidModelType    -->
+<!--                     lookupKey="histDepend"             Model lookup key        -->
+<!--                     KeyPosIntID="1"                    Model Identifier        -->
+<!--                                                        must be a unique        -->
+<!--                                                        positive integer        -->
+<!--                     displayName="History Dependent"    UI option displayed     -->
+<!--                     cardSpec="HistDep"                 Card specification      -->
+<!--                     numStateVariables="10"             Number of state vars    -->
+<!--                                                                                -->
+<!--                                                  List supported materials      -->
+<!--                                                                                -->
+<!--              <<== Define the valid material types here (<ValidMaterial .../>)  -->
+<!--                                                                                -->
+<!--              <<== Define card mapping here (<CardPropertyMapping type=""> )    -->
+<!--                                                                                -->
+<!--     <Properties>                                 Start Properties              -->
+<!--                                                                                -->
+<!--              <<== Properties are defined here                                  -->
+<!--                                                                                -->
+<!--     </Properties>                                                              -->
+<!--  </UserMaterialModel>                                                          -->
+<!-- ============================================================================== -->
+
+<!ELEMENT UserMaterialModel  (ValidMaterial*, CardPropertyMapping*, Properties)>
+<!ATTLIST UserMaterialModel
+    solver                  (SCSamcef) "SCSamcef"    
+    modelType               (umatModel1) "umatModel1"
+    lookupKeyPrefix         (SCS_UMAT) "SCS_UMAT"
+    lookupKey               CDATA #REQUIRED
+    KeyPosIntID             CDATA #REQUIRED
+    displayName             CDATA #REQUIRED
+    cardSpec                CDATA #REQUIRED
+    numStateVariables       CDATA #REQUIRED
+>
+
+<!-- ============================================================================= -->
+<!-- Define the valid material types for this model; use the string constants in   -->
+<!-- materialtypes.dtd for the Type attribute value.   Examples are:               -->
+<!--                                                                               -->
+<!--     <ValidMaterial type="&MaterialTypeISOTROPICLookUp;"/>                     -->
+<!--     <ValidMaterial type="&MaterialTypeORTHOTROPICLookUp;"/>                   -->
+<!--     <ValidMaterial type="&MaterialTypeANISOTROPICLookUp;"/>                   -->
+<!-- ============================================================================= -->
+<!ELEMENT ValidMaterial EMPTY>
+<!ATTLIST ValidMaterial
+    type ( IsotropicMaterial | OrthotropicMaterial | AnisotropicMaterial | DamageInterface ) #REQUIRED
+>
+
+<!-- ============================================================================= -->
+<!-- Define how the cards are formatted, by specifying the type and the order the  -->
+<!-- order the properties appear on the card.  The lookupKey matches the lookupKey -->
+<!-- on the property.  Use the constant value defined in materialumatconstants.dtd.-->
+<!-- In the example below, the REAL constants are exported with xxx value, yyy     -->
+<!-- value and zzz value in the first 3 real constant slots.  Similarly, the       -->
+<!-- values for 111, 222 and 333 show up in the first 3 integer slots. A xy-pair   -->
+<!-- table is exported with 444 value; a stress-strain table is exported with 555  -->
+<!-- value; a temperature table is exported with 666 value.                        -->
+<!--                                                                               -->
+<!--     <CardPropertyMapping type="&real;"                                        -->
+<!--                          lookupKey="xxx"/> where xxx matches the property     -->
+<!--     <CardPropertyMapping type="&real;"                                        -->
+<!--                          lookupKey="yyy"/> where yyy matches the property     -->
+<!--     <CardPropertyMapping type="&real;"                                        -->
+<!--                          lookupKey="zzz"/> where zzz matches the property     -->
+<!--     <CardPropertyMapping type="&integer;"                                     -->
+<!--                          lookupKey="111"/> where 111 matches the property     -->
+<!--     <CardPropertyMapping type="&integer;"                                     -->
+<!--                          lookupKey="222"/> where 222 matches the property     -->
+<!--     <CardPropertyMapping type="&integer;"                                     -->
+<!--                          lookupKey="333"/> where 333 matches the property     -->
+<!--     <CardPropertyMapping type="&xyPairTable;"                                 -->
+<!--                          lookupKey="444"/> where 444 matches the property     -->
+<!--     <CardPropertyMapping type="&stressStrainTable;"                           -->
+<!--                          lookupKey="555"/> where 555 matches the property     -->
+<!--     <CardPropertyMapping type="&temperatureTable;"                            -->
+<!--                          lookupKey="666"/> where 666 matches the property     -->
+<!-- ============================================================================= -->
+<!ELEMENT CardPropertyMapping EMPTY>
+<!ATTLIST CardPropertyMapping
+    type ( REAL | INTEGER | TABLES1 | TABLEST | TABLEM1 | TABLE ) #REQUIRED
+    lookupKey                                               CDATA #REQUIRED
+>
+
+<!-- ELEMENT Properties ( Property | PropertyField | Group)*  -->
+<!ELEMENT Properties ( Property | Group)* >
+<!ATTLIST Properties>
+
+<!-- ============================================================================= -->
+<!-- Define a Group to create a collapsible block that collects similar properties -->
+<!-- together (all properties between the <Group> and the </Group> will be         -->
+<!-- collected together).  The attributes are defined as follows:                  -->
+<!--                                                                               -->
+<!--     label is the name that will be put on the collapsible block               -->
+<!--                                                                               -->
+<!--     expanded indicates whether the block is expanded (visible) or collapsed   -->
+<!--              (not visible).                                                   -->
+<!--                                                                               -->
+<!--     numColumns indicates how the properties should be arranged in the UI.     -->
+<!--              The properties will be will fill in the coluns a row at a time,  -->
+<!--              so if there are 6 properties and 3 columns there will be 2 rows  -->
+<!--              of 3 properties with the first three in the first row and the    -->
+<!--              next three in the second row.                                    -->
+<!-- ============================================================================= -->
+<!-- ELEMENT Group  (  ( Property | PropertyField )+ ) -->
+<!ELEMENT Group  (  ( Property )+ ) >
+<!ATTLIST Group
+    label       CDATA               "Property"
+    expanded    ( true | false )    "true"
+    numColumns  CDATA               "1"
+>
+
+<!-- ============================================================================= -->
+<!-- Define an individual Property                                                 -->
+<!--                                                                               -->
+<!--        displayName is what is shown in the UI                                 -->
+<!--                                                                               -->
+<!--        When querying the property via NX Open routines, the look up key is    -->
+<!--        concatenates:                                                          -->
+<!--                UserMaterialModel::lookupKeyPrefix                             -->
+<!--                UserMaterialModel::lookupKey                                   -->
+<!--                UserMaterialModel::modelType                                   -->
+<!--                Property::lookupKey                                            -->
+<!--        separating each item with an underscore.  So, for the creep model ABC  -->
+<!--        in NX Nastran, the property with a lookupKey of 123 would be:          -->
+<!--        NXN_UMAT_ABC_creep_123                                                 -->
+<!--                                                                               -->
+<!--        visible indicates the property is shown in the UI.  This is normally   -->
+<!--        the case, but there may be a need to have a property that the user     -->
+<!--        isn't able to change in the UI.                                        -->
+<!--                                                                               -->
+<!--        editable indicates whether the value can be modified.  Normally this   -->
+<!--        is true, but there may be a case where it is desired that the user     -->
+<!--        cannot change this value.                                              -->
+<!--                                                                               -->
+<!--        valueType provides a choice for the property.  The valid types are:    -->
+<!--          - int         == integer value                                       -->
+<!--          - float       == real value                                          -->
+<!--          - enum        == enumerated list (this goes out as an integer)       -->
+<!--          - bool        == boolean value (toggle) which goes out as an integer -->
+<!--          - scalarField == tabular data goes out to the deck                   -->
+<!--                                                                               -->
+<!--        displayStyle: certain value types can be displayed with alternate      -->
+<!--        methods in the UI.   The values are found in materialuibehavior.dtd.   -->
+<!--          - scale_keyin_limits applies to float inputs where there is a fixed  -->
+<!--            upper and lower bounds for the input.  This will allow a slider to -->
+<!--            be dragged to set the value as well as allowing keyin values.      -->
+<!--          - nolabel applies to scalarFields; the name is not displayed         -->
+<!--          - default just takes the default display                             -->
+<!--                                                                               -->
+<!--        valueChoices: this applies to enumerated lists only. Each item that    -->
+<!--        is displayed on the pulldown is separated by a &Choice;.  Normally,    -->
+<!--        the item will be followed by = and an integer value.  The integer      -->
+<!--        value is what will be given.  If not given, it is a sequential value   -->
+<!--        starting with 0.  So, for example, a valueChoice might be:             -->
+<!--                valueChoices="&Choice;Item1=0&Choice;Item2=1&Choice;Item3=2">  -->
+<!--                                                                               -->
+<!--        valueLabel: this can be used with enumerated lists only.  Each this is -->
+<!--        additional text that is displayed above or below (use constants from   -->
+<!--        materialuibehavior.dtd) the choice.  The choices are separated with    -->
+<!--        &ValueLabelChoice;.  An example of something with 2 choices that have  -->
+<!--        labels displayed below would be:                                       -->
+<!--               valueLabel="&Below; item1label&ValueLabelChoice;item2label"     -->
+<!--                                                                               -->
+<!--        Dimensions: this defines the unit type (use constants from             -->
+<!--                    materialunits.dtd).                                        -->
+<!--                                                                               -->
+<!--        parentProperty / parentPropertyValToBeSensitive: when a property is    -->
+<!--            is only available (visible) based on another property's (boolean   -->
+<!--            or enumerated list) value.   The property that is dependent on the -->
+<!--            other one uses the parentProperty to specify the lookup key.  It   -->
+<!--            uses the parentPropertyValToBeSensitive to specify the value(s)    -->
+<!--            where the dependent property is visible.                           -->
+<!--                                                                               -->
+<!--        plot:  this is used with scalarField value types to indicate whether   -->
+<!--               the ability to plot the field is available or not.  The default -->
+<!--               is true.                                                        -->
+<!--                                                                               -->
+<!--        allowUnspecifiedValue: this indicates whether the value is required or -->
+<!--               not.   If set to true the input is optional, whereas if it is   -->
+<!--               false it is required.  The default value is true.               -->
+<!--                                                                               -->
+<!--   ========================================================================    -->
+<!--                                                                               -->
+<!--  Define the defaults, bounds and excluded values for a property               -->
+<!--                                                                               -->
+<!--    There are four (4) things that control the default value, the value range  -->
+<!--    and any invalid values.                                                    -->
+<!--                                                                               -->
+<!--    The DefaultValue indicates the value that should initially be displayed.   --> 
+<!--    The folowing indicates a blank should be displayed.                        -->
+<!--          <DefaultValue value="&valueEmpty;"/>                                 -->
+<!--                                                                               -->
+<!--    The LowerBound indicates the minimum value that is valid.  It contains     --> 
+<!--    both the value and whether it includes the value or not.   Similarly,      -->
+<!--    UpperBound defines the maximum value that is valid.                        -->
+<!--                                                                               -->
+<!--    The ExcludeValue indicates a value within the range that is not valid.     --> 
+<!--                                                                               -->
+<!--                                                                               -->
+<!--   ========================================================================    -->
+<!--                                                                               -->
+<!--  Define the valid field domain                                                -->
+<!--                                                                               -->
+<!--    A FieldDefn is defined when the valueType is "ScalarField".  The FieldDefn -->
+<!--    has a single Domain element that defines the independent domain (variable) -->
+<!--    of the field (table) where the dependent domain (variable) comes from      -->
+<!--    Dimensions on the Property. The domain specifies either temperature (6) or -->
+<!--    stress (28) as the independent domain (these correspond to the tablem1 or  -->
+<!--    tables1 cards that will be generated if there isn't a secondary domain).   -->
+<!--                                                                               -->
+<!--    When wanting to specify a tablest card, either temperature (6),            -->
+<!--    displacement (2) or force (25) is specified as the domain and hasSecondary -->
+<!--    is set to true.  The SecondaryDomain is specified with either time (5)     -->
+<!--    frequency (4) or stress (28).                                              -->
+<!--                                                                               -->
+<!--   ========================================================================    -->
+<!--                                                                               -->
+<!--   Example implementations                                                     -->
+<!--                                                                               -->
+<!--    Integer Property > 0                                                       -->
+<!--      <Property displayName="Integer Property"                                 -->              
+<!--                lookupKey="IntegerProperty"                                    -->
+<!--                valueType="int">                                               -->
+<!--          <DefaultValue value="&valueEmpty;"/>                                 -->
+<!--          <LowerBound value="&valueZero;"/>                                    -->
+<!--          <UpperBound value="&maxFloat;"/>                                     -->
+<!--     </Property>                                                               -->
+<!--                                                                               -->
+<!--    Real Property any value with units of Strain                               -->
+<!--      <Property displayName="Real Property"                                    -->              
+<!--                lookupKey="RealProperty"                                       -->
+<!--                valueType="float"                                              -->
+<!--                Dimensions="&MeasureStrain;">                                  -->
+<!--          <DefaultValue value="&valueEmpty;"/>                                 -->
+<!--          <LowerBound value="&minFloat;"/>                                     -->
+<!--          <UpperBound value="&maxFloat;"/>                                     -->
+<!--     </Property>                                                               -->
+<!--                                                                               -->
+<!--    Real Property with a unitless value between 0 and 1 with a slider          -->
+<!--      <Property displayName="Real Property"                                    -->              
+<!--                lookupKey="RealProperty2"                                      -->
+<!--                valueType="float"                                              -->
+<!--                displayStyle="&floatValueWithLimitsShowSliderDisplay;"         -->
+<!--                Dimensions="&MeasureUnitLess;                                  -->
+<!--          <DefaultValue value="&valueEmpty;"/>                                 -->
+<!--          <LowerBound value="&valueZero;"/>                                    -->
+<!--          <UpperBound value="&valueOne;"/>                                     -->
+<!--     </Property>                                                               -->
+<!--                                                                               -->
+<!--    Boolean Property (toggle)   (goes out as an int)                           -->
+<!--      <Property displayName="Boolean Property"                                 -->              
+<!--                lookupKey="BooleanProperty"                                    -->
+<!--                valueType="bool">                                              -->
+<!--          <DefaultValue value="&BoolFalse;"/>                                  -->
+<!--          <LowerBound value="&BoolMin;"/>                                      -->
+<!--          <UpperBound value="&BoolMax;"/>                                      -->
+<!--     </Property>                                                               -->
+<!--                                                                               -->
+<!--    Enumerated List Property with 3 items with the default choice being        -->
+<!--    the second item  (goes out as an int)                                      -->
+<!--      <Property displayName="Enum Property"                                    -->              
+<!--                lookupKey="EnumProperty"                                       -->
+<!--                valueType="enum"                                               -->
+<!--                valueChoices="&Choice;Item1=0&Choice;Item2=1&Choice;Item3=2">  -->
+<!--          <DefaultValue value="1"/>                                            -->
+<!--          <LowerBound value="0"/>                                              -->
+<!--          <UpperBound value="2"/>                                              -->
+<!--     </Property>                                                               -->
+<!--                                                                               -->
+<!--    Temperature dependent field (table) with units of stress                   -->
+<!--      <Property displayName="field Property"                                   -->              
+<!--                lookupKey="FieldProperty"                                      -->
+<!--                valueType="scalarField"                                        -->
+<!--                Dimensions="&MeasureStress;">                                  -->
+<!--          <DefaultValue value="&valueEmpty;"/>                                 -->
+<!--          <LowerBound value="&minFloat;"/>                                     -->
+<!--          <UpperBound value="&maxFloat;"/>                                     -->
+<!--          <FieldDefn nDomains="1">                                             -->
+<!--               <Domain type="&DomainTemperature;" />                           -->
+<!--          </FieldDefn>                                                         -->
+<!--     </Property>                                                               -->
+<!--                                                                               -->
+<!--    Real Property any value with units of Strain with a parent property        -->
+<!--    Parent can be either a enumerated list or a bool                           -->
+<!--    For this example, this property is displayed if the enumerated list        -->
+<!--    property is set to the third choice (lookupKey is EnumProperty)            --> 
+<!--      <Property displayName="Real Property"                                    -->              
+<!--                lookupKey="RealProperty3"                                      -->
+<!--                valueType="float"                                              -->
+<!--                Dimensions="&MeasureStrain;"                                   -->
+<!--                parentProperty="EnumProperty"                                  -->
+<!--                parentPropertyValToBeSensitive="2">                            -->
+<!--          <DefaultValue value="&valueEmpty;"/>                                 -->
+<!--          <LowerBound value="&minFloat;"/>                                     -->
+<!--          <UpperBound value="&maxFloat;"/>                                     -->
+<!--     </Property>                                                               -->
+<!-- ============================================================================= -->
+
+<!ELEMENT Property ((DefaultValue)?, 
+                    (LowerBound)?, 
+                    (UpperBound)?, 
+                    (ExcludeValue)?, 
+                    (FieldDefn)?)>
+
+<!-- Dimensions correspond to the constants defined materialunits.dtd  -->
+<!ATTLIST Property
+    displayName CDATA #REQUIRED
+    lookupKey CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    valueType (int          |
+               float        |
+               enum         |
+               bool         |
+               scalarField  ) #REQUIRED
+    displayStyle ( scale_keyin_limits | compact | nolabel | radio | radioVert | default ) "default"
+    valueChoices CDATA #IMPLIED
+    valueLabel CDATA #IMPLIED
+    Dimensions ( -1 |  0 |   1 |  2  |   3 |   4 |   5 |   6 |   7 |   8 |   9 | 
+                      10 |  11 |  12 |  13 |  14 |  15 |  16 |  17 |  18 |  19 | 
+                      20 |  21 |  22 |  23 |  24 |  25 |  26 |  27 |  28 |  29 | 
+                      30 |  31 |  32 |  33 |  34 |  35 |  36 |  37 |  38 |  39 | 
+                      40 |  41 |  42 |  43 |  44 |  45 |  46 |  47 |  48 |  49 | 
+                      50 |  51 |  52 |  53 |  54 |  55 |  56 |  57 |  58 |  59 | 
+                      60 |  61 |  62 |  63 |  64 |  65 |  66 |  67 |  68 |  69 | 
+                      70 |  71 |  72 |  73 |  74 |  75 |  76 |  77 |  78 |  79 | 
+                      80 |  81 |  82 |  83 |  84 |  85 |  86 |  87 |  88 |  89 | 
+                      90 |  91 |  92 |  93 |  94 |  95 |  96 |  97 |  98 |  99 | 
+                     100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 
+                     110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119 |
+                     120 | 121 ) "-1"  
+    parentProperty CDATA ""
+    parentPropertyValToBeSensitive CDATA ""
+    plot (true | false) "true"
+    allowUnspecifiedValue ( true | false ) "true"
+>
+<!ELEMENT DefaultValue EMPTY>
+<!ATTLIST DefaultValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT UpperBound EMPTY>
+<!ATTLIST UpperBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT LowerBound EMPTY>
+<!ATTLIST LowerBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT ExcludeValue EMPTY>
+<!ATTLIST ExcludeValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT FieldDefn (Domain*)>
+<!ATTLIST FieldDefn 
+     nDomains (1) "1"
+>
+
+<!-- numeric values correspond to constants in materialfielddomains.dtd -->
+<!ELEMENT Domain (SecondaryDomain?) >
+<!ATTLIST Domain
+    Name CDATA ""
+    type ( 1 | 2 | 3 | 4 | 5 | 6 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 28 | 29 | 45 ) "6"
+    hasSecondary (true | false) "false"
+>
+
+<!-- numeric values correspond to constants in materialfielddomains.dtd -->
+<!ELEMENT SecondaryDomain EMPTY>
+<!ATTLIST SecondaryDomain
+    Name CDATA ""
+    type ( 1 | 2 | 3 | 4 | 5 | 6 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 28 | 29 | 45 ) "28"
+>
+

@@ -1,0 +1,40 @@
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensity"/>
+
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="AnisotropicElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3"
+                   defaultValue="3"
+                   showProp="true"
+                   lockProp="false"/>
+
+<ReferenceProperty neutralName="ShearModulusConstant"/>
+<ReferenceProperty neutralName="G12Constant"/>
+<ReferenceProperty neutralName="G13Constant"/>
+<ReferenceProperty neutralName="G14Constant"/>
+<ReferenceProperty neutralName="G15Constant"/>
+<ReferenceProperty neutralName="G16Constant"/>
+<ReferenceProperty neutralName="G22Constant"/>
+<ReferenceProperty neutralName="G23Constant"/>
+<ReferenceProperty neutralName="G24Constant"/>
+<ReferenceProperty neutralName="G25Constant"/>
+<ReferenceProperty neutralName="G26Constant"/>
+<ReferenceProperty neutralName="G33Constant"/>
+<ReferenceProperty neutralName="G34Constant"/>
+<ReferenceProperty neutralName="G35Constant"/>
+<ReferenceProperty neutralName="G36Constant"/>
+<ReferenceProperty neutralName="G44Constant"/>
+<ReferenceProperty neutralName="G45Constant"/>
+<ReferenceProperty neutralName="G46Constant"/>
+<ReferenceProperty neutralName="G55Constant"/>
+<ReferenceProperty neutralName="G56Constant"/>
+<ReferenceProperty neutralName="G66Constant"/>
+

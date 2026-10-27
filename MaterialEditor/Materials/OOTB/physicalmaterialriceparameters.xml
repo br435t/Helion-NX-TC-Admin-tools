@@ -1,0 +1,12 @@
+    <Property name="Rice Parameter (RICE)"
+                neutralName="RiceParameter"
+                parentProperty="&Choice;AllFailureCriterion&Choice;RiceTraceyFailureCriterion"
+                parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;"
+                valueType="float"
+                Dimensions="&MeasureUnitLess;">
+        <DefaultValue value="&RiceParameter;"/>
+        <LowerBound value="&valueZero;"
+                    inclusive="true"/>
+        <UpperBound value="&maxFloat;"
+                    inclusive="true"/>
+    </Property>

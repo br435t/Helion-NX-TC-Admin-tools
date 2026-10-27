@@ -1,0 +1,19 @@
+<Property name="Percent Failure (PFL)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="PFL"
+        valueType="float">
+    <LowerBound value="-100"
+                inclusive="true"/>
+    <UpperBound value="100"
+                inclusive="true"/>
+</Property>
+
+<Property name="Orthogonal Softening (SOFT2)"
+        solPrefixName="NonPhysicalProp_LSDyna_"
+        solSuffixName="SOFT2"
+        valueType="float"
+        Dimensions="&MeasureUnitLess;"
+        parentProperty="NonPhysicalProp_LSDyna_CRIT"
+        parentPropertyValToBeSensitive="54">
+  <DefaultValue value="1.0"/>
+</Property>

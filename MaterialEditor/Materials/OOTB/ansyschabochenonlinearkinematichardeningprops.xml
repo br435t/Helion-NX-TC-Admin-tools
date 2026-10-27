@@ -1,0 +1,84 @@
+﻿<Property name=""
+          neutralName="ChabocheNonlinearKinematicHardeningOption"
+          valueType="enum"
+          valueChoices="&Choice;None=0&Choice;Include Temperature-Rate Term in Back-Stress Evolution (TRATE)=1&Choice;Strain-Hardening of Dynamic Recovery Properties (SHDR)=2"
+          Dimensions="&MeasureUnitLess;">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"/>
+    <UpperBound value="2"/>
+</Property>
+
+<Property name="Chaboche Nonlinear Kinematic Hardening"
+          neutralName="ChabocheNonlinearKinematicHardening"
+          valueType="scalarField_table"
+          plot="true"
+          parentProperty="&Choice;MatlNonlinearityType;&ChoiceAnd;YieldFunctionCriterion&ChoiceAnd;HardeningRule&Choice;ChabocheNonlinearKinematicHardeningOption"
+          parentPropertyValToBeSensitive="&Choice;3&Choice;1,7&Choice;1,2&Choice;0,1,2">
+    <TableDefn nRows="dynamic"
+               nCols="5"
+               minNumRows="1"
+               maxNumRows="5">
+        <TableProperty name="Material Constant (C)"
+                       neutralName="CStressCNKH"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureStress;"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ChabocheNonlinearKinematicHardeningOption"
+                       parentPropertyValToBeSensitive="0,1,2">
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Material Constant (G)"
+                       neutralName="GFactorCNKH"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureUnitLess;"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ChabocheNonlinearKinematicHardeningOption"
+                       parentPropertyValToBeSensitive="0,1,2">
+            <LowerBound value="&valueZero;"
+                        inclusive="true"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Saturation Value (P)"
+                       neutralName="SaturationValueCNKH"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureUnitLess;"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ChabocheNonlinearKinematicHardeningOption"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+        <TableProperty name="Evolution Rate (B)"
+                       neutralName="EvolutionRateCNKH"
+                       valueType="scalarField"
+                       scaleFactor="false"
+                       Dimensions="&MeasureUnitLess;"
+                       allowUnspecifiedValue="true"
+                       parentProperty="ChabocheNonlinearKinematicHardeningOption"
+                       parentPropertyValToBeSensitive="2">
+            <DefaultValue value="&valueEmpty;"/>
+            <LowerBound value="&valueZero;"
+                        inclusive="false"/>
+            <FieldDefn nDomains="2">
+                <Domain type="&DomainConstant;"/>
+                <Domain type="&DomainTemperature;"/>
+            </FieldDefn>
+        </TableProperty>
+    </TableDefn>
+</Property>

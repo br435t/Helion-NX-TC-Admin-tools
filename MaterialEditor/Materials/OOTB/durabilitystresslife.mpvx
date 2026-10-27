@@ -1,0 +1,12 @@
+<ReferenceProperty neutralName="StressLifeDataFormat"/>
+<ReferenceProperty neutralName="FatigueStrengthCoeff"/>
+<ReferenceProperty neutralName="FatigueStrengthCoeff2"/>
+<ReferenceProperty neutralName="FatigueStrengthCoeff12"/>
+<ReferenceProperty neutralName="FatigueStrengthExp"/>
+<ReferenceProperty neutralName="FatigueStrengthExp2"/>
+<ReferenceProperty neutralName="FatigueStrengthExp12"/>
+<ReferenceProperty neutralName="StressLifeDataField"/>
+<ReferenceProperty neutralName="StressLifeDataField2"/>
+<ReferenceProperty neutralName="SlopeField"/>
+<ReferenceProperty neutralName="StressAmplitudePointValue"/>
+<ReferenceProperty neutralName="FatigueLifePointValue"/>

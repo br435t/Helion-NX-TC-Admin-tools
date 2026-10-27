@@ -1,0 +1,151 @@
+<Property name="Material Applied Environment"
+          neutralName="MatlAppliedEnvironment"
+          valueType="int"
+          Dimensions="&MeasureUnitLess;"
+          visible="false">
+    <DefaultValue value="0"/>
+    <LowerBound value="0"
+                inclusive="true"/>
+    <UpperBound value="20"
+                inclusive="true"/>       
+</Property>
+
+<Property name="Simcenter Nastran Applied Views"
+          neutralName="SCNastranAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>   
+</Property>
+
+<Property name="Simcenter Samcef Applied Views"
+          neutralName="SCSamcefAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Thermal Flow Applied Views"
+          neutralName="SCThermalFlowAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Space Systems Thermal Applied Views"
+          neutralName="SCSpaceSystemsThermalAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Electronic System Cooling Applied Views"
+          neutralName="SCElectronicSystemCoolingAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Multiphysics Applied Views"
+          neutralName="SCMultiphysicsAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Acoustics BEM Applied Views"
+          neutralName="SCAcousticsBEMAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Acoustics Transient BEM Applied Views"
+          neutralName="SCAcousticsTransientBEMAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Ray Acoustics Applied Views"
+          neutralName="SCRayAcousticsAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter3D Noise And Vibration Applied Views"
+          neutralName="SCNoiseVibrationAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Simcenter Magnet Applied Views"
+          neutralName="SCMagnetAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="NX Design Sim Applied Views"
+          neutralName="NXDesignSimAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="MSC Nastran Applied Views"
+          neutralName="MSCNastranAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Abaqus Applied Views"
+          neutralName="AbaqusAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Ansys Applied Views"
+          neutralName="AnsysAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="LS Dyna Applied Views"
+          neutralName="LSDynaAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Motion Applied Views"
+          neutralName="MotionAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="HFEM IDS Applied Views"
+          neutralName="HFEMIDSAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Modeling Applied Views"
+          neutralName="ModelingAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>
+
+<Property name="Coatings Applied Views"
+          neutralName="CoatingsAppliedViews"
+          valueType="multistring"
+          visible="false">
+    <DefaultValue value="&valueBlank;"/>
+</Property>

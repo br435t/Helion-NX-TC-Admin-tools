@@ -1,0 +1,21 @@
+                <Property name="IR Scattering Coefficient"
+                          neutralName="IrScatterCoeff"
+                          valueType="float"
+                          Dimensions="&MeasureCoefficientPerLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>
+                <Property name="IR Extinction Coefficient"
+                          neutralName="IrExtinctCoeff"
+                          valueType="float"
+                          Dimensions="&MeasureCoefficientPerLength;">
+                    <DefaultValue value="&valueEmpty;"/>
+                    <LowerBound value="&minFloat;"
+                                inclusive="true"/>
+                    <UpperBound value="&maxFloat;"
+                                inclusive="true"/>
+                </Property>
+                

@@ -1,0 +1,70 @@
+<ReferenceProperty neutralName="ElasticDependencyControl"
+                   valueChoices="&Choice;Constant=3"
+                   defaultValue="3"
+                   showProp="false"
+                   lockProp="false"/>
+
+<ReferenceProperty neutralName="DensityControl"
+                   valueChoices="&Choice;Constant or Temperature or Frequency=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="MassDensityConstant"/>
+<ReferenceProperty neutralName="MassDensityTemperature"/>
+<ReferenceProperty neutralName="MassDensityFrequency"/>
+
+<ReferenceProperty neutralName="YoungsModulusConstant"/>
+
+<ReferenceProperty neutralName="PoissonsRatioType"
+                   valueChoices="Major Poisson's Ratio=0;Minor Poisson's Ratio=1"
+                   defaultValue="0"
+                   showProp="true"
+                   lockProp="false"/>
+<ReferenceProperty neutralName="PoissonsRatioConstant"/>
+
+<ReferenceProperty neutralName="Yield"/>
+
+<ReferenceProperty neutralName="UltTensile"/>
+
+<ReferenceProperty neutralName="TsaiWuInteraction"
+                   valueLabel="Tsai-Wu Interaction Coefficient (F12)"/>
+
+<ReferenceProperty neutralName="MaxStressTensionConstant"/>
+
+<ReferenceProperty neutralName="MaxStressCompressionConstant"/>
+
+<ReferenceProperty neutralName="MaxInPlaneShearStressConstant"/>
+
+<ReferenceProperty neutralName="MaxStrainTension"/>
+
+<ReferenceProperty neutralName="MaxStrainCompression"/>
+
+<ReferenceProperty neutralName="MaxInPlaneShearStrain"/>
+
+<ReferenceProperty neutralName="RefTemp"/>
+
+<ReferenceProperty neutralName="ThermalExpansionCoefficientType"/>
+
+<ReferenceProperty neutralName="ThermalExpansionConstant"/>
+
+<ReferenceProperty neutralName="ThermalConductivityControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="TempConductivityBehaviorType"
+                   valueChoices="&Choice;Isotropic=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="ThermalConductivity"/>
+
+
+<ReferenceProperty neutralName="SpecificHeatControl"
+                   valueChoices="&Choice;Constant or Temperature=0"
+                   defaultValue="0"
+                   showProp="false"
+                   lockProp="true"/>
+<ReferenceProperty neutralName="SpecificHeat"/>
+
+<ReferenceProperty neutralName="CoatingsVisualizationColor"/>

@@ -1,0 +1,867 @@
+<!ENTITY CurrentVersion "1">   <!-- This correlates to NX6; materials was viewed to not change often, so the complex -->
+                               <!-- mainVersion.QRMNumber.DevelopVersion was not implemented here.  At some point we -->
+                               <!-- may want to handle this or get the version in sync with the NX version numbers   -->
+
+<!-- This file needs to remain in sync with constants.dtd -->
+<!ENTITY MaterialTypeISOTROPICString "Isotropic">
+<!ENTITY MaterialTypeORTHOTROPICString "Orthotropic">
+<!ENTITY MaterialTypeANISOTROPICString "Anisotropic">
+<!ENTITY MaterialTypeFORMABILITYString "Formability">
+<!ENTITY MaterialTypeFLUIDString "Fluid">
+<!ENTITY MaterialTypeHYPERELASTICString "Hyperelastic - general">
+<!ENTITY MaterialTypeMOONEYRIVLINString "Mooney-Rivlin">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATAString "Mooney-Rivlin Test Data">
+<!ENTITY MaterialTypePOLYNOMIALString "Polynomial">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIALString "Reduced Polynomial">
+<!ENTITY MaterialTypeOGDENString "Ogden">
+<!ENTITY MaterialTypeOGDENTESTDATAString "Ogden Test Data">
+<!ENTITY MaterialTypeFOAMString "Foam">
+<!ENTITY MaterialTypeFOAMTESTDATAString "Foam Test Data">
+<!ENTITY MaterialTypeBLATZString "Blatz">
+<!ENTITY MaterialTypeARRUDABOYCEString "Arruda-Boyce">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATAString "Arruda-Boyce Test Data">
+<!ENTITY MaterialTypeNEOHOOKEString "Neo Hooke">
+<!ENTITY MaterialTypeNEOHOOKETESTDATAString "Neo Hooke Test Data">
+<!ENTITY MaterialTypeMARLOWString "Marlow">
+<!ENTITY MaterialTypeVANDERWAALSString "Van Der Waals">
+<!ENTITY MaterialTypeYEOHString "Yeoh">
+<!ENTITY MaterialTypeYEOHTESTDATAString "Yeoh Test Data">
+<!ENTITY MaterialTypeGENTString "Gent">
+<!ENTITY MaterialTypeGASKETString "Gasket (Strain)">
+<!ENTITY MaterialTypeGASKETBEHAVIORString "Gasket Behavior">
+<!ENTITY MaterialTypeSHAPEMEMORYALLOYString "Shape Memory Alloy">
+<!ENTITY MaterialTypeSUSSMANBATHEString "Sussman Bathe">
+<!ENTITY MaterialTypeGASKETLENGTHString "Gasket (Displacement)">
+<!ENTITY MaterialTypeDAMAGEINTERFACEString "Damage Interface">
+<!ENTITY MaterialTypeMULTIPLEFLUIDString "Multiple Fluid">
+<!ENTITY MaterialTypeHARTSMITHString "Hart-Smith">
+<!ENTITY MaterialTypeALEXANDERString "Alexander">
+<!ENTITY MaterialTypeCURINGString "Curing">
+<!ENTITY MaterialTypePOROUSString "Porous">
+<!ENTITY MaterialTypeCOMPOUNDISOTROPICString "Compound Isotropic">
+<!ENTITY MaterialTypeLOWDENSITYFOAMString "Low Density Foam">
+<!ENTITY MaterialTypeFABRICString "Fabric">
+<!ENTITY MaterialTypeCRUSHABLEFOAMString "Crushable Foam">
+<!ENTITY MaterialTypeRATESENSITVEFOAMString "Rate Sensitive Foam">
+<!ENTITY MaterialTypeMULTIMECHMICROSTRUCTUREString "Multimech Microstructure">
+
+
+<!ENTITY MaterialTypeISOTROPICLookUp "IsotropicMaterial">
+<!ENTITY MaterialTypeORTHOTROPICLookUp "OrthotropicMaterial">
+<!ENTITY MaterialTypeANISOTROPICLookUp "AnisotropicMaterial">
+<!ENTITY MaterialTypeFORMABILITYLookUp "FormabilityMaterial">
+<!ENTITY MaterialTypeFLUIDLookUp "FluidMaterial">
+<!ENTITY MaterialTypeHYPERELASTICLookUp "HyperelasticMaterial">
+<!ENTITY MaterialTypeMOONEYRIVLINLookUp "MooneyRivlinMaterial">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATALookUp "MooneyRivlinMaterialTestData">
+<!ENTITY MaterialTypePOLYNOMIALLookUp "PolynomialMaterial">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIALLookUp "ReducedPolynomialMaterial">
+<!ENTITY MaterialTypeOGDENLookUp "OgdenMaterial">
+<!ENTITY MaterialTypeOGDENTESTDATALookUp "OgdenMaterialTestData">
+<!ENTITY MaterialTypeFOAMLookUp "FoamMaterial">
+<!ENTITY MaterialTypeFOAMTESTDATALookUp "FoamMaterialTestData">
+<!ENTITY MaterialTypeBLATZLookUp "BlatzMaterial">
+<!ENTITY MaterialTypeARRUDABOYCELookUp "ArrudaBoyceMaterial">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATALookUp "ArrudaBoyceMaterialTestData">
+<!ENTITY MaterialTypeNEOHOOKELookUp "NeoHookeMaterial">
+<!ENTITY MaterialTypeNEOHOOKETESTDATALookUp "NeoHookeMaterialTestData">
+<!ENTITY MaterialTypeMARLOWLookUp "MarlowMaterial">
+<!ENTITY MaterialTypeVANDERWAALSLookUp "VanDerWaalsMaterial">
+<!ENTITY MaterialTypeYEOHLookUp "YeohMaterial">
+<!ENTITY MaterialTypeYEOHTESTDATALookUp "YeohMaterialTestData">
+<!ENTITY MaterialTypeGENTLookUp "GentMaterial">
+<!ENTITY MaterialTypeGASKETLookUp "GasketMaterial">
+<!ENTITY MaterialTypeGASKETBEHAVIORLookUp "GasketBehaviorMaterial">
+<!ENTITY MaterialTypeSHAPEMEMORYALLOYLookUp "ShapeMemoryAlloy">
+<!ENTITY MaterialTypeSUSSMANBATHELookUp "SussmanBathe">
+<!ENTITY MaterialTypeGASKETLENGTHLookUp "GasketMaterialDisplacement">
+<!ENTITY MaterialTypeDAMAGEINTERFACELookUp "DamageInterface">
+<!ENTITY MaterialTypeMULTIPLEFLUIDLookUp "MultipleFluid">
+<!ENTITY MaterialTypeHARTSMITHLookUp "HartSmithMaterial">
+<!ENTITY MaterialTypeALEXANDERLookUp "AlexanderMaterial">
+<!ENTITY MaterialTypeCURINGLookUp "CuringMaterial">
+<!ENTITY MaterialTypePOROUSLookUp "PorousMaterial">
+<!ENTITY MaterialTypeCOMPOUNDISOTROPICLookUp "CompoundIsotropicMaterial">
+<!ENTITY MaterialTypeLOWDENSITYFOAMLookUp "LowDensityFoamMaterial">
+<!ENTITY MaterialTypeFABRICLookUp "FabricMaterial">
+<!ENTITY MaterialTypeCRUSHABLEFOAMLookup "CrushableFoamMaterial">
+<!ENTITY MaterialTypeRATESENSITIVEFOAMLookUp "RateSensitiveFoamMaterial">
+<!ENTITY MaterialTypeMULTIMECHMICROSTRUCTURELookUp "MultimechMicrostructureMaterial">
+
+<!-- These id values correspond to values in uf_sf_types.h         -->
+<!ENTITY MaterialTypeISOTROPIC "0">
+<!ENTITY MaterialTypeORTHOTROPIC "1">
+<!ENTITY MaterialTypeANISOTROPIC "2">
+<!ENTITY MaterialTypeFORMABILITY "3">
+<!ENTITY MaterialTypeFLUID "4">
+<!ENTITY MaterialTypeHYPERELASTIC "5">
+<!ENTITY MaterialTypeMOONEYRIVLIN "6">
+<!ENTITY MaterialTypeMOONEYRIVLINTESTDATA "7">
+<!ENTITY MaterialTypePOLYNOMIAL "8">
+<!ENTITY MaterialTypeREDUCEDPOLYNOMIAL "9">
+<!ENTITY MaterialTypeOGDEN "10">
+<!ENTITY MaterialTypeOGDENTESTDATA "11">
+<!ENTITY MaterialTypeFOAM "12">
+<!ENTITY MaterialTypeFOAMTESTDATA "13">
+<!ENTITY MaterialTypeBLATZ "14">
+<!ENTITY MaterialTypeARRUDABOYCE "15">
+<!ENTITY MaterialTypeARRUDABOYCETESTDATA "16">
+<!ENTITY MaterialTypeNEOHOOKE "17">
+<!ENTITY MaterialTypeNEOHOOKETESTDATA "18">
+<!ENTITY MaterialTypeMARLOW "19">
+<!ENTITY MaterialTypeVANDERWAALS "20">
+<!ENTITY MaterialTypeYEOH "21">
+<!ENTITY MaterialTypeYEOHTESTDATA "22">
+<!ENTITY MaterialTypeGENT "23">
+<!ENTITY MaterialTypeGASKET "24">
+<!ENTITY MaterialTypeGASKETBEHAVIOR "25">
+<!ENTITY MaterialTypeSHAPEMEMORYALLOY "26">
+<!ENTITY MaterialTypeSUSSMANBATHE "27">
+<!ENTITY MaterialTypeGASKETDISPLACEMENT "28">
+<!ENTITY MaterialTypeDAMAGEINTERFACE "29">
+<!ENTITY MaterialTypeMULTIPLEFLUID "30">
+<!ENTITY MaterialTypeHARTSMITH "31">
+<!ENTITY MaterialTypeALEXANDER "32">
+<!ENTITY MaterialTypeCURING "33">
+<!-- Removed type 34 for thermo-plastic material-->
+<!ENTITY MaterialTypePOROUS "35">
+<!ENTITY MaterialTypeCOMPOUNDISOTROPIC "36">
+<!ENTITY MaterialTypeLOWDENSITYFOAM "37">
+<!ENTITY MaterialTypeFABRIC "38">
+<!ENTITY MaterialTypeCRUSHABLEFOAM "39">
+<!ENTITY MaterialTypeRATESENSITIVEFOAM "40">
+<!ENTITY MaterialTypeMULTIMECHMICROSTRUCTURE "41">
+
+
+<!ENTITY MATERIALTYPECHOICES "&Choice;Isotropic=&MaterialTypeISOTROPIC;&Choice;Orthotropic=&MaterialTypeORTHOTROPIC;&Choice;Anisotropic=&MaterialTypeANISOTROPIC;&Choice;Fluid=&MaterialTypeFLUID;&Choice;Hyperelastic=&MaterialTypeHYPERELASTIC;&Choice;Mooney-Rivlin=&MaterialTypeMOONEYRIVLIN;&Choice;Mooney-Rivlin Test Data=&MaterialTypeMOONEYRIVLINTESTDATA;&Choice;Polynomial=&MaterialTypePOLYNOMIAL;&Choice;Reduced Polynomial=&MaterialTypeREDUCEDPOLYNOMIAL;&Choice;Ogden=&MaterialTypeOGDEN;&Choice;Ogden Test Data=&MaterialTypeOGDENTESTDATA;&Choice;Foam=&MaterialTypeFOAM;&Choice;Foam Test Data=&MaterialTypeFOAMTESTDATA;&Choice;Blatz=&MaterialTypeBLATZ;&Choice;Arruda-Boyce=&MaterialTypeARRUDABOYCE;&Choice;Arruda-Boyce Test Data=&MaterialTypeARRUDABOYCETESTDATA;&Choice;Neo-Hooke=&MaterialTypeNEOHOOKE;&Choice;Neo-Hooke Test Data=&MaterialTypeNEOHOOKETESTDATA;&Choice;Marlow=&MaterialTypeMARLOW;&Choice;VanderWaals=&MaterialTypeVANDERWAALS;&Choice;Yeoh=&MaterialTypeYEOH;&Choice;Yeoh Test Data=&MaterialTypeYEOHTESTDATA;&Choice;Gent=&MaterialTypeGENT;&Choice;Gasket=&MaterialTypeGASKET;&Choice;Gasket Behavior=&MaterialTypeGASKETBEHAVIOR;&Choice;Shape Memory Alloy=&MaterialTypeSHAPEMEMORYALLOY;&Choice;Sussman-Bathe=&MaterialTypeSUSSMANBATHE;&Choice;Gasket (Displacement)=&MaterialTypeGASKETDISPLACEMENT;&Choice;Damage Interface=&MaterialTypeDAMAGEINTERFACE;&Choice;Multiple Fluid=&MaterialTypeMULTIPLEFLUID;&Choice;Hart-Smith=&MaterialTypeHARTSMITH;&Choice;Alexander=&MaterialTypeALEXANDER;&Choice;Curing=&MaterialTypeCURING;&Choice;Porous=&MaterialTypePOROUS;&Choice;Compound Isotropic=&MaterialTypeCOMPOUNDISOTROPIC;&Choice;Low Density Foam=&MaterialTypeLOWDENSITYFOAM;&Choice;Fabric=&MaterialTypeFABRIC;&Choice;Crushable Foam=&MaterialTypeCRUSHABLEFOAM;&Choice;Rate Sensitive Foam=&MaterialTypeRATESENSITIVEFOAM;Multimech Microstructure=&MaterialTypeMULTIMECHMICROSTRUCTURE;">
+
+<!ENTITY MATERIALEXCLUDE_OBSOLETEMATERIALTYPES "&MaterialTypeFORMABILITY;,34">
+
+
+
+<!--                  ====================================
+                               Units of Measure
+                      ====================================
+     correlates to units_general.h (or sfunit_def.h)
+ -->
+<!ENTITY MeasureDomain "-2"><!-- (Field Domain) -->
+<!ENTITY MeasureUnitLess "-1">
+<!ENTITY MeasureLength "0"><!-- (mm) -->
+<!ENTITY MeasureArea "1"><!-- (mm^2) -->
+<!ENTITY MeasureVolume "2"><!-- (mm^3) -->
+<!ENTITY MeasureMass "3"><!-- (kg) -->
+<!ENTITY MeasureMassDensity "4"><!-- (kg/mm^3) -->
+<!ENTITY MeasureFatigueStrCoeff "5"><!-- (mN/mm^2(kPa)) -->
+<!ENTITY MeasureTime "6"><!-- (sec) -->
+<!ENTITY MeasureAngle "7"><!-- (degrees) -->
+<!ENTITY MeasureVelocity "8"><!-- (mm/sec) -->
+<!ENTITY MeasureAcceleration "9"><!-- (mm/sec^2) -->
+<!ENTITY MeasureForce "10"><!-- (mN) -->
+<!ENTITY MeasureForcePerLength "11"><!-- (mN/mm) -->
+<!ENTITY MeasureForcePerArea "12"><!-- (mN/mm^2(kPa)) -->
+<!ENTITY MeasureMoment "13"><!-- (mN-mm) -->
+<!ENTITY MeasureStress "14"><!-- (mN/mm^2(kPa)) -->
+<!ENTITY MeasureStrain "15"><!-- (mm/mm) -->
+<!ENTITY MeasureStrainEnergy "16"><!-- (mN-mm) -->
+<!ENTITY MeasureStrainEnergyDensity "17"><!-- (mN-mm/mm^3) -->
+<!ENTITY MeasureTemperature "18"><!-- (C) -->
+<!ENTITY MeasureHeatFlux "19"><!-- (microW/mm^2) -->
+<!ENTITY MeasureConvection "20"><!-- (microW/mm^2-C) -->
+<!ENTITY MeasureThermConductivity "21"><!-- (microW/mm-C) -->
+<!ENTITY MeasureThermExpansion "22"><!-- (1/C) -->
+<!ENTITY MeasureHeatCapacity "23"><!-- (microJ/kg-K) -->
+<!ENTITY MeasureAngularVelocity "24"><!-- (degrees/sec) -->
+<!ENTITY MeasureAngularAcceleration "25"><!-- (degrees/sec^2) -->
+<!ENTITY MeasureFatigueLife "26"><!-- (DutyCycles) -->
+<!ENTITY MeasureHeatFlow "27"><!-- (microW) -->
+<!ENTITY MeasureThermEnergy "28"><!-- (microJ) -->
+<!ENTITY MeasureMassInertia "29"><!-- (kg-mm^2) -->
+<!ENTITY MeasureDynamicViscosity "30"><!-- (kg/mm-sec) -->
+<!ENTITY MeasureHeatGeneration "31"><!-- (microW/mm^3) -->
+<!ENTITY MeasureThermalConductance "32"><!-- (microW/C) -->
+<!ENTITY MeasureConductancePerLength "33"><!-- (microW/mm-C) -->
+<!ENTITY MeasureThermalResistance "34"><!-- (C/microW) -->
+<!ENTITY MeasureMassFlowRate "35"><!-- (kg/sec) -->
+<!ENTITY MeasureVolumeFlowRate "36"><!-- (mm^3/sec) -->
+<!ENTITY MeasureTemperatureDifference "37"><!-- (deltaC) -->
+<!ENTITY MeasureFrequency "38"><!-- (Hz) -->
+<!ENTITY MeasureCoefficientPerLength "39"><!-- (1/mm) -->
+<!ENTITY MeasureAreaMomentInertia "40"><!-- (mm^4) -->
+<!ENTITY MeasureViscousDamping "41"><!-- (kg/sec) -->
+<!ENTITY MeasureEnergy "42"><!-- (microJ) -->
+<!ENTITY MeasurePower "43"><!-- (microW) -->
+<!ENTITY MeasureMomentum "44"><!-- (kg-mm/sec) -->
+<!ENTITY MeasureTemperatureGradient "45"><!-- (C/mm) -->
+<!ENTITY MeasureEnergyPerMass "46"><!-- (mm^2/sec^2) -->
+<!ENTITY MeasureEnergyDispRateMass "47"><!-- (mm^2/sec^3) -->
+<!ENTITY MeasureMassFlux "48"><!-- (kg/sec-mm^2) -->
+<!ENTITY MeasureMassPerLength "49"><!-- (kg/mm) -->
+<!ENTITY MeasureMassPerArea "50"><!-- (kg/mm^2) -->
+<!ENTITY MeasureElectricCurrent "51"><!-- (A) -->
+<!ENTITY MeasureElectricalResistance "52"><!-- (microOhm) -->
+<!ENTITY MeasureElectricalResistivity "53"><!-- (microOhm-mm) -->
+<!ENTITY MeasureElectricalConductance "54"><!-- (Mmho) -->
+<!ENTITY MeasureVoltage "55"><!-- (microV) -->
+<!ENTITY MeasureVoltagePerTemperature "56"><!-- (microV/C) -->
+<!ENTITY MeasureDiffusivity "57"><!-- (mm^2/sec) -->
+<!ENTITY MeasureLatentHeatPerMass "58"><!-- (microJ/kg) -->
+<!ENTITY MeasureThermalEnergyPerArea "59"><!-- (microJ/mm^2) -->
+<!ENTITY MeasureThermalPIDGain "60"><!-- (1/C) -->
+<!ENTITY MeasureThermalPIDIntegral "61"><!-- (1/C-sec) -->
+<!ENTITY MeasureThermalPIDDerivative "62"><!-- (sec/C) -->
+<!ENTITY MeasureHeadLossCoeff "63"><!-- (mN-sec/mm^3) -->
+<!ENTITY MeasureTsaiWuCoeff "64"><!-- (mm^4/mN^2) -->
+<!ENTITY MeasureMassLength "65"><!-- (kg-mm) -->
+<!ENTITY MeasurePerVolume "66"><!-- (1/mm^3) -->
+<!ENTITY MeasureWarpingConstant "67"><!-- (mm^6) -->
+<!ENTITY MeasureStressCompliance "68"><!-- (mm^2/mN(1/kPa)) -->
+<!ENTITY MeasureLengthPerPressure "69"><!-- (mm^3/mN) -->
+<!ENTITY MeasurePressurePerLength "70"><!-- (mN/mm^3) -->
+<!ENTITY MeasurePressurePerVelocity "71"><!-- (mN-sec/mm^3) -->
+<!ENTITY MeasureMomentPerAngle "72"><!-- (mN-mm/deg) -->
+<!ENTITY MeasureCoefficientPerTime "73"><!-- (1/sec) -->
+<!ENTITY MeasureAngularMomentumPerAngle "74"><!-- (mN-mm-sec/deg) -->
+<!ENTITY MeasureThermalCapacitance "75"><!-- (microJ/C) -->
+<!ENTITY MeasureInductance "76"><!-- (microH) -->
+<!ENTITY MeasureVoltagePerAngularVelocity "77"><!-- (microV-sec/degrees) -->
+<!ENTITY MeasurePerArea "78"><!-- (1/mm^2) -->
+<!ENTITY MeasureTemperatureChangeRate "79"><!-- (deltaC/sec) -->
+<!ENTITY MeasureJerk "80"><!-- (mm/sec^3) -->
+<!ENTITY MeasureAngularJerk "81"><!-- (degrees/sec^3) -->
+<!ENTITY MeasureMagneticFieldStrength "82"><!-- (A/mm) -->
+<!ENTITY MeasureMagneticFluxDensity "83"><!-- (N/A-m) -->
+<!ENTITY MeasureAngularMomentum "84"><!-- (mN-mm-sec) -->
+<!ENTITY MeasureVelocityPerPressure "85"><!-- (mm^3/mN-sec) -->
+<!ENTITY MeasureCoefPerUnitTimeSquared "86"><!-- (1/sec^2) -->
+<!ENTITY MeasureCoefPerUnitTimeCubed "87"><!-- (1/sec^3) -->
+<!ENTITY MeasureFlowResistivity "88"><!-- (Nsm^(-4)) -->
+<!ENTITY MeasureCurrentDensity "89"><!-- (A/mm^3)) -->
+<!ENTITY MeasureForcePerAngle "90"><!-- (mN/deg)) -->
+<!ENTITY MeasureLengthPerAngle "91"><!-- (mm/deg)) -->
+<!ENTITY MeasureCurrentDensityArea "92"><!-- (A/mm^2)) -->
+<!ENTITY MeasureElectricFieldStrength "93"><!-- (V/mm)) -->
+<!ENTITY MeasureElectricFluxDensity "94"><!-- (As/mm^2)) -->
+<!ENTITY MeasureElectricCharge "95"><!-- (A-sec) -->
+<!ENTITY MeasureLuminousIntensity "96"><!-- (cd) -->
+<!ENTITY MeasureLuminousFlux "97"><!-- (lm) -->
+<!ENTITY MeasureLuminance "98"><!-- (cd/mm^2) -->
+<!ENTITY MeasureIlluminance "99"><!-- (Mlx) -->
+<!ENTITY MeasureAmountOfSubstance "100"><!-- (mol) -->
+<!ENTITY MeasureMolality "101"><!-- (mol/kg) -->
+<!ENTITY MeasureMolarConcentration "102"><!-- (mol/m^3) -->
+<!ENTITY MeasurePerFrequency "103"><!-- (1/Hz) -->
+<!ENTITY MeasureDiffusionResistance "104"><!-- (sec/mm) -->
+<!ENTITY MeasureTransmissionLoss "105"><!-- (microW/microW) -->
+<!ENTITY MeasureElectricalConductivity "106"><!-- (Mmho/mm) -->
+<!ENTITY MeasurePowerToMassRatio "107"><!-- (microW/kg) -->
+<!ENTITY MeasureElectricalCapacitance "108"><!-- (pfarad) -->
+<!ENTITY MeasureFrequencySquared "109"><!-- (Hz^2) -->
+<!ENTITY MeasurePerAngle "110"><!-- (1/degrees) -->
+<!ENTITY MeasurePerAngleSquared "111"><!-- (1/degrees^2) -->
+<!ENTITY MeasureFrequencyCubed "112"><!--(Hz^3) -->
+<!ENTITY MeasureMassInertiaPerAngle "113"><!-- (kg-mm^2/degrees) -->
+<!ENTITY MeasureMagneticConductivity "114"><!-- (microOhm/mm) -->
+<!ENTITY MeasureMagneticFlux "115"><!-- (microWb) -->
+<!ENTITY MeasureMagneticVectorPotential "116"><!-- (microWb/mm) -->
+<!ENTITY MeasureMagneticVolumeChargeDensity "117"><!-- (A-s/mm^3) -->
+<!ENTITY MeasureApparentPower "118"><!-- (microVA) -->
+<!ENTITY MeasureMagneticEnergyContent "119"><!-- (microW-sec) -->
+<!ENTITY MeasureTerminal "120">
+
+
+<!-- Domains are from Part_Field_Domain_External.h.
+     The domain numbers are maintained as their enums
+ -->
+
+<!ENTITY DomainUser "-1">
+<!ENTITY DomainGeneral "0">
+<!ENTITY DomainParameter "1">
+<!ENTITY DomainLength "2">
+<!ENTITY DomainAngle "3">
+<!ENTITY DomainFrequency "4">
+<!ENTITY DomainTime "5">
+<!ENTITY DomainTemperature "6">
+<!ENTITY DomainGeneral2d "7">
+<!ENTITY DomainParameterPlane "8">
+<!ENTITY DomainPlane "9">
+<!ENTITY DomainPole "10">
+<!ENTITY DomainGeneral3d "11">
+<!ENTITY DomainParameterSpace "12">
+<!ENTITY DomainSpatial "13">
+<!ENTITY DomainCylindrical "14">
+<!ENTITY DomainSpherical "15">
+<!ENTITY DomainConstant "16">
+<!ENTITY DomainAngleAngle "17">
+<!ENTITY DomainNodeID "18">
+<!ENTITY DomainArea "19">
+<!ENTITY DomainVolume "20">
+<!ENTITY DomainStrain "21">
+<!ENTITY DomainStrainEnergy "22">
+<!ENTITY DomainStrainEnergyDensity "23">
+<!ENTITY DomainAcceleration "24">
+<!ENTITY DomainForce "25">
+<!ENTITY DomainPressure "26">
+<!ENTITY DomainMoment "27">
+<!ENTITY DomainStress "28">
+<!ENTITY DomainVelocity "29">
+<!ENTITY DomainComponentAcceleration "30">
+<!ENTITY DomainComponentForce "31">
+<!ENTITY DomainComponentPressure "32">
+<!ENTITY DomainComponentMoment "33">
+<!ENTITY DomainComponentVelocity "34">
+<!ENTITY DomainStressTensor "42">
+<!ENTITY DomainStrainTensor "43">
+<!ENTITY DomainExcitation "44">
+<!ENTITY DomainDimensionless "45">
+<!ENTITY DomainDimensionlessPlane "46">
+<!ENTITY DomainDimensionlessSpace "47">
+<!ENTITY DomainDepth "48">
+<!ENTITY DomainBalancedStrainTensor "49">
+<!ENTITY DomainYAxis "50">
+<!ENTITY DomainZAxis "51">
+<!ENTITY DomainYZPlane "52">
+<!ENTITY DomainZXPlane "53">
+<!ENTITY DomainGeneralLength "54">
+
+
+
+
+<!-- User Material (UMAT) DTD for NX Nastran -->
+<!-- The following constants are maintained in Part_PropTable_IPropDescUI.hxx -->
+<!-- DoNotShow : Used in boxLabel to indicate no group on the UI, but colect the children together. -->
+<!ENTITY DoNotShow "~">
+<!-- Collapse : Used in boxLabel to indicate the group on the UI is to be initially displayed as collasped -->
+<!ENTITY Collapse "-">
+<!-- ColumnLayout : Used in boxLabel to indicate the group on the UI is to have n columns where n is a number -->
+<!--                between 1 and 9 inclusive the immediately follows the ColumnLayout symbol                 -->
+<!--                (e.g. &ColumnLayout;6 indicates this group will have 6 columns).                          -->
+<!ENTITY ColumnLayout "^">
+<!-- Above|Below : (Applies only to TargetSets and valueLabel attribute of properties.)                                                             -->
+<!--          Used in boxLabel to indicate the TargetSet is placed in the UI group above specified property.-->
+<!--          E.g., boxLabel="Model Objects&Choice;&Above;description"                                      -->
+<!--          where  "description" is the neutralName of a property having boxLabel="Model Objects"         -->
+<!--          E.g., boxLabel="Model Objects&Choice;&Above;"                                                 -->
+<!--          E.g., boxLabel="Model Objects&Choice;&Below;"                                                 -->
+<!--          No property name means place at top/bottom of group.                                          -->
+<!--          Default is boxLabel="Model Objects" which means top of group.                                 -->
+<!--                                                                                                        -->
+<!--          Append to the start of the valueLabel string to indicate the ValueLabel widget will be        -->
+<!--          above or below the PropertyComponent UI block.                                                -->
+<!--          To indent the valueLabel, insert extra blank charaters in the string.                         -->
+<!ENTITY Above "+">
+<!ENTITY Below "-">
+
+<!-- Choice : Our universal delimiter. A separator between option choices.  -->
+<!--          changed from # to ~ to avoid clashing with the declash symbol -->
+<!ENTITY Choice "~">
+<!ENTITY ValueLabelChoice "#">
+<!-- Choice operators to use for multi-parent control logic when defining a list of parent choices on the parentProperty attribute. -->
+<!-- Choice : Default delimiter denotes the following parent choice will be evaluated using OR logic relative to other parent choices. -->
+<!-- ChoiceAnd : Denotes the following parent choice will be evaluated using AND logic relative to other parent choices. -->
+<!-- ChoiceNot : Denotes the following parent choice will be evaluated using NOT logic relative to other parent choices. -->
+<!-- Group : Denotes the following group of parent choices will be evaulated using OR logic relative to other parent choices or groups. -->
+<!-- GroupAnd : Denotes the following group of parent choices will be evaluated using AND logic relative to other parent choices or groups. -->
+<!-- GroupNot : Denotes the following group of parent choice will be evaluated using NOT logic relative to other parent choices or groups. -->
+<!-- GroupClose : Denotes the group close of parent choices for multi-parent control logic. -->
+<!-- Example syntax of AND logic between two parent properties: parentProperty="&Choice;neutralName1&ChoiceAnd;neutralName2" -->
+<!-- Example syntax of NOT logic between two parent properties: parentProperty="&Choice;neutralName1&ChoiceNot;neutralName2" -->
+<!-- Example syntax between two groups of parents such as (parent1 OR parent2) AND (parent3 OR parent4): -->
+<!-- parentProperty="&Group;&Choice;neutralName1&Choice;neutralName2&GroupClose;&GroupAnd;&Choice;neutralName3&Choice;neutralName4&GroupClose;" -->
+<!ENTITY ChoiceAnd "~+">
+<!ENTITY ChoiceNot "~!">
+<!ENTITY Group "(">
+<!ENTITY GroupAnd "(^">
+<!ENTITY GroupNot "(*">
+<!ENTITY GroupClose ")">
+
+<!-- Retain Values (Dialog Memory) on UI. -->
+<!ENTITY retainValueDefault "-777777.">
+<!ENTITY retainValueTrue    "true">
+<!ENTITY retainValueFalse   "false">
+
+<!-- Alternate display styles -->
+<!ENTITY defaultDisplay                         "default">
+<!ENTITY floatValueWithLimitsShowSliderDisplay  "scale_keyin_limits">
+<!ENTITY enumRadioButton                        "radio">
+<!ENTITY enumVerticalRadioButton                "radioVert">
+<!ENTITY scalarFieldNoLabelDisplay              "nolabel">
+<!-- Requires multiple domains including constant -->
+<!ENTITY scalarFieldCompactDisplay              "compact">
+
+
+
+
+<!ENTITY valueAutoAssign "-666666.">
+<!ENTITY valueEmpty "-777777.">
+<!ENTITY valueBlank "">
+<!ENTITY maxFloat "-888888.">
+<!ENTITY minFloat "-999999.">
+
+<!ENTITY valueInherit "inherited">
+
+<!-- Boolean values -->
+<!ENTITY BoolMin       "0">
+<!ENTITY BoolMax       "1">
+<!ENTITY BoolFalse     "0">
+<!ENTITY BoolTrue      "1">
+
+<!-- Angle values -->
+<!ENTITY AngleMin            "0">
+<!ENTITY AngleMax            "6.28318530717955">
+<!ENTITY Angle360deg         "6.28318530717955">
+<!ENTITY Angle45deg          "0.78539816339744">
+<!ENTITY Angle53deg          "0.92502450355699">
+
+<!-- Minimum Temperature -->
+<!ENTITY MinTemperature "0.0">
+<!ENTITY ZeroDegCelsius "273.15">
+
+<!-- Other Values -->
+<!ENTITY valueZero "0.">
+<!ENTITY valueZeroPointOne "0.1">
+<!ENTITY valueZeroPointFive "0.5">
+<!ENTITY valueOne "1.">
+<!ENTITY valueOnePointFive "1.5">
+<!ENTITY valueMinusOne "-1.">
+<!ENTITY valueThousand "1000.">
+
+<!ENTITY valuePercentMin "0.0">
+<!ENTITY valuePercentMax "100.0">
+<!ENTITY value50Percent "50.0">
+
+<!ENTITY valueDistTol "0.0254">
+
+
+<!-- Model Types (<UserMaterialModel modelType="&rateIndependent;") -->
+<!ENTITY umatModel1 "umatModel1">
+<!ENTITY umatModel2 "umatModel2">
+<!ENTITY umatCreepModel1 "umatCreepModel1">
+<!ENTITY umatCreepModel2 "umatCreepModel2">
+
+<!-- Card Mapping Types (e.g. <CardPropertyMapping type="&real;") -->
+<!ENTITY real "REAL">
+<!ENTITY integer "INTEGER">
+<!ENTITY stressStrainTable "TABLES1">
+<!ENTITY tableOfTables "TABLEST">
+<!ENTITY temperatureTable "TABLEM1">
+<!ENTITY xyPairTable "TABLE">
+
+<!ENTITY valueAcceleration "9810">
+
+<!ENTITY defaultErrorSussmanBathe "0.01">
+
+<!ENTITY CompressiveTensileyieldRatio "1.3">
+
+<!-- Symbolic output formats are from Part_Field_Domain_External.h.
+ -->
+
+<!ENTITY OutputStringOrPlugin "0">
+<!ENTITY OutputString "1">
+<!ENTITY OutputPlugin "2">
+
+<!ENTITY DamageNone  "-777777.">
+<!ENTITY DamageMAXE  "0">
+<!ENTITY DamageMAXS  "1">
+<!ENTITY DamageMAXPE "2">
+<!ENTITY DamageMAXPS "3">
+<!ENTITY DamageQUADE "4">
+<!ENTITY DamageQUADS "5">
+
+<!ENTITY GasketBehaviorTypeElasticPlastic  "0">
+<!ENTITY GasketBehaviorTypeDamage          "1">
+
+<!ENTITY RiceParameter  "0.283">
+
+<!ENTITY IsotropicPoissonsMinimum  "-1.0">
+<!ENTITY IsotropicPoissonsMaximum  "0.5">
+
+<!ENTITY PlasticPoissonsDefault  "0.04">
+
+<!--                  ====================================
+                        Complex Value Support
+                      ====================================
+ -->
+<!ENTITY ComplexRealImaginaryExpressionChoice "0" >
+<!ENTITY ComplexMagnitudePhaseExpressionChoice "1" >
+<!ENTITY ComplexFieldChoice "2" >
+<!ENTITY ComplexRealImaginaryNumber "complex" >
+<!ENTITY ComplexMagnitudePhaseNumber "complex2" >
+<!ENTITY ComplexFieldDomainName "ComplexNumber" >
+<!ENTITY ComplexFieldRealSuffix "(real)" >
+<!ENTITY ComplexFieldImaginarySuffix "(imaginary)" >
+<!ENTITY ComplexFieldRealMagnitudeSuffix "(realmagnitude)" >
+<!ENTITY ComplexFieldImaginaryPhaseSuffix "(imaginaryphase)" >
+
+
+<!--                  ====================================
+                       LS-DYNA Material Cards                       
+                      ====================================
+                      The enum value is assigned based on : 
+                        1.) older numeric scheme of LS-DYNA material names (MAT_001, MAT002 etc.)
+                            - Multiply the numeric value by 100 for the same.
+                            e.g MAT_ELASTIC (MAT_001) is set to 100
+                        2.) "OPTION" keyword availability for the material types
+                            - If additonal options are present, then add the options by incrementing
+                            by 1 for each possible value
+                            e.g LOG_INTERPOLATION option on MatPiecewiseLinearPlasticity is set to 2401 (2400 +1)
+ -->
+<!ENTITY MatElastic "100" >
+<!ENTITY MatPlasticKinematic "300" >
+<!ENTITY MatViscoelastic "600" >
+<!ENTITY MatNull "900" >
+<!ENTITY MatRigid "2000" >
+<!ENTITY MatPiecewiseLinearPlasticity  "2400" >
+<!ENTITY MatPiecewiseLinearPlasticityLogInterpolation "2401" >
+<!ENTITY MatPiecewiseLinearPlasticityStochastic "2402" >
+<!ENTITY MatPiecewiseLinearPlasticityMidfail "2403" >
+<!ENTITY MatPiecewiseLinearPlasticity2D  "2404" >
+<!ENTITY MatLinearElasticDiscreteBeam "6600">
+<!ENTITY MatPlasticitywithDamage  "8100" >
+<!ENTITY MatPlasticitywithDamageStochastic "8101" >
+<!ENTITY MatPlasticitywithDamageOrtho  "8200" >
+<!ENTITY MatPlasticitywithDamageOrthoRcdc "8201" >
+<!ENTITY MatPlasticitywithDamageOrthoRcdc1980 "8202" >
+<!ENTITY MatPlasticityPolymer "8900" >
+<!ENTITY MatSimplifiedJohnsonCook "9800" >
+<!ENTITY MatSpotweld  "10000" >
+<!ENTITY MatSpotweldDamageFailure "10001" >
+<!ENTITY MatTRIP "11300" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticity  "12300" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityLogInterpolation "12301" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityPrestrain  "12302" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityRate "12303" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityRTCL  "12304" >
+<!ENTITY MatModifiedPiecewiseLinearPlasticityStochastic "12305" >
+
+
+<!--  =================================================================
+                               Environments
+      ================================================================ -->
+
+<!ELEMENT Materials (Material)*>
+<!ATTLIST Materials
+    additionalSolverProperties CDATA  #FIXED "true"
+>
+
+<!ELEMENT Material  (Property|
+                     PropertyField|
+                     Tab|
+                     Group)*>
+<!ATTLIST Material
+    type (   0 |  1 |  2 |       4 |  5 |  6 |  7 |  8 |  9 | 
+            10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 
+            20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |  
+            30 | 31 | 32 | 33 |      35 | 36 | 37 | 38 | 39 | 
+            40 | 41 ) #REQUIRED
+
+>
+
+<!ELEMENT Tab  (Group)* >
+<!ATTLIST Tab
+    label          CDATA "DefaultTabName"
+>
+<!ELEMENT Group  ( (Property|PropertyField)* )>
+<!ATTLIST Group
+    label          CDATA "DefaultGroupName"
+    expanded (true | false) "true"
+    numColumns     CDATA "1"
+>
+
+<!ELEMENT Property ((DefaultValue)?, (LowerBound)?, (UpperBound)?, (ExcludeValue)?, (FieldDefn | MatrixDefn | TableDefn)?, (ReferenceFilterClass)*)>
+<!ATTLIST Property
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    solPrefixName ( NonPhysicalProp_GENERAL_                |
+                    NonPhysicalProp_Abaqus_                 |
+                    NonPhysicalProp_Ansys_                  |
+                    NonPhysicalProp_LSDyna_                 |
+                    NonPhysicalProp_MSCNastran_             |
+                    NonPhysicalProp_NXDesignSim_            |
+                    NonPhysicalProp_SC3DAcousticBEM_        |
+                    NonPhysicalProp_SC3DAcousticTransBEM_   |
+                    NonPhysicalProp_SC3DElecSysCooling_     | 
+                    NonPhysicalProp_SC3DMultiPhysics_       |
+                    NonPhysicalProp_SC3DRayAcoustic_        |
+                    NonPhysicalProp_SC3DNV_                 |
+                    NonPhysicalProp_SC3DThermalFlow_        |
+                    NonPhysicalProp_SC3DSPACESYSThermal_    |
+                    NonPhysicalProp_SCMagnet_               |
+                    NonPhysicalProp_SCNastran_              |
+                    NonPhysicalProp_SCSamcef_               ) "NonPhysicalProp_GENERAL_"
+    solSuffixName CDATA #REQUIRED
+    valueType (nil          |
+               int          |
+               float        |
+               char         |
+               enum         |
+               bool         |
+               vector       |
+               multistring  |
+               coord        |
+               material     |
+               matrix       |
+               field        |
+               scalarField  |
+               axis         |
+               float_array           |
+               float_table           |
+               int_array             ) "nil"
+    valueSubtype CDATA ""
+    selectionLabel CDATA ""
+    selectionBoxLabel CDATA ""
+    icon CDATA #IMPLIED
+    valueChoices CDATA #IMPLIED
+    valueToolTip CDATA #IMPLIED
+    Dimensions ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116| 117 |118 | 119 ) "-1"
+    Type (default) "default"
+    parentProperty CDATA ""
+    parentPropertyValToBeSensitive CDATA "0"
+    propertyVisibleOrSensitive ( visible | sensitive ) "visible"
+    retainValue ( true | false ) "false"
+    action CDATA ""
+    plot (true | false) "true"
+    scaleFactor (true | false) "true"
+    scalarOnly (true | false) "false"
+    noObjectSelectedLabel CDATA "None"
+    allowUnspecifiedValue ( true | false ) "true"
+    relatedRegionTargetSets CDATA ""
+    tablePresentation (true | false) "false"
+    customColumns CDATA ""
+    sortAscending (true | false) "true"
+    isOwner (true | false) "false"
+>
+<!ELEMENT DefaultValue EMPTY>
+<!ATTLIST DefaultValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT UpperBound EMPTY>
+<!ATTLIST UpperBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT LowerBound EMPTY>
+<!ATTLIST LowerBound
+    value CDATA #REQUIRED
+    inclusive (true | false) "false"
+>
+<!ELEMENT ExcludeValue EMPTY>
+<!ATTLIST ExcludeValue
+    value CDATA #REQUIRED
+>
+<!ELEMENT ReferenceFilterClass EMPTY>
+<!ATTLIST ReferenceFilterClass
+    name CDATA #IMPLIED
+    groupFilterClassName CDATA #IMPLIED
+    selectionFilterClassName CDATA #IMPLIED
+>
+<!--
+      .=============.
+      |Property...  |
+      |             |
+      .==v==========.
+         |
+         |
+      .=(1)=======.
+      |FieldDefn |
+      |          |
+      .==v=======.
+         |
+         |
+      .=(*)=======.
+      |Domain     |
+      |           |  The "Domain"s are to define the independent variable domains of a Field
+      .==v=====v==.
+         |     |
+         |  .=(?)============.
+         |  |SecondaryDomain |   The optional secondary "Domain" defines heterogeneous
+         |  |                |   independent domain of a Field. 
+         |  .==v=============.   
+         |     |
+         |     |     There can be 'n' number of independent domains for each field
+      .=(*)===(*)=.  and each domain can have 'm' number of variables; note that specified
+      |Variable   |  independent variables need to map to the specified independent domain
+      |           |
+      .===========.
+  -->
+<!ELEMENT FieldDefn ((Domain)*)>
+<!ATTLIST FieldDefn
+    nDomains CDATA "1"
+>
+<!ELEMENT Domain ((Variable)*, (SecondaryDomain)?)>
+<!ATTLIST Domain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 ) "-1"
+    nVariables CDATA "0"
+    hasSecondary (true | false) "false"
+>
+<!ELEMENT Variable EMPTY>
+<!ATTLIST Variable
+    Name CDATA ""
+    Measure ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116| 117 |118 | 119 ) "-1"
+    evaluationValue CDATA "-777777."
+    evaluationProperty CDATA ""
+    propertyType (Solution | Step | None ) "None"
+>
+<!ELEMENT SecondaryDomain ((Variable)*)>
+<!ATTLIST SecondaryDomain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 26 | 28 | 42 | 43 ) "-1"
+    nVariables CDATA "0"
+>
+<!ELEMENT MatrixDefn ((ColumnHeading)*, (RowHeading)*, (DisableCell)*, (HideCell)*, (DefaultCellValue)*)>
+<!ATTLIST MatrixDefn
+    nCols (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64) #REQUIRED
+    nRows (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64) #REQUIRED
+    matrixType (symmetric | general) "general"
+>
+<!ELEMENT ColumnHeading EMPTY>
+<!ATTLIST ColumnHeading
+    column CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!ELEMENT RowHeading EMPTY>
+<!ATTLIST RowHeading
+    row CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!ELEMENT HideCell EMPTY>
+<!ATTLIST HideCell
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+>
+<!ELEMENT DisableCell EMPTY>
+<!ATTLIST DisableCell
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+>
+<!ELEMENT DefaultCellValue EMPTY>
+<!ATTLIST DefaultCellValue
+    row CDATA #REQUIRED
+    column CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+<!--
+   Defintion for a Table of Properties
+   A table can have any number of Column, each defined by an
+   included TableProperty.
+   The number of rows in the table is defined by nRows.
+   If nRows is set to "dynamic" then the number of rows in this table is
+   dynamically defined by the user of this descriptor.
+   -->
+<!ELEMENT TableDefn (TableProperty+)>
+<!ATTLIST TableDefn
+    nRows CDATA '"1"'
+>
+<!ELEMENT TableProperty (DefaultValue, (LowerBound)?, (UpperBound)?)>
+<!ATTLIST TableProperty
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    neutralName CDATA #REQUIRED
+    valueType (int | float) "float"
+    Dimensions ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116| 117 |118 | 119 ) "-1"
+>
+<!--
+          .===============.
+          |PropertyField  |
+          |               |
+          .v============v=.
+           |            |
+           |            |
+     .=====v======.     |
+     |DepDomain   |     |  The "DepDomain" is used to define the field's dependent domain
+     |            |     |
+     .==v=========.     |  If the specified domain has measures, then variable validation will
+        |               |  simply check that it is a valid domain.  No order is specified or
+        |               |  names for validation, so it is NOT recommended unless all variables
+        |               |  in the domain have unique measures; otherwise it will be impossible
+        |               |  for formatters to differentiate the variables to map to output=
+     .==v=========.     |
+     |DepVariable |     |  If the specified domain has variables, then the specified variables
+     |            |     |  must constitute the valid measures for the domain and variables on
+     .==v=========.     |  the selected field should be mapped in order.
+        |               |
+        |               |  If the specified variables have names, the order is irrelevant, and
+     .=(*)=========.    |  the mapping will be done based on name AND measure.
+     |ExcludeValue |    |
+     |             |    |
+     .=============.    |
+                     .==v=========.
+                     |FieldDefn   |
+                     |            |
+                     .==v=========.
+                        |
+                       .=. See FieldDefn for info on independent domain spec=
+-->
+<!ELEMENT PropertyField (DepDomain, FieldDefn)>
+<!ATTLIST PropertyField
+    name CDATA #REQUIRED
+    visible (true | false) "true"
+    editable (true | false) "true"
+    solPrefixName ( NonPhysicalProp_GENERAL_                |
+                    NonPhysicalProp_Abaqus_                 |
+                    NonPhysicalProp_Ansys_                  |
+                    NonPhysicalProp_LSDyna_                 |
+                    NonPhysicalProp_MSCNastran_             |
+                    NonPhysicalProp_NXDesignSim_            |
+                    NonPhysicalProp_SC3DAcousticBEM_        |
+                    NonPhysicalProp_SC3DAcousticTransBEM_   |
+                    NonPhysicalProp_SC3DElecSysCooling_     | 
+                    NonPhysicalProp_SC3DMultiPhysics_       |
+                    NonPhysicalProp_SC3DRayAcoustic_        |
+                    NonPhysicalProp_SC3DNV_                 |
+                    NonPhysicalProp_SC3DThermalFlow_        |
+                    NonPhysicalProp_SC3DSPACESYSThermal_    |
+                    NonPhysicalProp_SCMagnet_               |
+                    NonPhysicalProp_SCNastran_              |
+                    NonPhysicalProp_SCSamcef_               ) "NonPhysicalProp_GENERAL_"
+    solSuffixName CDATA #REQUIRED
+    valueType (generalField | vectorField) "generalField"
+    inferredSelection (true | false) "false"
+    plot (true | false) "true"
+    scaleFactor (true | false) "true"
+    valueSubtype CDATA ""
+    icon CDATA #IMPLIED
+    valueChoices CDATA #IMPLIED
+    valueToolTip CDATA #IMPLIED
+    Dimensions ( -2 ) "-2"
+    Type (default) "default"
+    parentProperty CDATA ""
+    parentPropertyValToBeSensitive CDATA "0"
+    propertyVisibleOrSensitive ( visible | sensitive ) "visible"
+    menuAttachProp CDATA ""
+    attachType ( attachRight ) "attachRight"
+    retainValue ( true | false ) "false"
+    action CDATA ""
+    scalarOnly ( true | false ) "false"
+    noObjectSelectedLabel CDATA "None"
+    allowUnspecifiedValue ( true | false ) "true"
+    relatedRegionTargetSets CDATA ""
+
+>
+<!ELEMENT DepDomain ((DepVariable)*, (ExcludeValue)*)>
+<!ATTLIST DepDomain
+    Name CDATA ""
+    autocreate (true | false) "false"
+    type ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 21 | 22 | 23 | 28 | 42 | 43 ) "-1"
+    nVariables CDATA "0"
+    LowerBound CDATA "-777777."
+    LowerBound_inclusive (true | false) "false"
+    UpperBound CDATA "-777777."
+    UpperBound_inclusive (true | false) "false"
+>
+<!ELEMENT DepVariable ((ExcludeValue)*)>
+<!ATTLIST DepVariable
+    Name CDATA ""
+    DisplayName CDATA ""
+    NeutralName CDATA ""
+    Measure ( -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116| 117 |118 | 119 ) "-1"
+    DefaultValue CDATA "-777777."
+    LowerBound CDATA "-777777."
+    LowerBound_inclusive (true | false) "false"
+    UpperBound CDATA "-777777."
+    UpperBound_inclusive (true | false) "false"
+>

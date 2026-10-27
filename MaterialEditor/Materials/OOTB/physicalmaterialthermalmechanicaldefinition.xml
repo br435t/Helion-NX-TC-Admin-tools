@@ -1,0 +1,13 @@
+<!-- This property is obsoleted but either remove it or make it invisible will cause a major remaster of material tests -->
+<!-- TODO: NX12 Removal Scheduled --> 
+<Property name="Mechanical Power to Heat Ratio"
+            neutralName="MechanicalPowertoHeatRatio"
+            valueType="float"
+            valueSubtype="scale_keyin_limits"
+            scaleFactor="false">
+    <DefaultValue value="&valueZero;"/>
+    <LowerBound value="&valueZero;"
+                inclusive="true"/>
+    <UpperBound value="&valueOne;"
+                inclusive="true"/>
+</Property>

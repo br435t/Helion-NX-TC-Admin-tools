@@ -1,0 +1,50 @@
+<Property name="Tsai-Wu Interaction Coefficient (F12)"
+          neutralName="TsaiWuInteraction"
+          parentProperty="&Choice;AllFailureCriterion&Choice;TsaiWuFailureCriterion&Choice;MaterialType"
+          parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;&Choice;&MaterialTypeISOTROPIC;,&MaterialTypeCOMPOUNDISOTROPIC;"
+          valueType="scalarField"
+          Dimensions="&MeasureTsaiWuCoeff;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Tsai-Wu Interaction Coefficient (F13)"
+          neutralName="TsaiWu13"
+          valueType="scalarField"
+          Dimensions="&MeasureTsaiWuCoeff;"
+          parentProperty="&Choice;AllFailureCriterion&Choice;TsaiWuFailureCriterion"
+          parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+<Property name="Tsai-Wu Interaction Coefficient (F23)"
+          neutralName="TsaiWu23"
+          valueType="scalarField"
+          Dimensions="&MeasureTsaiWuCoeff;"
+          parentProperty="&Choice;AllFailureCriterion&Choice;TsaiWuFailureCriterion"
+          parentPropertyValToBeSensitive="&Choice;&BoolTrue;&Choice;&BoolTrue;">
+    <DefaultValue value="&valueEmpty;"/>
+    <LowerBound value="&minFloat;"
+                inclusive="true"/>
+    <UpperBound value="&maxFloat;"
+                inclusive="true"/>
+    <FieldDefn nDomains="2">
+        <Domain type="&DomainConstant;"/>
+        <Domain type="&DomainTemperature;"/>
+    </FieldDefn>
+</Property>
+
+
